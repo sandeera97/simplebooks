@@ -2,6 +2,7 @@ export interface NavItem {
   label: string;
   href?: string;
   children?: NavItem[];
+  external?: boolean;
 }
 
 export const navItems: NavItem[] = [
