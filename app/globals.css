@@ -90,7 +90,7 @@ a, button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 22px 56px;
+  padding: 22px 0px;
   max-width: 1250px;
   margin: 0 auto;
 }
@@ -195,7 +195,7 @@ a, button {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  padding: 80px 56px 96px;
+  padding: 80px 0px 96px;
   max-width: 1250px;
   margin: 0 auto;
 }
@@ -212,7 +212,7 @@ a, button {
   font-size: 16px;
   line-height: 1.6;
   color: var(--sim-muted);
-  margin: 0 0 30px;
+  margin: 15px 0 30px;
   max-width: 470px;
 }
 .sim_bk_hero_cta { font-size: 16px; padding: 14px 38px; box-shadow: 0 10px 24px rgba(241,95,44,0.28); }
