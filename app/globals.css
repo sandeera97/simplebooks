@@ -1,26 +1,481 @@
 @import "tailwindcss";
 
-@theme {
-  /* Simplebooks brand — orange primary */
-  --color-brand: #f5712a;
-  --color-brand-dark: #e05f18;
-  --color-brand-light: #fff3ee;
-  --color-navy: #0a1628;
-  --color-navy-mid: #1a2744;
-  --color-hero-bg: #f0f2ff;
-  --font-sans: var(--font-inter);
+/* ============================================================
+   Simplebooks design system — all classes prefixed sim_bk_
+   Brand tokens taken from the approved reference design.
+   ============================================================ */
+:root {
+  --sim-navy: #11144d;
+  --sim-orange: #f15f2c;
+  --sim-orange-dark: #d94e1f;
+  --sim-muted: #8a8fa6;
+  --sim-muted-light: #9aa0b4;
+  --sim-text-soft: #5a607a;
+  --sim-lavender: #edeefb;
+  --sim-footer: #0f1235;
+  --sim-footer-text: #c5c8e0;
+  --sim-footer-link: #4a8dff;
+  --sim-border: #f1f1f6;
+  --font-poppins: "Poppins", sans-serif;
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #111827;
-}
+* { box-sizing: border-box; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  margin: 0;
+  font-family: var(--font-poppins), sans-serif;
+  color: var(--sim-navy);
+  background: #ffffff;
+  overflow-x: hidden;
 }
 
-html {
-  scroll-behavior: smooth;
+::placeholder { color: var(--sim-muted-light); opacity: 1; }
+
+a, button {
+  transition: background .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+/* ---------- Shared layout ---------- */
+.sim_bk_container { max-width: 1250px; margin: 0 auto; }
+.sim_bk_sec_pad { padding-left: 56px; padding-right: 56px; }
+
+/* ---------- Buttons (pills) ---------- */
+.sim_bk_btn_orange {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  background: var(--sim-orange);
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-poppins), sans-serif;
+}
+.sim_bk_btn_orange:hover {
+  background: var(--sim-orange-dark);
+  box-shadow: 0 12px 30px rgba(241,95,44,0.42);
+  transform: translateY(-2px);
+}
+.sim_bk_btn_outline {
+  text-decoration: none;
+  color: var(--sim-navy);
+  font-weight: 600;
+  border: 1.5px solid var(--sim-orange);
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+}
+.sim_bk_btn_outline:hover { background: var(--sim-orange); color: #ffffff; }
+.sim_bk_btn_dark {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  background: #15151f;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+}
+.sim_bk_btn_dark:hover { background: #2a2a3d; transform: translateY(-2px); }
+
+/* ---------- Header ---------- */
+.sim_bk_header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #ffffff;
+  border-bottom: 1px solid var(--sim-border);
+}
+.sim_bk_hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 56px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.sim_bk_logo {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--sim-navy);
+  text-decoration: none;
+}
+.sim_bk_nav { display: flex; align-items: center; gap: 34px; }
+.sim_bk_nav_link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: var(--sim-navy);
+  font-weight: 600;
+  font-size: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-poppins), sans-serif;
+}
+.sim_bk_nav_link:hover { color: var(--sim-orange); }
+.sim_bk_caret { font-size: 11px; opacity: .7; }
+.sim_bk_header_actions { display: flex; align-items: center; gap: 12px; }
+.sim_bk_signin { padding: 11px 26px; font-size: 15px; }
+.sim_bk_signup { padding: 12px 28px; font-size: 15px; }
+
+/* Dropdown menus */
+.sim_bk_dropdown {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 10px;
+  min-width: 220px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow: 0 18px 50px rgba(17,20,77,0.16);
+  z-index: 60;
+}
+.sim_bk_dropdown_right { left: auto; right: 0; }
+.sim_bk_dropdown_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--sim-navy);
+  text-decoration: none;
+  border-radius: 9px;
+  white-space: nowrap;
+}
+.sim_bk_dropdown_item:hover { background: var(--sim-lavender); color: var(--sim-orange); }
+.sim_bk_nav_item { position: relative; }
+.sim_bk_submenu { left: 100%; top: 0; margin: 0 0 0 6px; }
+
+/* Mobile */
+.sim_bk_burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--sim-navy);
+}
+.sim_bk_mobile_menu {
+  display: none;
+  border-top: 1px solid var(--sim-border);
+  background: #ffffff;
+  padding: 10px 0;
+  max-height: 78vh;
+  overflow-y: auto;
+}
+.sim_bk_mobile_link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 13px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--sim-navy);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-poppins), sans-serif;
+}
+.sim_bk_mobile_actions { display: flex; flex-direction: column; gap: 12px; padding: 16px 28px; border-top: 1px solid var(--sim-border); }
+
+/* ---------- Hero ---------- */
+.sim_bk_hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 80px 56px 96px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.sim_bk_hero_text { flex: 1; max-width: 540px; }
+.sim_bk_hero_text h1 {
+  font-size: 46px;
+  line-height: 1.12;
+  font-weight: 800;
+  margin: 0 0 22px;
+  letter-spacing: -1px;
+  color: var(--sim-navy);
+}
+.sim_bk_hero_text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--sim-muted);
+  margin: 0 0 30px;
+  max-width: 470px;
+}
+.sim_bk_hero_cta { font-size: 16px; padding: 14px 38px; box-shadow: 0 10px 24px rgba(241,95,44,0.28); }
+.sim_bk_hero_region { font-size: 14px; color: var(--sim-muted); margin: 26px 0 0; }
+.sim_bk_region_link { color: var(--sim-orange); font-weight: 600; text-decoration: none; }
+.sim_bk_region_link:hover { color: var(--sim-orange-dark); }
+.sim_bk_hero_img { flex: 1; display: flex; justify-content: flex-end; }
+
+/* Striped image placeholder */
+.sim_bk_ph_img {
+  max-width: 100%;
+  background: repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 10px, #eceefa 10px, #eceefa 20px);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sim_bk_ph_label { font-family: monospace; font-size: 13px; color: var(--sim-muted-light); }
+
+/* ---------- Services ---------- */
+.sim_bk_services { background: var(--sim-lavender); padding: 70px 56px 84px; }
+.sim_bk_svc_grid {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+.sim_bk_svc_card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 38px 32px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(17,20,77,0.04);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.sim_bk_svc_card:hover { transform: translateY(-6px); box-shadow: 0 16px 42px rgba(17,20,77,0.10); }
+.sim_bk_svc_icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 22px;
+}
+.sim_bk_svc_card h3 { font-size: 21px; font-weight: 700; margin: 0 0 14px; color: var(--sim-navy); }
+.sim_bk_svc_card p { font-size: 14px; line-height: 1.6; color: var(--sim-muted); margin: 0; }
+
+/* ---------- Future / platform ---------- */
+.sim_bk_future {
+  background: #ffffff;
+  padding: 96px 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.sim_bk_future_text { flex: 1; max-width: 520px; }
+.sim_bk_future_text h2 {
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 800;
+  margin: 0 0 20px;
+  letter-spacing: -0.5px;
+  color: var(--sim-navy);
+}
+.sim_bk_future_text p { font-size: 15px; line-height: 1.7; color: var(--sim-muted); margin: 0; }
+.sim_bk_future_img { flex: 1; display: flex; justify-content: flex-end; }
+
+/* ---------- Banking partners ---------- */
+.sim_bk_banking { background: #ffffff; padding: 20px 56px 90px; text-align: center; }
+.sim_bk_banking h2 { font-size: 30px; font-weight: 800; margin: 0 0 44px; color: var(--sim-navy); }
+.sim_bk_banking_row { display: flex; align-items: center; justify-content: center; gap: 64px; flex-wrap: wrap; }
+
+/* ---------- Testimonials + form ---------- */
+.sim_bk_testimonials { background: var(--sim-lavender); padding: 80px 56px 100px; }
+.sim_bk_testimonials h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 50px;
+  color: var(--sim-navy);
+}
+.sim_bk_tg { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.sim_bk_tcard {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  box-shadow: 0 6px 22px rgba(17,20,77,0.05);
+}
+.sim_bk_tcard_quote { font-size: 12.5px; line-height: 1.6; color: var(--sim-text-soft); margin: 0 0 18px; }
+.sim_bk_tcard_author { display: flex; align-items: center; gap: 10px; }
+.sim_bk_avatar { width: 34px; height: 34px; border-radius: 50%; background: #d9dcee; flex-shrink: 0; }
+.sim_bk_tcard_name { font-size: 12.5px; font-weight: 700; color: var(--sim-navy); }
+.sim_bk_tcard_role { font-size: 11px; color: var(--sim-muted-light); }
+.sim_bk_view_more { text-align: center; margin-top: 40px; }
+.sim_bk_view_more .sim_bk_btn_dark { font-size: 14px; padding: 13px 34px; }
+
+/* Form */
+.sim_bk_form { max-width: 760px; margin: 70px auto 0; }
+.sim_bk_form_required { font-size: 14px; color: var(--sim-text-soft); margin: 0 0 18px; }
+.sim_bk_form_required span { color: #f0395b; }
+.sim_bk_name_grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.sim_bk_input {
+  width: 100%;
+  padding: 19px 22px;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 15px;
+  color: var(--sim-navy);
+  box-shadow: 0 4px 16px rgba(17,20,77,0.04);
+  margin-bottom: 16px;
+}
+.sim_bk_input:focus { outline: 2px solid rgba(241,95,44,0.35); }
+.sim_bk_field { position: relative; }
+.sim_bk_phone_row {
+  display: flex;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(17,20,77,0.04);
+  overflow: hidden;
+}
+.sim_bk_phone_code {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 19px 16px;
+  background: #f1f2f8;
+  font-size: 15px;
+  color: var(--sim-navy);
+  white-space: nowrap;
+  border: none;
+  font-family: var(--font-poppins), sans-serif;
+}
+.sim_bk_phone_input { flex: 1; min-width: 0; padding: 19px 18px; border: none; background: transparent; font-family: var(--font-poppins), sans-serif; font-size: 15px; color: var(--sim-navy); }
+.sim_bk_phone_input:focus { outline: none; }
+.sim_bk_select {
+  width: 100%;
+  padding: 19px 22px;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 15px;
+  color: var(--sim-navy);
+  box-shadow: 0 4px 16px rgba(17,20,77,0.04);
+  appearance: none;
+  -webkit-appearance: none;
+}
+.sim_bk_select_arrow { position: absolute; right: 22px; top: 50%; transform: translateY(-50%); color: var(--sim-orange); font-size: 12px; pointer-events: none; }
+.sim_bk_textarea {
+  width: 100%;
+  padding: 19px 22px;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 15px;
+  color: var(--sim-navy);
+  box-shadow: 0 4px 16px rgba(17,20,77,0.04);
+  resize: vertical;
+  margin-bottom: 28px;
+}
+.sim_bk_textarea:focus { outline: 2px solid rgba(241,95,44,0.35); }
+.sim_bk_form_submit { text-align: center; }
+.sim_bk_form_submit .sim_bk_btn_orange { font-weight: 700; font-size: 15px; padding: 16px 40px; box-shadow: 0 10px 24px rgba(241,95,44,0.28); }
+
+/* ---------- Footer ---------- */
+.sim_bk_footer { background: var(--sim-footer); color: #ffffff; padding: 70px 56px 56px; }
+.sim_bk_footer_logo { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 38px; color: #fff; text-decoration: none; display: inline-block; }
+.sim_bk_ft_grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 50px; }
+.sim_bk_footer_desc { font-size: 14px; line-height: 1.8; color: var(--sim-footer-text); margin: 0 0 26px; }
+.sim_bk_socials { display: flex; gap: 12px; }
+.sim_bk_social_ico {
+  width: 36px;
+  height: 36px;
+  border-radius: 7px;
+  background: #ffffff;
+  color: var(--sim-footer);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+}
+.sim_bk_social_ico:hover { transform: translateY(-3px); }
+.sim_bk_footer_link { display: inline-block; margin-top: 48px; color: var(--sim-footer-link); text-decoration: none; font-size: 14px; }
+.sim_bk_footer_link:hover { color: #7fb0ff; }
+.sim_bk_footer_addr { font-size: 14px; line-height: 1.9; color: var(--sim-footer-text); }
+
+/* ---------- Chat widget ---------- */
+.sim_bk_chat { position: fixed; bottom: 26px; right: 26px; z-index: 60; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+.sim_bk_chat_bubble {
+  position: relative;
+  max-width: 250px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: 0 10px 30px rgba(17,20,77,0.18);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--sim-navy);
+}
+.sim_bk_chat_close { position: absolute; top: 8px; right: 10px; color: var(--sim-muted-light); cursor: pointer; font-size: 13px; background: none; border: none; }
+.sim_bk_chat_btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--sim-footer);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 22px rgba(17,20,77,0.3);
+  cursor: pointer;
+  border: none;
+}
+.sim_bk_chat_btn:hover { transform: scale(1.07); }
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 1120px) {
+  .sim_bk_nav { gap: 22px; }
+  .sim_bk_svc_grid { grid-template-columns: repeat(2, 1fr); }
+  .sim_bk_tg { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 920px) {
+  .sim_bk_hdr { flex-wrap: wrap; gap: 16px; padding: 18px 28px; justify-content: space-between; }
+  .sim_bk_nav { display: none; }
+  .sim_bk_header_actions { display: none; }
+  .sim_bk_burger { display: flex; }
+  .sim_bk_mobile_menu.sim_bk_open { display: block; }
+  .sim_bk_hero { flex-direction: column; padding: 48px 28px 60px; text-align: center; }
+  .sim_bk_hero_text { max-width: 100%; }
+  .sim_bk_hero_text p { margin-left: auto; margin-right: auto; }
+  .sim_bk_hero_img, .sim_bk_future_img { justify-content: center; }
+  .sim_bk_future { flex-direction: column; padding: 60px 28px; gap: 36px; text-align: center; }
+  .sim_bk_future_text { max-width: 100%; }
+  .sim_bk_tg { grid-template-columns: repeat(2, 1fr); }
+  .sim_bk_ft_grid { grid-template-columns: 1fr; gap: 34px; }
+  .sim_bk_services, .sim_bk_banking, .sim_bk_testimonials { padding-left: 28px; padding-right: 28px; }
+}
+@media (max-width: 560px) {
+  .sim_bk_svc_grid { grid-template-columns: 1fr; }
+  .sim_bk_tg { grid-template-columns: 1fr; }
+  .sim_bk_name_grid { grid-template-columns: 1fr; }
+  .sim_bk_hero_text h1 { font-size: 34px; }
+  .sim_bk_phone_row { flex-wrap: wrap; }
+}
+
+/* Desktop: hide mobile menu always */
+@media (min-width: 921px) {
+  .sim_bk_mobile_menu { display: none !important; }
 }
