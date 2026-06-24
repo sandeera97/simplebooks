@@ -61,6 +61,15 @@ export default function Footer() {
             +880-1312-329255
           </div>
         </div>
+
+        {/* Copyright bar */}
+        <div className="sim_bk_copyright">
+          <span>© {new Date().getFullYear()} Simplebooks (Pvt) Ltd. All rights reserved.</span>
+          <div className="sim_bk_copyright_links">
+            <Link href="/privacy-policy">Privacy Policy</Link>
+            <Link href="/no-claim-certification">No Claim Certification</Link>
+          </div>
+        </div>
       </div>
     </footer>
   );
