@@ -152,6 +152,25 @@ a, button {
 .sim_bk_nav_item { position: relative; }
 .sim_bk_submenu { left: 100%; top: 0; margin: 0 0 0 6px; }
 
+/* Invisible "bridge" filling the gap between a trigger and its menu so the
+   pointer never leaves the hover area while moving onto the dropdown. */
+.sim_bk_dropdown::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+.sim_bk_submenu::before {
+  top: 0;
+  bottom: 0;
+  left: -10px;
+  right: auto;
+  width: 10px;
+  height: auto;
+}
+
 /* Mobile */
 .sim_bk_burger {
   display: none;

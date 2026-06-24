@@ -1,12 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { navItems, regions, NavItem } from "./navData";
 
+/* Open instantly on hover, close after a short delay so the mouse can
+   cross the gap between the trigger and the menu without it closing. */
+function useHoverOpen(delay = 140) {
+  const [open, setOpen] = useState(false);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const onMouseEnter = () => {
+    if (timer.current) clearTimeout(timer.current);
+    setOpen(true);
+  };
+  const onMouseLeave = () => {
+    timer.current = setTimeout(() => setOpen(false), delay);
+  };
+  return { open, onMouseEnter, onMouseLeave };
+}
+
 /* ---------- Desktop dropdown ---------- */
 function DesktopDropdown({ item }: { item: NavItem }) {
-  const [open, setOpen] = useState(false);
+  const { open, onMouseEnter, onMouseLeave } = useHoverOpen();
 
   if (!item.children) {
     return (
@@ -19,8 +34,8 @@ function DesktopDropdown({ item }: { item: NavItem }) {
   return (
     <div
       className="sim_bk_nav_item"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <button className="sim_bk_nav_link">
         {item.label} <span className="sim_bk_caret">▾</span>
@@ -43,12 +58,12 @@ function DesktopDropdown({ item }: { item: NavItem }) {
 }
 
 function SubDropdown({ item }: { item: NavItem }) {
-  const [open, setOpen] = useState(false);
+  const { open, onMouseEnter, onMouseLeave } = useHoverOpen();
   return (
     <div
       className="sim_bk_nav_item"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <button className="sim_bk_dropdown_item" style={{ width: "100%" }}>
         {item.label} <span className="sim_bk_caret">▸</span>
@@ -68,12 +83,12 @@ function SubDropdown({ item }: { item: NavItem }) {
 
 /* ---------- Region dropdown ---------- */
 function RegionDropdown() {
-  const [open, setOpen] = useState(false);
+  const { open, onMouseEnter, onMouseLeave } = useHoverOpen();
   return (
     <div
       className="sim_bk_nav_item"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <button className="sim_bk_nav_link">
         Region <span style={{ fontSize: 15 }}>🌐</span>{" "}
