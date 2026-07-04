@@ -95,7 +95,7 @@ export default function AccountingSoftwarePage() {
       <Header />
       <main>
         {/* ============ HERO ============ */}
-        <section className="sim_bk_split" style={{ gap: 56, paddingTop: 70, paddingBottom: 80, paddingLeft: 56, paddingRight: 56 }}>
+        <section className="sim_bk_split" style={{ gap: 56, paddingTop: 70, paddingBottom: 80 }}>
           <div className="sim_bk_split_text">
             <h1 style={{ fontSize: 50, lineHeight: 1.1, fontWeight: 800, margin: "0 0 24px", letterSpacing: "-1px", color: "#11144d" }}>Invoicing Streamlined, Payments Boosted</h1>
             <p style={{ fontSize: 16, lineHeight: 1.7, color: "#8a8fa6", margin: "0 0 34px" }}>Elevate your business with our user-friendly dashboard. Create professional invoices and ensure <strong style={{ color: "#11144d", fontWeight: 700 }}>swift, accurate</strong> payments. Try free for 2 months!</p>
@@ -121,7 +121,7 @@ export default function AccountingSoftwarePage() {
         </section>
 
         {/* ============ CREATE & CUSTOMIZE (timeline) ============ */}
-        <section className="sim_bk_split" style={{ gap: 70, paddingTop: 40, paddingBottom: 90, paddingLeft: 56, paddingRight: 56 }}>
+        <section className="sim_bk_split" style={{ gap: 70, paddingTop: 40, paddingBottom: 90 }}>
           <div className="sim_bk_split_img" style={{ justifyContent: "center" }}>
             <div className="ph-img" style={{ width: 480, height: 520, background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 10px, #eceefa 10px, #eceefa 20px)", borderRadius: 14, display: "flex", alignItems: "center", justifyContent: "center" }}>
               <span style={{ fontFamily: "monospace", fontSize: 13, color: "#9aa0b4" }}>[ invoice preview mockups ]</span>
