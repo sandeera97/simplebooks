@@ -116,7 +116,7 @@ export default function PayrollManagementSystemPage() {
       <Header />
       <main style={{ fontFamily: "'Poppins', sans-serif", color: "#11144d", background: "#ffffff", overflowX: "hidden" }}>
         {/* ============ HERO ============ */}
-        <section className="sim_bk_split" style={{ alignItems: "center", justifyContent: "space-between", gap: 56, padding: "70px 56px 80px", maxWidth: 1250, margin: "0 auto" }}>
+        <section className="sim_bk_split" style={{ alignItems: "center", justifyContent: "space-between", gap: 56, padding: "70px 0 80px", maxWidth: 1250, margin: "0 auto" }}>
           <div className="sim_bk_split_text" style={{ maxWidth: 560 }}>
             <h1 style={{ fontSize: 48, lineHeight: 1.12, fontWeight: 800, margin: "0 0 24px", letterSpacing: "-1px", color: "#11144d" }}>Payroll Made Simple: A Guided Payroll Tool with a Professional Touch</h1>
             <p style={{ fontSize: 16, lineHeight: 1.7, color: "#8a8fa6", margin: "0 0 34px" }}>Sri Lanka&apos;s only payroll tool offering the perfect blend of automation and expert human compliance support. Experience accurate, fast, and stress-free payroll ensuring complete peace of mind.</p>
@@ -144,12 +144,12 @@ export default function PayrollManagementSystemPage() {
         </section>
 
         {/* ============ WHY SIMPLEBOOKS (tabs) ============ */}
-        <section style={{ padding: "40px 56px 90px", background: "#ffffff" }}>
+        <section style={{ padding: "40px 0 90px", background: "#ffffff" }}>
           <WhyTabs />
         </section>
 
         {/* ============ 4-STEP PROCESS ============ */}
-        <section style={{ padding: "40px 56px 90px", background: "#ffffff" }}>
+        <section style={{ padding: "40px 0 90px", background: "#ffffff" }}>
           <h2 style={{ textAlign: "center", fontSize: 34, fontWeight: 800, lineHeight: 1.3, margin: "0 0 64px", color: "#11144d" }}>Don&apos;t worry about payroll management anymore –<br />Let us take on the hassle</h2>
           <div className="sim_bk_steps4" style={{ maxWidth: 1150, margin: "0 auto", position: "relative" }}>
             {steps.map((s) => (
@@ -171,7 +171,7 @@ export default function PayrollManagementSystemPage() {
         </section>
 
         {/* ============ WHY PAYROLL BAND ============ */}
-        <section style={{ background: "#f5f6fd", padding: "70px 56px 78px", textAlign: "center" }}>
+        <section style={{ background: "#f5f6fd", padding: "70px 0 78px", textAlign: "center" }}>
           <h2 style={{ fontSize: 36, fontWeight: 800, margin: "0 0 16px", color: "#11144d" }}>Why Simplebooks Payroll?</h2>
           <p style={{ fontSize: 16, lineHeight: 1.6, color: "#6b7db0", margin: "0 0 52px" }}>With Simplebooks Payroll, you can have peace of mind knowing that your payroll is<br />in capable hands</p>
           <div style={{ maxWidth: 1120, margin: "0 auto 46px", display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap" }}>
@@ -200,8 +200,8 @@ export default function PayrollManagementSystemPage() {
         </section>
 
         {/* ============ PRICING CARD ============ */}
-        <section style={{ padding: "84px 56px 90px", background: "#ffffff" }}>
-          <div className="sim_bk_split" style={{ maxWidth: 1150, margin: "0 auto", background: "#ffffff", border: "1px solid #eef0f6", borderRadius: 22, padding: "54px 56px", boxShadow: "0 16px 44px rgba(17,20,77,0.06)", gap: 60 }}>
+        <section style={{ padding: "84px 0 90px", background: "#ffffff" }}>
+          <div className="sim_bk_split" style={{ maxWidth: 1150, margin: "0 auto", background: "#ffffff", border: "1px solid #eef0f6", borderRadius: 22, padding: "54px 0", boxShadow: "0 16px 44px rgba(17,20,77,0.06)", gap: 60 }}>
             <div style={{ flex: 1 }}>
               <h2 style={{ fontSize: 38, lineHeight: 1.15, fontWeight: 800, margin: "0 0 22px", color: "#11144d" }}>All-inclusive pricing to register your business</h2>
               <div style={{ fontSize: 17, fontWeight: 600, color: "#11144d", marginBottom: 20 }}>1-month trial period</div>
@@ -230,7 +230,7 @@ export default function PayrollManagementSystemPage() {
         </section>
 
         {/* ============ TESTIMONIALS ============ */}
-        <section style={{ background: "#ffffff", padding: "40px 56px 90px" }}>
+        <section style={{ background: "#ffffff", padding: "40px 0 90px" }}>
           <h2 style={{ textAlign: "center", fontSize: 32, fontWeight: 800, lineHeight: 1.3, margin: "0 0 50px", color: "#11144d" }}>Help us, help you by being one of the 5000 businesses<br />in Sri Lanka that has relied on us.</h2>
           <div style={{ maxWidth: 1250, margin: "0 auto" }}>
             <div className="sim_bk_tg">
@@ -254,7 +254,7 @@ export default function PayrollManagementSystemPage() {
         </section>
 
         {/* ============ FAQ ============ */}
-        <section style={{ padding: "80px 56px 90px", background: "#eceefb" }}>
+        <section style={{ padding: "80px 0 90px", background: "#eceefb" }}>
           <h2 style={{ textAlign: "center", fontSize: 40, fontWeight: 800, margin: "0 0 54px", color: "#11144d" }}>Frequently Asked Questions</h2>
           <div style={{ maxWidth: 1180, margin: "0 auto 44px" }}>
             <Faq2Accordion faqs={faqData} />
@@ -265,7 +265,7 @@ export default function PayrollManagementSystemPage() {
         </section>
 
         {/* ============ BLOG READING ============ */}
-        <section style={{ padding: "84px 56px 90px", background: "#ffffff" }}>
+        <section style={{ padding: "84px 0 90px", background: "#ffffff" }}>
           <h2 style={{ textAlign: "center", fontSize: 34, fontWeight: 800, lineHeight: 1.3, margin: "0 auto 56px", color: "#11144d", maxWidth: 900 }}>We&apos;re on a mission to empower businesses in Sri Lanka, so here&apos;s some reading to improve your experience.</h2>
           <div className="sim_bk_grid3" style={{ maxWidth: 1180, margin: "0 auto" }}>
             {blogs.map((b, i) => (
@@ -284,7 +284,7 @@ export default function PayrollManagementSystemPage() {
         </section>
 
         {/* ============ LAUNCHING SOON ============ */}
-        <section style={{ padding: "40px 56px 90px", background: "#ffffff" }}>
+        <section style={{ padding: "40px 0 90px", background: "#ffffff" }}>
           <h2 style={{ textAlign: "center", fontSize: 36, fontWeight: 800, margin: "0 0 60px", color: "#11144d" }}>We&apos;re Launching Soon!</h2>
           <div className="sim_bk_bpt3" style={{ maxWidth: 1120, margin: "0 auto" }}>
 
@@ -343,7 +343,7 @@ export default function PayrollManagementSystemPage() {
         </section>
 
         {/* ============ GET STARTED FORM ============ */}
-        <section id="get-started" style={{ position: "relative", padding: "80px 56px 100px", background: "#f5f6fd", overflow: "hidden" }}>
+        <section id="get-started" style={{ position: "relative", padding: "80px 0 100px", background: "#f5f6fd", overflow: "hidden" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
             <h2 style={{ fontSize: 40, fontWeight: 800, margin: "0 0 10px", color: "#11144d" }}>Get Started</h2>
             <p style={{ fontSize: 14, color: "#f0395b", margin: 0 }}>&quot;*&quot; indicates required fields</p>

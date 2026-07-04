@@ -402,7 +402,7 @@ export default function BusinessRegistrationPage() {
         </section>
 
         {/* GOOGLE RATING BAR */}
-        <section className="sim_bk_dark_bg" style={{ padding: "28px 56px" }}>
+        <section className="sim_bk_dark_bg" style={{ padding: "28px 0" }}>
           <div className="sim_bk_rating_bar">
             <span style={{ fontSize: 26, fontWeight: 800 }}>
               <span style={{ color: "#4285F4" }}>G</span><span style={{ color: "#EA4335" }}>o</span><span style={{ color: "#FBBC05" }}>o</span><span style={{ color: "#4285F4" }}>g</span><span style={{ color: "#34A853" }}>l</span><span style={{ color: "#EA4335" }}>e</span>

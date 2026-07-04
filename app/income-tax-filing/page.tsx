@@ -48,7 +48,7 @@ export default function IncomeTaxFilingPage() {
         {/* ============ HERO ============ */}
         <section
           className="sim_bk_split"
-          style={{ gap: 56, padding: "70px 56px 80px", maxWidth: 1250, margin: "0 auto" }}
+          style={{ gap: 56, padding: "70px 0 80px", maxWidth: 1250, margin: "0 auto" }}
         >
           <div className="sim_bk_split_text" style={{ flex: 1, maxWidth: 560 }}>
             <h1 style={{ fontSize: 48, lineHeight: 1.12, fontWeight: 800, margin: "0 0 24px", letterSpacing: "-1px", color: "#11144d" }}>File Your Own Taxes with Confidence</h1>
@@ -88,7 +88,7 @@ export default function IncomeTaxFilingPage() {
         </section>
 
         {/* ============ WHATSAPP AI ASSISTANT ============ */}
-        <section style={{ background: "#f5f6fd", padding: "70px 56px 80px" }}>
+        <section style={{ background: "#f5f6fd", padding: "70px 0 80px" }}>
           <div style={{ textAlign: "center", maxWidth: 820, margin: "0 auto 48px" }}>
             <h2 style={{ fontSize: 36, fontWeight: 800, margin: "0 0 16px", color: "#11144d" }}>Sri Lanka&apos;s first ever Free AI-powered Whatsapp Tax Assistant</h2>
             <p style={{ fontSize: 16, lineHeight: 1.6, color: "#6b7db0", margin: 0 }}>Chat with our AI, get your computations, file your taxes and much more – all from your WhatsApp</p>
@@ -119,7 +119,7 @@ export default function IncomeTaxFilingPage() {
         </section>
 
         {/* ============ DO YOUR TAXES RIGHT (accordion) ============ */}
-        <section style={{ padding: "84px 56px 90px", background: "#ffffff" }}>
+        <section style={{ padding: "84px 0 90px", background: "#ffffff" }}>
           <h2 style={{ textAlign: "center", fontSize: 38, fontWeight: 800, margin: "0 0 56px", color: "#11144d" }}>Do Your Taxes Right — Without the Stress</h2>
           <div className="sim_bk_split" style={{ maxWidth: 1150, margin: "0 auto", alignItems: "flex-start", gap: 56, padding: 0 }}>
             <div className="sim_bk_split_text" style={{ flex: 1, maxWidth: "none" }}>
@@ -135,7 +135,7 @@ export default function IncomeTaxFilingPage() {
         </section>
 
         {/* ============ 3 SIMPLE STEPS ============ */}
-        <section style={{ padding: "66px 56px 80px", background: "#eef0fb" }}>
+        <section style={{ padding: "66px 0 80px", background: "#eef0fb" }}>
           <div style={{ maxWidth: 1150, margin: "0 auto" }}>
             <div style={{ display: "inline-block", background: "#fbe0d4", color: "#11144d", fontSize: 13, fontWeight: 700, padding: "8px 18px", borderRadius: 999, marginBottom: 18 }}>How It Works</div>
             <h2 style={{ fontSize: 38, fontWeight: 800, margin: "0 0 56px", color: "#11144d" }}>3 Simple Steps to File Your <span style={{ color: "#f15f2c" }}>Tax Return</span></h2>
@@ -178,7 +178,7 @@ export default function IncomeTaxFilingPage() {
         </section>
 
         {/* ============ EXPERT ASSISTANCE ============ */}
-        <section style={{ padding: "80px 56px 90px", background: "#ffffff", textAlign: "center" }}>
+        <section style={{ padding: "80px 0 90px", background: "#ffffff", textAlign: "center" }}>
           <div style={{ width: "100%", maxWidth: 620, height: 300, margin: "0 auto 50px", background: "#eef0fb", borderRadius: 18, display: "flex", alignItems: "center", justifyContent: "center" }}>
             <span style={{ fontFamily: "monospace", fontSize: 13, color: "#9aa0b4" }}>[ expert + client illustration ]</span>
           </div>
@@ -188,8 +188,8 @@ export default function IncomeTaxFilingPage() {
         </section>
 
         {/* ============ PRICING (dark) ============ */}
-        <section style={{ padding: "20px 56px 90px", background: "#ffffff" }}>
-          <div className="sim_bk_pricing_split" style={{ maxWidth: 1250, margin: "0 auto", background: "#12123f", borderRadius: 22, padding: "54px 56px", display: "flex", alignItems: "center", gap: 50 }}>
+        <section style={{ padding: "20px 0 90px", background: "#ffffff" }}>
+          <div className="sim_bk_pricing_split" style={{ maxWidth: 1250, margin: "0 auto", background: "#12123f", borderRadius: 22, padding: "54px 0", display: "flex", alignItems: "center", gap: 50 }}>
             <div style={{ flex: 1.1 }}>
               <h2 style={{ fontSize: 40, fontWeight: 800, margin: "0 0 18px", color: "#ffffff" }}>Simple Pricing, No Surprises</h2>
               <p style={{ fontSize: 17, lineHeight: 1.6, color: "#b9bdd6", margin: "0 0 28px" }}>Instant tax results, Real human review, IRD e-filing, All-inclusive - no hidden fees</p>
@@ -214,7 +214,7 @@ export default function IncomeTaxFilingPage() {
         </section>
 
         {/* ============ FILE RIGHT, SAVE MORE ============ */}
-        <section style={{ padding: "80px 56px 90px", background: "#eef0fb" }}>
+        <section style={{ padding: "80px 0 90px", background: "#eef0fb" }}>
           <h2 style={{ textAlign: "center", fontSize: 36, fontWeight: 800, margin: "0 0 50px", color: "#11144d" }}>File Right, Save More — With Clear Steps &amp; Expert Support</h2>
           <div className="sim_bk_grid4" style={{ maxWidth: 1200, margin: "0 auto 44px", gap: 24 }}>
 
@@ -257,7 +257,7 @@ export default function IncomeTaxFilingPage() {
         </section>
 
         {/* ============ REAL PEOPLE, REAL RESULTS ============ */}
-        <section style={{ padding: "80px 56px 90px", background: "#ffffff" }}>
+        <section style={{ padding: "80px 0 90px", background: "#ffffff" }}>
           <h2 style={{ textAlign: "center", fontSize: 36, fontWeight: 800, margin: "0 0 50px", color: "#11144d" }}>Real People, Real Results</h2>
           <ReviewsScroller reviews={reviews} />
           <div style={{ textAlign: "center", marginTop: 36 }}>
@@ -266,7 +266,7 @@ export default function IncomeTaxFilingPage() {
         </section>
 
         {/* ============ FAQ ============ */}
-        <section id="faq" style={{ padding: "80px 56px 90px", background: "#eef0fb" }}>
+        <section id="faq" style={{ padding: "80px 0 90px", background: "#eef0fb" }}>
           <h2 style={{ textAlign: "center", fontSize: 40, fontWeight: 800, margin: "0 0 54px", color: "#11144d" }}>Frequently Asked Questions</h2>
           <div style={{ marginBottom: 44 }}>
             <Faq2Accordion faqs={faqData} />

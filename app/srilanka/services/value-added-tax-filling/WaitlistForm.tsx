@@ -17,7 +17,7 @@ export default function WaitlistForm() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section id="waitlist" style={{ background: "#14143d", padding: "80px 56px 90px" }}>
+    <section id="waitlist" style={{ background: "#14143d", padding: "80px 0 90px" }}>
       <div style={{ maxWidth: 560, margin: "0 auto", textAlign: "center" }}>
         <h2 style={{ fontSize: 38, fontWeight: 800, margin: "0 0 16px", color: "#ffffff" }}>
           Ready to Simplify Your VAT Filing?

@@ -167,7 +167,7 @@ export default function VatFilingPage() {
           <div style={{ position: "absolute", bottom: -120, left: -80, width: 300, height: 300, borderRadius: "50%", background: "#1b1b52", opacity: 0.4 }} />
           <div
             className="sim_bk_split"
-            style={{ position: "relative", zIndex: 2, gap: 56, padding: "80px 56px 90px" }}
+            style={{ position: "relative", zIndex: 2, gap: 56, padding: "80px 0 90px" }}
           >
             <div className="sim_bk_split_text" style={{ maxWidth: 540 }}>
               <h1 style={{ fontSize: 58, lineHeight: 1.08, fontWeight: 800, margin: "0 0 26px", letterSpacing: "-1.5px", color: "#ffffff" }}>
@@ -233,7 +233,7 @@ export default function VatFilingPage() {
         </section>
 
         {/* ============ OLD WAY VS SIMPLEBOOKS WAY ============ */}
-        <section style={{ padding: "84px 56px 90px", background: "#fbfbfd" }}>
+        <section style={{ padding: "84px 0 90px", background: "#fbfbfd" }}>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
             <h2 style={{ fontSize: 38, fontWeight: 800, margin: "0 0 14px", color: "#11144d" }}>
               The Old Way vs. <span style={{ color: "#f15f2c" }}>The Simplebooks Way</span>
@@ -275,7 +275,7 @@ export default function VatFilingPage() {
         </section>
 
         {/* ============ HOW IT WORKS ============ */}
-        <section style={{ padding: "70px 56px 84px", background: "#eef0f4" }}>
+        <section style={{ padding: "70px 0 84px", background: "#eef0f4" }}>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
             <h2 style={{ fontSize: 34, fontWeight: 800, margin: "0 0 14px", color: "#11144d" }}>How It Works</h2>
             <p style={{ fontSize: 16, color: "#6b7db0", margin: 0 }}>Three steps. That&apos;s all it takes.</p>
@@ -294,7 +294,7 @@ export default function VatFilingPage() {
         </section>
 
         {/* ============ WHY ACCOUNTANTS LOVE IT ============ */}
-        <section style={{ padding: "80px 56px 90px", background: "#fbfbfd" }}>
+        <section style={{ padding: "80px 0 90px", background: "#fbfbfd" }}>
           <h2 style={{ textAlign: "center", fontSize: 36, fontWeight: 800, margin: "0 0 54px", color: "#11144d" }}>
             Why Accountants Love It
           </h2>
@@ -316,7 +316,7 @@ export default function VatFilingPage() {
         </section>
 
         {/* ============ FAQ ============ */}
-        <section style={{ padding: "80px 56px 90px", background: "#eef0f4" }}>
+        <section style={{ padding: "80px 0 90px", background: "#eef0f4" }}>
           <div style={{ textAlign: "center", marginBottom: 50 }}>
             <h2 style={{ fontSize: 40, fontWeight: 800, margin: "0 0 14px", color: "#11144d" }}>Frequently Asked Questions</h2>
             <p style={{ fontSize: 16, color: "#6b7db0", margin: 0 }}>Everything you need to know about Simplebooks VAT filing.</p>

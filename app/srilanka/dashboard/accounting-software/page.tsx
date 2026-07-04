@@ -176,7 +176,7 @@ export default function AccountingSoftwarePage() {
         </section>
 
         {/* ============ WHAT MORE (feature band) ============ */}
-        <section style={{ background: "#f5f6fd", padding: "66px 56px 74px", textAlign: "center" }}>
+        <section style={{ background: "#f5f6fd", padding: "66px 0 74px", textAlign: "center" }}>
           <h2 style={{ fontSize: 36, fontWeight: 800, margin: "0 0 10px", color: "#11144d" }}>What more can you do with Simplebooks Dashboard?</h2>
           <p style={{ fontSize: 16, color: "#6b7db0", margin: "0 0 52px" }}>Your shortcut to smooth payments</p>
           <div className="whatmore-grid" style={{ maxWidth: 1080, margin: "0 auto 46px", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 30 }}>
@@ -209,7 +209,7 @@ export default function AccountingSoftwarePage() {
         </section>
 
         {/* ============ PRICING ============ */}
-        <section style={{ padding: "84px 56px 90px", background: "#ffffff" }}>
+        <section style={{ padding: "84px 0 90px", background: "#ffffff" }}>
           <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
             <h2 style={{ fontSize: 40, fontWeight: 800, margin: "0 0 40px", color: "#11144d" }}>All-inclusive pricing to register your business</h2>
             <PricingToggle />
@@ -217,7 +217,7 @@ export default function AccountingSoftwarePage() {
         </section>
 
         {/* ============ TESTIMONIALS ============ */}
-        <section style={{ background: "#ffffff", padding: "40px 56px 90px" }}>
+        <section style={{ background: "#ffffff", padding: "40px 0 90px" }}>
           <h2 style={{ textAlign: "center", fontSize: 32, fontWeight: 800, lineHeight: 1.3, margin: "0 0 50px", color: "#11144d" }}>Help us, help you by being one of the 5000 businesses<br />in Sri Lanka that has relied on us.</h2>
           <div style={{ maxWidth: 1250, margin: "0 auto" }}>
             <div className="sim_bk_tg">
@@ -241,13 +241,13 @@ export default function AccountingSoftwarePage() {
         </section>
 
         {/* ============ FAQ ============ */}
-        <section style={{ padding: "80px 56px 90px", background: "#eceefb" }}>
+        <section style={{ padding: "80px 0 90px", background: "#eceefb" }}>
           <h2 style={{ textAlign: "center", fontSize: 40, fontWeight: 800, margin: "0 0 54px", color: "#11144d" }}>Frequently Asked Questions</h2>
           <Faq2Accordion faqs={faqs} />
         </section>
 
         {/* ============ BLOG READING ============ */}
-        <section style={{ padding: "84px 56px 90px", background: "#ffffff" }}>
+        <section style={{ padding: "84px 0 90px", background: "#ffffff" }}>
           <h2 style={{ textAlign: "center", fontSize: 34, fontWeight: 800, lineHeight: 1.3, margin: "0 auto 56px", color: "#11144d", maxWidth: 900 }}>We&apos;re on a mission to empower businesses in Sri Lanka, so here&apos;s some reading to improve your experience.</h2>
           <div className="sim_bk_grid3" style={{ maxWidth: 1180, margin: "0 auto" }}>
             {blogs.map((b, i) => (
@@ -266,7 +266,7 @@ export default function AccountingSoftwarePage() {
         </section>
 
         {/* ============ BOOKKEEPING / PAYROLL / TAX ============ */}
-        <section style={{ padding: "40px 56px 90px", background: "#ffffff" }}>
+        <section style={{ padding: "40px 0 90px", background: "#ffffff" }}>
           <h2 style={{ textAlign: "center", fontSize: 36, fontWeight: 800, margin: "0 0 60px", color: "#11144d" }}>What more can you do with Simplebooks Dashboard?</h2>
           <div className="sim_bk_bpt3" style={{ maxWidth: 1120, margin: "0 auto" }}>
 
@@ -325,7 +325,7 @@ export default function AccountingSoftwarePage() {
         </section>
 
         {/* ============ GET STARTED CTA BAND ============ */}
-        <section style={{ padding: "80px 56px", background: "#eceefb", textAlign: "center" }}>
+        <section style={{ padding: "80px 0", background: "#eceefb", textAlign: "center" }}>
           <h2 style={{ fontSize: 36, fontWeight: 800, lineHeight: 1.2, margin: "0 0 22px", color: "#11144d" }}>Get started with Simplebooks Invoicing<br />for free</h2>
           <p style={{ fontSize: 16, color: "#6b7db0", margin: "0 0 40px" }}>Get access to all our features for four months, and see the difference it can make for your business.</p>
           <div className="checks-2col" style={{ maxWidth: 760, margin: "0 auto 42px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "18px 40px", textAlign: "left" }}>
@@ -340,7 +340,7 @@ export default function AccountingSoftwarePage() {
         </section>
 
         {/* ============ GET STARTED FORM ============ */}
-        <section id="get-started" style={{ position: "relative", padding: "80px 56px 100px", background: "#f5f6fd", overflow: "hidden" }}>
+        <section id="get-started" style={{ position: "relative", padding: "80px 0 100px", background: "#f5f6fd", overflow: "hidden" }}>
           <div style={{ position: "absolute", left: 40, bottom: 40, width: 150, height: 220, background: "repeating-linear-gradient(45deg, #eceefb, #eceefb 10px, #e3e6f7 10px, #e3e6f7 20px)", borderRadius: 12, display: "none", alignItems: "center", justifyContent: "center" }} />
           <div style={{ textAlign: "center", marginBottom: 40 }}>
             <h2 style={{ fontSize: 40, fontWeight: 800, margin: "0 0 10px", color: "#11144d" }}>Get Started</h2>

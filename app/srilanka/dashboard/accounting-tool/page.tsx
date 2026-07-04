@@ -118,7 +118,7 @@ export default function AccountingToolPage() {
             alignItems: "center",
             justifyContent: "space-between",
             gap: 56,
-            padding: "70px 56px 80px",
+            padding: "70px 0 80px",
             maxWidth: 1250,
             margin: "0 auto",
           }}
@@ -236,7 +236,7 @@ export default function AccountingToolPage() {
         {/* ============ WE'VE GOT YOU COVERED (tabs) ============ */}
         <section
           className="sec-pad"
-          style={{ padding: "40px 56px 90px", background: "#ffffff" }}
+          style={{ padding: "40px 0 90px", background: "#ffffff" }}
         >
           <h2
             style={{
@@ -255,7 +255,7 @@ export default function AccountingToolPage() {
         {/* ============ HOW IT WORKS ============ */}
         <section
           className="sec-pad"
-          style={{ padding: "40px 56px 90px", background: "#ffffff" }}
+          style={{ padding: "40px 0 90px", background: "#ffffff" }}
         >
           <div style={{ textAlign: "center", marginBottom: 60 }}>
             <h2
@@ -455,7 +455,7 @@ export default function AccountingToolPage() {
           className="sec-pad"
           style={{
             background: "#f5f6fd",
-            padding: "70px 56px 80px",
+            padding: "70px 0 80px",
             textAlign: "center",
           }}
         >
@@ -637,7 +637,7 @@ export default function AccountingToolPage() {
         {/* ============ TESTIMONIALS ============ */}
         <section
           className="sec-pad"
-          style={{ background: "#ffffff", padding: "80px 56px 90px" }}
+          style={{ background: "#ffffff", padding: "80px 0 90px" }}
         >
           <div
             style={{
@@ -740,7 +740,7 @@ export default function AccountingToolPage() {
         <section
           id="faq"
           className="sec-pad"
-          style={{ padding: "80px 56px 90px", background: "#eceefb" }}
+          style={{ padding: "80px 0 90px", background: "#eceefb" }}
         >
           <h2
             style={{
