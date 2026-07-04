@@ -732,3 +732,33 @@ a, button {
     padding-right: 28px !important;
   }
 }
+
+/* ============================================================
+   Services pages — mobile responsive for reference hook classes
+   (desktop layout is set via inline styles; these override on mobile)
+   ============================================================ */
+@media (max-width: 920px) {
+  .sim_bk_form_illus { display: none !important; }
+  .sim_bk_feat_grid,
+  .sim_bk_inc_grid,
+  .sim_bk_details_grid,
+  .sim_bk_why_grid { grid-template-columns: 1fr !important; max-width: 460px !important; margin-left: auto !important; margin-right: auto !important; }
+  .sim_bk_adv_inner,
+  .sim_bk_rem_inner,
+  .sim_bk_tools_inner,
+  .sim_bk_hire_grid { flex-direction: column !important; }
+  .sim_bk_tools_div { width: 100% !important; height: 1px !important; }
+  .sim_bk_sec_lists { flex-direction: column !important; gap: 4px !important; }
+  .sim_bk_banks_row { flex-wrap: wrap !important; gap: 34px 20px !important; }
+  .sim_bk_hire_chev { display: none !important; }
+  .sim_bk_steps5,
+  .sim_bk_steps6 { grid-template-columns: repeat(2, 1fr) !important; row-gap: 44px !important; }
+  .sim_bk_step_line { display: none !important; }
+  .sim_bk_logos_grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 620px) {
+  .sim_bk_steps5,
+  .sim_bk_steps6,
+  .sim_bk_logos_grid { grid-template-columns: 1fr !important; }
+  .bullets { grid-template-columns: 1fr !important; }
+}
