@@ -667,3 +667,57 @@ a, button {
   .sim_bk_h1 { font-size: 34px; }
   .sim_bk_rating_bar { flex-wrap: wrap; gap: 8px; font-size: 16px; }
 }
+
+/* ============================================================
+   Dashboard tool pages (Invoicing, Payroll, Tax, Accounting, VAT)
+   Shared responsive grids + hover/interaction helpers.
+   ============================================================ */
+/* button radius modifiers (used with sim_bk_btn_orange) */
+.sim_bk_rad10 { border-radius: 10px !important; }
+.sim_bk_rad12 { border-radius: 12px !important; }
+
+/* pointer + generic hover lifts */
+.sim_bk_pointer { cursor: pointer; }
+.sim_bk_hover_lift { transition: transform .25s ease, box-shadow .25s ease; }
+.sim_bk_hover_lift:hover { transform: translateY(-6px); box-shadow: 0 16px 42px rgba(17,20,77,0.10); }
+.sim_bk_hover_lift_sm { transition: transform .2s ease; }
+.sim_bk_hover_lift_sm:hover { transform: translateY(-5px); }
+.sim_bk_readmore { transition: color .2s ease; text-decoration: none; }
+.sim_bk_readmore:hover { color: #d94e1f; }
+.sim_bk_arrow_btn { transition: background .2s ease, transform .2s ease; cursor: pointer; }
+.sim_bk_arrow_btn:hover { background: #f15f2c; transform: scale(1.06); }
+.sim_bk_arrow_btn:hover svg { stroke: #fff; }
+
+/* FAQ 2-column card style */
+.sim_bk_faq2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.sim_bk_faq2_card { background: #f6f7fe; border: 1px solid #dfe3f7; border-radius: 14px; padding: 24px 26px; cursor: pointer; transition: box-shadow .2s ease, border-color .2s ease; align-self: start; width: 100%; text-align: left; font-family: var(--font-poppins), sans-serif; }
+.sim_bk_faq2_card:hover { border-color: #b9c0f0; box-shadow: 0 8px 22px rgba(17,20,77,0.06); }
+
+/* generic responsive grids */
+.sim_bk_grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.sim_bk_grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+.sim_bk_steps3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.sim_bk_steps4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.sim_bk_bpt3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px; }
+/* tabs row (left tabs + right panel) */
+.sim_bk_tabs_row { display: flex; align-items: stretch; gap: 30px; }
+
+@media (max-width: 1120px) {
+  .sim_bk_grid4 { gap: 30px 24px; }
+}
+@media (max-width: 920px) {
+  .sim_bk_faq2 { grid-template-columns: 1fr; }
+  .sim_bk_grid4 { grid-template-columns: repeat(2, 1fr); }
+  .sim_bk_steps4 { grid-template-columns: repeat(2, 1fr); }
+  .sim_bk_steps3 { grid-template-columns: 1fr; }
+  .sim_bk_bpt3 { grid-template-columns: 1fr; max-width: 460px; margin-left: auto; margin-right: auto; }
+  .sim_bk_tabs_row { flex-direction: column; }
+  .sim_bk_tabs_row > * { width: 100% !important; }
+}
+@media (max-width: 760px) {
+  .sim_bk_grid3 { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .sim_bk_grid4 { grid-template-columns: 1fr; }
+  .sim_bk_steps4 { grid-template-columns: 1fr; }
+}
