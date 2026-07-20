@@ -762,3 +762,11 @@ a, button {
   .sim_bk_logos_grid { grid-template-columns: 1fr !important; }
   .bullets { grid-template-columns: 1fr !important; }
 }
+
+/* WhatsApp green button (tax pages) */
+.sim_bk_btn_wa {
+  display: inline-flex; align-items: center; gap: 12px; text-decoration: none;
+  color: #ffffff; font-weight: 700; background: #22bd5b; border-radius: 999px;
+  border: none; cursor: pointer; font-family: var(--font-poppins), sans-serif;
+}
+.sim_bk_btn_wa:hover { background: #1ea34e; box-shadow: 0 12px 30px rgba(34,189,91,0.4); transform: translateY(-2px); }
