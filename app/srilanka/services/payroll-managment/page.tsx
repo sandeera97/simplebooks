@@ -76,19 +76,17 @@ export default function PayrollManagementPage() {
           </a>
         </div>
         <div className="sim_bk_split_img">
-          <div
+          <img
+            src="/images/payroll-services/02.png"
+            alt="Illustration of payroll calculation with a calculator and salary documents"
             style={{
               width: 500,
               height: 380,
-              background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 10px, #eceefa 10px, #eceefa 20px)",
               borderRadius: 14,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              objectFit: "contain",
+              display: "block",
             }}
-          >
-            <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ payroll dashboard illustration ]</span>
-          </div>
+          />
         </div>
       </section>
 
@@ -282,20 +280,18 @@ export default function PayrollManagementPage() {
           }}
         >
           <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-            <div
+            <img
+              src="/images/payroll-services/01.png"
+              alt="Illustration of a person tracking payroll deadlines on a calendar with a stopwatch"
               style={{
                 width: "100%",
                 maxWidth: 400,
                 height: 300,
-                background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 10px, #eceefa 10px, #eceefa 20px)",
                 borderRadius: 14,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
+                objectFit: "contain",
+                display: "block",
               }}
-            >
-              <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ reminder illustration ]</span>
-            </div>
+            />
           </div>
           <div style={{ flex: 1 }}>
             <div style={{ fontSize: 14, fontWeight: 700, letterSpacing: 1, color: "#6d3fe0", marginBottom: 14 }}>PERSONALIZED REMINDERS</div>

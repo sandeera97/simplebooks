@@ -94,8 +94,8 @@ export default function IncomeTaxPage() {
           </div>
           <div className="sim_bk_split" style={{ maxWidth: 1150, margin: "0 auto", gap: 60, padding: 0 }}>
             <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-              <div style={{ width: 280, height: 420, background: "#22252f", borderRadius: 32, border: "8px solid #15161d", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ Simplebooks Tax Assistant WhatsApp chat ]</span>
+              <div style={{ width: 280, height: 420, background: "#22252f", borderRadius: 32, border: "8px solid #15161d", overflow: "hidden" }}>
+                <img src="/images/tax-tool/01.png" alt="Simplebooks Tax Assistant WhatsApp chat on iPhone" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
               </div>
             </div>
             <div className="sim_bk_split_text" style={{ flex: 1, maxWidth: 520 }}>
@@ -178,8 +178,8 @@ export default function IncomeTaxPage() {
 
         {/* ============ EXPERT ASSISTANCE ============ */}
         <section style={{ padding: "80px 0 90px", background: "#ffffff", textAlign: "center" }}>
-          <div style={{ width: "100%", maxWidth: 620, height: 300, margin: "0 auto 50px", background: "#eef0fb", borderRadius: 18, display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ File your taxes with expert assistance illustration ]</span>
+          <div style={{ width: "100%", maxWidth: 620, height: 300, margin: "0 auto 50px", background: "#eef0fb", borderRadius: 18, overflow: "hidden" }}>
+            <img src="/images/tax-tool/02.jpg" alt="File your taxes with expert assistance" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", borderRadius: 18 }} />
           </div>
           <h2 style={{ fontSize: 38, fontWeight: 800, margin: "0 0 18px", color: "#11144d" }}>File Your Taxes Confidently with Expert Assistance</h2>
           <p style={{ fontSize: 16, lineHeight: 1.6, color: "#8a8fa6", maxWidth: 640, margin: "0 auto 34px" }}>From answering your questions along the way to a final review before you file, our experts ensure your return is 100% accurate.</p>

@@ -4,21 +4,13 @@ import ChatWidget from "@/components/layout/ChatWidget";
 
 export const metadata = { title: "Our Services | Simplebooks" };
 
-const stripedBox: React.CSSProperties = {
-  width: 460,
+const svcImg: React.CSSProperties = {
+  width: "100%",
+  maxWidth: 460,
   height: 340,
-  background:
-    "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 10px, #eceefa 10px, #eceefa 20px)",
   borderRadius: 14,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-};
-
-const captionStyle: React.CSSProperties = {
-  fontFamily: "monospace",
-  fontSize: 12,
-  color: "#9aa0b4",
+  objectFit: "contain",
+  display: "block",
 };
 
 const h2Style: React.CSSProperties = {
@@ -101,9 +93,11 @@ export default function ServicesPage() {
               <div
                 style={{ flex: 1, display: "flex", justifyContent: "center" }}
               >
-                <div className="ph-img" style={stripedBox}>
-                  <span style={captionStyle}>[ registration illustration ]</span>
-                </div>
+                <img
+                  src="/images/services/01.jpg"
+                  alt="Business registration consultants planning on a board"
+                  style={svcImg}
+                />
               </div>
             </div>
 
@@ -152,9 +146,11 @@ export default function ServicesPage() {
               <div
                 style={{ flex: 1, display: "flex", justifyContent: "center" }}
               >
-                <div className="ph-img" style={stripedBox}>
-                  <span style={captionStyle}>[ bookkeeping illustration ]</span>
-                </div>
+                <img
+                  src="/images/services/02.png"
+                  alt="Bookkeeper working with a calculator"
+                  style={svcImg}
+                />
               </div>
             </div>
 
@@ -224,11 +220,11 @@ export default function ServicesPage() {
               <div
                 style={{ flex: 1, display: "flex", justifyContent: "center" }}
               >
-                <div className="ph-img" style={stripedBox}>
-                  <span style={captionStyle}>
-                    [ legal consulting illustration ]
-                  </span>
-                </div>
+                <img
+                  src="/images/services/03.jpg"
+                  alt="Legal consultant meeting with a business owner"
+                  style={svcImg}
+                />
               </div>
             </div>
 
@@ -278,11 +274,11 @@ export default function ServicesPage() {
               <div
                 style={{ flex: 1, display: "flex", justifyContent: "center" }}
               >
-                <div className="ph-img" style={stripedBox}>
-                  <span style={captionStyle}>
-                    [ contract review illustration ]
-                  </span>
-                </div>
+                <img
+                  src="/images/services/04.jpg"
+                  alt="Reviewing a terms of service contract document"
+                  style={svcImg}
+                />
               </div>
             </div>
 
@@ -327,9 +323,11 @@ export default function ServicesPage() {
               <div
                 style={{ flex: 1, display: "flex", justifyContent: "center" }}
               >
-                <div className="ph-img" style={stripedBox}>
-                  <span style={captionStyle}>[ trademark illustration ]</span>
-                </div>
+                <img
+                  src="/images/services/05.png"
+                  alt="Creative ideas and brand assets worth protecting with a trademark"
+                  style={svcImg}
+                />
               </div>
             </div>
 
@@ -375,9 +373,11 @@ export default function ServicesPage() {
               <div
                 style={{ flex: 1, display: "flex", justifyContent: "center" }}
               >
-                <div className="ph-img" style={stripedBox}>
-                  <span style={captionStyle}>[ shareholder illustration ]</span>
-                </div>
+                <img
+                  src="/images/services/06.png"
+                  alt="Shareholders shaking hands over a signed agreement"
+                  style={svcImg}
+                />
               </div>
             </div>
 
@@ -416,9 +416,11 @@ export default function ServicesPage() {
               <div
                 style={{ flex: 1, display: "flex", justifyContent: "center" }}
               >
-                <div className="ph-img" style={stripedBox}>
-                  <span style={captionStyle}>[ tax consulting illustration ]</span>
-                </div>
+                <img
+                  src="/images/services/07.png"
+                  alt="Tax and financial consultants discussing notes"
+                  style={svcImg}
+                />
               </div>
             </div>
 
@@ -465,9 +467,11 @@ export default function ServicesPage() {
               <div
                 style={{ flex: 1, display: "flex", justifyContent: "center" }}
               >
-                <div className="ph-img" style={stripedBox}>
-                  <span style={captionStyle}>[ payroll illustration ]</span>
-                </div>
+                <img
+                  src="/images/services/08.png"
+                  alt="Team getting paid on time through payroll services"
+                  style={svcImg}
+                />
               </div>
             </div>
           </div>

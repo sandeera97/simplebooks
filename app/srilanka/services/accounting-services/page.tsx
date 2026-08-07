@@ -18,7 +18,11 @@ const steps: { n: string; title: string; lineDisplay: "block" | "none" }[] = [
   { n: "6", title: "Help you with taxation", lineDisplay: "none" },
 ];
 
-const software: string[] = ["Quickbooks", "Zoho Books", "Xero"];
+const software: { name: string; img: string }[] = [
+  { name: "Quickbooks", img: "/images/bookkeeping/04.png" },
+  { name: "Zoho Books", img: "/images/bookkeeping/05.png" },
+  { name: "Xero", img: "/images/bookkeeping/06.png" },
+];
 
 const needList: string[] = [
   "Invoices",
@@ -248,20 +252,11 @@ export default function AccountingServicesPage() {
               }}
             >
               <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-                <div
-                  className="sim_bk_ph_img"
-                  style={{
-                    width: "100%",
-                    height: 320,
-                    background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 10px, #eceefa 10px, #eceefa 20px)",
-                    borderRadius: 14,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ growth illustration ]</span>
-                </div>
+                <img
+                  src="/images/bookkeeping/01.png"
+                  alt="Growing business illustration - team reviewing an upward growth chart"
+                  style={{ width: "100%", height: 320, objectFit: "contain", borderRadius: 14, display: "block" }}
+                />
               </div>
               <div style={{ flex: 1 }}>
                 <div style={{ fontSize: 14, fontWeight: 700, letterSpacing: 1, color: "#6d1fe0", marginBottom: 16 }}>
@@ -367,23 +362,23 @@ export default function AccountingServicesPage() {
             <p style={{ fontSize: 16, color: "#6b7db0", margin: "0 0 50px" }}>Here at Simplebooks, we collaborate with:</p>
             <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "center", gap: 90, flexWrap: "wrap" }}>
               {software.map((s) => (
-                <div key={s} className="sim_bk_hover_lift_sm">
-                  <div
-                    className="sim_bk_ph_img"
+                <div key={s.name} className="sim_bk_hover_lift_sm">
+                  <img
+                    src={s.img}
+                    alt={`${s.name} logo`}
                     style={{
                       width: 150,
                       height: 150,
                       margin: "0 auto 18px",
-                      background: "repeating-linear-gradient(45deg, #e4e7f6, #e4e7f6 10px, #edeffa 10px, #edeffa 20px)",
+                      background: "#ffffff",
+                      padding: 16,
+                      boxSizing: "border-box",
                       borderRadius: "50%",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
+                      objectFit: "contain",
+                      display: "block",
                     }}
-                  >
-                    <span style={{ fontFamily: "monospace", fontSize: 11, color: "#9aa0b4" }}>[ logo ]</span>
-                  </div>
-                  <div style={{ fontSize: 17, fontWeight: 700, color: "#14143d" }}>{s}</div>
+                  />
+                  <div style={{ fontSize: 17, fontWeight: 700, color: "#14143d" }}>{s.name}</div>
                 </div>
               ))}
             </div>

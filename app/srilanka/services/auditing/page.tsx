@@ -17,15 +17,15 @@ const steps: { n: string; title: string; contactDisplay: string }[] = [
   { n: "5", title: "Access your audited accounts", contactDisplay: "none" },
 ];
 
-const partners: string[] = [
-  "iits",
-  "Ceylon Guide",
-  "Sama",
-  "Almond Tree",
-  "Victory Information",
-  "The Grind Coffeehouse",
-  "KuleAir",
-  "OE",
+const partners: { name: string; img?: string }[] = [
+  { name: "iits", img: "/images/auditing/20.png" },
+  { name: "Ceylon Guide" },
+  { name: "Sama", img: "/images/auditing/21.png" },
+  { name: "Almond Tree", img: "/images/auditing/22.png" },
+  { name: "Victory Information" },
+  { name: "The Grind Coffeehouse", img: "/images/auditing/23.png" },
+  { name: "KuleAir", img: "/images/auditing/24.png" },
+  { name: "OE", img: "/images/auditing/25.png" },
 ];
 
 const installments: { months: string; name: string }[] = [
@@ -89,9 +89,11 @@ export default function AuditingPage() {
             <a href="#get-started" className="sim_bk_btn_orange" style={{ display: "inline-block", fontSize: 16, padding: "15px 38px", boxShadow: "0 10px 24px rgba(241,95,44,0.28)" }}>Get Audit Help</a>
           </div>
           <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
-            <div className="ph-img" style={{ width: 500, height: 360, background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 10px, #eceefa 10px, #eceefa 20px)", borderRadius: 14, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ fontFamily: "monospace", fontSize: 13, color: "#9aa0b4" }}>[ auditing illustration ]</span>
-            </div>
+            <img
+              src="/images/auditing/01.png"
+              alt="Auditing illustration - analyst reviewing charts and reports"
+              style={{ width: 500, height: 360, maxWidth: "100%", objectFit: "contain", borderRadius: 14, display: "block" }}
+            />
           </div>
         </section>
 
@@ -189,11 +191,20 @@ export default function AuditingPage() {
         <section style={{ padding: "74px 0 30px", background: "#ffffff", textAlign: "center" }}>
           <h2 style={{ fontSize: 30, fontWeight: 800, lineHeight: 1.3, margin: "0 0 50px", color: "#14143d" }}>One of Sri Lanka&apos;s most trusted auditing<br />service provider</h2>
           <div style={{ maxWidth: 1150, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", gap: "40px 44px" }}>
-            {partners.map((p, i) => (
-              <div key={i} className="ph-img" style={{ width: 120, height: 56, background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 8px, #eceefa 8px, #eceefa 16px)", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontFamily: "monospace", fontSize: 10, color: "#9aa0b4", textAlign: "center", padding: "0 6px" }}>{p}</span>
-              </div>
-            ))}
+            {partners.map((p, i) =>
+              p.img ? (
+                <img
+                  key={i}
+                  src={p.img}
+                  alt={`${p.name} logo`}
+                  style={{ width: 120, height: 56, objectFit: "contain", borderRadius: 8, display: "block" }}
+                />
+              ) : (
+                <div key={i} className="ph-img" style={{ width: 120, height: 56, background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 8px, #eceefa 8px, #eceefa 16px)", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <span style={{ fontFamily: "monospace", fontSize: 10, color: "#9aa0b4", textAlign: "center", padding: "0 6px" }}>{p.name}</span>
+                </div>
+              )
+            )}
           </div>
         </section>
 

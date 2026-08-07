@@ -123,9 +123,7 @@ export default function AccountingSoftwarePage() {
         {/* ============ CREATE & CUSTOMIZE (timeline) ============ */}
         <section className="sim_bk_split" style={{ gap: 70, paddingTop: 40, paddingBottom: 90 }}>
           <div className="sim_bk_split_img" style={{ justifyContent: "center" }}>
-            <div className="ph-img" style={{ width: 480, height: 520, background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 10px, #eceefa 10px, #eceefa 20px)", borderRadius: 14, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ fontFamily: "monospace", fontSize: 13, color: "#9aa0b4" }}>[ invoice preview mockups ]</span>
-            </div>
+            <img src="/images/invoicing/01.png" alt="Professional invoice preview mockups from the Simplebooks invoicing tool" style={{ width: 480, height: 520, objectFit: "contain", borderRadius: 14, display: "block" }} />
           </div>
           <div className="sim_bk_split_text">
 

@@ -182,19 +182,19 @@ const secretaryRight: string[] = [
   "Online banking facilities",
 ];
 
-type Testimonial = { quote: string; name: string; role: string };
+type Testimonial = { quote: string; name: string; role: string; img?: string };
 
 const testimonials: Testimonial[] = [
-  { quote: "Excellent service from the entire simplebooks team. Registering my company was quick and stress-free.", name: "Travel with Wife", role: "@travelwithwife" },
-  { quote: "Company registration is a hectic process in Sri Lanka. Simplebooks is simply a life saver.", name: "Damith Menaka", role: "Director, Animspire" },
-  { quote: "Thanks you simplebooks team for the amazing support on my company registration. Givantha, Moiz and other team members were very helpful. Keep up the quick service. Highly recommended this hassle-free service 👍", name: "NAWRAN", role: "Director, Social Media Academy" },
-  { quote: "They took the time to explain what they were doing every step of the way. This took a lot of stress away. I deeply appreciate their professionality and will always recommend Simplebooks to any in need of the services they provide. I couldn't have wished for anything better.", name: "Ratta", role: "Founder, Studio Ratta" },
-  { quote: "SUPER!!! It's the best place to ever do business with. Dream team!", name: "Chanux Bro", role: "Director, Chanux Bro" },
-  { quote: "They provided exactly what I needed. Very responsive and professional team to work with.", name: "Wickramawardena", role: "Manager" },
-  { quote: "I have worked with Simplebooks team for several years and I'm quite happy about their attention to detail, followups and overall knowledge of the field and pricing. Clearly an industry leader for Company secretarial work in Sri lanka.", name: "Kalana Muthumuni", role: "" },
-  { quote: "Very friendly and Professional. Highly recommended. Just went to collect the documents. Simple as that.", name: "Sandul Perera", role: "Director" },
-  { quote: "It's a superb experience that I got from Simple Books. I got the contract through on line. from there onwards up to now – I came to collect my documents - they gave me very good service. Responding via mails for my queries, updating the process etc ..everything is good.", name: "Sarath Senanayake", role: "Director" },
-  { quote: "I've registered over 10 businesses with Simplebooks over the years and I would recommend them every step of the way.", name: "Bhanuka Harischandra", role: "Founder, Surge Global" },
+  { quote: "Excellent service from the entire simplebooks team. Registering my company was quick and stress-free.", name: "Travel with Wife", role: "@travelwithwife", img: "/images/register-a-company/02.jpg" },
+  { quote: "Company registration is a hectic process in Sri Lanka. Simplebooks is simply a life saver.", name: "Damith Menaka", role: "Director, Animspire", img: "/images/register-a-company/03.jpg" },
+  { quote: "Thanks you simplebooks team for the amazing support on my company registration. Givantha, Moiz and other team members were very helpful. Keep up the quick service. Highly recommended this hassle-free service 👍", name: "NAWRAN", role: "Director, Social Media Academy", img: "/images/register-a-company/04.jpg" },
+  { quote: "They took the time to explain what they were doing every step of the way. This took a lot of stress away. I deeply appreciate their professionality and will always recommend Simplebooks to any in need of the services they provide. I couldn't have wished for anything better.", name: "Ratta", role: "Founder, Studio Ratta", img: "/images/register-a-company/05.jpg" },
+  { quote: "SUPER!!! It's the best place to ever do business with. Dream team!", name: "Chanux Bro", role: "Director, Chanux Bro", img: "/images/register-a-company/06.jpg" },
+  { quote: "They provided exactly what I needed. Very responsive and professional team to work with.", name: "Wickramawardena", role: "Manager", img: "/images/register-a-company/08.jpg" },
+  { quote: "I have worked with Simplebooks team for several years and I'm quite happy about their attention to detail, followups and overall knowledge of the field and pricing. Clearly an industry leader for Company secretarial work in Sri lanka.", name: "Kalana Muthumuni", role: "", img: "/images/register-a-company/16.jpg" },
+  { quote: "Very friendly and Professional. Highly recommended. Just went to collect the documents. Simple as that.", name: "Sandul Perera", role: "Director", img: "/images/register-a-company/17.jpg" },
+  { quote: "It's a superb experience that I got from Simple Books. I got the contract through on line. from there onwards up to now – I came to collect my documents - they gave me very good service. Responding via mails for my queries, updating the process etc ..everything is good.", name: "Sarath Senanayake", role: "Director", img: "/images/register-a-company/18.jpg" },
+  { quote: "I've registered over 10 businesses with Simplebooks over the years and I would recommend them every step of the way.", name: "Bhanuka Harischandra", role: "Founder, Surge Global", img: "/images/register-a-company/19.jpg" },
 ];
 
 type Blog = { overlay: string; title: string; meta: string };
@@ -403,9 +403,7 @@ export default function RegisterACompanyPage() {
           </h2>
           <div className="sim_bk_adv_inner" style={{ margin: "0 auto", border: "1px solid #f2e0d8", borderRadius: 18, padding: "40px 48px", display: "flex", alignItems: "center", gap: 56, boxShadow: "0 10px 34px rgba(17,20,77,0.04)" }}>
             <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-              <div style={{ width: "100%", maxWidth: 420, height: 300, background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 10px, #eceefa 10px, #eceefa 20px)", borderRadius: 14, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ handshake illustration ]</span>
-              </div>
+              <img src="/images/company-secretary/03.svg" alt="Two business people shaking hands" style={{ width: "100%", maxWidth: 420, height: 300, objectFit: "contain", borderRadius: 14, display: "block" }} />
             </div>
             <div style={{ flex: 1 }}>
               <h3 style={{ fontSize: 26, fontWeight: 800, margin: "0 0 16px", color: "#14143d" }}>We have helped over 5,000+ others.</h3>
@@ -605,7 +603,11 @@ export default function RegisterACompanyPage() {
               <div key={i} style={{ background: "#ffffff", borderRadius: 14, padding: "22px 20px", display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: 200, boxShadow: "0 6px 22px rgba(17,20,77,0.05)" }}>
                 <p style={{ fontSize: 12.5, lineHeight: 1.6, color: "#5a607a", margin: "0 0 18px" }}>{t.quote}</p>
                 <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <div style={{ width: 34, height: 34, borderRadius: "50%", background: "#d9dcee", flexShrink: 0 }} />
+                  {t.img ? (
+                    <img src={t.img} alt={t.name} style={{ width: 34, height: 34, borderRadius: "50%", objectFit: "cover", flexShrink: 0, display: "block" }} />
+                  ) : (
+                    <div style={{ width: 34, height: 34, borderRadius: "50%", background: "#d9dcee", flexShrink: 0 }} />
+                  )}
                   <div>
                     <div style={{ fontSize: 12.5, fontWeight: 700, color: "#11144d" }}>{t.name}</div>
                     <div style={{ fontSize: 11, color: "#9aa0b4" }}>{t.role}</div>

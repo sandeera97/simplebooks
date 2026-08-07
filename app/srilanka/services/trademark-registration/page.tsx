@@ -79,15 +79,15 @@ const steps: { n: string; title: string; lineDisplay: "block" | "none" }[] = [
 ];
 
 /* ---------- Logos (8) ---------- */
-const logos: string[] = [
-  "The Ceylon Guide",
-  "Sama",
-  "Almond Tree",
-  "Victory Information",
-  "iits",
-  "The Grind Coffeehouse",
-  "KuleAir",
-  "OE",
+const logos: { label: string; img?: string }[] = [
+  { label: "The Ceylon Guide" },
+  { label: "Sama", img: "/images/trademark/01.png" },
+  { label: "Almond Tree", img: "/images/trademark/02.png" },
+  { label: "Victory Information" },
+  { label: "iits", img: "/images/trademark/03.png" },
+  { label: "The Grind Coffeehouse", img: "/images/trademark/04.png" },
+  { label: "KuleAir", img: "/images/trademark/05.png" },
+  { label: "OE", img: "/images/trademark/06.png" },
 ];
 
 /* ---------- Installment banks (5) ---------- */
@@ -205,9 +205,17 @@ export default function TrademarkRegistrationPage() {
             <div style={{ maxWidth: 1000, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "44px 30px" }}>
               {logos.map((l, i) => (
                 <div key={i} className="sim_bk_hover_lift_sm" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <div style={{ width: 150, height: 80, background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 9px, #eceefa 9px, #eceefa 18px)", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <span style={{ fontFamily: "monospace", fontSize: 10, color: "#9aa0b4", textAlign: "center", padding: "0 6px" }}>{l}</span>
-                  </div>
+                  {l.img ? (
+                    <img
+                      src={l.img}
+                      alt={`${l.label} logo`}
+                      style={{ width: 150, height: 80, borderRadius: 8, objectFit: "contain", display: "block" }}
+                    />
+                  ) : (
+                    <div style={{ width: 150, height: 80, background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 9px, #eceefa 9px, #eceefa 18px)", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <span style={{ fontFamily: "monospace", fontSize: 10, color: "#9aa0b4", textAlign: "center", padding: "0 6px" }}>{l.label}</span>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

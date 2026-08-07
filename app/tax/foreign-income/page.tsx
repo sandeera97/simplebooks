@@ -83,9 +83,7 @@ export default function ForeignIncomePage() {
               </div>
             </div>
             <div className="sim_bk_split_img" style={{ display: "flex", justifyContent: "flex-end" }}>
-              <div style={{ width: "100%", maxWidth: 440, height: 320, background: "#b9c6f5", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ USD tax team illustration ]</span>
-              </div>
+              <img src="/images/tax-foreign/01.png" alt="USD tax team" style={{ width: "100%", maxWidth: 440, height: 320, borderRadius: 12, objectFit: "contain", display: "block" }} />
             </div>
           </div>
         </section>
@@ -168,9 +166,7 @@ export default function ForeignIncomePage() {
               {/* Freelancer card */}
               <div style={{ background: "#ffffff", border: "1px solid #eaedf7", borderRadius: 18, padding: "40px 36px", boxShadow: "0 8px 30px rgba(17,20,77,0.05)" }}>
                 <div style={{ textAlign: "center", marginBottom: 26 }}>
-                  <div style={{ width: 110, height: 110, borderRadius: "50%", background: "#fdeee7", margin: "0 auto 18px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ Freelancer illustration ]</span>
-                  </div>
+                  <img src="/images/tax-foreign/02.png" alt="Freelancer" style={{ width: 110, height: 110, borderRadius: "50%", background: "#fdeee7", margin: "0 auto 18px", objectFit: "contain", display: "block" }} />
                   <h3 style={{ fontSize: 24, fontWeight: 800, margin: "0 0 12px", color: "#11144d" }}>Freelancer / Consultant</h3>
                   <span style={{ display: "inline-block", background: "#f15f2c", color: "#fff", fontSize: 13, fontWeight: 700, padding: "6px 18px", borderRadius: 999 }}>Business Income</span>
                 </div>
@@ -211,9 +207,7 @@ export default function ForeignIncomePage() {
               {/* Employee card */}
               <div style={{ background: "#ffffff", border: "1px solid #eaedf7", borderRadius: 18, padding: "40px 36px", boxShadow: "0 8px 30px rgba(17,20,77,0.05)" }}>
                 <div style={{ textAlign: "center", marginBottom: 26 }}>
-                  <div style={{ width: 110, height: 110, borderRadius: "50%", background: "#eef0f6", margin: "0 auto 18px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ Remote employee illustration ]</span>
-                  </div>
+                  <img src="/images/tax-foreign/03.png" alt="Remote Employee" style={{ width: 110, height: 110, borderRadius: "50%", background: "#eef0f6", margin: "0 auto 18px", objectFit: "contain", display: "block" }} />
                   <h3 style={{ fontSize: 24, fontWeight: 800, margin: "0 0 12px", color: "#11144d" }}>Remote Employee</h3>
                   <span style={{ display: "inline-block", background: "#14143d", color: "#fff", fontSize: 13, fontWeight: 700, padding: "6px 18px", borderRadius: 999 }}>Employment Income</span>
                 </div>
@@ -293,9 +287,7 @@ export default function ForeignIncomePage() {
                 </div>
               </div>
               <div className="sim_bk_split_img" style={{ display: "flex", justifyContent: "center" }}>
-                <div style={{ width: "100%", maxWidth: 420, height: 320, background: "#e7e9f5", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ Tax calculator illustration ]</span>
-                </div>
+                <img src="/images/tax-foreign/04.png" alt="Tax Compliance Team" style={{ width: "100%", maxWidth: 420, height: 320, borderRadius: 12, objectFit: "contain", display: "block" }} />
               </div>
             </div>
           </div>
@@ -356,9 +348,7 @@ export default function ForeignIncomePage() {
             <div className="cost-split" style={{ maxWidth: 1150, margin: "0 auto", display: "flex", gap: 30, alignItems: "stretch" }}>
               <div style={{ flex: 1, border: "1px solid #eef0f6", borderRadius: 16, padding: 30, boxShadow: "0 6px 22px rgba(17,20,77,0.04)" }}>
                 <h3 style={{ textAlign: "center", fontSize: 20, fontWeight: 800, margin: "0 0 20px", color: "#11144d" }}>How Tax Penalties Escalate</h3>
-                <div style={{ width: "100%", height: 300, background: "#fbfbfd", borderRadius: 10, marginBottom: 20, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ Tax penalty escalation chart ]</span>
-                </div>
+                <img src="/images/tax-foreign/05.png" alt="Tax Penalty Escalation Chart" style={{ width: "100%", height: 300, borderRadius: 10, marginBottom: 20, objectFit: "contain", display: "block" }} />
                 <div style={{ background: "#fdeef0", borderRadius: 10, padding: 16, textAlign: "center", fontSize: 15, fontWeight: 700, color: "#e0416b" }}>Rs. 500,000 tax becomes Rs. 1,040,000 in just 12 months</div>
               </div>
               <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 20 }}>

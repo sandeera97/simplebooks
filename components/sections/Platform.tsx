@@ -11,9 +11,11 @@ export default function Platform() {
         </p>
       </div>
       <div className="sim_bk_future_img">
-        <div className="sim_bk_ph_img" style={{ width: 440, height: 320 }}>
-          <span className="sim_bk_ph_label">[ platform illustration ]</span>
-        </div>
+        <img
+          src="/images/home/02.png"
+          alt="Business owner uploading documents on the Simplebooks platform"
+          style={{ width: "100%", maxWidth: 440, height: 320, objectFit: "contain", display: "block" }}
+        />
       </div>
     </section>
   );

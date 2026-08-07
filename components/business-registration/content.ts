@@ -112,17 +112,17 @@ export const secretaryItems = [
 ];
 
 export const partners = [
-  { name: "Dialog", logo: "[ Dialog ]" },
-  { name: "PAYable", logo: "[ PAYable ]" },
-  { name: "LK Domain Registry", logo: "[ LK Domain ]" },
-  { name: "Loku Business", logo: "[ Loku ]" },
-  { name: "Flash Health", logo: "[ Flash Health ]" },
+  { name: "Dialog", img: "/images/business-registration/11.png" },
+  { name: "PAYable", img: "/images/business-registration/14.jpg" },
+  { name: "LK Domain Registry", img: "/images/business-registration/15.png" },
+  { name: "Loku Business", img: "/images/business-registration/16.jpg" },
+  { name: "Flash Health", img: "/images/business-registration/17.png" },
 ];
 
 export const reviews = [
-  { name: "NAWRAN", text: "Thanks to Simplebooks team for the amazing support on my company registration. Very helpful and quick service!" },
-  { name: "Ratta", text: "They explained every step of the way. I deeply appreciate their professionality. Highly recommend!" },
-  { name: "Chanux Bro", text: "SUPERB! I highly recommend this place to everyone. simplebooks makes starting a business so easy! 😍" },
+  { name: "NAWRAN", img: "/images/business-registration/19.jpg", text: "Thanks to Simplebooks team for the amazing support on my company registration. Very helpful and quick service!" },
+  { name: "Ratta", img: "/images/business-registration/20.jpg", text: "They explained every step of the way. I deeply appreciate their professionality. Highly recommend!" },
+  { name: "Chanux Bro", img: "/images/business-registration/21.jpg", text: "SUPERB! I highly recommend this place to everyone. simplebooks makes starting a business so easy! 😍" },
 ];
 
 export const faqs = [

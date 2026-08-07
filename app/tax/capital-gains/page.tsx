@@ -326,19 +326,17 @@ export default function CapitalGainsPage() {
               </div>
             </div>
             <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
-              <div
+              <img
+                src="/images/tax-capital-gains/01.png"
+                alt="Capital Gains Tax Investment"
                 style={{
                   width: "100%",
                   maxWidth: 460,
                   aspectRatio: "5 / 4",
-                  background: "transparent",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
+                  objectFit: "contain",
+                  display: "block",
                 }}
-              >
-                <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ Capital gains growth illustration ]</span>
-              </div>
+              />
             </div>
           </div>
         </section>
@@ -606,19 +604,17 @@ export default function CapitalGainsPage() {
                 </div>
               </div>
               <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-                <div
+                <img
+                  src="/images/tax-capital-gains/02.png"
+                  alt="CGT Calculator"
                   style={{
                     width: "100%",
                     maxWidth: 400,
                     aspectRatio: "1 / 1",
-                    background: "transparent",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
+                    objectFit: "contain",
+                    display: "block",
                   }}
-                >
-                  <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ CGT calculator illustration ]</span>
-                </div>
+                />
               </div>
             </div>
           </div>
@@ -635,19 +631,17 @@ export default function CapitalGainsPage() {
             </div>
             <div className="sim_bk_split" style={{ maxWidth: 1150, margin: "0 auto", display: "flex", alignItems: "center", gap: 60 }}>
               <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-                <div
+                <img
+                  src="/images/tax-capital-gains/03.png"
+                  alt="Property Sale Exemptions"
                   style={{
                     width: "100%",
                     maxWidth: 420,
                     aspectRatio: "5 / 4",
-                    background: "transparent",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
+                    objectFit: "contain",
+                    display: "block",
                   }}
-                >
-                  <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ Property for sale exemption illustration ]</span>
-                </div>
+                />
               </div>
               <div style={{ flex: 1.05, display: "flex", flexDirection: "column", gap: 22 }}>
                 {exemptions.map((e, i) => (

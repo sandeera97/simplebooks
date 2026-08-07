@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 };
 
 const steps = [
-  { n: "1", title: "Document Collection", desc: "We guide you through gathering all required documents and ensure everything is complete and accurate." },
-  { n: "2", title: "Application Processing", desc: "Our experts handle all the paperwork, forms, and submissions to the Inland Revenue Department." },
-  { n: "3", title: "TIN Certificate Delivery", desc: "Receive your official TIN certificate and all necessary documentation for your business operations." },
+  { n: "1", title: "Document Collection", img: "/images/tax-tin/01.png", desc: "We guide you through gathering all required documents and ensure everything is complete and accurate." },
+  { n: "2", title: "Application Processing", img: "/images/tax-tin/02.png", desc: "Our experts handle all the paperwork, forms, and submissions to the Inland Revenue Department." },
+  { n: "3", title: "TIN Certificate Delivery", img: "/images/tax-tin/03.png", desc: "Receive your official TIN certificate and all necessary documentation for your business operations." },
 ];
 
 const challenges = [
@@ -32,8 +32,8 @@ const solutions = [
   "Dedicated support throughout the process",
 ];
 
-const whatYouGet = [
-  { title: "Fast Processing", desc: "Get your TIN certificate in record time with our streamlined process and IRD connections." },
+const whatYouGet: { title: string; desc: string; img?: string }[] = [
+  { title: "Fast Processing", img: "/images/tax-tin/06.png", desc: "Get your TIN certificate in record time with our streamlined process and IRD connections." },
   { title: "100% Accuracy", desc: "Our experts ensure all forms and documents are completed correctly the first time." },
   { title: "Ongoing Support", desc: "Get continued assistance even after your TIN registration is complete." },
 ];
@@ -119,9 +119,7 @@ export default function TinRegistrationPage() {
             <div className="sim_bk_steps3" style={{ maxWidth: 1150, margin: "0 auto 30px", display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 26 }}>
               {steps.map((s, i) => (
                 <div key={i} className="sim_bk_hover_lift" style={{ background: "#ffffff", border: "1px solid #eaedf7", borderRadius: 16, padding: "40px 34px", textAlign: "center", boxShadow: "0 6px 22px rgba(17,20,77,0.04)" }}>
-                  <div style={{ width: "100%", maxWidth: 200, height: 150, margin: "0 auto 24px", background: "#f5f6fd", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ {s.title} illustration ]</span>
-                  </div>
+                  <img src={s.img} alt={`${s.title} illustration`} style={{ width: "100%", maxWidth: 200, height: 150, margin: "0 auto 24px", borderRadius: 12, objectFit: "contain", display: "block" }} />
                   <div style={{ width: 46, height: 46, margin: "0 auto 22px", borderRadius: "50%", background: "#1f5cb5", color: "#fff", fontSize: 18, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center" }}>{s.n}</div>
                   <h3 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 14px", color: "#11144d" }}>{s.title}</h3>
                   <p style={{ fontSize: 14.5, lineHeight: 1.6, color: "#8a8fa6", margin: 0 }}>{s.desc}</p>
@@ -148,9 +146,7 @@ export default function TinRegistrationPage() {
               </div>
             </div>
             <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-              <div style={{ width: "100%", maxWidth: 420, height: 320, background: "#eef0fb", borderRadius: 16, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ Frustrated business owner with paperwork illustration ]</span>
-              </div>
+              <img src="/images/tax-tin/04.png" alt="Frustrated business owner with paperwork" style={{ width: "100%", maxWidth: 420, height: 320, borderRadius: 16, objectFit: "contain", display: "block" }} />
             </div>
           </div>
         </section>
@@ -159,9 +155,7 @@ export default function TinRegistrationPage() {
         <section style={{ background: "#ffffff", padding: "80px 0" }}>
           <div className="sim_bk_split sim_bk_split_rev" style={{ maxWidth: 1150, margin: "0 auto", gap: 60 }}>
             <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-              <div style={{ width: "100%", maxWidth: 420, height: 320, background: "#f5f6fd", borderRadius: 16, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ Expert support illustration ]</span>
-              </div>
+              <img src="/images/tax-tin/05.png" alt="Expert support" style={{ width: "100%", maxWidth: 420, height: 320, borderRadius: 16, objectFit: "contain", display: "block" }} />
             </div>
             <div className="sim_bk_split_text" style={{ flex: 1, maxWidth: 520 }}>
               <h2 style={{ fontSize: 32, fontWeight: 800, margin: "0 0 16px", color: "#11144d" }}>Our TIN Registration Solution</h2>
@@ -189,9 +183,13 @@ export default function TinRegistrationPage() {
             <div className="sim_bk_grid3" style={{ maxWidth: 1150, margin: "0 auto", gap: 26 }}>
               {whatYouGet.map((g, i) => (
                 <div key={i} className="sim_bk_hover_lift" style={{ background: "#ffffff", borderRadius: 16, padding: "40px 34px", textAlign: "center", boxShadow: "0 8px 26px rgba(17,20,77,0.04)" }}>
-                  <div style={{ width: "100%", maxWidth: 180, height: 130, margin: "0 auto 24px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ {g.title} illustration ]</span>
-                  </div>
+                  {g.img ? (
+                    <img src={g.img} alt={`${g.title} illustration`} style={{ width: "100%", maxWidth: 180, height: 130, margin: "0 auto 24px", objectFit: "contain", display: "block" }} />
+                  ) : (
+                    <div style={{ width: "100%", maxWidth: 180, height: 130, margin: "0 auto 24px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ {g.title} illustration ]</span>
+                    </div>
+                  )}
                   <h3 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px", color: "#11144d" }}>{g.title}</h3>
                   <p style={{ fontSize: 14.5, lineHeight: 1.6, color: "#8a8fa6", margin: 0 }}>{g.desc}</p>
                 </div>
