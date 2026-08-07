@@ -56,9 +56,7 @@ export default function SsclPage() {
               </div>
             </div>
             <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
-              <div style={{ width: "100%", maxWidth: 460, aspectRatio: "4 / 3", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ SSCL tax compliance illustration ]</span>
-              </div>
+              <img src="/images/tax-sscl/01.png" alt="Tax compliance" style={{ width: "100%", maxWidth: 460, aspectRatio: "4 / 3", objectFit: "contain", display: "block" }} />
             </div>
           </div>
         </section>
@@ -146,9 +144,7 @@ export default function SsclPage() {
                 </div>
               </div>
               <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-                <div style={{ width: "100%", maxWidth: 420, aspectRatio: "1 / 1", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ Liable turnover calculation illustration ]</span>
-                </div>
+                <img src="/images/tax-sscl/02.png" alt="SSCL Calculator" style={{ width: "100%", maxWidth: 420, aspectRatio: "1 / 1", objectFit: "contain", display: "block" }} />
               </div>
             </div>
           </div>
@@ -191,9 +187,7 @@ export default function SsclPage() {
 
               </div>
               <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-                <div style={{ width: "100%", maxWidth: 420, aspectRatio: "1 / 1", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ SSCL penalty structure illustration ]</span>
-                </div>
+                <img src="/images/tax-sscl/03.png" alt="SSCL Penalties Warning" style={{ width: "100%", maxWidth: 420, aspectRatio: "1 / 1", objectFit: "contain", display: "block" }} />
               </div>
             </div>
           </div>

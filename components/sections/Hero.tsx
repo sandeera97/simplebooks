@@ -21,9 +21,11 @@ export default function Hero() {
       </div>
 
       <div className="sim_bk_hero_img">
-        <div className="sim_bk_ph_img" style={{ width: 460, height: 360 }}>
-          <span className="sim_bk_ph_label">[ hero illustration — team ]</span>
-        </div>
+        <img
+          src="/images/home/01.png"
+          alt="Team of business owners celebrating with a high five"
+          style={{ width: "100%", maxWidth: 460, height: 360, objectFit: "contain", display: "block" }}
+        />
       </div>
     </section>
   );

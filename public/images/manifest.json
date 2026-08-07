@@ -1,0 +1,2806 @@
+{
+  "home": {
+    "liveUrl": "https://simplebooks.com/",
+    "images": [
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/global-home-01-01-1-768x769-1.png",
+        "alt": "",
+        "width": 768,
+        "height": 769,
+        "cls": "wp-image-35",
+        "file": "images/home/01.png"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/platform-area-01.png",
+        "alt": "",
+        "width": 501,
+        "height": 501,
+        "cls": "wp-image-42",
+        "file": "images/home/02.png"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2026/03/Seylan_Transparent-1.png",
+        "alt": "",
+        "width": 800,
+        "height": 450,
+        "cls": "wp-image-441",
+        "file": "images/home/03.png"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2026/03/Sampath-Bank-Plc-Logo-Vector.svg-1.png",
+        "alt": "",
+        "width": 1987,
+        "height": 1118,
+        "cls": "wp-image-440",
+        "file": "images/home/04.png"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/rravel-with-wife.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/home/05.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/damith-menaka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/home/06.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nawran.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/home/07.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/ratta.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/home/08.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/chanux-bro.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/home/09.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/jeevan-mendis.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/home/10.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/dhanushka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/home/11.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/tom.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/home/12.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Aqib.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/home/13.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/osanda.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/home/14.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nizar.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/home/15.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Saajidh.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/home/16.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Demintha.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/home/17.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/malki.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/home/18.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/alana-Muthumuni.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/home/19.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Sandul.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/home/20.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/sarath.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/home/21.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/bhanuka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/home/22.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/simplebooks-logo.png",
+        "alt": "",
+        "width": 968,
+        "height": 185,
+        "cls": "wp-image-31",
+        "file": "images/home/23.png"
+      }
+    ]
+  },
+  "business-registration": {
+    "liveUrl": "(js-rendered)",
+    "images": [
+      {
+        "url": "https://simplebooks.com/business-registration/assets/hero-dashboard-xMKigtfU.png",
+        "alt": "Simplebooks team member showing dashboard",
+        "file": "images/business-registration/01.png"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/why-choose-person-aZQAxEmj.png",
+        "alt": "Simplebooks team member",
+        "file": "images/business-registration/02.png"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/name-check-mockup-new-C8MUq_mH.png",
+        "alt": "Company name check mockup",
+        "file": "images/business-registration/03.png"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/online-dashboard-mockup-C7Vn0RVg.png",
+        "alt": "Dashboard registration progress mockup",
+        "file": "images/business-registration/04.png"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/rework-sign-mockup-mQ8chAbP.png",
+        "alt": "Digital document signing mockup",
+        "file": "images/business-registration/05.png"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/forms-mockup-gBoFQKH-.png",
+        "alt": "Online forms mockup",
+        "file": "images/business-registration/06.png"
+      },
+      {
+        "url": "https://img.youtube.com/vi/I-nmcacevn0/hqdefault.jpg",
+        "alt": "How Registration Works video thumbnail",
+        "file": "images/business-registration/07.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/info-needed-person-B_QqczAR.png",
+        "alt": "Team member ready to help",
+        "file": "images/business-registration/08.png"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/service-included-person-DH5vzisj.png",
+        "alt": "Team member (services included)",
+        "file": "images/business-registration/09.png"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/loku-business-B46vGy0C.png",
+        "alt": "Loku Business Course",
+        "file": "images/business-registration/10.png"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/Dialog-D6YtI7Sx.png",
+        "alt": "Dialog",
+        "file": "images/business-registration/11.png"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/koko-logo-HN_4VpV_.png",
+        "alt": "KOKO logo",
+        "file": "images/business-registration/12.png"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/koko-mascot-ZoZ8T-No.png",
+        "alt": "Pay with KOKO mascot",
+        "file": "images/business-registration/13.png"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/payable-5togPWEy.jpeg",
+        "alt": "PAYable",
+        "file": "images/business-registration/14.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/domain-lk-DTiWoGXf.png",
+        "alt": "LK Domain Registry",
+        "file": "images/business-registration/15.png"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/loku-business-new-BcVaRRuA.jpg",
+        "alt": "Loku Business",
+        "file": "images/business-registration/16.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/Flash%20Health-BDp06Xl0.png",
+        "alt": "Flash Health",
+        "file": "images/business-registration/17.png"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/safe%20food%20solutions-CjTyoJi8.jpeg",
+        "alt": "Safe Food Solutions",
+        "file": "images/business-registration/18.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/nawran-vz8brkrd.jpeg",
+        "alt": "NAWRAN avatar",
+        "file": "images/business-registration/19.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/ratta-x2lqKaYU.jpg",
+        "alt": "Ratta avatar",
+        "file": "images/business-registration/20.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/business-registration/assets/chanux-CMp9cCLe.jpg",
+        "alt": "Chanux Bro avatar",
+        "file": "images/business-registration/21.jpg"
+      }
+    ]
+  },
+  "services": {
+    "liveUrl": "https://simplebooks.com/srilanka/services/",
+    "images": [
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2024/01/registration-01-768x769-1.jpg",
+        "alt": "Auditing ",
+        "width": 768,
+        "height": 769,
+        "cls": "wp-image-462",
+        "file": "images/services/01.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2024/01/bookkeeping-01-768x769-1.png",
+        "alt": "Auditing ",
+        "width": 768,
+        "height": 769,
+        "cls": "wp-image-463",
+        "file": "images/services/02.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2024/01/legal-01-768x769-1.jpg",
+        "alt": "Auditing ",
+        "width": 768,
+        "height": 769,
+        "cls": "wp-image-464",
+        "file": "images/services/03.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2024/01/contract-review-01-768x769-1.jpg",
+        "alt": "Auditing ",
+        "width": 768,
+        "height": 769,
+        "cls": "wp-image-467",
+        "file": "images/services/04.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2024/01/trademark-01-768x769-1.png",
+        "alt": "Auditing ",
+        "width": 768,
+        "height": 769,
+        "cls": "wp-image-468",
+        "file": "images/services/05.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2024/01/shareholder-agreement-02-768x769-1.png",
+        "alt": "Auditing ",
+        "width": 768,
+        "height": 769,
+        "cls": "wp-image-469",
+        "file": "images/services/06.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2024/01/financial-consulting-01-768x769-1.png",
+        "alt": "Auditing ",
+        "width": 768,
+        "height": 769,
+        "cls": "wp-image-470",
+        "file": "images/services/07.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2024/01/payroll-services-01-768x769-1.png",
+        "alt": "Auditing ",
+        "width": 768,
+        "height": 769,
+        "cls": "wp-image-471",
+        "file": "images/services/08.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/06/simplebooks-logo.png",
+        "alt": "",
+        "width": 968,
+        "height": 185,
+        "cls": "wp-image-63",
+        "file": "images/services/09.png"
+      }
+    ]
+  },
+  "auditing": {
+    "liveUrl": "https://simplebooks.com/srilanka/services/auditing/",
+    "images": [
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/08/Data-report-pana-1.png",
+        "alt": "Auditing ",
+        "width": 708,
+        "height": 454,
+        "cls": "wp-image-207",
+        "file": "images/auditing/01.png"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/rravel-with-wife.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/auditing/02.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/damith-menaka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/auditing/03.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nawran.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/auditing/04.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/ratta.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/auditing/05.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/chanux-bro.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/auditing/06.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/jeevan-mendis.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/auditing/07.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/dhanushka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/auditing/08.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/tom.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/auditing/09.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Aqib.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/auditing/10.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/osanda.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/auditing/11.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nizar.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/auditing/12.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Saajidh.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/auditing/13.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Demintha.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/auditing/14.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/malki.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/auditing/15.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/alana-Muthumuni.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/auditing/16.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Sandul.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/auditing/17.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/sarath.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/auditing/18.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/bhanuka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/auditing/19.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/08/iits@2x.png",
+        "alt": "",
+        "width": 242,
+        "height": 242,
+        "cls": "wp-image-235",
+        "file": "images/auditing/20.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/08/53028722_761361530927822_6717671941521539072_n@2x.png",
+        "alt": "",
+        "width": 240,
+        "height": 240,
+        "cls": "wp-image-237",
+        "file": "images/auditing/21.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/08/almond-tree@2x.png",
+        "alt": "",
+        "width": 518,
+        "height": 518,
+        "cls": "wp-image-238",
+        "file": "images/auditing/22.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/08/grind-coffee@2x.png",
+        "alt": "",
+        "width": 288,
+        "height": 288,
+        "cls": "wp-image-240",
+        "file": "images/auditing/23.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/08/kule-air@2x.png",
+        "alt": "",
+        "width": 244,
+        "height": 244,
+        "cls": "wp-image-241",
+        "file": "images/auditing/24.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/08/oe@2x.png",
+        "alt": "",
+        "width": 312,
+        "height": 312,
+        "cls": "wp-image-242",
+        "file": "images/auditing/25.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2026/03/TIN-Registration-in-Sri-Lanka-2026-Everything-You-Need-to-Know.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2025/08/Corporate-Income-Tax-in-Sri-Lanka-A-Simple-Guide.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2025/05/What-You-Should-Know-About-Value-Added-Tax-1024x538-1.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/06/simplebooks-logo.png",
+        "alt": "",
+        "width": 968,
+        "height": 185,
+        "cls": "wp-image-63",
+        "file": "images/auditing/29.png"
+      }
+    ]
+  },
+  "bookkeeping": {
+    "liveUrl": "https://simplebooks.com/srilanka/services/accounting-services/",
+    "images": [
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/08/growing-business-768x512-1.png",
+        "alt": "",
+        "width": 768,
+        "height": 512,
+        "cls": "wp-image-276",
+        "file": "images/bookkeeping/01.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2024/04/experienced-bookkeepers-1-768x512-1.png",
+        "alt": "",
+        "width": 768,
+        "height": 512,
+        "cls": "wp-image-25653",
+        "file": "images/bookkeeping/02.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2024/04/tune-data-2.png",
+        "alt": "",
+        "width": 750,
+        "height": 750,
+        "cls": "wp-image-25654",
+        "file": "images/bookkeeping/03.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/08/quickbooks-01-2039x2048-1.png",
+        "alt": "",
+        "width": 2039,
+        "height": 2048,
+        "cls": "wp-image-284",
+        "file": "images/bookkeeping/04.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/08/zoho-book.png",
+        "alt": "",
+        "width": 2039,
+        "height": 2048,
+        "cls": "wp-image-287",
+        "file": "images/bookkeeping/05.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/08/xero-01-2039x2048-1.png",
+        "alt": "",
+        "width": 2039,
+        "height": 2048,
+        "cls": "wp-image-286",
+        "file": "images/bookkeeping/06.png"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/rravel-with-wife.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/bookkeeping/07.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/damith-menaka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/bookkeeping/08.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nawran.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/bookkeeping/09.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/ratta.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/bookkeeping/10.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/chanux-bro.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/bookkeeping/11.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/jeevan-mendis.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/bookkeeping/12.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/dhanushka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/bookkeeping/13.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/tom.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/bookkeeping/14.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Aqib.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/bookkeeping/15.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/osanda.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/bookkeeping/16.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nizar.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/bookkeeping/17.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Saajidh.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/bookkeeping/18.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Demintha.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/bookkeeping/19.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/malki.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/bookkeeping/20.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/alana-Muthumuni.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/bookkeeping/21.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Sandul.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/bookkeeping/22.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/sarath.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/bookkeeping/23.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/bhanuka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/bookkeeping/24.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2021/04/what-are-source-documents.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2017/08/The-Entrepreneurs-Guide-To-Bookkeeping.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2017/03/Bookkeeping-–-A-Financial-Guide-For-Survival.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/06/simplebooks-logo.png",
+        "alt": "",
+        "width": 968,
+        "height": 185,
+        "cls": "wp-image-63",
+        "file": "images/bookkeeping/28.png"
+      }
+    ]
+  },
+  "register-a-company": {
+    "liveUrl": "https://simplebooks.com/srilanka/services/register-a-company/",
+    "images": [
+      {
+        "url": "https://simplebooks.com/business-registration/assets/Dialog-D6YtI7Sx.png",
+        "alt": "Koko",
+        "width": 33,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/01.png"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/rravel-with-wife.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/02.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/damith-menaka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/03.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nawran.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/04.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/ratta.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/05.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/chanux-bro.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/06.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/jeevan-mendis.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/07.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/dhanushka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/08.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/tom.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/09.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Aqib.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/10.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/osanda.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/11.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nizar.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/12.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Saajidh.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/13.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Demintha.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/14.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/malki.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/15.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/alana-Muthumuni.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/16.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Sandul.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/17.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/sarath.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/18.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/bhanuka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/register-a-company/19.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2026/04/ChatGPT-Image-Apr-20-2026-10_41_07-PM.png ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2020/10/How-to-Register-an-NGO-in-Sri-Lanka.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2020/11/How-to-Register-a-Business-in-Sri-Lanka-2.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/06/simplebooks-logo.png",
+        "alt": "",
+        "width": 968,
+        "height": 185,
+        "cls": "wp-image-63",
+        "file": "images/register-a-company/23.png"
+      }
+    ]
+  },
+  "company-secretary": {
+    "liveUrl": "https://simplebooks.com/srilanka/services/company-secretary/",
+    "images": [
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/09/Call-center-pana-3.svg",
+        "alt": "Talk to the team",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/01.svg"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/09/Accept-terms-pana-3-1.svg",
+        "alt": "Fill out the documentation",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/02.svg"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/09/Business-deal-pana-3.svg",
+        "alt": "Have Simplebooks take over",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/03.svg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/rravel-with-wife.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/04.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/damith-menaka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/05.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nawran.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/06.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/ratta.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/07.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/chanux-bro.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/08.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/jeevan-mendis.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/09.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/dhanushka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/10.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/tom.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/11.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Aqib.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/12.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/osanda.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/13.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nizar.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/14.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Saajidh.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/15.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Demintha.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/16.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/malki.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/17.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/alana-Muthumuni.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/18.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Sandul.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/19.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/sarath.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/20.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/bhanuka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/company-secretary/21.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2021/03/How-to-issue-or-transfer-shares-in-a-Private-Limited-Company.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2020/11/New-Project.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2020/12/why-you-need-a-company-secretary-in-sri-lanka.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/06/simplebooks-logo.png",
+        "alt": "",
+        "width": 968,
+        "height": 185,
+        "cls": "wp-image-63",
+        "file": "images/company-secretary/25.png"
+      }
+    ]
+  },
+  "payroll-services": {
+    "liveUrl": "https://simplebooks.com/srilanka/services/payroll-managment/",
+    "images": [
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/12/payroll-deadline-port.png",
+        "alt": "",
+        "width": 750,
+        "height": 750,
+        "cls": "wp-image-419",
+        "file": "images/payroll-services/01.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/12/payroll-calculate-768x768-1.png",
+        "alt": "",
+        "width": 768,
+        "height": 768,
+        "cls": "wp-image-421",
+        "file": "images/payroll-services/02.png"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/rravel-with-wife.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-services/03.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/damith-menaka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-services/04.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nawran.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-services/05.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/ratta.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-services/06.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/chanux-bro.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-services/07.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/jeevan-mendis.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-services/08.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/dhanushka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-services/09.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/tom.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-services/10.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Aqib.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-services/11.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/osanda.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-services/12.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nizar.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-services/13.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Saajidh.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-services/14.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Demintha.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-services/15.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/malki.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-services/16.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/alana-Muthumuni.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-services/17.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Sandul.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-services/18.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/sarath.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-services/19.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/bhanuka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-services/20.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2016/12/Employee-Provident-Fund-Trust-Fund.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2020/12/A-Z-Guide-on-Salary-Sheets-Salary-Slips-and-Salary-Slip-Formats-in-Sri-Lanka.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2025/03/Your-Go-to-Guide-to-Payroll-Systems-in-Sri-Lanka-1024x538-1.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/06/simplebooks-logo.png",
+        "alt": "",
+        "width": 968,
+        "height": 185,
+        "cls": "wp-image-63",
+        "file": "images/payroll-services/24.png"
+      }
+    ]
+  },
+  "trademark": {
+    "liveUrl": "https://simplebooks.com/srilanka/services/trademark-registration/",
+    "images": [
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/12/53028722_761361530927822_6717671941521539072_n@2x-1.png",
+        "alt": "",
+        "width": 240,
+        "height": 240,
+        "cls": "wp-image-437",
+        "file": "images/trademark/01.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/12/almond-tree@2x-1.png",
+        "alt": "",
+        "width": 518,
+        "height": 518,
+        "cls": "wp-image-438",
+        "file": "images/trademark/02.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/12/iits@2x-1.png",
+        "alt": "",
+        "width": 242,
+        "height": 242,
+        "cls": "wp-image-440",
+        "file": "images/trademark/03.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/12/grind-coffee@2x-1.png",
+        "alt": "",
+        "width": 288,
+        "height": 288,
+        "cls": "wp-image-441",
+        "file": "images/trademark/04.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/12/kule-air@2x-1.png",
+        "alt": "",
+        "width": 244,
+        "height": 244,
+        "cls": "wp-image-442",
+        "file": "images/trademark/05.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/12/oe@2x-1.png",
+        "alt": "",
+        "width": 312,
+        "height": 312,
+        "cls": "wp-image-443",
+        "file": "images/trademark/06.png"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/rravel-with-wife.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/trademark/07.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/damith-menaka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/trademark/08.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nawran.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/trademark/09.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/ratta.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/trademark/10.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/chanux-bro.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/trademark/11.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/jeevan-mendis.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/trademark/12.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/dhanushka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/trademark/13.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/tom.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/trademark/14.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Aqib.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/trademark/15.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/osanda.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/trademark/16.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nizar.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/trademark/17.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Saajidh.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/trademark/18.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Demintha.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/trademark/19.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/malki.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/trademark/20.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/alana-Muthumuni.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/trademark/21.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Sandul.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/trademark/22.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/sarath.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/trademark/23.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/bhanuka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/trademark/24.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2019/03/Constructing-A-Company-Name.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2021/12/payment-gateway-sri-lanka.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2021/11/Quickbooks-Sri-Lanka.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/06/simplebooks-logo.png",
+        "alt": "",
+        "width": 968,
+        "height": 185,
+        "cls": "wp-image-63",
+        "file": "images/trademark/28.png"
+      }
+    ]
+  },
+  "legal": {
+    "liveUrl": "https://simplebooks.com/srilanka/legal/",
+    "images": [
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/rravel-with-wife.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/legal/01.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/damith-menaka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/legal/02.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nawran.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/legal/03.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/ratta.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/legal/04.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/chanux-bro.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/legal/05.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/jeevan-mendis.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/legal/06.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/dhanushka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/legal/07.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/tom.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/legal/08.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Aqib.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/legal/09.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/osanda.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/legal/10.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nizar.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/legal/11.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Saajidh.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/legal/12.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Demintha.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/legal/13.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/malki.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/legal/14.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/alana-Muthumuni.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/legal/15.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Sandul.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/legal/16.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/sarath.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/legal/17.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/bhanuka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/legal/18.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2021/02/Labour-Law-in-Sri-Lanka.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2018/10/Set-Terms-Secure-Investments-Transfer-Partnerships-Via-Partnership-Agreements.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2018/10/When-Does-Power-Of-Attorney-Take-Effect.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/06/simplebooks-logo.png",
+        "alt": "",
+        "width": 968,
+        "height": 185,
+        "cls": "wp-image-63",
+        "file": "images/legal/22.png"
+      }
+    ]
+  },
+  "invoicing": {
+    "liveUrl": "https://simplebooks.com/srilanka/dashboard/accounting-software/",
+    "images": [
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2024/05/1-1.png",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/01.png"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2024/05/black-dot-1.png",
+        "alt": "Indicator Dot",
+        "width": null,
+        "height": null,
+        "cls": "indicator-circle",
+        "file": "images/invoicing/02.png"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/rravel-with-wife.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/03.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/damith-menaka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/04.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nawran.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/05.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/ratta.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/06.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/chanux-bro.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/07.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/jeevan-mendis.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/08.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/dhanushka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/09.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/tom.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/10.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Aqib.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/11.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/osanda.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/12.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nizar.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/13.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Saajidh.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/14.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Demintha.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/15.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/malki.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/16.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/alana-Muthumuni.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/17.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Sandul.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/18.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/sarath.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/19.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/bhanuka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/invoicing/20.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2021/03/How-to-issue-or-transfer-shares-in-a-Private-Limited-Company.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2020/11/New-Project.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2020/12/why-you-need-a-company-secretary-in-sri-lanka.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/06/simplebooks-logo.png",
+        "alt": "",
+        "width": 968,
+        "height": 185,
+        "cls": "wp-image-63",
+        "file": "images/invoicing/24.png"
+      }
+    ]
+  },
+  "payroll-tool": {
+    "liveUrl": "https://simplebooks.com/srilanka/dashboard/payroll-management-system/",
+    "images": [
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/rravel-with-wife.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-tool/01.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/damith-menaka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-tool/02.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nawran.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-tool/03.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/ratta.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-tool/04.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/chanux-bro.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-tool/05.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/jeevan-mendis.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-tool/06.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/dhanushka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-tool/07.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/tom.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-tool/08.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Aqib.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-tool/09.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/osanda.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-tool/10.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nizar.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-tool/11.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Saajidh.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-tool/12.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Demintha.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-tool/13.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/malki.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-tool/14.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/alana-Muthumuni.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-tool/15.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Sandul.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-tool/16.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/sarath.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-tool/17.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/bhanuka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/payroll-tool/18.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2016/12/Employee-Provident-Fund-Trust-Fund.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2020/12/A-Z-Guide-on-Salary-Sheets-Salary-Slips-and-Salary-Slip-Formats-in-Sri-Lanka.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2025/03/Your-Go-to-Guide-to-Payroll-Systems-in-Sri-Lanka-1024x538-1.jpg ",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": null,
+        "failed": true
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/06/simplebooks-logo.png",
+        "alt": "",
+        "width": 968,
+        "height": 185,
+        "cls": "wp-image-63",
+        "file": "images/payroll-tool/22.png"
+      }
+    ]
+  },
+  "accounting-tool": {
+    "liveUrl": "https://simplebooks.com/srilanka/dashboard/accounting-tool/",
+    "images": [
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/rravel-with-wife.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/accounting-tool/01.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/damith-menaka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/accounting-tool/02.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nawran.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/accounting-tool/03.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/ratta.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/accounting-tool/04.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/chanux-bro.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/accounting-tool/05.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/jeevan-mendis.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/accounting-tool/06.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/dhanushka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/accounting-tool/07.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/tom.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/accounting-tool/08.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Aqib.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/accounting-tool/09.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/osanda.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/accounting-tool/10.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nizar.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/accounting-tool/11.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Saajidh.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/accounting-tool/12.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Demintha.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/accounting-tool/13.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/malki.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/accounting-tool/14.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/alana-Muthumuni.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/accounting-tool/15.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Sandul.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/accounting-tool/16.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/sarath.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/accounting-tool/17.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/bhanuka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/accounting-tool/18.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/06/simplebooks-logo.png",
+        "alt": "",
+        "width": 968,
+        "height": 185,
+        "cls": "wp-image-63",
+        "file": "images/accounting-tool/19.png"
+      }
+    ]
+  },
+  "tax-tool": {
+    "liveUrl": "(js-rendered)",
+    "images": [
+      {
+        "url": "https://simplebooks.com/income-tax-filing/assets/iphone-with-tax-agent-D05Ef-D1.png",
+        "alt": "WhatsApp Tax Assistant on iPhone",
+        "file": "images/tax-tool/01.png"
+      },
+      {
+        "url": "https://simplebooks.com/income-tax-filing/assets/Expert%20support-Dqhw10MK.jpg",
+        "alt": "Expert Support",
+        "file": "images/tax-tool/02.jpg"
+      }
+    ]
+  },
+  "vat-tool": {
+    "liveUrl": "https://simplebooks.com/srilanka/services/value-added-tax-filling/",
+    "images": [
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/06/simplebooks-logo.png",
+        "alt": "",
+        "width": 968,
+        "height": 185,
+        "cls": "wp-image-63",
+        "file": "images/vat-tool/01.png"
+      }
+    ]
+  },
+  "tax-ai-bot": {
+    "liveUrl": "https://simplebooks.com/whatsapp-ai-chatbot/",
+    "images": []
+  },
+  "tax-tin": {
+    "liveUrl": "(js-rendered)",
+    "images": [
+      {
+        "url": "https://simplebooks.com/tin-registration/assets/documents-pana-waU16HyQ.png",
+        "alt": "Document Collection",
+        "file": "images/tax-tin/01.png"
+      },
+      {
+        "url": "https://simplebooks.com/tin-registration/assets/forms-pana-Pv5H3B8j.png",
+        "alt": "Application Processing",
+        "file": "images/tax-tin/02.png"
+      },
+      {
+        "url": "https://simplebooks.com/tin-registration/assets/certification-pana-DoDCmtQH.png",
+        "alt": "TIN Certificate Delivery",
+        "file": "images/tax-tin/03.png"
+      },
+      {
+        "url": "https://simplebooks.com/tin-registration/assets/stress-pana-BmdXJjB9.png",
+        "alt": "TIN Registration Stress",
+        "file": "images/tax-tin/04.png"
+      },
+      {
+        "url": "https://simplebooks.com/tin-registration/assets/active-support-pana-DcyX8se_.png",
+        "alt": "Professional TIN Registration Support",
+        "file": "images/tax-tin/05.png"
+      },
+      {
+        "url": "https://simplebooks.com/tin-registration/assets/achievement-pana-CEBVPoZv.png",
+        "alt": "Fast Processing",
+        "file": "images/tax-tin/06.png"
+      }
+    ]
+  },
+  "tax-corporate": {
+    "liveUrl": "(js-rendered)",
+    "images": [
+      {
+        "url": "https://simplebooks.com/corporate-tax/assets/business-merger-B6YkAByX.png",
+        "alt": "TIN Registration Process",
+        "file": "images/tax-corporate/01.png"
+      },
+      {
+        "url": "https://simplebooks.com/corporate-tax/assets/financial-data-73P6blK8.png",
+        "alt": "Document Collection",
+        "file": "images/tax-corporate/02.png"
+      },
+      {
+        "url": "https://simplebooks.com/corporate-tax/assets/office-work-BHEH6Yx7.png",
+        "alt": "Application Processing",
+        "file": "images/tax-corporate/03.png"
+      },
+      {
+        "url": "https://simplebooks.com/corporate-tax/assets/team-work-9LPCjahd.png",
+        "alt": "TIN Certificate Delivery",
+        "file": "images/tax-corporate/04.png"
+      },
+      {
+        "url": "https://simplebooks.com/corporate-tax/assets/finance-CoGhi9EQ.png",
+        "alt": "Financial Solutions",
+        "file": "images/tax-corporate/05.png"
+      },
+      {
+        "url": "https://simplebooks.com/corporate-tax/assets/business-growth-CueFAhu_.png",
+        "alt": "No More Deadline Panic",
+        "file": "images/tax-corporate/06.png"
+      },
+      {
+        "url": "https://simplebooks.com/corporate-tax/assets/achievement-CEBVPoZv.png",
+        "alt": "Complete Peace of Mind",
+        "file": "images/tax-corporate/07.png"
+      }
+    ]
+  },
+  "tax-vat": {
+    "liveUrl": "(js-rendered)",
+    "images": [
+      {
+        "url": "https://simplebooks.com/vat/assets/stress-D17hqAsK.png",
+        "alt": "VAT stress",
+        "file": "images/tax-vat/01.png"
+      },
+      {
+        "url": "https://simplebooks.com/vat/assets/documents-waU16HyQ.png",
+        "alt": "Document Collection",
+        "file": "images/tax-vat/02.png"
+      },
+      {
+        "url": "https://simplebooks.com/vat/assets/schedule-Drd1S1Yl.png",
+        "alt": "Schedule / Application Processing",
+        "file": "images/tax-vat/03.png"
+      },
+      {
+        "url": "https://simplebooks.com/vat/assets/active-support-DcyX8se_.png",
+        "alt": "Active support",
+        "file": "images/tax-vat/04.png"
+      },
+      {
+        "url": "https://simplebooks.com/vat/assets/certification-DoDCmtQH.png",
+        "alt": "Professional VAT Compliance",
+        "file": "images/tax-vat/05.png"
+      },
+      {
+        "url": "https://simplebooks.com/vat/assets/peace-of-mind-DpaUXgF1.png",
+        "alt": "No More Deadline Panic",
+        "file": "images/tax-vat/06.png"
+      },
+      {
+        "url": "https://simplebooks.com/vat/assets/business-growth-DtvZWKls.png",
+        "alt": "Complete Peace of Mind",
+        "file": "images/tax-vat/07.png"
+      }
+    ]
+  },
+  "tax-apit": {
+    "liveUrl": "https://simplebooks.com/srilanka/apit-landing-page/",
+    "images": [
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/rravel-with-wife.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/tax-apit/01.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/damith-menaka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/tax-apit/02.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nawran.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/tax-apit/03.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/ratta.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/tax-apit/04.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/chanux-bro.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/tax-apit/05.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/jeevan-mendis.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/tax-apit/06.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/dhanushka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/tax-apit/07.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/tom.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/tax-apit/08.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Aqib.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/tax-apit/09.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/osanda.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/tax-apit/10.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/nizar.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/tax-apit/11.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Saajidh.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/tax-apit/12.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Demintha.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/tax-apit/13.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/malki.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/tax-apit/14.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/alana-Muthumuni.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/tax-apit/15.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/Sandul.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/tax-apit/16.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/sarath.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/tax-apit/17.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/wp-content/uploads/2023/06/bhanuka.jpg",
+        "alt": "",
+        "width": null,
+        "height": null,
+        "cls": "",
+        "file": "images/tax-apit/18.jpg"
+      },
+      {
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2023/06/simplebooks-logo.png",
+        "alt": "",
+        "width": 968,
+        "height": 185,
+        "cls": "wp-image-63",
+        "file": "images/tax-apit/19.png"
+      }
+    ]
+  },
+  "tax-foreign": {
+    "liveUrl": "(js-rendered)",
+    "images": [
+      {
+        "url": "https://simplebooks.com/foreign-income-tax/assets/money-income-pana-DzsROdTb.png",
+        "alt": "Money income (hero)",
+        "file": "images/tax-foreign/01.png"
+      },
+      {
+        "url": "https://simplebooks.com/foreign-income-tax/assets/freelancer-pana-f9j_gl2D.png",
+        "alt": "Freelancer",
+        "file": "images/tax-foreign/02.png"
+      },
+      {
+        "url": "https://simplebooks.com/foreign-income-tax/assets/remote-work-pana-DwQzwcbK.png",
+        "alt": "Remote Employee",
+        "file": "images/tax-foreign/03.png"
+      },
+      {
+        "url": "https://simplebooks.com/foreign-income-tax/assets/tax-compliance-pana-BEIj9Cyi.png",
+        "alt": "Tax Compliance Team",
+        "file": "images/tax-foreign/04.png"
+      },
+      {
+        "url": "https://simplebooks.com/foreign-income-tax/assets/penalty-escalation-chart-BVZ0MjWY.png",
+        "alt": "Tax Penalty Escalation Chart",
+        "file": "images/tax-foreign/05.png"
+      }
+    ]
+  },
+  "tax-sscl": {
+    "liveUrl": "(js-rendered)",
+    "images": [
+      {
+        "url": "https://simplebooks.com/sscl/assets/tax-compliance-pana-BhqXr23s.png",
+        "alt": "Tax compliance (hero)",
+        "file": "images/tax-sscl/01.png"
+      },
+      {
+        "url": "https://simplebooks.com/sscl/assets/calculator-pana-Bj-65pqW.png",
+        "alt": "SSCL Calculator",
+        "file": "images/tax-sscl/02.png"
+      },
+      {
+        "url": "https://simplebooks.com/sscl/assets/penalty-warning-pana-BYgyrF5i.png",
+        "alt": "SSCL Penalties Warning",
+        "file": "images/tax-sscl/03.png"
+      }
+    ]
+  },
+  "tax-capital-gains": {
+    "liveUrl": "(js-rendered)",
+    "images": [
+      {
+        "url": "https://simplebooks.com/capital-gain-tax/assets/investing-pana-Gtvvu9Us.png",
+        "alt": "Capital Gains Tax Investment (hero)",
+        "file": "images/tax-capital-gains/01.png"
+      },
+      {
+        "url": "https://simplebooks.com/capital-gain-tax/assets/calculator-pana-Bj-65pqW.png",
+        "alt": "CGT Calculator",
+        "file": "images/tax-capital-gains/02.png"
+      },
+      {
+        "url": "https://simplebooks.com/capital-gain-tax/assets/property-sale-pana-oYpjwbtJ.png",
+        "alt": "Property Sale Exemptions",
+        "file": "images/tax-capital-gains/03.png"
+      }
+    ]
+  },
+  "tax-webinar": {
+    "liveUrl": "(js-rendered)",
+    "images": [
+      {
+        "url": "https://simplebooks.com/webinar/assets/webinar-pana-CUDpTrRh.png",
+        "alt": "Webinar (hero)",
+        "file": "images/tax-webinar/01.png"
+      },
+      {
+        "url": "https://simplebooks.com/webinar/assets/online-learning-pana-BPKlvJnR.png",
+        "alt": "Online Learning",
+        "file": "images/tax-webinar/02.png"
+      },
+      {
+        "url": "https://simplebooks.com/webinar/assets/presentation-pana-BYgyrF5i.png",
+        "alt": "Corporate Training",
+        "file": "images/tax-webinar/03.png"
+      },
+      {
+        "url": "https://simplebooks.com/webinar/assets/newsletter-pana-9PTBCaRW.png",
+        "alt": "Free Webinar Notifications",
+        "file": "images/tax-webinar/04.png"
+      }
+    ]
+  }
+}

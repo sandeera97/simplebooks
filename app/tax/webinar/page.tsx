@@ -130,9 +130,7 @@ export default function TaxWebinarPage() {
               </div>
             </div>
             <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
-              <div style={{ width: "100%", maxWidth: 480, aspectRatio: "4 / 3", background: "#eef0fb", borderRadius: 14, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ Expert-led webinar illustration ]</span>
-              </div>
+              <img src="/images/tax-webinar/01.png" alt="Expert-led webinar" style={{ width: "100%", maxWidth: 480, aspectRatio: "4 / 3", borderRadius: 14, objectFit: "contain", display: "block" }} />
             </div>
           </div>
         </section>
@@ -173,9 +171,7 @@ export default function TaxWebinarPage() {
                 </div>
               </div>
               <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
-                <div style={{ width: "100%", maxWidth: 420, aspectRatio: "5 / 4", background: "#eef0fb", borderRadius: 14, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ Facilitator teaching illustration ]</span>
-                </div>
+                <img src="/images/tax-webinar/02.png" alt="Online Learning" style={{ width: "100%", maxWidth: 420, aspectRatio: "5 / 4", borderRadius: 14, objectFit: "contain", display: "block" }} />
               </div>
             </div>
           </div>
@@ -238,9 +234,7 @@ export default function TaxWebinarPage() {
                 <a href="#notify" className="sim_bk_btn_dark sim_bk_rad10" style={{ background: "#12123f", fontSize: 15, padding: "15px 34px" }}>Request Corporate Webinar</a>
               </div>
               <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
-                <div style={{ width: "100%", maxWidth: 420, aspectRatio: "1 / 1", background: "#eef0fb", borderRadius: 14, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ Corporate webinar illustration ]</span>
-                </div>
+                <img src="/images/tax-webinar/03.png" alt="Corporate Training" style={{ width: "100%", maxWidth: 420, aspectRatio: "1 / 1", borderRadius: 14, objectFit: "contain", display: "block" }} />
               </div>
             </div>
           </div>
@@ -284,9 +278,7 @@ export default function TaxWebinarPage() {
             </div>
             <div className="sim_bk_split" style={{ maxWidth: 1000, gap: 60, padding: 0 }}>
               <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-                <div style={{ width: "100%", maxWidth: 380, aspectRatio: "4 / 3", background: "#dfe3fb", borderRadius: 14, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ Free webinar announcement illustration ]</span>
-                </div>
+                <img src="/images/tax-webinar/04.png" alt="Free Webinar Notifications" style={{ width: "100%", maxWidth: 380, aspectRatio: "4 / 3", borderRadius: 14, objectFit: "contain", display: "block" }} />
               </div>
               <div style={{ flex: 1 }}>
                 <h3 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 24px", color: "#14143d" }}>Why Join Our Free Webinars?</h3>

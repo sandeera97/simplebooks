@@ -8,9 +8,9 @@ export const metadata: Metadata = {
 };
 
 const steps = [
-  { n: "1", title: "Get Financially Clear", desc: "We start with your books, audit status, and real-time cash flows. Fix bookkeeping gaps and align audited financials for Y/A 2024/25." },
-  { n: "2", title: "File with Confidence", desc: "We prepare your full tax pack, handle income, WHT, foreign earnings, and optimize every deduction with complete accuracy." },
-  { n: "3", title: "Stay Compliant All Year", desc: "We don't vanish after March. Year-round support with quarterly consults, regulatory alerts, and proactive guidance." },
+  { n: "1", title: "Get Financially Clear", img: "/images/tax-corporate/02.png", desc: "We start with your books, audit status, and real-time cash flows. Fix bookkeeping gaps and align audited financials for Y/A 2024/25." },
+  { n: "2", title: "File with Confidence", img: "/images/tax-corporate/03.png", desc: "We prepare your full tax pack, handle income, WHT, foreign earnings, and optimize every deduction with complete accuracy." },
+  { n: "3", title: "Stay Compliant All Year", img: "/images/tax-corporate/04.png", desc: "We don't vanish after March. Year-round support with quarterly consults, regulatory alerts, and proactive guidance." },
 ];
 
 const deserve = [
@@ -20,10 +20,10 @@ const deserve = [
   { title: "Real People Who Care", desc: "Actual humans who respond, explain, and solve problems. No more being ignored or passed around." },
 ];
 
-const success = [
-  { title: "No More Deadline Panic", desc: "Your VAT returns are prepared months in advance. Deadlines become non-events because everything is already handled." },
+const success: { title: string; desc: string; img?: string }[] = [
+  { title: "No More Deadline Panic", img: "/images/tax-corporate/06.png", desc: "Your VAT returns are prepared months in advance. Deadlines become non-events because everything is already handled." },
   { title: "Reliable Partner, Not Ghost", desc: "Your questions get answered within hours, not weeks. You have a dedicated team that knows your business." },
-  { title: "Complete Peace of Mind", desc: "Sleep well knowing your compliance is bulletproof. Audit-ready documentation and expert backing." },
+  { title: "Complete Peace of Mind", img: "/images/tax-corporate/07.png", desc: "Sleep well knowing your compliance is bulletproof. Audit-ready documentation and expert backing." },
 ];
 
 export default function CorporateTaxPage() {
@@ -48,9 +48,7 @@ export default function CorporateTaxPage() {
               <a href="#contact" className="sim_bk_btn_orange sim_bk_rad10" style={{ display: "inline-block", fontSize: 15, padding: "14px 30px", boxShadow: "0 10px 24px rgba(241,95,44,0.28)" }}>Talk to our Expertise</a>
             </div>
             <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
-              <div style={{ width: "100%", maxWidth: 460, height: 360, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ Corporate tax partnership illustration ]</span>
-              </div>
+              <img src="/images/tax-corporate/01.png" alt="Corporate tax partnership" style={{ width: "100%", maxWidth: 460, height: 360, objectFit: "contain", display: "block" }} />
             </div>
           </div>
         </section>
@@ -66,9 +64,7 @@ export default function CorporateTaxPage() {
             <div className="sim_bk_grid3" style={{ maxWidth: 1150, margin: "0 auto 28px", gap: 26 }}>
               {steps.map((s, i) => (
                 <div key={i} className="sim_bk_hover_lift" style={{ background: "#ffffff", border: "1px solid #eaedf7", borderRadius: 16, padding: "36px 34px", textAlign: "center", boxShadow: "0 6px 22px rgba(17,20,77,0.04)" }}>
-                  <div style={{ width: "100%", maxWidth: 220, height: 160, margin: "0 auto 20px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ {s.title} illustration ]</span>
-                  </div>
+                  <img src={s.img} alt={`${s.title} illustration`} style={{ width: "100%", maxWidth: 220, height: 160, margin: "0 auto 20px", objectFit: "contain", display: "block" }} />
                   <div style={{ width: 46, height: 46, margin: "0 auto 22px", borderRadius: "50%", background: "#1f5cb5", color: "#fff", fontSize: 18, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center" }}>{s.n}</div>
                   <h3 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 14px", color: "#11144d" }}>{s.title}</h3>
                   <p style={{ fontSize: 14.5, lineHeight: 1.6, color: "#8a8fa6", margin: 0 }}>{s.desc}</p>
@@ -145,9 +141,7 @@ export default function CorporateTaxPage() {
               </div>
             </div>
             <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-              <div style={{ width: "100%", maxWidth: 440, height: 320, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ Financial growth dashboard illustration ]</span>
-              </div>
+              <img src="/images/tax-corporate/05.png" alt="Financial growth dashboard" style={{ width: "100%", maxWidth: 440, height: 320, objectFit: "contain", display: "block" }} />
             </div>
           </div>
         </section>
@@ -162,9 +156,13 @@ export default function CorporateTaxPage() {
             <div className="sim_bk_grid3" style={{ maxWidth: 1150, margin: "0 auto", gap: 26 }}>
               {success.map((s, i) => (
                 <div key={i} className="sim_bk_hover_lift" style={{ background: "#ffffff", borderRadius: 16, padding: "40px 34px", textAlign: "center", boxShadow: "0 8px 26px rgba(17,20,77,0.04)" }}>
-                  <div style={{ width: "100%", maxWidth: 160, height: 120, margin: "0 auto 24px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ {s.title} illustration ]</span>
-                  </div>
+                  {s.img ? (
+                    <img src={s.img} alt={`${s.title} illustration`} style={{ width: "100%", maxWidth: 160, height: 120, margin: "0 auto 24px", objectFit: "contain", display: "block" }} />
+                  ) : (
+                    <div style={{ width: "100%", maxWidth: 160, height: 120, margin: "0 auto 24px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ {s.title} illustration ]</span>
+                    </div>
+                  )}
                   <h3 style={{ fontSize: 19, fontWeight: 700, margin: "0 0 12px", color: "#11144d" }}>{s.title}</h3>
                   <p style={{ fontSize: 14.5, lineHeight: 1.6, color: "#8a8fa6", margin: 0 }}>{s.desc}</p>
                 </div>

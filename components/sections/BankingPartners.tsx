@@ -3,12 +3,16 @@ export default function BankingPartners() {
     <section className="sim_bk_banking">
       <h2>Banking partners</h2>
       <div className="sim_bk_banking_row">
-        <div className="sim_bk_ph_img" style={{ width: 150, height: 60 }}>
-          <span className="sim_bk_ph_label" style={{ fontSize: 11 }}>[ Seylan ]</span>
-        </div>
-        <div className="sim_bk_ph_img" style={{ width: 150, height: 60 }}>
-          <span className="sim_bk_ph_label" style={{ fontSize: 11 }}>[ Sampath Bank ]</span>
-        </div>
+        <img
+          src="/images/home/03.png"
+          alt="Seylan Bank logo"
+          style={{ width: 150, height: 60, objectFit: "contain", display: "block" }}
+        />
+        <img
+          src="/images/home/04.png"
+          alt="Sampath Bank logo"
+          style={{ width: 150, height: 60, objectFit: "contain", display: "block" }}
+        />
       </div>
     </section>
   );

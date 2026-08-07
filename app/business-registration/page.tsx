@@ -77,7 +77,7 @@ function FeatIcon({ icon, stroke }: { icon: string; stroke: string }) {
     case "users": return (<svg {...p}><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>);
     case "card": return (<svg {...p}><rect x="1" y="4" width="22" height="16" rx="2" /><line x1="1" y1="10" x2="23" y2="10" /></svg>);
     case "globe": return (<svg {...p}><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>);
-    case "loku": return (<div style={{ width: 34, height: 34, borderRadius: 6, background: "#f5d020", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, fontWeight: 800, color: "#11144d" }}>LOKU</div>);
+    case "loku": return (<img src="/images/business-registration/10.png" alt="Loku Business" style={{ width: 34, height: 34, borderRadius: 6, objectFit: "cover", display: "block" }} />);
     default: return null;
   }
 }
@@ -97,7 +97,7 @@ export default function BusinessRegistrationPage() {
             <a href="#get-started" className="sim_bk_btn_orange" style={{ padding: "15px 38px", fontSize: 16, boxShadow: "0 10px 24px rgba(241,95,44,0.28)" }}>Register Your Business With us</a>
           </div>
           <div className="sim_bk_split_img">
-            <PhImg label="[ person + dashboard ]" style={{ width: 460, height: 460 }} />
+            <img src="/images/business-registration/01.png" alt="Simplebooks team member showing the registration dashboard" style={{ width: 460, height: 460, maxWidth: "100%", objectFit: "contain", display: "block" }} />
           </div>
         </section>
 
@@ -112,7 +112,7 @@ export default function BusinessRegistrationPage() {
               <a href="#get-started" className="sim_bk_btn_orange" style={orangeBtn}>Contact Us</a>
             </div>
             <div className="sim_bk_split_img">
-              <PhImg label="[ person photo ]" light={false} style={{ width: 420, height: 480 }} />
+              <img src="/images/business-registration/02.png" alt="Simplebooks team member" style={{ width: 420, height: 480, maxWidth: "100%", objectFit: "cover", borderRadius: 14, display: "block" }} />
             </div>
           </div>
         </section>
@@ -120,7 +120,7 @@ export default function BusinessRegistrationPage() {
         {/* INSTANT NAME CHECK (white) */}
         <section className="sim_bk_split" style={{ paddingTop: 90, paddingBottom: 90 }}>
           <div className="sim_bk_split_img" style={{ justifyContent: "flex-start" }}>
-            <PhImg label="[ name-check dashboard ]" style={{ width: "100%", height: 380 }} />
+            <img src="/images/business-registration/03.png" alt="Instant company name check mockup" style={{ width: "100%", height: 380, objectFit: "contain", display: "block" }} />
           </div>
           <div className="sim_bk_split_text" style={{ maxWidth: 520 }}>
             <h2 className="sim_bk_h2">Instant Company Name Check</h2>
@@ -145,7 +145,7 @@ export default function BusinessRegistrationPage() {
               <a href="#get-started" className="sim_bk_btn_orange" style={orangeBtn}>Contact Us</a>
             </div>
             <div className="sim_bk_split_img">
-              <PhImg label="[ progress dashboard ]" light={false} style={{ width: 480, height: 360 }} />
+              <img src="/images/business-registration/04.png" alt="Real-time registration progress dashboard" style={{ width: 480, height: 360, maxWidth: "100%", objectFit: "cover", borderRadius: 14, display: "block" }} />
             </div>
           </div>
         </section>
@@ -153,7 +153,7 @@ export default function BusinessRegistrationPage() {
         {/* DIGITAL DOC SIGNING (white) */}
         <section className="sim_bk_split" style={{ paddingTop: 90, paddingBottom: 90 }}>
           <div className="sim_bk_split_img" style={{ justifyContent: "flex-start" }}>
-            <PhImg label="[ documents dashboard ]" style={{ width: "100%", height: 380 }} />
+            <img src="/images/business-registration/05.png" alt="Digital document signing and upload dashboard" style={{ width: "100%", height: 380, objectFit: "contain", display: "block" }} />
           </div>
           <div className="sim_bk_split_text" style={{ maxWidth: 520 }}>
             <h2 className="sim_bk_h2">Digital Document Signing &amp; Upload</h2>
@@ -173,7 +173,7 @@ export default function BusinessRegistrationPage() {
               <a href="#get-started" className="sim_bk_btn_orange" style={orangeBtn}>Register with the Dashboard</a>
             </div>
             <div className="sim_bk_split_img">
-              <PhImg label="[ forms dashboard ]" light={false} style={{ width: 480, height: 380 }} />
+              <img src="/images/business-registration/06.png" alt="Simple guided online forms mockup" style={{ width: 480, height: 380, maxWidth: "100%", objectFit: "cover", borderRadius: 14, display: "block" }} />
             </div>
           </div>
         </section>
@@ -203,9 +203,9 @@ export default function BusinessRegistrationPage() {
                 </div>
               </div>
               <div className="sim_bk_split_img" style={{ justifyContent: "center" }}>
-                <div className="sim_bk_ph_img" style={{ width: 360, height: 460, background: "repeating-linear-gradient(45deg, #1d2a86, #1d2a86 12px, #25309a 12px, #25309a 24px)", borderRadius: 18, flexDirection: "column", justifyContent: "flex-end", paddingBottom: 36 }}>
-                  <span style={{ fontFamily: "monospace", fontSize: 12, color: "#aeb6ff", marginBottom: 14 }}>[ video thumbnail ]</span>
-                  <span style={{ fontSize: 22, fontWeight: 800, color: "#fff" }}>Assured compliance</span>
+                <div className="sim_bk_ph_img" style={{ width: 360, height: 460, background: "#1d2a86", borderRadius: 18, flexDirection: "column", justifyContent: "flex-end", paddingBottom: 36, position: "relative", overflow: "hidden" }}>
+                  <img src="/images/business-registration/07.jpg" alt="How registration works video thumbnail" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  <span style={{ position: "relative", fontSize: 22, fontWeight: 800, color: "#fff" }}>Assured compliance</span>
                 </div>
               </div>
             </div>
@@ -223,7 +223,7 @@ export default function BusinessRegistrationPage() {
               <a href="#get-started" className="sim_bk_btn_orange" style={orangeBtn}>Contact Us</a>
             </div>
             <div className="sim_bk_split_img">
-              <PhImg label="[ person photo ]" light={false} style={{ width: 420, height: 480 }} />
+              <img src="/images/business-registration/08.png" alt="Simplebooks team member ready to help" style={{ width: 420, height: 480, maxWidth: "100%", objectFit: "cover", borderRadius: 14, display: "block" }} />
             </div>
           </div>
         </section>
@@ -231,7 +231,7 @@ export default function BusinessRegistrationPage() {
         {/* WHAT'S INCLUDED (white) */}
         <section className="sim_bk_split" style={{ paddingTop: 90, paddingBottom: 90 }}>
           <div className="sim_bk_split_img" style={{ justifyContent: "flex-start" }}>
-            <PhImg label="[ person photo ]" style={{ width: "100%", height: 480 }} />
+            <img src="/images/business-registration/09.png" alt="Simplebooks team member explaining what's included" style={{ width: "100%", height: 480, objectFit: "contain", display: "block" }} />
           </div>
           <div className="sim_bk_split_text" style={{ maxWidth: 540 }}>
             <h2 className="sim_bk_h2">What&apos;s Included in the Service</h2>
@@ -388,9 +388,7 @@ export default function BusinessRegistrationPage() {
         <section className="sim_bk_split" style={{ gap: 60 }}>
           <div className="sim_bk_split_img" style={{ justifyContent: "center" }}>
             <div className="sim_bk_koko_card">
-              <div style={{ width: 180, height: 180, margin: "0 auto 28px", background: "repeating-linear-gradient(45deg, #aac3ec, #aac3ec 10px, #b6ccef 10px, #b6ccef 20px)", borderRadius: 14, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontFamily: "monospace", fontSize: 12, color: "#5c6f96" }}>[ KOKO illustration ]</span>
-              </div>
+              <img src="/images/business-registration/13.png" alt="KOKO mascot" style={{ width: 180, height: 180, margin: "0 auto 28px", objectFit: "contain", display: "block" }} />
               <div style={{ fontSize: 22, fontWeight: 800, color: "#11144d" }}>Pay with KOKO</div>
             </div>
           </div>
@@ -421,7 +419,7 @@ export default function BusinessRegistrationPage() {
             {partners.map((p, i) => (
               <div key={i} style={{ width: 150 }}>
                 <div className="sim_bk_partner_card">
-                  <span style={{ fontFamily: "monospace", fontSize: 10, color: "#9aa0b4", textAlign: "center", padding: "0 8px" }}>{p.logo}</span>
+                  <img src={p.img} alt={p.name} style={{ maxWidth: "78%", maxHeight: "70%", objectFit: "contain", display: "block" }} />
                 </div>
                 <div style={{ fontSize: 15, color: "#5a607a" }}>{p.name}</div>
               </div>
@@ -437,7 +435,7 @@ export default function BusinessRegistrationPage() {
             {reviews.map((r, i) => (
               <div key={i} className="sim_bk_review_card">
                 <div className="sim_bk_review_avatar">
-                  <span style={{ fontFamily: "monospace", fontSize: 9, color: "#9aa0b4" }}>photo</span>
+                  <img src={r.img} alt={r.name} style={{ width: "100%", height: "100%", borderRadius: "50%", objectFit: "cover", display: "block" }} />
                 </div>
                 <div style={{ fontSize: 19, fontWeight: 800, color: "#11144d", marginBottom: 14 }}>{r.name}</div>
                 <p style={{ fontSize: 15, lineHeight: 1.6, color: "#6b7290", margin: 0 }}>{r.text}</p>

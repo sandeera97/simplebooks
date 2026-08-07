@@ -12,16 +12,19 @@ const steps = [
   {
     n: "1",
     title: "Expert Registration & Setup",
+    img: "/images/tax-vat/02.png",
     desc: "Complete VAT registration within 2 working days (Premier) or 2 weeks (Basic). We handle everything from document preparation to RAMIS portal setup.",
   },
   {
     n: "2",
     title: "Ongoing Return Preparation",
+    img: "/images/tax-vat/03.png",
     desc: "Professional VAT schedule preparation and electronic submission through RAMIS portal. Starting at LKR 25,000 per quarter with payment coordination.",
   },
   {
     n: "3",
     title: "Continuous Compliance Support",
+    img: "/images/tax-vat/04.png",
     desc: "Regular updates on VAT regulation changes, deadline reminders, and professional guidance for complex scenarios. Your long-term compliance partner.",
   },
 ];
@@ -45,9 +48,10 @@ const deserve = [
   },
 ];
 
-const success = [
+const success: { title: string; desc: string; img?: string }[] = [
   {
     title: "No More Deadline Panic",
+    img: "/images/tax-vat/06.png",
     desc: "Your VAT returns are prepared months in advance. Deadlines become non-events because everything is already handled.",
   },
   {
@@ -56,6 +60,7 @@ const success = [
   },
   {
     title: "Complete Peace of Mind",
+    img: "/images/tax-vat/07.png",
     desc: "Sleep well knowing your compliance is bulletproof. Audit-ready documentation and expert backing.",
   },
 ];
@@ -196,9 +201,7 @@ export default function VatCompliancePage() {
               </div>
             </div>
             <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
-              <div style={{ width: "100%", maxWidth: 440, height: 320, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ VAT compliance illustration ]</span>
-              </div>
+              <img src="/images/tax-vat/01.png" alt="VAT compliance stress" style={{ width: "100%", maxWidth: 440, height: 320, objectFit: "contain", display: "block" }} />
             </div>
           </div>
         </section>
@@ -214,9 +217,7 @@ export default function VatCompliancePage() {
             <div className="steps3" style={{ maxWidth: 1150, margin: "0 auto 28px", display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 26 }}>
               {steps.map((s) => (
                 <div key={s.n} className="step-card" style={{ background: "#ffffff", border: "1px solid #eaedf7", borderRadius: 16, padding: "36px 34px", textAlign: "center", boxShadow: "0 6px 22px rgba(17,20,77,0.04)" }}>
-                  <div style={{ width: "100%", maxWidth: 220, height: 150, margin: "0 auto 20px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ {s.title} illustration ]</span>
-                  </div>
+                  <img src={s.img} alt={`${s.title} illustration`} style={{ width: "100%", maxWidth: 220, height: 150, margin: "0 auto 20px", objectFit: "contain", display: "block" }} />
                   <div style={{ width: 46, height: 46, margin: "0 auto 22px", borderRadius: "50%", background: "#1f5cb5", color: "#fff", fontSize: 18, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center" }}>{s.n}</div>
                   <h3 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 14px", color: "#11144d" }}>{s.title}</h3>
                   <p style={{ fontSize: 14.5, lineHeight: 1.6, color: "#8a8fa6", margin: 0 }}>{s.desc}</p>
@@ -274,9 +275,7 @@ export default function VatCompliancePage() {
                 </div>
               </div>
               <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-                <div style={{ width: "100%", maxWidth: 440, height: 320, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ VAT certification illustration ]</span>
-                </div>
+                <img src="/images/tax-vat/05.png" alt="VAT certification" style={{ width: "100%", maxWidth: 440, height: 320, objectFit: "contain", display: "block" }} />
               </div>
             </div>
           </div>
@@ -292,9 +291,13 @@ export default function VatCompliancePage() {
             <div className="succ-grid" style={{ maxWidth: 1150, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 26 }}>
               {success.map((s) => (
                 <div key={s.title} className="succ-card" style={{ background: "#ffffff", borderRadius: 16, padding: "40px 34px", textAlign: "center", boxShadow: "0 8px 26px rgba(17,20,77,0.04)" }}>
-                  <div style={{ width: "100%", maxWidth: 160, height: 120, margin: "0 auto 24px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ {s.title} illustration ]</span>
-                  </div>
+                  {s.img ? (
+                    <img src={s.img} alt={`${s.title} illustration`} style={{ width: "100%", maxWidth: 160, height: 120, margin: "0 auto 24px", objectFit: "contain", display: "block" }} />
+                  ) : (
+                    <div style={{ width: "100%", maxWidth: 160, height: 120, margin: "0 auto 24px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ {s.title} illustration ]</span>
+                    </div>
+                  )}
                   <h3 style={{ fontSize: 19, fontWeight: 700, margin: "0 0 12px", color: "#11144d" }}>{s.title}</h3>
                   <p style={{ fontSize: 14.5, lineHeight: 1.6, color: "#8a8fa6", margin: 0 }}>{s.desc}</p>
                 </div>
