@@ -87,12 +87,12 @@ const featCards: { icon: React.ReactNode; title: string; desc: string }[] = [
 ];
 
 /* ---------- What can we do for you (5 steps) ---------- */
-const steps: { n: string; title: string; desc: string; lineDisplay: "block" | "none" }[] = [
-  { n: "1", title: "We'll register your company for you", desc: "If you're looking to register your company hassle free, you've come to the right place. We'll take over from here on", lineDisplay: "block" },
-  { n: "2", title: "Take care of all your company changes", desc: "Need to make some changes to your company details post registration? Don't worry, we'll take care of that too", lineDisplay: "block" },
-  { n: "3", title: "File your Annual Returns", desc: "Keep your focus on running your business and let Simplebooks take care of preparing and filing your Annual Returns", lineDisplay: "block" },
-  { n: "4", title: "Help you open bank accounts", desc: "Forgo the fuss of having to deal with the banks yourself. We'll step in and help you open all of your bank accounts", lineDisplay: "block" },
-  { n: "5", title: "We'll even liaison with the ROC for you", desc: "We'll communicate all your company changes and developments to the ROC so you don't have to worry about it", lineDisplay: "none" },
+const steps: { n: string; title: string; desc: string; lineDisplay: "block" | "none"; img: string; alt: string }[] = [
+  { n: "1", title: "We'll register your company for you", desc: "If you're looking to register your company hassle free, you've come to the right place. We'll take over from here on", lineDisplay: "block", img: "/images/company-secretary/svg-02-Attached-files-pana-1-2.svg", alt: "Attaching company registration documents to an email" },
+  { n: "2", title: "Take care of all your company changes", desc: "Need to make some changes to your company details post registration? Don't worry, we'll take care of that too", lineDisplay: "block", img: "/images/company-secretary/svg-03-Meeting-pana-1.svg", alt: "Team meeting to discuss company changes" },
+  { n: "3", title: "File your Annual Returns", desc: "Keep your focus on running your business and let Simplebooks take care of preparing and filing your Annual Returns", lineDisplay: "block", img: "/images/company-secretary/svg-04-Development-pana-2.svg", alt: "Preparing and filing annual returns at a desk" },
+  { n: "4", title: "Help you open bank accounts", desc: "Forgo the fuss of having to deal with the banks yourself. We'll step in and help you open all of your bank accounts", lineDisplay: "block", img: "/images/company-secretary/svg-05-Accept-terms-pana-1-1.svg", alt: "Reviewing and signing bank account paperwork" },
+  { n: "5", title: "We'll even liaison with the ROC for you", desc: "We'll communicate all your company changes and developments to the ROC so you don't have to worry about it", lineDisplay: "none", img: "/images/company-secretary/svg-06-Personal-files-pana.svg", alt: "Organising company files to liaise with the ROC" },
 ];
 
 /* ---------- Pricing installment banks (5) ---------- */
@@ -159,9 +159,11 @@ export default function CompanySecretaryPage() {
             </div>
           </div>
           <div className="sim_bk_split_img">
-            <div style={{ width: 500, height: 400, background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 10px, #eceefa 10px, #eceefa 20px)", borderRadius: 14, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ company secretary illustration ]</span>
-            </div>
+            <img
+              src="/images/company-secretary/svg-01-Documents-pana-3.svg"
+              alt="Company secretary organising company documents and files"
+              style={{ width: 500, height: 400, borderRadius: 14, objectFit: "contain", display: "block" }}
+            />
           </div>
         </section>
 
@@ -196,9 +198,11 @@ export default function CompanySecretaryPage() {
                   </div>
                   <h3 style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.35, margin: "0 0 16px", color: "#3a4a78", minHeight: 44 }}>{s.title}</h3>
                   <p style={{ fontSize: 14, lineHeight: 1.6, color: "#8a8fa6", margin: "0 auto 22px", maxWidth: 200 }}>{s.desc}</p>
-                  <div style={{ width: 130, height: 120, margin: "0 auto", background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 9px, #eceefa 9px, #eceefa 18px)", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <span style={{ fontFamily: "monospace", fontSize: 10, color: "#9aa0b4" }}>[ art ]</span>
-                  </div>
+                  <img
+                    src={s.img}
+                    alt={s.alt}
+                    style={{ width: 130, height: 120, margin: "0 auto", borderRadius: 12, objectFit: "contain", display: "block" }}
+                  />
                 </div>
               ))}
             </div>

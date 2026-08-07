@@ -9,12 +9,42 @@ export const metadata: Metadata = {
 };
 
 /* ---------- Data (from reference renderVals) ---------- */
-const steps: { n: string; title: string; contactDisplay: string }[] = [
-  { n: "1", title: "Contact the Simplebooks team", contactDisplay: "inline-block" },
-  { n: "2", title: "Documentation hand-over", contactDisplay: "none" },
-  { n: "3", title: "Present your source documents to auditors", contactDisplay: "none" },
-  { n: "4", title: "Auditing process begins", contactDisplay: "none" },
-  { n: "5", title: "Access your audited accounts", contactDisplay: "none" },
+const steps: { n: string; title: string; contactDisplay: string; art: string; alt: string }[] = [
+  {
+    n: "1",
+    title: "Contact the Simplebooks team",
+    contactDisplay: "inline-block",
+    art: "/images/auditing/svg-01-Call-center-pana-1-1.svg",
+    alt: "Illustration of a support agent with a headset taking a customer call",
+  },
+  {
+    n: "2",
+    title: "Documentation hand-over",
+    contactDisplay: "none",
+    art: "/images/auditing/svg-02-Accept-terms-pana-1.svg",
+    alt: "Illustration of a person accepting terms and handing over signed documents",
+  },
+  {
+    n: "3",
+    title: "Present your source documents to auditors",
+    contactDisplay: "none",
+    art: "/images/auditing/svg-03-Projections-pana-1.svg",
+    alt: "Illustration of financial projections and charts being presented",
+  },
+  {
+    n: "4",
+    title: "Auditing process begins",
+    contactDisplay: "none",
+    art: "/images/auditing/svg-04-Development-pana-1.svg",
+    alt: "Illustration of an auditor working through the books at a desk",
+  },
+  {
+    n: "5",
+    title: "Access your audited accounts",
+    contactDisplay: "none",
+    art: "/images/auditing/svg-05-Business-deal-pana-1.svg",
+    alt: "Illustration of two people shaking hands over completed audited accounts",
+  },
 ];
 
 const partners: { name: string; img?: string }[] = [
@@ -108,9 +138,11 @@ export default function AuditingPage() {
               <div key={s.n} style={{ textAlign: "center" }}>
                 <div style={{ width: 48, height: 48, margin: "0 auto 22px", borderRadius: "50%", background: "#17c39a", color: "#fff", fontSize: 18, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center" }}>{s.n}</div>
                 <h3 style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.4, margin: "0 0 22px", color: "#3a4a78", minHeight: 44 }}>{s.title}</h3>
-                <div className="ph-img" style={{ width: 130, height: 110, margin: "0 auto", background: "repeating-linear-gradient(45deg, #e4e7f6, #e4e7f6 9px, #edeffa 9px, #edeffa 18px)", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <span style={{ fontFamily: "monospace", fontSize: 10, color: "#9aa0b4" }}>[ art ]</span>
-                </div>
+                <img
+                  src={s.art}
+                  alt={s.alt}
+                  style={{ width: 130, height: 110, margin: "0 auto", maxWidth: "100%", borderRadius: 12, objectFit: "contain", display: "block" }}
+                />
                 <a href="#get-started" className="sim_bk_readmore" style={{ display: s.contactDisplay, marginTop: 16, fontSize: 15, fontWeight: 600, color: "#14143d" }}>Contact Now</a>
               </div>
             ))}

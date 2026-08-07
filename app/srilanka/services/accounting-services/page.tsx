@@ -9,13 +9,49 @@ export const metadata: Metadata = {
 };
 
 /* ---------- renderVals() data (ported from reference) ---------- */
-const steps: { n: string; title: string; lineDisplay: "block" | "none" }[] = [
-  { n: "1", title: "Tell us about your business", lineDisplay: "block" },
-  { n: "2", title: "Migrate your documents", lineDisplay: "block" },
-  { n: "3", title: "We'll process your paperwork", lineDisplay: "block" },
-  { n: "4", title: "Deliver tax ready financials", lineDisplay: "block" },
-  { n: "5", title: "Bookkeeping meetings", lineDisplay: "block" },
-  { n: "6", title: "Help you with taxation", lineDisplay: "none" },
+const steps: { n: string; title: string; lineDisplay: "block" | "none"; art: string; alt: string }[] = [
+  {
+    n: "1",
+    title: "Tell us about your business",
+    lineDisplay: "block",
+    art: "/images/bookkeeping/svg-02-Call-center-pana.svg",
+    alt: "Illustration of a support agent with a headset taking a customer call",
+  },
+  {
+    n: "2",
+    title: "Migrate your documents",
+    lineDisplay: "block",
+    art: "/images/bookkeeping/svg-03-Windows-pana-2.svg",
+    alt: "Illustration of documents being moved between windows on a screen",
+  },
+  {
+    n: "3",
+    title: "We'll process your paperwork",
+    lineDisplay: "block",
+    art: "/images/bookkeeping/svg-04-Development-pana-1-1.svg",
+    alt: "Illustration of a bookkeeper processing paperwork at a computer",
+  },
+  {
+    n: "4",
+    title: "Deliver tax ready financials",
+    lineDisplay: "block",
+    art: "/images/bookkeeping/svg-05-Attached-files-pana-1-1.svg",
+    alt: "Illustration of attached financial files ready for delivery",
+  },
+  {
+    n: "5",
+    title: "Bookkeeping meetings",
+    lineDisplay: "block",
+    art: "/images/bookkeeping/svg-06-Meeting-pana.svg",
+    alt: "Illustration of a team meeting around a table",
+  },
+  {
+    n: "6",
+    title: "Help you with taxation",
+    lineDisplay: "none",
+    art: "/images/bookkeeping/svg-07-Business-deal-pana-1-1.svg",
+    alt: "Illustration of two people shaking hands on a completed tax filing",
+  },
 ];
 
 const software: { name: string; img: string }[] = [
@@ -146,20 +182,18 @@ export default function AccountingServicesPage() {
             </a>
           </div>
           <div className="sim_bk_split_img">
-            <div
-              className="sim_bk_ph_img"
+            <img
+              src="/images/bookkeeping/svg-01-In-the-office-pana1.svg"
+              alt="Bookkeeping illustration - accountants working together in the office"
               style={{
                 width: 500,
                 height: 380,
-                background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 10px, #eceefa 10px, #eceefa 20px)",
+                maxWidth: "100%",
                 borderRadius: 14,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
+                objectFit: "contain",
+                display: "block",
               }}
-            >
-              <span style={{ fontFamily: "monospace", fontSize: 13, color: "#9aa0b4" }}>[ bookkeeping illustration ]</span>
-            </div>
+            />
           </div>
         </section>
 
@@ -212,21 +246,19 @@ export default function AccountingServicesPage() {
                   <h3 style={{ fontSize: 15, fontWeight: 700, lineHeight: 1.4, margin: "0 0 20px", color: "#3a4a78", minHeight: 42 }}>
                     {s.title}
                   </h3>
-                  <div
-                    className="sim_bk_ph_img"
+                  <img
+                    src={s.art}
+                    alt={s.alt}
                     style={{
                       width: 120,
                       height: 100,
                       margin: "0 auto",
-                      background: "repeating-linear-gradient(45deg, #e4e7f6, #e4e7f6 9px, #edeffa 9px, #edeffa 18px)",
+                      maxWidth: "100%",
                       borderRadius: 12,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
+                      objectFit: "contain",
+                      display: "block",
                     }}
-                  >
-                    <span style={{ fontFamily: "monospace", fontSize: 10, color: "#9aa0b4" }}>[ art ]</span>
-                  </div>
+                  />
                 </div>
               ))}
             </div>

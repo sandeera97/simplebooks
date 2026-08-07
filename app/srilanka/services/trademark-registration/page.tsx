@@ -70,12 +70,12 @@ const featCards: { icon: React.ReactNode; title: string; desc: string }[] = [
 ];
 
 /* ---------- Registration steps (5) ---------- */
-const steps: { n: string; title: string; lineDisplay: "block" | "none" }[] = [
-  { n: "1", title: "Tell us about your trademark", lineDisplay: "block" },
-  { n: "2", title: "Submit the necessary details", lineDisplay: "block" },
-  { n: "3", title: "We'll fill in and file the documentation", lineDisplay: "block" },
-  { n: "4", title: "Simplebooks will process your documents", lineDisplay: "block" },
-  { n: "5", title: "Collect your Trademark certificate", lineDisplay: "none" },
+const steps: { n: string; title: string; lineDisplay: "block" | "none"; img: string; alt: string }[] = [
+  { n: "1", title: "Tell us about your trademark", lineDisplay: "block", img: "/images/trademark/svg-06-Call-center-pana-6-1.svg", alt: "Support agent on a call taking down trademark details" },
+  { n: "2", title: "Submit the necessary details", lineDisplay: "block", img: "/images/trademark/svg-07-Accept-terms-pana-6-1.svg", alt: "Client submitting the required trademark details on a form" },
+  { n: "3", title: "We'll fill in and file the documentation", lineDisplay: "block", img: "/images/trademark/svg-08-Personal-files-pana-6.svg", alt: "Filing trademark documentation into a cabinet" },
+  { n: "4", title: "Simplebooks will process your documents", lineDisplay: "block", img: "/images/trademark/svg-09-Development-pana-6-1.svg", alt: "Team member processing trademark documents at a desk" },
+  { n: "5", title: "Collect your Trademark certificate", lineDisplay: "none", img: "/images/trademark/svg-10-Business-deal-pana-6-1.svg", alt: "Handshake on handing over the trademark certificate" },
 ];
 
 /* ---------- Logos (8) ---------- */
@@ -140,9 +140,11 @@ export default function TrademarkRegistrationPage() {
             </a>
           </div>
           <div className="sim_bk_split_img">
-            <div style={{ width: 500, height: 360, background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 10px, #eceefa 10px, #eceefa 20px)", borderRadius: 14, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ trademark illustration ]</span>
-            </div>
+            <img
+              src="/images/trademark/svg-01-Signing-a-contract-pana-6.svg"
+              alt="Business owner signing a brand trademark contract with an oversized pen"
+              style={{ width: 500, height: 360, maxWidth: "100%", borderRadius: 14, objectFit: "contain", display: "block" }}
+            />
           </div>
         </section>
 
@@ -181,9 +183,11 @@ export default function TrademarkRegistrationPage() {
                     <div style={{ display: s.lineDisplay, position: "absolute", left: "calc(50% + 38px)", right: "calc(-50% + 38px)", top: "50%", borderTop: "2px dashed #2a2a3d" }} />
                   </div>
                   <h3 style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.35, margin: "0 0 22px", color: "#3a4a78", minHeight: 44 }}>{s.title}</h3>
-                  <div style={{ width: 130, height: 120, margin: "0 auto", background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 9px, #e6e9f8 9px, #e6e9f8 18px)", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <span style={{ fontFamily: "monospace", fontSize: 10, color: "#9aa0b4" }}>[ art ]</span>
-                  </div>
+                  <img
+                    src={s.img}
+                    alt={s.alt}
+                    style={{ width: 130, height: 120, margin: "0 auto", maxWidth: "100%", borderRadius: 12, objectFit: "contain", display: "block" }}
+                  />
                 </div>
               ))}
             </div>
