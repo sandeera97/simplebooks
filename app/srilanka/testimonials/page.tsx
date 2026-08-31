@@ -62,9 +62,11 @@ export default function TestimonialsPage() {
                 const photo = avatarFor(r.author);
                 return (
                   <article key={i} className="sim_bk_testi_card">
-                    <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 10px", color: "#14143d", lineHeight: 1.35 }}>
-                      {r.title}
-                    </h2>
+                    {r.title && (
+                      <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 10px", color: "#14143d", lineHeight: 1.35 }}>
+                        {r.title}
+                      </h2>
+                    )}
                     <Stars />
                     <p style={{ fontSize: 14.5, lineHeight: 1.7, color: "#5a607a", margin: "0 0 20px" }}>{r.quote}</p>
                     <div style={{ display: "flex", alignItems: "center", gap: 10}}>
@@ -77,7 +79,12 @@ export default function TestimonialsPage() {
                       ) : (
                         <div style={{ width: 38, height: 38, borderRadius: "50%", background: "#d9dcee", flexShrink: 0 }} />
                       )}
-                      <span style={{ fontSize: 14, fontWeight: 700, color: "#11144d" }}>{r.author}</span>
+                      <div>
+                        <div style={{ fontSize: 14, fontWeight: 700, color: "#11144d" }}>{r.author}</div>
+                        {r.role && (
+                          <div style={{ fontSize: 12.5, color: "#8289a6", marginTop: 1 }}>{r.role}</div>
+                        )}
+                      </div>
                     </div>
                   </article>
                 );
