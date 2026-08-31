@@ -3,6 +3,12 @@
    Names with no confirmed photo are intentionally absent — callers should fall
    back to the neutral circle rather than showing another person's face. */
 export const AVATARS: Record<string, string> = {
+  "Aqib Aslam": "/images/avatars/aqib-aslam.jpg",
+  "Osanda Gamage": "/images/avatars/osanda-gamage.jpg",
+  "Saajidh Thassim": "/images/avatars/saajidh-thassim.jpg",
+  "Demintha Nirushan": "/images/avatars/demintha-nirushan.jpg",
+  "Malki Abeygunawardena": "/images/avatars/malki-abeygunawardena.jpg",
+  "Cricketer Jeevan Mendis": "/images/avatars/jeevan-mendis.jpg",
   "Travel with Wife": "/images/avatars/travel-with-wife.jpg",
   "Damith Menaka": "/images/avatars/damith-menaka.jpg",
   "NAWRAN": "/images/avatars/nawran.jpg",

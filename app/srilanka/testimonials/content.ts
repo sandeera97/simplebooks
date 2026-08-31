@@ -1,7 +1,9 @@
 export interface Review {
-  title: string;
+  /** Cards on the testimonials page carry a headline; the homepage reviews do not. */
+  title?: string;
   quote: string;
   author: string;
+  role?: string;
 }
 
 /* Reviews as published on simplebooks.com/srilanka/testimonials/ */
@@ -126,5 +128,96 @@ export const reviews: Review[] = [
     quote:
       "Big shout out and thank-you to Simplebooks, our digitally savvy and entrepreneurial minded newly retained book-keepers for our new start-up Remote Workforce. They went above and beyond in their level of service in handling all the drawn out Sri Lankan registration processes required to set up the company. Here's to a long lasting partnership — and as they say what goes around comes around!",
     author: "Tom Simpson",
+  },
+
+  /* Reviews as published across simplebooks.com (homepage + every service page).
+     These carry no headline on the live site, so they render without one. */
+  {
+    quote:
+      "හිතුවට වඩා ලේසියෙන් වැඩේ කරලා දුන්නට ස්තුතියි @teamsimplebooks",
+    author: "Travel with Wife",
+  },
+  {
+    quote:
+      "Company registration is a hectic process in Sri Lanka. Simplebooks is simply a life saver.",
+    author: "Damith Menaka",
+    role: "Director, Animspire",
+  },
+  {
+    quote:
+      "Honest review! Thanks you simplebooks team for the amazing support on my company registration. Givantha, Moiz and other team members were very helpful. Keep up the quick service. Highly recommended this hassle-free service. 👍🏼",
+    author: "NAWRAN",
+    role: "Director, Social Media Academy",
+  },
+  {
+    quote:
+      "They took the time to explain what they were doing every step of the way. This took a lot of stress away. I deeply appreciate their professionality and will always recommend Simplebooks to any in need of the services they provide.I couldn't have wished for anything better. Studio",
+    author: "Ratta",
+    role: "Founder, Studio Ratta",
+  },
+  {
+    quote:
+      "SUPERB!!! I highly recommend this place to everyone.. තමන්ගේම Business එකක් Start කරන එක හැමෝගෙම Dream එකක් උනාට ඒකට හොද මගපෙන්වීමක් නැති එක තමයි අවුල. SimpleBook එකෙන් email කීපයකින් මේ වැඩේ කරගන්න පුලුවන්. 😍",
+    author: "Chanux Bro",
+    role: "Director, Chanux Bro",
+  },
+  {
+    quote:
+      "Very good service.. very happy with your assistance.",
+    author: "Cricketer Jeevan Mendis",
+    role: "Director",
+  },
+  {
+    quote:
+      "A very professional service by a dynamic and efficient team. The simplebooks team took over the hassle of registering my business and kept me posted on every step of the process. They were also very helpful with responding to whatever the doubts I had regarding to registering the business.",
+    author: "Aqib Aslam",
+    role: "Director",
+  },
+  {
+    quote:
+      "We sincerely appreciate your efficient customer service and the trustworthiness you have demonstrated on our project. Thank you very much",
+    author: "Osanda Gamage",
+    role: "Founder",
+  },
+  {
+    quote:
+      "Fantastic service, very prompt in communication. Will be coming back to them for my next venture!",
+    author: "Ahamed Nizar",
+    role: "Founder",
+  },
+  {
+    quote:
+      "Simplebooks is amazing! I was overwhelmed with all the paperwork requirements to register a company but luckily came across Simplebooks and without a single visit, I was able to incorporate my company with ease. They have professionals who are attentive and client oriented and there is no doubt they provide an unparallel service.",
+    author: "Saajidh Thassim",
+    role: "Founder",
+  },
+  {
+    quote:
+      "I have registered my first private limited company with them few weeks ago. They provided an amazing service during the registration process. Also they have been working as my company secretary & I would like to say that customer caring is in next level. Kudos to Moiz & Anushanth. Highly recommended to anyone !",
+    author: "Demintha Nirushan",
+    role: "Founder",
+  },
+  {
+    quote:
+      "I appreciate the services provided by the simplebooks team. They are extremely professional and quick.They got my company registered smoothly and within time as promised. Everyone’s super helpful and nice!",
+    author: "Malki Abeygunawardena",
+    role: "Human Resource Manager, Surge Global",
+  },
+  {
+    quote:
+      "I have worked with Simplebooks team for several years and I’m quite happy about their attention to detail, followups and overall knowledge of the field and pricing. Clearly an industry leader for Company secretarial work in Sri lanka.",
+    author: "Kalana Muthumuni",
+  },
+  {
+    quote:
+      "Very friendly and Professional. Highly recommended. Just went to collect the documents. Simple as that.",
+    author: "Sandul Perera",
+    role: "Director",
+  },
+  {
+    quote:
+      "I've registered over 10 businesses with Simplebooks over the years and I would recommend them every step of the way.",
+    author: "Bhanuka Harischandra",
+    role: "Founder, Surge Global",
   },
 ];
