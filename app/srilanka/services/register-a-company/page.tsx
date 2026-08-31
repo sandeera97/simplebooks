@@ -94,14 +94,49 @@ const dashForms: DashForm[] = [
   { title: "Articles of association", body: "Saepe cum dicta sed similique molestias consequatur minima aliquam.", status: "Pending", statusColor: "#e59a2b", dl: "", action: "" },
 ];
 
-type Step = { n: string; title: string; desc: string; lineDisplay: "block" | "none" };
+type Step = { n: string; title: string; desc: string; lineDisplay: "block" | "none"; art: string; alt: string };
 
 const steps: Step[] = [
-  { n: "1", title: "Approve your business name", desc: "We will check the availability, reserve and approve your business name for you.", lineDisplay: "block" },
-  { n: "2", title: "Submit your registration form", desc: "Let the team fill out and submit your registration forms. This includes Form 01, 18 and 19.", lineDisplay: "block" },
-  { n: "3", title: "Submit articles of association", desc: "Get the team to help you create and submit your new company's articles of association.", lineDisplay: "block" },
-  { n: "4", title: "Help open your bank accounts", desc: "Once your company has been approved, we'll help you with opening your bank accounts.", lineDisplay: "block" },
-  { n: "5", title: "Make sure you're compliant", desc: "We will help you ensure that you're conducting your business according to the Sri Lankan law.", lineDisplay: "none" },
+  {
+    n: "1",
+    title: "Approve your business name",
+    desc: "We will check the availability, reserve and approve your business name for you.",
+    lineDisplay: "block",
+    art: "/images/register-a-company/svg-02-Done-pana.svg",
+    alt: "Illustration of a business name approved with a large check mark",
+  },
+  {
+    n: "2",
+    title: "Submit your registration form",
+    desc: "Let the team fill out and submit your registration forms. This includes Form 01, 18 and 19.",
+    lineDisplay: "block",
+    art: "/images/register-a-company/svg-03-Accept-terms-pana-3.svg",
+    alt: "Illustration of a person accepting terms and submitting a registration form",
+  },
+  {
+    n: "3",
+    title: "Submit articles of association",
+    desc: "Get the team to help you create and submit your new company's articles of association.",
+    lineDisplay: "block",
+    art: "/images/register-a-company/svg-04-Development-pana-1-1.svg",
+    alt: "Illustration of a person drafting company documents on a computer",
+  },
+  {
+    n: "4",
+    title: "Help open your bank accounts",
+    desc: "Once your company has been approved, we'll help you with opening your bank accounts.",
+    lineDisplay: "block",
+    art: "/images/register-a-company/svg-05-Savings-pana-1.svg",
+    alt: "Illustration of savings and a bank account being opened",
+  },
+  {
+    n: "5",
+    title: "Make sure you're compliant",
+    desc: "We will help you ensure that you're conducting your business according to the Sri Lankan law.",
+    lineDisplay: "none",
+    art: "/images/register-a-company/svg-06-Business-deal-pana-4.svg",
+    alt: "Illustration of two people shaking hands over a compliant business deal",
+  },
 ];
 
 type DetailCol = { title: string; items: string[] };
@@ -254,9 +289,11 @@ export default function RegisterACompanyPage() {
           </a>
         </div>
         <div className="sim_bk_split_img">
-          <div style={{ position: "relative", width: 500, height: 360, background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 10px, #eceefa 10px, #eceefa 20px)", borderRadius: 14, display: "flex", alignItems: "center", justifyContent: "center", maxWidth: "100%" }}>
-            <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ business registration illustration ]</span>
-          </div>
+          <img
+            src="/images/register-a-company/svg-01-Certification-pana-1.svg"
+            alt="Business registration illustration - company incorporation certificate being awarded"
+            style={{ width: 500, height: 360, maxWidth: "100%", borderRadius: 14, objectFit: "contain", display: "block" }}
+          />
         </div>
       </section>
 
@@ -350,9 +387,11 @@ export default function RegisterACompanyPage() {
                 </div>
                 <h3 style={{ fontSize: 17, fontWeight: 700, lineHeight: 1.35, margin: "0 0 16px", color: "#3a4a78", minHeight: 46 }}>{s.title}</h3>
                 <p style={{ fontSize: 14.5, lineHeight: 1.6, color: "#8a8fa6", margin: "0 auto 22px", maxWidth: 210 }}>{s.desc}</p>
-                <div style={{ width: 130, height: 120, margin: "0 auto", background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 9px, #eceefa 9px, #eceefa 18px)", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <span style={{ fontFamily: "monospace", fontSize: 10, color: "#9aa0b4" }}>[ art ]</span>
-                </div>
+                <img
+                  src={s.art}
+                  alt={s.alt}
+                  style={{ width: 130, height: 120, margin: "0 auto", maxWidth: "100%", borderRadius: 12, objectFit: "contain", display: "block" }}
+                />
               </div>
             ))}
           </div>

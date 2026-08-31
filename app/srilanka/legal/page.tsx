@@ -90,11 +90,11 @@ const features = [
 ];
 
 const steps = [
-  { n: "1", title: "Contact the Simplebooks team", line: true },
-  { n: "2", title: "Communicate your legal needs", line: true },
-  { n: "3", title: "Solution discussion", line: true },
-  { n: "4", title: "Hand over details and documentation", line: true },
-  { n: "5", title: "Receive deliverables", line: false },
+  { n: "1", title: "Contact the Simplebooks team", line: true, img: "/images/legal/svg-07-Call-center-pana-4.svg", alt: "Support agent on a call with a client" },
+  { n: "2", title: "Communicate your legal needs", line: true, img: "/images/legal/svg-08-Accept-terms-pana-4.svg", alt: "Client presenting a legal document alongside a gavel" },
+  { n: "3", title: "Solution discussion", line: true, img: "/images/legal/svg-09-Conversation-pana-4.svg", alt: "Two people discussing a legal solution" },
+  { n: "4", title: "Hand over details and documentation", line: true, img: "/images/legal/svg-10-Personal-files-pana-4.svg", alt: "Lawyer filing client documentation into a cabinet" },
+  { n: "5", title: "Receive deliverables", line: false, img: "/images/legal/svg-11-Business-deal-pana-4-1.svg", alt: "Handshake on delivering the completed legal work" },
 ];
 
 const helpList = [
@@ -150,9 +150,11 @@ export default function LegalPage() {
             <a href="#get-started" className="sim_bk_btn_orange" style={{ padding: "15px 36px", fontSize: 16, boxShadow: "0 10px 24px rgba(241,95,44,0.28)" }}>Get a free Legal Consultation</a>
           </div>
           <div className="sim_bk_split_img">
-            <div className="sim_bk_ph_img" style={{ width: 500, height: 360, background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 10px, #eceefa 10px, #eceefa 20px)", borderRadius: 14 }}>
-              <span className="sim_bk_ph_label" style={{ fontSize: 12 }}>[ legal services illustration ]</span>
-            </div>
+            <img
+              src="/images/legal/svg-01-Signing-a-contract-pana-4.svg"
+              alt="Legal contract ready for signature beside a judge's gavel"
+              style={{ width: 500, height: 360, maxWidth: "100%", borderRadius: 14, objectFit: "contain", display: "block" }}
+            />
           </div>
         </section>
 
@@ -189,9 +191,11 @@ export default function LegalPage() {
                     {s.line && <div className="sim_bk_step_line" style={{ position: "absolute", left: "calc(50% + 38px)", right: "calc(-50% + 38px)", top: "50%", borderTop: "2px dashed #f7a3b0" }} />}
                   </div>
                   <h3 style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.35, margin: "0 0 22px", color: "#3a4a78", minHeight: 44 }}>{s.title}</h3>
-                  <div className="sim_bk_ph_img" style={{ width: 130, height: 120, margin: "0 auto", background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 9px, #eceefa 9px, #eceefa 18px)", borderRadius: 12 }}>
-                    <span className="sim_bk_ph_label" style={{ fontSize: 10 }}>[ art ]</span>
-                  </div>
+                  <img
+                    src={s.img}
+                    alt={s.alt}
+                    style={{ width: 130, height: 120, margin: "0 auto", maxWidth: "100%", borderRadius: 12, objectFit: "contain", display: "block" }}
+                  />
                 </div>
               ))}
             </div>

@@ -12,11 +12,41 @@ export const metadata: Metadata = {
 function renderVals() {
   return {
     steps: [
-      { n: "1", title: "We'll handle your paperwork", lineDisplay: "block" },
-      { n: "2", title: "Process all your documents", lineDisplay: "block" },
-      { n: "3", title: "Generate your reports", lineDisplay: "block" },
-      { n: "4", title: "Pay your employees' EPF/ETF", lineDisplay: "block" },
-      { n: "5", title: "File your EPF/ETF returns", lineDisplay: "none" },
+      {
+        n: "1",
+        title: "We'll handle your paperwork",
+        lineDisplay: "block",
+        art: "/images/payroll-services/svg-02-Documents-pana-5.svg",
+        alt: "Illustration of a person filing payroll paperwork into a cabinet",
+      },
+      {
+        n: "2",
+        title: "Process all your documents",
+        lineDisplay: "block",
+        art: "/images/payroll-services/svg-03-Development-pana-5.svg",
+        alt: "Illustration of a person processing payroll documents at a computer",
+      },
+      {
+        n: "3",
+        title: "Generate your reports",
+        lineDisplay: "block",
+        art: "/images/payroll-services/svg-04-Accept-terms-pana-5.svg",
+        alt: "Illustration of a person reviewing a generated payroll report",
+      },
+      {
+        n: "4",
+        title: "Pay your employees' EPF/ETF",
+        lineDisplay: "block",
+        art: "/images/payroll-services/svg-05-Business-deal-pana-5.svg",
+        alt: "Illustration of two people shaking hands over an EPF/ETF payment",
+      },
+      {
+        n: "5",
+        title: "File your EPF/ETF returns",
+        lineDisplay: "none",
+        art: "/images/payroll-services/svg-06-Attached-files-pana-5.svg",
+        alt: "Illustration of a person filing EPF/ETF returns online with attached files",
+      },
     ],
 
     needList: [
@@ -138,20 +168,19 @@ export default function PayrollManagementPage() {
                 <h3 style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.35, margin: "0 0 22px", color: "#3a4a78", minHeight: 44 }}>
                   {s.title}
                 </h3>
-                <div
+                <img
+                  src={s.art}
+                  alt={s.alt}
                   style={{
                     width: 130,
                     height: 120,
                     margin: "0 auto",
-                    background: "repeating-linear-gradient(45deg, #f4f5fb, #f4f5fb 9px, #e6e9f8 9px, #e6e9f8 18px)",
+                    maxWidth: "100%",
                     borderRadius: 12,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
+                    objectFit: "contain",
+                    display: "block",
                   }}
-                >
-                  <span style={{ fontFamily: "monospace", fontSize: 10, color: "#9aa0b4" }}>[ art ]</span>
-                </div>
+                />
               </div>
             ))}
           </div>
