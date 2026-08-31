@@ -57,7 +57,7 @@ export default function TestimonialsPage() {
         {/* REVIEWS */}
         <section style={{ padding: "70px 0 80px", background: "#ffffff" }}>
           <div style={{ maxWidth: 1180, margin: "0 auto" }}>
-            <div className="sim_bk_testi_grid">
+            <div className="sim_bk_testi_masonry">
               {reviews.map((r, i) => {
                 const photo = avatarFor(r.author);
                 return (
@@ -67,7 +67,7 @@ export default function TestimonialsPage() {
                     </h2>
                     <Stars />
                     <p style={{ fontSize: 14.5, lineHeight: 1.7, color: "#5a607a", margin: "0 0 20px" }}>{r.quote}</p>
-                    <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: "auto" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 10}}>
                       {photo ? (
                         <img
                           src={photo}
