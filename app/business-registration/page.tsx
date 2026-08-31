@@ -4,6 +4,8 @@ import Footer from "@/components/layout/Footer";
 import ChatWidget from "@/components/layout/ChatWidget";
 import FaqAccordion from "@/components/business-registration/FaqAccordion";
 import GetStartedForm from "@/components/business-registration/GetStartedForm";
+import YouTubeEmbed from "@/components/video/YouTubeEmbed";
+import { VIDEOS } from "@/components/video/videos";
 import {
   whyPoints, nameCheckPoints, trackingPoints, docPoints, formsPoints, steps,
   infoPoints, includedPoints, includedCards, basicFeatures, premiumFeatures,
@@ -203,9 +205,12 @@ export default function BusinessRegistrationPage() {
                 </div>
               </div>
               <div className="sim_bk_split_img" style={{ justifyContent: "center" }}>
-                <div className="sim_bk_ph_img" style={{ width: 360, height: 460, background: "#1d2a86", borderRadius: 18, flexDirection: "column", justifyContent: "flex-end", paddingBottom: 36, position: "relative", overflow: "hidden" }}>
-                  <img src="/images/business-registration/07.jpg" alt="How registration works video thumbnail" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-                  <span style={{ position: "relative", fontSize: 22, fontWeight: 800, color: "#fff" }}>Assured compliance</span>
+                <div className="sim_bk_ph_img" style={{ width: 360, height: 460, background: "#1d2a86", borderRadius: 18, flexDirection: "column", justifyContent: "center", gap: 30, padding: "0 20px", position: "relative", overflow: "hidden" }}>
+                  <YouTubeEmbed
+                    id={VIDEOS.businessRegistration.id}
+                    title={VIDEOS.businessRegistration.title}
+                  />
+                  <span style={{ fontSize: 22, fontWeight: 800, color: "#fff" }}>Assured compliance</span>
                 </div>
               </div>
             </div>

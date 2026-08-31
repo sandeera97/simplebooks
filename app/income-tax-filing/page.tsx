@@ -5,6 +5,8 @@ import ChatWidget from "@/components/layout/ChatWidget";
 import Faq2Accordion from "@/components/dashboard/Faq2Accordion";
 import Accordion from "./Accordion";
 import ReviewsScroller from "./ReviewsScroller";
+import YouTubeEmbed from "@/components/video/YouTubeEmbed";
+import { VIDEOS } from "@/components/video/videos";
 
 export const metadata: Metadata = {
   title: "File Your Own Taxes with Confidence | Simplebooks",
@@ -77,13 +79,11 @@ export default function IncomeTaxFilingPage() {
             <p style={{ fontSize: 13, fontStyle: "italic", color: "#8a8fa6", margin: "20px 0 0" }}>*No credit card until final review</p>
           </div>
           <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
-            <div style={{ position: "relative", width: 520, height: 320, background: "repeating-linear-gradient(45deg, #1a1c3a, #1a1c3a 12px, #23264a 12px, #23264a 24px)", borderRadius: 14, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", maxWidth: "100%" }}>
-              <span style={{ position: "absolute", top: 16, left: 18, right: 18, fontSize: 15, fontWeight: 700, color: "#ffffff" }}>Easy Guide to Using the Simplebooks Tax Tool for Tax Filing</span>
-              <div style={{ width: 78, height: 78, borderRadius: "50%", background: "#ff0000", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <div style={{ width: 0, height: 0, borderTop: "16px solid transparent", borderBottom: "16px solid transparent", borderLeft: "26px solid #fff", marginLeft: 6 }} />
-              </div>
-              <span style={{ position: "absolute", bottom: 14, right: 16, fontSize: 12, color: "#eee", background: "rgba(0,0,0,0.5)", padding: "6px 12px", borderRadius: 6 }}>▶ Watch on YouTube</span>
-            </div>
+            <YouTubeEmbed
+              id={VIDEOS.taxTool.id}
+              title={VIDEOS.taxTool.title}
+              style={{ width: 520, maxWidth: "100%", borderRadius: 14 }}
+            />
           </div>
         </section>
 

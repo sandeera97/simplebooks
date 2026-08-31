@@ -4,6 +4,7 @@ import Footer from "@/components/layout/Footer";
 import ChatWidget from "@/components/layout/ChatWidget";
 import Faq2Accordion from "@/components/dashboard/Faq2Accordion";
 import CovTabs from "./CovTabs";
+import { avatarFor } from "@/components/avatars";
 
 export const metadata: Metadata = {
   title: "All-in-One Accounting Tool | Simplebooks",
@@ -693,15 +694,30 @@ export default function AccountingToolPage() {
                   <div
                     style={{ display: "flex", alignItems: "center", gap: 10 }}
                   >
-                    <div
-                      style={{
-                        width: 34,
-                        height: 34,
-                        borderRadius: "50%",
-                        background: "#d9dcee",
-                        flexShrink: 0,
-                      }}
-                    ></div>
+                    {avatarFor(t.name) ? (
+                      <img
+                        src={avatarFor(t.name)!}
+                        alt={t.name}
+                        style={{
+                          width: 34,
+                          height: 34,
+                          borderRadius: "50%",
+                          objectFit: "cover",
+                          flexShrink: 0,
+                          display: "block",
+                        }}
+                      />
+                    ) : (
+                      <div
+                        style={{
+                          width: 34,
+                          height: 34,
+                          borderRadius: "50%",
+                          background: "#d9dcee",
+                          flexShrink: 0,
+                        }}
+                      ></div>
+                    )}
                     <div>
                       <div
                         style={{

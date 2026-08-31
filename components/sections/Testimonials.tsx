@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { avatarFor } from "@/components/avatars";
 
 interface Testimonial {
   quote: string;
@@ -27,7 +28,11 @@ export default function Testimonials() {
           <div key={i} className="sim_bk_tcard">
             <p className="sim_bk_tcard_quote">{t.quote}</p>
             <div className="sim_bk_tcard_author">
-              <div className="sim_bk_avatar" />
+              {avatarFor(t.name) ? (
+                <img src={avatarFor(t.name)!} alt={t.name} className="sim_bk_avatar" style={{ objectFit: "cover", display: "block" }} />
+              ) : (
+                <div className="sim_bk_avatar" />
+              )}
               <div>
                 <div className="sim_bk_tcard_name">{t.name}</div>
                 {t.role && <div className="sim_bk_tcard_role">{t.role}</div>}

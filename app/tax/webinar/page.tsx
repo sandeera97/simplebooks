@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ChatWidget from "@/components/layout/ChatWidget";
+import YouTubeEmbed from "@/components/video/YouTubeEmbed";
+import { WEBINARS } from "@/components/video/videos";
 
 export const metadata: Metadata = {
   title: "Tax Webinar | Simplebooks",
@@ -248,20 +250,12 @@ export default function TaxWebinarPage() {
               <p style={{ fontSize: 16, color: "#6b7db0", margin: 0 }}>Watch recordings of our expert-led tax webinars</p>
             </div>
             <div className="sim_bk_grid3" style={{ maxWidth: 1180, margin: "0 auto", gap: 30 }}>
-              {videos.map((v, vi) => (
-                <div key={vi} className="sim_bk_hover_lift" style={{ border: "1px solid #eef0f6", borderRadius: 14, overflow: "hidden", boxShadow: "0 8px 26px rgba(17,20,77,0.05)", background: "#ffffff" }}>
-                  <div style={{ position: "relative" }}>
-                    <div style={{ width: "100%", aspectRatio: "16 / 9", background: "#1f2440", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                      <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ {v.title} ]</span>
-                    </div>
-                    <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: 54, height: 38, borderRadius: 9, background: "#ff0000", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                      <div style={{ width: 0, height: 0, borderTop: "9px solid transparent", borderBottom: "9px solid transparent", borderLeft: "15px solid #fff", marginLeft: 3 }} />
-                    </div>
-                    <span style={{ position: "absolute", bottom: 10, right: 10, fontSize: 11, fontWeight: 600, color: "#fff", background: "rgba(0,0,0,0.65)", padding: "4px 9px", borderRadius: 5 }}>▶ Watch on YouTube</span>
-                  </div>
+              {WEBINARS.map((w, vi) => (
+                <div key={w.id} className="sim_bk_hover_lift" style={{ border: "1px solid #eef0f6", borderRadius: 14, overflow: "hidden", boxShadow: "0 8px 26px rgba(17,20,77,0.05)", background: "#ffffff" }}>
+                  <YouTubeEmbed id={w.id} title={w.title} style={{ borderRadius: 0 }} />
                   <div style={{ padding: "22px 22px 26px" }}>
-                    <h3 style={{ fontSize: 17, fontWeight: 700, lineHeight: 1.35, margin: "0 0 10px", color: "#14143d" }}>{v.title}</h3>
-                    <p style={{ fontSize: 14, lineHeight: 1.6, color: "#8a8fa6", margin: 0 }}>{v.desc}</p>
+                    <h3 style={{ fontSize: 17, fontWeight: 700, lineHeight: 1.35, margin: "0 0 10px", color: "#14143d" }}>{w.title}</h3>
+                    <p style={{ fontSize: 14, lineHeight: 1.6, color: "#8a8fa6", margin: 0 }}>{videos[vi].desc}</p>
                   </div>
                 </div>
               ))}

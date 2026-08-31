@@ -3,6 +3,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ChatWidget from "@/components/layout/ChatWidget";
 import ServiceForm from "@/components/services/ServiceForm";
+import { avatarFor } from "@/components/avatars";
 
 export const metadata: Metadata = {
   title: "Payroll Management Services | Simplebooks",
@@ -375,7 +376,11 @@ export default function PayrollManagementPage() {
                 >
                   <p style={{ fontSize: 12.5, lineHeight: 1.6, color: "#5a607a", margin: "0 0 18px" }}>{t.quote}</p>
                   <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                    <div style={{ width: 34, height: 34, borderRadius: "50%", background: "#d9dcee", flexShrink: 0 }} />
+                    {avatarFor(t.name) ? (
+                      <img src={avatarFor(t.name)!} alt={t.name} style={{ width: 34, height: 34, borderRadius: "50%", objectFit: "cover", flexShrink: 0, display: "block" }} />
+                    ) : (
+                      <div style={{ width: 34, height: 34, borderRadius: "50%", background: "#d9dcee", flexShrink: 0 }} />
+                    )}
                     <div>
                       <div style={{ fontSize: 12.5, fontWeight: 700, color: "#11144d" }}>{t.name}</div>
                       <div style={{ fontSize: 11, color: "#9aa0b4" }}>{t.role}</div>
