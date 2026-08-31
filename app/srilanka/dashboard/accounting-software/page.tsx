@@ -5,6 +5,9 @@ import ChatWidget from "@/components/layout/ChatWidget";
 import Faq2Accordion from "@/components/dashboard/Faq2Accordion";
 import PricingToggle from "./PricingToggle";
 import GetStartedForm from "./GetStartedForm";
+import YouTubeEmbed from "@/components/video/YouTubeEmbed";
+import { VIDEOS } from "@/components/video/videos";
+import { avatarFor } from "@/components/avatars";
 
 export const metadata: Metadata = {
   title: "Invoicing Streamlined, Payments Boosted | Simplebooks",
@@ -110,13 +113,11 @@ export default function AccountingSoftwarePage() {
             <p style={{ fontSize: 13, fontStyle: "italic", color: "#8a8fa6", margin: "22px 0 0" }}>Full access for free. 2 month free trial. No credit card required.</p>
           </div>
           <div className="sim_bk_split_img">
-            <div className="ph-img" style={{ position: "relative", width: 520, height: 300, background: "repeating-linear-gradient(45deg, #33384f, #33384f 12px, #3b4159 12px, #3b4159 24px)", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
-              <span style={{ position: "absolute", top: 16, left: 18, fontSize: 15, fontWeight: 700, color: "#ffffff" }}>Invoicing Tool Dashboard Demo Video</span>
-              <div style={{ width: 78, height: 78, borderRadius: "50%", background: "#ff0000", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <div style={{ width: 0, height: 0, borderTop: "16px solid transparent", borderBottom: "16px solid transparent", borderLeft: "26px solid #fff", marginLeft: 6 }} />
-              </div>
-              <span style={{ position: "absolute", bottom: 14, right: 16, fontSize: 12, color: "#eee", background: "rgba(0,0,0,0.5)", padding: "6px 12px", borderRadius: 6 }}>▶ Watch on YouTube</span>
-            </div>
+            <YouTubeEmbed
+              id={VIDEOS.invoicing.id}
+              title={VIDEOS.invoicing.title}
+              style={{ width: 520, maxWidth: "100%" }}
+            />
           </div>
         </section>
 
@@ -223,7 +224,11 @@ export default function AccountingSoftwarePage() {
                 <div key={i} style={{ background: "#ffffff", border: "1px solid #eef0f6", borderRadius: 14, padding: "22px 20px", display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: 200, boxShadow: "0 6px 22px rgba(17,20,77,0.04)" }}>
                   <p style={{ fontSize: 12.5, lineHeight: 1.6, color: "#5a607a", margin: "0 0 18px" }}>{t.quote}</p>
                   <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                    <div style={{ width: 34, height: 34, borderRadius: "50%", background: "#d9dcee", flexShrink: 0 }} />
+                    {avatarFor(t.name) ? (
+                      <img src={avatarFor(t.name)!} alt={t.name} style={{ width: 34, height: 34, borderRadius: "50%", objectFit: "cover", flexShrink: 0, display: "block" }} />
+                    ) : (
+                      <div style={{ width: 34, height: 34, borderRadius: "50%", background: "#d9dcee", flexShrink: 0 }} />
+                    )}
                     <div>
                       <div style={{ fontSize: 12.5, fontWeight: 700, color: "#11144d" }}>{t.name}</div>
                       <div style={{ fontSize: 11, color: "#9aa0b4" }}>{t.role}</div>

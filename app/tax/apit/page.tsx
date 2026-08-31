@@ -3,6 +3,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ChatWidget from "@/components/layout/ChatWidget";
 import Faq from "./Faq";
+import YouTubeEmbed from "@/components/video/YouTubeEmbed";
+import { VIDEOS } from "@/components/video/videos";
+import { avatarFor } from "@/components/avatars";
 
 export const metadata: Metadata = {
   title: "APIT Filing | Simplebooks",
@@ -56,15 +59,11 @@ export default function ApitPage() {
             <a href="#get-started" className="sim_bk_btn_orange sim_bk_rad10" style={{ fontSize: 16, padding: "15px 36px", boxShadow: "0 10px 24px rgba(241,95,44,0.28)" }}>Get Free Consultation</a>
           </div>
           <div className="sim_bk_split_img" style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
-            <div style={{ position: "relative", width: 500, maxWidth: "100%", borderRadius: 14, overflow: "hidden", boxShadow: "0 16px 44px rgba(17,20,77,0.18)" }}>
-              <div style={{ width: "100%", height: 300, background: "#1a1c3a", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontFamily: "monospace", fontSize: 12, color: "#9aa0b4" }}>[ APIT Tax Update 2025 video ]</span>
-              </div>
-              <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: 66, height: 66, borderRadius: "50%", background: "#ff0000", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <div style={{ width: 0, height: 0, borderTop: "13px solid transparent", borderBottom: "13px solid transparent", borderLeft: "22px solid #fff", marginLeft: 5 }} />
-              </div>
-              <span style={{ position: "absolute", bottom: 12, right: 14, fontSize: 12, color: "#fff", background: "rgba(0,0,0,0.5)", padding: "5px 10px", borderRadius: 5 }}>▶ Watch on YouTube</span>
-            </div>
+            <YouTubeEmbed
+              id={VIDEOS.apit.id}
+              title={VIDEOS.apit.title}
+              style={{ width: 500, maxWidth: "100%", borderRadius: 14, boxShadow: "0 16px 44px rgba(17,20,77,0.18)" }}
+            />
           </div>
         </section>
 
@@ -211,7 +210,11 @@ export default function ApitPage() {
                 <div key={i} style={{ background: "#ffffff", border: "1px solid #eef0f6", borderRadius: 14, padding: "22px 20px", display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: 210, boxShadow: "0 6px 22px rgba(17,20,77,0.04)" }}>
                   <p style={{ fontSize: 12.5, lineHeight: 1.6, color: "#5a607a", margin: "0 0 18px" }}>{t.quote}</p>
                   <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                    <div style={{ width: 34, height: 34, borderRadius: "50%", background: "#d9dcee", flexShrink: 0 }} />
+                    {avatarFor(t.name) ? (
+                      <img src={avatarFor(t.name)!} alt={t.name} style={{ width: 34, height: 34, borderRadius: "50%", objectFit: "cover", flexShrink: 0, display: "block" }} />
+                    ) : (
+                      <div style={{ width: 34, height: 34, borderRadius: "50%", background: "#d9dcee", flexShrink: 0 }} />
+                    )}
                     <div>
                       <div style={{ fontSize: 12.5, fontWeight: 700, color: "#11144d" }}>{t.name}</div>
                       <div style={{ fontSize: 11, color: "#9aa0b4" }}>{t.role}</div>

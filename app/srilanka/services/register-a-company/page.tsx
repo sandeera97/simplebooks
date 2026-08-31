@@ -3,6 +3,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ChatWidget from "@/components/layout/ChatWidget";
 import ServiceForm from "@/components/services/ServiceForm";
+import { VIDEOS } from "@/components/video/videos";
 
 export const metadata: Metadata = {
   title: "Register Your Business with Us | Simplebooks",
@@ -225,7 +226,7 @@ const testimonials: Testimonial[] = [
   { quote: "Thanks you simplebooks team for the amazing support on my company registration. Givantha, Moiz and other team members were very helpful. Keep up the quick service. Highly recommended this hassle-free service 👍", name: "NAWRAN", role: "Director, Social Media Academy", img: "/images/register-a-company/04.jpg" },
   { quote: "They took the time to explain what they were doing every step of the way. This took a lot of stress away. I deeply appreciate their professionality and will always recommend Simplebooks to any in need of the services they provide. I couldn't have wished for anything better.", name: "Ratta", role: "Founder, Studio Ratta", img: "/images/register-a-company/05.jpg" },
   { quote: "SUPER!!! It's the best place to ever do business with. Dream team!", name: "Chanux Bro", role: "Director, Chanux Bro", img: "/images/register-a-company/06.jpg" },
-  { quote: "They provided exactly what I needed. Very responsive and professional team to work with.", name: "Wickramawardena", role: "Manager", img: "/images/register-a-company/08.jpg" },
+  { quote: "They provided exactly what I needed. Very responsive and professional team to work with.", name: "Wickramawardena", role: "Manager" },
   { quote: "I have worked with Simplebooks team for several years and I'm quite happy about their attention to detail, followups and overall knowledge of the field and pricing. Clearly an industry leader for Company secretarial work in Sri lanka.", name: "Kalana Muthumuni", role: "", img: "/images/register-a-company/16.jpg" },
   { quote: "Very friendly and Professional. Highly recommended. Just went to collect the documents. Simple as that.", name: "Sandul Perera", role: "Director", img: "/images/register-a-company/17.jpg" },
   { quote: "It's a superb experience that I got from Simple Books. I got the contract through on line. from there onwards up to now – I came to collect my documents - they gave me very good service. Responding via mails for my queries, updating the process etc ..everything is good.", name: "Sarath Senanayake", role: "Director", img: "/images/register-a-company/18.jpg" },
@@ -317,7 +318,7 @@ export default function RegisterACompanyPage() {
             </div>
             <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
               <a href="#free-consultation" className="sim_bk_btn_orange" style={{ fontSize: 15, padding: "14px 30px" }}>Sign up for free</a>
-              <a href="#" className="sim_bk_btn_orange" style={{ fontSize: 15, padding: "14px 30px" }}>Watch demo</a>
+              <a href={`https://youtu.be/${VIDEOS.registerCompany.id}`} target="_blank" rel="noopener noreferrer" className="sim_bk_btn_orange" style={{ fontSize: 15, padding: "14px 30px" }}>Watch demo</a>
             </div>
           </div>
 
