@@ -770,3 +770,15 @@ a, button {
   border: none; cursor: pointer; font-family: var(--font-poppins), sans-serif;
 }
 .sim_bk_btn_wa:hover { background: #1ea34e; box-shadow: 0 12px 30px rgba(34,189,91,0.4); transform: translateY(-2px); }
+
+/* ---------- Testimonials page ---------- */
+.sim_bk_testi_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
+.sim_bk_testi_card {
+  display: flex; flex-direction: column;
+  background: #ffffff; border: 1px solid #eef0f6; border-radius: 16px;
+  padding: 30px 28px; box-shadow: 0 8px 26px rgba(17,20,77,0.05);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.sim_bk_testi_card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(17,20,77,0.10); }
+@media (max-width: 980px) { .sim_bk_testi_grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .sim_bk_testi_grid { grid-template-columns: 1fr; } }

@@ -261,7 +261,7 @@ export default function IncomeTaxFilingPage() {
           <h2 style={{ textAlign: "center", fontSize: 36, fontWeight: 800, margin: "0 0 50px", color: "#11144d" }}>Real People, Real Results</h2>
           <ReviewsScroller reviews={reviews} />
           <div style={{ textAlign: "center", marginTop: 36 }}>
-            <a href="#" className="sim_bk_btn_orange" style={{ fontSize: 15, padding: "13px 34px" }}>View More</a>
+            <a href="/srilanka/testimonials" className="sim_bk_btn_orange" style={{ fontSize: 15, padding: "13px 34px" }}>View More</a>
           </div>
         </section>
 

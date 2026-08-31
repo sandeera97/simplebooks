@@ -738,7 +738,7 @@ export default function AccountingToolPage() {
             </div>
             <div style={{ textAlign: "center", marginTop: 40 }}>
               <a
-                href="#"
+                href="/srilanka/testimonials"
                 className="sim_bk_btn_orange"
                 style={{
                   display: "inline-block",
