@@ -51,10 +51,14 @@ export default function ContactForm() {
       <div className="sim_bk_field" style={{ marginBottom: 16 }}>
         <select required defaultValue="" className="sim_bk_select">
           <option value="" disabled>Services required *</option>
-          <option>Business Setup</option>
-          <option>Online Bookkeeping</option>
-          <option>Legal Services</option>
-          <option>Payroll Management</option>
+          <option>Business registration</option>
+          <option>Bookkeeping</option>
+          <option>Payroll</option>
+          <option>Tax</option>
+          <option>Company secretary</option>
+          <option>Legal</option>
+          <option>Trademark</option>
+          <option>General</option>
         </select>
         <span className="sim_bk_select_arrow">▼</span>
       </div>
@@ -62,8 +66,8 @@ export default function ContactForm() {
       <div className="sim_bk_field" style={{ marginBottom: 16 }}>
         <select defaultValue="" className="sim_bk_select">
           <option value="" disabled>Preferred Language</option>
-          <option>English</option>
           <option>Sinhala</option>
+          <option>English</option>
           <option>Tamil</option>
         </select>
         <span className="sim_bk_select_arrow">▼</span>
