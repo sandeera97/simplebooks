@@ -834,3 +834,56 @@ a, button {
 .sim_bk_prose ul { margin: 18px 0 18px 20px; padding: 0; }
 .sim_bk_prose li { font-size: 16px; line-height: 1.8; color: #5a607a; margin: 0 0 12px; }
 .sim_bk_prose a { color: #f15f2c; font-weight: 600; }
+
+/* ---------- Payable page ---------- */
+.sim_bk_payable_row { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: start; }
+.sim_bk_payable_kicker { font-size: 15px; color: #5a607a; margin: 0 0 6px; }
+.sim_bk_payable_title {
+  font-size: 46px; font-weight: 800; letter-spacing: -1px;
+  color: #14143d; margin: 0 0 14px; line-height: 1.1;
+}
+.sim_bk_payable_lead { font-size: 16px; line-height: 1.7; color: #5a607a; margin: 0; max-width: 420px; }
+.sim_bk_payable_list { list-style: none; margin: 0; padding: 0; }
+.sim_bk_payable_list > li {
+  display: flex; gap: 12px; align-items: flex-start;
+  font-size: 15.5px; line-height: 1.7; color: #5a607a; margin: 0 0 18px;
+}
+.sim_bk_payable_tick { flex-shrink: 0; margin-top: 4px; }
+.sim_bk_payable_sublist { margin: 10px 0 0 18px; padding: 0; }
+.sim_bk_payable_sublist li { font-size: 15px; line-height: 1.7; color: #5a607a; margin: 0 0 4px; }
+.sim_bk_payable_outro { font-size: 15.5px; line-height: 1.7; color: #5a607a; margin: 24px 0 0; }
+
+@media (max-width: 900px) {
+  .sim_bk_payable_row { grid-template-columns: 1fr; gap: 36px; }
+  .sim_bk_payable_title { font-size: 38px; }
+}
+
+/* ---------- FAQ page ---------- */
+.sim_bk_faq_group { margin: 0 0 48px; }
+.sim_bk_faq_group:last-child { margin-bottom: 0; }
+.sim_bk_faq_group_title {
+  font-size: 26px; font-weight: 800; color: #14143d;
+  margin: 0 0 20px; letter-spacing: -0.4px;
+}
+.sim_bk_faq_list { border-top: 1px solid #e7e9f3; }
+.sim_bk_faq_item { border-bottom: 1px solid #e7e9f3; }
+.sim_bk_faq_q { margin: 0; font-size: 16px; }
+.sim_bk_faq_q button {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; text-align: left; background: none; border: 0; cursor: pointer;
+  padding: 20px 4px; font: inherit; font-weight: 600; color: #14143d;
+  line-height: 1.5;
+}
+.sim_bk_faq_q button:hover { color: #f15f2c; }
+.sim_bk_faq_q svg { flex-shrink: 0; color: #f15f2c; }
+.sim_bk_faq_item.is_open .sim_bk_faq_q button { color: #f15f2c; }
+.sim_bk_faq_a { padding: 0 4px 22px; }
+.sim_bk_faq_a p { font-size: 15.5px; line-height: 1.8; color: #5a607a; margin: 0 0 14px; }
+.sim_bk_faq_a p:last-child { margin-bottom: 0; }
+.sim_bk_faq_a ul { margin: 12px 0 12px 20px; padding: 0; }
+.sim_bk_faq_a li { font-size: 15.5px; line-height: 1.8; color: #5a607a; margin: 0 0 8px; }
+
+@media (max-width: 600px) {
+  .sim_bk_faq_group_title { font-size: 22px; }
+  .sim_bk_faq_q button { padding: 18px 2px; font-size: 15.5px; }
+}
