@@ -548,7 +548,7 @@ export default function ForeignIncomePage() {
                 ))}
               </div>
               <div style={{ textAlign: "center", marginTop: 40 }}>
-                <a href="#" className="sim_bk_btn_orange" style={{ fontSize: 14, padding: "13px 34px" }}>View more</a>
+                <a href="/srilanka/testimonials" className="sim_bk_btn_orange" style={{ fontSize: 14, padding: "13px 34px" }}>View more</a>
               </div>
             </div>
           </div>

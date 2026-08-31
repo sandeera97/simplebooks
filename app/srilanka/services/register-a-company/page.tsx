@@ -657,7 +657,7 @@ export default function RegisterACompanyPage() {
             ))}
           </div>
           <div style={{ textAlign: "center", marginTop: 44 }}>
-            <a href="#" className="sim_bk_btn_dark" style={{ fontSize: 15, padding: "14px 40px", background: "#12123f" }}>View More</a>
+            <a href="/srilanka/testimonials" className="sim_bk_btn_dark" style={{ fontSize: 15, padding: "14px 40px", background: "#12123f" }}>View More</a>
           </div>
         </div>
       </section>

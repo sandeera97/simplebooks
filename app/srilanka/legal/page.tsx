@@ -272,7 +272,7 @@ export default function LegalPage() {
               ))}
             </div>
             <div style={{ textAlign: "center", marginTop: 44 }}>
-              <a href="#" className="sim_bk_btn_dark" style={{ padding: "14px 40px", fontSize: 15, background: "#12123f" }}>View more</a>
+              <a href="/srilanka/testimonials" className="sim_bk_btn_dark" style={{ padding: "14px 40px", fontSize: 15, background: "#12123f" }}>View more</a>
             </div>
           </div>
         </section>
