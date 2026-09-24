@@ -155,27 +155,62 @@
   transition: grid-template-rows .4s var(--v2-ease);
 }
 .v2_hdr.is_open .v2_mnav { grid-template-rows: 1fr; }
+/* overflow:hidden is what lets grid-template-rows collapse this cleanly */
 .v2_mnav_inner { overflow: hidden; min-height: 0; }
-.v2_mnav_pad { padding-top: 14px; padding-bottom: 22px; }
+/* a deep tree can outgrow the screen, so scroll the content, not the panel */
+.v2_mnav_pad {
+  padding-top: 14px; padding-bottom: 28px;
+  max-height: calc(100vh - 116px); overflow-y: auto; overscroll-behavior: contain;
+}
 
-.v2_mnav_list { margin: 0; padding: 0; list-style: none; }
-.v2_mnav_list li {
+.v2_mnav_list, .v2_mnav_sub ul { margin: 0; padding: 0; list-style: none; }
+.v2_mnav_list > li {
   opacity: 0; transform: translateY(-6px);
   transition: opacity .3s var(--v2-ease), transform .3s var(--v2-ease);
 }
-.v2_hdr.is_open .v2_mnav_list li { opacity: 1; transform: none; }
-.v2_mnav_list a {
-  display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  padding: 14px 4px; font-size: 16px; font-weight: 700; color: var(--v2-navy);
-  border-bottom: 1px solid rgba(10, 18, 51, 0.06);
+.v2_hdr.is_open .v2_mnav_list > li { opacity: 1; transform: none; }
+.v2_hdr.is_open .v2_mnav_list > li:nth-child(1) { transition-delay: .05s; }
+.v2_hdr.is_open .v2_mnav_list > li:nth-child(2) { transition-delay: .095s; }
+.v2_hdr.is_open .v2_mnav_list > li:nth-child(3) { transition-delay: .14s; }
+.v2_hdr.is_open .v2_mnav_list > li:nth-child(4) { transition-delay: .185s; }
+.v2_hdr.is_open .v2_mnav_list > li:nth-child(5) { transition-delay: .23s; }
+
+/* one row, whether it navigates or expands */
+.v2_mnav_link {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 14px 4px; font: inherit; font-size: 16px; font-weight: 700; color: var(--v2-navy);
+  background: none; border: 0; border-bottom: 1px solid rgba(10, 18, 51, 0.06);
+  text-align: left; cursor: pointer;
   transition: color .2s var(--v2-ease), padding-left .25s var(--v2-ease);
 }
-.v2_mnav_list a:hover, .v2_mnav_list a:focus-visible { color: var(--v2-orange); padding-left: 8px; }
+.v2_mnav_link:hover, .v2_mnav_link:focus-visible { color: var(--v2-orange); padding-left: 8px; }
 .v2_mnav_go { color: var(--v2-ink-5); font-size: 14px; transition: transform .25s var(--v2-ease), color .2s; }
-.v2_mnav_list a:hover .v2_mnav_go { color: var(--v2-orange); transform: translateX(3px); }
+.v2_mnav_link:hover .v2_mnav_go { color: var(--v2-orange); transform: translateX(3px); }
+.v2_mnav_chev { color: var(--v2-ink-4); display: grid; place-items: center; transition: transform .35s var(--v2-ease), color .2s; }
+.v2_mnav_list li.is_open > .v2_mnav_toggle { color: var(--v2-orange); }
+.v2_mnav_list li.is_open > .v2_mnav_toggle .v2_mnav_chev { transform: rotate(180deg); color: var(--v2-orange); }
 
+/* nested levels: smaller, lighter, indented, with a rail down the side */
+.v2_mnav_d1 { font-size: 14.5px; font-weight: 600; color: var(--v2-ink-2); padding: 11px 4px; }
+.v2_mnav_d2 { font-size: 13.5px; font-weight: 500; color: var(--v2-ink-3); padding: 9px 4px; }
+.v2_mnav_sub {
+  display: grid; grid-template-rows: 0fr;
+  transition: grid-template-rows .36s var(--v2-ease);
+}
+.v2_mnav_list li.is_open > .v2_mnav_sub { grid-template-rows: 1fr; }
+.v2_mnav_sub_in { overflow: hidden; min-height: 0; }
+.v2_mnav_sub > .v2_mnav_sub_in > ul {
+  margin: 2px 0 8px; padding-left: 14px;
+  border-left: 2px solid rgba(10, 18, 51, 0.08);
+}
+.v2_mnav_sub .v2_mnav_link { border-bottom-color: rgba(10, 18, 51, 0.04); }
+.v2_mnav_sub li:last-child > .v2_mnav_link { border-bottom: 0; }
+
+/* footer block: region + the two CTAs. The last nav row's own bottom border
+   is the divider, so this adds space only — no second line, no dead gap. */
+.v2_mnav_foot { margin-top: 20px; }
 .v2_mnav_region {
-  display: inline-flex; align-items: center; gap: 7px; margin: 18px 0 16px;
+  display: inline-flex; align-items: center; gap: 7px; margin: 0 0 16px;
   font-size: 13.5px; font-weight: 600; color: var(--v2-ink-2);
   padding: 9px 14px; border: 1px solid var(--v2-line); border-radius: 999px;
 }
@@ -726,7 +761,11 @@
   .v2_hero_p { font-size: 16px; }
   .v2_logo { font-size: 17px; }
   .v2_burger { width: 38px; height: 38px; }
-  .v2_mnav_list a { font-size: 15.5px; padding: 12px 2px; }
+  /* keep the depth hierarchy — a blanket .v2_mnav_link size flattens it */
+  .v2_mnav_d0 { font-size: 15.5px; padding: 12px 2px; }
+  .v2_mnav_d1 { font-size: 14px; padding: 10px 2px; }
+  .v2_mnav_d2 { font-size: 13px; padding: 9px 2px; }
+  .v2_mnav_sub > .v2_mnav_sub_in > ul { padding-left: 11px; }
   .v2_phone { grid-template-columns: 1fr; }
   .v2_form, .v2_quote { padding: 20px; }
   .v2_score { gap: 16px 24px; }

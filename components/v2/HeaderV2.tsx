@@ -2,7 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { navItems } from "@/components/layout/navData";
+import MobileNav from "./MobileNav";
 
+/* Top-level entries for the desktop bar. The full tree (including every
+   submenu) is navItems, which the mobile panel renders in full. */
 const NAV = [
   { label: "Dashboard", href: "/srilanka/dashboard/accounting-tool", caret: true },
   { label: "Company Name Check", href: "/srilanka/company-name-check" },
@@ -96,28 +100,21 @@ export default function HeaderV2() {
         <div className="v2_mnav" id="v2-mobile-menu" ref={panelRef} aria-hidden={!open}>
           <div className="v2_mnav_inner">
             <div className="v2_wrap v2_mnav_pad">
-              <ul className="v2_mnav_list">
-                {NAV.map((n, i) => (
-                  <li key={n.label} style={{ transitionDelay: `${open ? 0.05 + i * 0.045 : 0}s` }}>
-                    <Link href={n.href} onClick={() => setOpen(false)}>
-                      <span>{n.label}</span>
-                      <span className="v2_mnav_go" aria-hidden="true">→</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <MobileNav items={navItems} onNavigate={() => setOpen(false)} />
 
-              <div className="v2_mnav_region">
-                🇱🇰 Sri Lanka <span className="v2_nav_caret">▼</span>
-              </div>
+              <div className="v2_mnav_foot">
+                <div className="v2_mnav_region">
+                  🇱🇰 Sri Lanka <span className="v2_nav_caret">▼</span>
+                </div>
 
-              <div className="v2_mnav_cta">
-                <a className="v2_mnav_signin" href="https://dashboard.simplebooks.com/sign-in">
-                  Sign in
-                </a>
-                <a className="v2_mnav_signup" href="https://dashboard.simplebooks.com">
-                  Sign up
-                </a>
+                <div className="v2_mnav_cta">
+                  <a className="v2_mnav_signin" href="https://dashboard.simplebooks.com/sign-in">
+                    Sign in
+                  </a>
+                  <a className="v2_mnav_signup" href="https://dashboard.simplebooks.com">
+                    Sign up
+                  </a>
+                </div>
               </div>
             </div>
           </div>
