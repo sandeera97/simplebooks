@@ -33,12 +33,8 @@ export default function HomePage() {
         <Stats />
         <WhatWeDo />
         <Platform />
-        <section id="how">
-          <HowItWorks />
-        </section>
-        <section id="why">
-          <WhySimplebooks />
-        </section>
+        <HowItWorks />
+        <WhySimplebooks />
         <Customers />
         <FaqMarquee />
         <GetStarted />

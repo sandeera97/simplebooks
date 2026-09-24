@@ -160,7 +160,7 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <section className="v2_how">
+    <section className="v2_how" id="how">
       <div className="v2_wrap">
         <div className="v2_sec_head_center">
           <p className="v2_eyebrow v2_reveal">How it works</p>
@@ -201,7 +201,7 @@ const WITH_US = [
 
 export function WhySimplebooks() {
   return (
-    <section className="v2_sec v2_sec_pad">
+    <section className="v2_sec v2_sec_pad" id="why">
       <div className="v2_wrap">
         <div className="v2_why_in">
           <div>

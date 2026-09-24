@@ -726,7 +726,10 @@ a, button {
    desktop (aligned with the header). Restore a small gutter on mobile so content
    doesn't touch the screen edges. !important overrides inline section padding. */
 @media (max-width: 920px) {
-  main section,
+  /* Scoped to the old design only. The 2026 redesign wraps its page in
+     .sim_bk_v2 and gutters its own .v2_wrap, so this !important rule would
+     double-pad every one of its sections below 920px. */
+  :not(.sim_bk_v2) > main section,
   .sim_bk_footer {
     padding-left: 28px !important;
     padding-right: 28px !important;

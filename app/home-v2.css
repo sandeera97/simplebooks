@@ -555,10 +555,12 @@
 /* =========================================================================
    Responsive
    ========================================================================= */
+
+/* Laptop -> tablet: two-column sections stack, nav collapses to a burger. */
 @media (max-width: 1080px) {
   .v2_hero_in, .v2_platform_in, .v2_why_in, .v2_cust_in, .v2_start_in { grid-template-columns: 1fr; gap: 48px; }
   .v2_sec_head { grid-template-columns: 1fr; gap: 20px; align-items: start; }
-  .v2_cards, .v2_steps, .v2_mini { grid-template-columns: repeat(2, 1fr); }
+  .v2_cards { grid-template-columns: repeat(2, 1fr); }
   .v2_stats_in { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .v2_foot_cols { grid-template-columns: 1fr 1fr; gap: 36px; }
   .v2_news { grid-template-columns: 1fr; gap: 24px; }
@@ -569,28 +571,88 @@
   }
   .v2_float_payroll { left: 0; bottom: 60px; }
   .v2_float_filing { right: 0; }
+  /* the hero image no longer needs to fill half the screen */
+  .v2_hero_card { max-width: 620px; margin: 0 auto; }
+}
+
+/* Three-up rows go straight from 3 to 1. At 2 columns the last card is
+   orphaned on its own row, which looks broken. */
+@media (max-width: 1000px) {
+  .v2_steps, .v2_mini { grid-template-columns: 1fr; }
+  .v2_sec_pad, .v2_platform, .v2_how, .v2_cust { padding: 96px 0; }
+  .v2_faq { padding: 88px 0; }
+}
+
+/* Tablet portrait: 40px gutters start eating the content. */
+@media (max-width: 860px) {
+  .v2_wrap { padding: 0 28px; }
+  .v2_compare { grid-template-columns: 1fr; }
+  .v2_quote { padding: 34px; }
+  .v2_form { padding: 30px; }
 }
 
 @media (max-width: 720px) {
-  /* 40px gutters are right on desktop but eat a phone screen */
   .v2_wrap { padding: 0 22px; }
   .v2_sec_pad, .v2_platform, .v2_how, .v2_cust, .v2_faq { padding: 72px 0; }
   .v2_hero { padding: 44px 0 64px; }
-  .v2_cards, .v2_steps, .v2_mini, .v2_compare, .v2_grid2 { grid-template-columns: 1fr; }
+  .v2_banks { padding: 0 0 44px; }
+  .v2_cards, .v2_grid2 { grid-template-columns: 1fr; }
   .v2_dash_body { grid-template-columns: 1fr; min-height: 0; }
   .v2_dash_side { display: none; }
-  .v2_score { flex-wrap: wrap; gap: 20px; }
+  .v2_score { flex-wrap: wrap; gap: 20px 34px; }
   .v2_contact { flex-wrap: wrap; gap: 24px; }
-  .v2_foot_cols { grid-template-columns: 1fr; }
+  .v2_foot_cols { grid-template-columns: 1fr; gap: 30px; }
   .v2_form { padding: 24px; }
   .v2_quote { padding: 28px; }
   .v2_quote_t { font-size: 17px; }
   .v2_float { display: none; }
   .v2_news_form { flex-direction: column; }
   .v2_news_form .v2_btn { justify-content: center; }
+  .v2_banks_in { gap: 16px 22px; }
+  /* the marquee pills are oversized for a phone */
+  .v2_q { font-size: 13.5px; padding: 11px 18px; }
 }
 
-@media (max-width: 420px) {
+/* Phone: shrink the display numbers, stop the phone field squeezing. */
+@media (max-width: 560px) {
+  .v2_score_n { font-size: 38px; }
+  .v2_stat_n { font-size: 34px; }
+  .v2_news h2 { font-size: 23px; }
+  .v2_h3 { font-size: 18px; }
+  /* 104px of country code + a 96px number field is unusable */
+  .v2_phone { grid-template-columns: 104px 1fr; gap: 8px; }
+  .v2_phone .v2_select { padding-left: 10px; padding-right: 6px; }
+  .v2_quote_nav { gap: 8px; }
+  .v2_quote_count { width: 100%; margin-left: 0; order: 3; }
+  .v2_dots { margin-left: 0; }
+  .v2_acc_body { padding-left: 42px; }
+  .v2_why_badge { left: 0; bottom: -16px; padding: 12px 14px; }
+}
+
+@media (max-width: 430px) {
   .v2_stats_in { grid-template-columns: 1fr; gap: 24px; }
+  .v2_hero_cta { flex-direction: column; align-items: stretch; }
   .v2_hero_cta .v2_btn { width: 100%; justify-content: center; }
+  .v2_announce { height: auto; min-height: 40px; padding: 8px 16px; flex-wrap: wrap; gap: 4px 8px; font-size: 12px; }
+  .v2_hdr_in { gap: 12px; }
+  .v2_logo { font-size: 18px; gap: 7px; }
+  .v2_logo_mark { width: 11px; height: 11px; }
+  .v2_sec_pad, .v2_platform, .v2_how, .v2_cust, .v2_faq { padding: 60px 0; }
+  .v2_card, .v2_step, .v2_col { padding: 24px 20px; }
+  .v2_dash_main { padding: 14px; }
+  .v2_dash_kpis { gap: 6px; }
+}
+
+/* Smallest phones still in use (iPhone SE, Galaxy A0x). */
+@media (max-width: 360px) {
+  .v2_wrap { padding: 0 16px; }
+  .v2_h1 { font-size: 36px; letter-spacing: -0.035em; }
+  .v2_hero_p { font-size: 16px; }
+  .v2_logo { font-size: 17px; }
+  .v2_burger { width: 38px; height: 38px; }
+  .v2_phone { grid-template-columns: 1fr; }
+  .v2_form, .v2_quote { padding: 20px; }
+  .v2_score { gap: 16px 24px; }
+  .v2_dash_kpi { padding: 8px; }
+  .v2_dash_kpi b { font-size: 16px; }
 }
