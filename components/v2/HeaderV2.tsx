@@ -4,21 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { navItems } from "@/components/layout/navData";
 import MobileNav from "./MobileNav";
-
-/* Top-level entries for the desktop bar. The full tree (including every
-   submenu) is navItems, which the mobile panel renders in full. */
-const NAV = [
-  { label: "Dashboard", href: "/srilanka/dashboard/accounting-tool", caret: true },
-  { label: "Company Name Check", href: "/srilanka/company-name-check" },
-  { label: "Services", href: "/srilanka/services", caret: true },
-  { label: "Resources", href: "/srilanka/videos", caret: true },
-  { label: "Contact", href: "/srilanka/contact" },
-];
+import DesktopNav from "./DesktopNav";
 
 export function Logo({ size = 21 }: { size?: number }) {
   return (
     <span className="v2_logo" style={{ fontSize: size }}>
-      <span className="v2_logo_mark" />
       simplebooks
     </span>
   );
@@ -34,7 +24,7 @@ export default function HeaderV2() {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setOpen(false);
     };
-    const mq = window.matchMedia("(min-width: 1081px)");
+    const mq = window.matchMedia("(min-width: 1201px)");
     const onWide = () => mq.matches && setOpen(false);
     document.addEventListener("keydown", onKey);
     mq.addEventListener("change", onWide);
@@ -57,14 +47,7 @@ export default function HeaderV2() {
             <Logo />
           </Link>
 
-          <nav className="v2_nav">
-            {NAV.map((n) => (
-              <Link key={n.label} href={n.href}>
-                {n.label}
-                {n.caret && <span className="v2_nav_caret">▼</span>}
-              </Link>
-            ))}
-          </nav>
+          <DesktopNav items={navItems} />
 
           <div className="v2_hdr_right">
             <span className="v2_region">

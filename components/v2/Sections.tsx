@@ -341,10 +341,7 @@ export function FooterV2() {
 
         <div className="v2_foot_cols">
           <div>
-            <span className="v2_logo" style={{ color: "#fff" }}>
-              <span className="v2_logo_mark" />
-              simplebooks
-            </span>
+            <span className="v2_logo" style={{ color: "#fff" }}>simplebooks</span>
             <p className="v2_foot_about">
               Simplebooks helps small business owners and entrepreneurs grow through financial
               consulting, registrations and legal services. Backed by local knowledge from our

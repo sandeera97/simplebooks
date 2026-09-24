@@ -43,10 +43,7 @@ function DashboardMock() {
       </div>
       <div className="v2_dash_body">
         <aside className="v2_dash_side">
-          <p className="v2_dash_brand">
-            <span className="v2_logo_mark" style={{ width: 9, height: 9 }} />
-            simplebooks
-          </p>
+          <p className="v2_dash_brand">simplebooks</p>
           <ul className="v2_dash_nav">
             <li className="is_on">Overview</li>
             <li>Requests</li>

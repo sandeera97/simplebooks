@@ -103,27 +103,66 @@
   -webkit-backdrop-filter: saturate(1.8) blur(16px);
   border-bottom: 1px solid rgba(10, 18, 51, 0.06);
 }
-.v2_hdr_in { height: 75px; display: flex; align-items: center; gap: 28px; }
+.v2_hdr_in { height: 75px; display: flex; align-items: center; gap: 20px; }
 .v2_logo { display: inline-flex; align-items: center; gap: 9px; font-size: 21px; font-weight: 800; letter-spacing: -0.5px; }
 .v2_logo_mark { width: 13px; height: 13px; border-radius: 3px; background: var(--v2-orange); transform: rotate(45deg); flex-shrink: 0; }
 .v2_nav { display: flex; align-items: center; gap: 4px; margin-left: 12px; }
-.v2_nav > * {
+.v2_nav > a,
+.v2_nav_has > button {
   font-size: 14.5px; font-weight: 600; color: var(--v2-navy);
   display: inline-flex; align-items: center; gap: 5px;
   background: none; border: 0; cursor: pointer;
-  padding: 9px 12px; border-radius: 10px;
-  transition: background-color .25s var(--v2-ease);
+  padding: 9px 12px; border-radius: 10px; white-space: nowrap;
+  transition: background-color .25s var(--v2-ease), color .25s var(--v2-ease);
 }
-.v2_nav > *:hover { background: rgba(10, 18, 51, 0.05); }
-.v2_nav_caret { font-size: 9px; opacity: .55; }
+.v2_nav > a:hover,
+.v2_nav_has > button:hover,
+.v2_nav_has.is_open > button { background: rgba(10, 18, 51, 0.05); }
+.v2_nav_has.is_open > button { color: var(--v2-orange); }
+.v2_nav_caret { display: grid; place-items: center; opacity: .5; transition: transform .3s var(--v2-ease); }
+.v2_nav_has.is_open .v2_nav_caret { transform: rotate(180deg); opacity: 1; }
+
+/* ---------- Desktop mega menu ---------- */
+.v2_nav_has { position: relative; }
+.v2_mega {
+  position: absolute; top: calc(100% + 12px); left: 50%;
+  transform: translate(-50%, -8px); z-index: 70;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .24s var(--v2-ease), transform .24s var(--v2-ease), visibility .24s;
+}
+.v2_nav_has.is_open .v2_mega {
+  opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0);
+}
+/* invisible bridge so the cursor can cross the gap without closing */
+.v2_mega::before { content: ""; position: absolute; top: -14px; left: 0; right: 0; height: 14px; }
+.v2_mega_in {
+  background: #fff; border: 1px solid rgba(10, 18, 51, 0.08); border-radius: 18px;
+  box-shadow: 0 30px 70px -32px rgba(10, 18, 51, 0.45);
+  padding: 22px; min-width: 240px;
+}
+.v2_mega_grid { display: flex; gap: 30px; align-items: flex-start; }
+.v2_mega_col { min-width: 186px; }
+.v2_mega_h {
+  font-size: 10.5px; font-weight: 800; letter-spacing: 1.3px; text-transform: uppercase;
+  color: var(--v2-ink-5); margin-bottom: 12px; padding: 0 8px;
+}
+.v2_mega_col ul { margin: 0; padding: 0; list-style: none; }
+.v2_mega_col li + li { margin-top: 1px; }
+.v2_mega_col a {
+  display: block; padding: 8px; border-radius: 9px;
+  font-size: 14px; font-weight: 600; color: var(--v2-ink-2); white-space: nowrap;
+  transition: background-color .2s var(--v2-ease), color .2s var(--v2-ease);
+}
+.v2_mega_col a:hover { background: rgba(10, 18, 51, 0.05); color: var(--v2-orange); }
+.v2_mega_col a span { font-size: 11px; opacity: .55; }
 .v2_hdr_right { margin-left: auto; display: flex; align-items: center; gap: 14px; }
 .v2_region {
   display: inline-flex; align-items: center; gap: 7px; font-size: 13.5px; font-weight: 600;
-  padding: 9px 14px; border: 1px solid var(--v2-line); border-radius: 999px; background: #fff;
+  white-space: nowrap; padding: 9px 14px; border: 1px solid var(--v2-line); border-radius: 999px; background: #fff;
   transition: border-color .25s var(--v2-ease);
 }
 .v2_region:hover { border-color: rgba(10, 18, 51, 0.28); }
-.v2_signin { font-size: 14px; font-weight: 700; }
+.v2_signin { font-size: 14px; font-weight: 700; white-space: nowrap; }
 
 /* ---------- Burger + mobile menu ---------- */
 .v2_burger {
@@ -785,7 +824,7 @@
    ========================================================================= */
 
 /* Laptop -> tablet: two-column sections stack, nav collapses to a burger. */
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
   .v2_hero_in, .v2_platform_in, .v2_why_in, .v2_cust_in, .v2_start_in { grid-template-columns: 1fr; gap: 48px; }
   .v2_sec_head { grid-template-columns: 1fr; gap: 20px; align-items: start; }
   .v2_cards { grid-template-columns: repeat(2, 1fr); }
@@ -793,6 +832,7 @@
   .v2_foot_cols { grid-template-columns: 1fr 1fr; gap: 36px; }
   .v2_news { grid-template-columns: 1fr; gap: 24px; }
   .v2_nav, .v2_hdr_right .v2_signin, .v2_hdr_right .v2_region { display: none; }
+  .v2_mega { display: none; }
   .v2_burger { display: grid; }
   .v2_mnav { display: grid; }
   .v2_float_payroll { left: 0; bottom: 60px; }
