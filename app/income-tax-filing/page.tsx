@@ -34,17 +34,17 @@ const INCLUDED = [
 
 const PLANS = [
   {
-    name: "Self-file",
-    price: "Rs 4,500",
-    blurb: "For a straightforward salary or single-source return.",
-    features: ["Instant computation", "Human review before filing", "IRD e-filing", "Email support"],
-  },
-  {
-    name: "Assisted",
-    price: "Rs 9,500",
-    blurb: "Multiple income sources, foreign income or rental.",
-    features: ["Everything in Self-file", "Multiple income sources", "Foreign income handling", "Live chat and phone support", "Deduction review call"],
+    name: "Income tax return",
+    price: "Rs. 4,999",
+    blurb: "Regular price Rs. 20,000. Instant tax results, real human review and IRD e-filing.",
+    features: [
+      "Instant tax results",
+      "Real human review",
+      "IRD e-filing",
+      "All-inclusive — no hidden fees",
+    ],
     featured: true,
+    cta: "Begin filing your return",
   },
 ];
 
@@ -130,7 +130,7 @@ export default function TaxToolPage() {
             title="Simple pricing, no surprises"
             lead="One fee, everything included. You only pay after you've seen your computation."
           />
-          <Pricing plans={PLANS} note="Prices are per year of assessment and include IRD e-filing." />
+          <Pricing plans={PLANS} note="Price is per year of assessment and includes IRD e-filing." />
         </div>
       </section>
 
