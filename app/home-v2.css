@@ -888,6 +888,25 @@
 .v2_karma_body b { font-size: 15px; font-weight: 800; color: var(--v2-navy); margin-top: auto; }
 @media (max-width: 1000px) { .v2_karma_grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; } }
 
+/* ---------- Alternating service sections ---------- */
+.v2_split { display: grid; grid-template-columns: 1.05fr 1fr; gap: 57.6px; align-items: center; }
+.v2_split.is_flip .v2_split_copy { order: 2; }
+.v2_split.is_flip .v2_split_aside { order: 1; }
+.v2_split_h { margin-top: 14px; font-size: clamp(28px, 3.1vw, 40px); }
+.v2_split_p { margin-top: 20px; max-width: 560px; font-size: 16px; }
+.v2_chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; padding: 0; list-style: none; }
+.v2_chips li {
+  font-size: 12.5px; font-weight: 700; padding: 8px 14px; border-radius: 999px;
+  background: rgba(10, 18, 51, 0.05); color: var(--v2-ink-2);
+}
+.v2_split + .v2_split { margin-top: 96px; }
+@media (max-width: 1000px) {
+  .v2_split { grid-template-columns: 1fr; gap: 36px; }
+  .v2_split.is_flip .v2_split_copy { order: 1; }
+  .v2_split.is_flip .v2_split_aside { order: 2; }
+  .v2_split + .v2_split { margin-top: 68px; }
+}
+
 /* =========================================================================
    Responsive
    ========================================================================= */
