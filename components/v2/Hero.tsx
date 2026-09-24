@@ -1,5 +1,12 @@
 import Link from "next/link";
 
+const TRUST_FACES = [
+  "/images/avatars/sarath-senanayake.jpg",
+  "/images/avatars/dhanushka.jpg",
+  "/images/avatars/damith-menaka.jpg",
+  "/images/avatars/bhanuka-harischandra.jpg",
+];
+
 export default function Hero() {
   return (
     <section className="v2_sec v2_hero">
@@ -53,6 +60,18 @@ export default function Hero() {
                 Check
               </button>
             </form>
+          </div>
+
+          <div className="v2_trust v2_reveal">
+            <div className="v2_trust_faces">
+              {TRUST_FACES.map((f) => (
+                <img key={f} src={f} alt="" width={36} height={36} loading="lazy" />
+              ))}
+            </div>
+            <div>
+              <p className="v2_trust_a">4.9 / 5 across 400+ Google reviews</p>
+              <p className="v2_trust_b">4,500+ businesses registered since 2014</p>
+            </div>
           </div>
         </div>
 
