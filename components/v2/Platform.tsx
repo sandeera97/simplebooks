@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 const ITEMS = [
@@ -96,6 +96,27 @@ function DashboardMock() {
 
 export default function Platform() {
   const [open, setOpen] = useState(0);
+  // Hover-to-open is for mice only. Touch devices report no hover, and a
+  // hover-opened panel there would fight the tap.
+  const [hoverOpens, setHoverOpens] = useState(false);
+  const leaveTimer = useRef<number | null>(null);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const sync = () => setHoverOpens(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => {
+      mq.removeEventListener("change", sync);
+      if (leaveTimer.current) window.clearTimeout(leaveTimer.current);
+    };
+  }, []);
+
+  function onEnter(i: number) {
+    if (!hoverOpens) return;
+    if (leaveTimer.current) window.clearTimeout(leaveTimer.current);
+    setOpen(i);
+  }
 
   return (
     <section className="v2_sec v2_platform" id="platform">
@@ -120,18 +141,33 @@ export default function Platform() {
             {ITEMS.map((it, i) => {
               const isOpen = open === i;
               return (
-                <div key={it.n} className="v2_acc_item">
+                <div
+                  key={it.n}
+                  className={`v2_acc_item${isOpen ? " is_open" : ""}`}
+                  onMouseEnter={() => onEnter(i)}
+                >
                   <button
                     type="button"
                     className="v2_acc_btn"
                     aria-expanded={isOpen}
-                    onClick={() => setOpen(isOpen ? -1 : i)}
+                    aria-controls={`v2-acc-${it.n}`}
+                    onFocus={() => onEnter(i)}
+                    onClick={() => setOpen(isOpen && !hoverOpens ? -1 : i)}
                   >
                     <span className="v2_acc_n">{it.n}</span>
                     <span className="v2_acc_t">{it.t}</span>
-                    <span className="v2_acc_s">{isOpen ? "−" : "+"}</span>
+                    <span className="v2_acc_s" aria-hidden="true">
+                      {isOpen ? "−" : "+"}
+                    </span>
                   </button>
-                  {isOpen && <p className="v2_acc_body">{it.d}</p>}
+
+                  {/* Always rendered; collapsed with grid-template-rows so the
+                      open/close is a real CSS transition, not a mount. */}
+                  <div className="v2_acc_wrap" id={`v2-acc-${it.n}`} role="region">
+                    <div className="v2_acc_inner">
+                      <p className="v2_acc_body">{it.d}</p>
+                    </div>
+                  </div>
                 </div>
               );
             })}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 /* Real reviews, taken from the live site. */
@@ -50,10 +50,38 @@ const FACES = [
   "/images/avatars/damith-menaka.jpg",
 ];
 
+const DELAY = 6000;
+
 export default function Customers() {
   const [i, setI] = useState(0);
+  const [dir, setDir] = useState<1 | -1>(1);
+  const [paused, setPaused] = useState(false);
+  const timer = useRef<number | null>(null);
+
+  const go = useCallback((d: 1 | -1) => {
+    setDir(d);
+    setI((p) => (p + d + QUOTES.length) % QUOTES.length);
+  }, []);
+
+  useEffect(() => {
+    if (paused) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    timer.current = window.setTimeout(() => go(1), DELAY);
+    return () => {
+      if (timer.current) window.clearTimeout(timer.current);
+    };
+    // re-arms on every slide change, so a manual click restarts the countdown
+  }, [i, paused, go]);
+
+  // don't keep cycling in a background tab
+  useEffect(() => {
+    const onVis = () => setPaused(document.hidden);
+    document.addEventListener("visibilitychange", onVis);
+    return () => document.removeEventListener("visibilitychange", onVis);
+  }, []);
+
   const cur = QUOTES[i];
-  const go = (d: number) => setI((p) => (p + d + QUOTES.length) % QUOTES.length);
 
   return (
     <section className="v2_cust" id="customers">
@@ -85,16 +113,52 @@ export default function Customers() {
             </div>
           </div>
 
-          <div className="v2_quote v2_reveal">
+          <div
+            className="v2_quote v2_reveal"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+            onFocusCapture={() => setPaused(true)}
+            onBlurCapture={() => setPaused(false)}
+          >
             <p className="v2_quote_mark">&ldquo;</p>
-            <p className="v2_quote_t">{cur.q}</p>
-            <div className="v2_quote_who">
-              <b>{cur.name}</b>
-              {cur.role && <span>{cur.role}</span>}
+
+            <div className="v2_quote_stage" aria-live="polite">
+              {/* keyed so each slide remounts and replays the enter animation */}
+              <div key={i} className={`v2_quote_slide ${dir === 1 ? "from_right" : "from_left"}`}>
+                <p className="v2_quote_t">{cur.q}</p>
+                <div className="v2_quote_who">
+                  <b>{cur.name}</b>
+                  {cur.role && <span>{cur.role}</span>}
+                </div>
+              </div>
             </div>
+
             <div className="v2_quote_nav">
               <button type="button" onClick={() => go(-1)} aria-label="Previous review">←</button>
               <button type="button" onClick={() => go(1)} aria-label="Next review">→</button>
+
+              <div className="v2_dots" role="tablist" aria-label="Reviews">
+                {QUOTES.map((_, n) => (
+                  <button
+                    key={n}
+                    type="button"
+                    role="tab"
+                    aria-selected={n === i}
+                    aria-label={`Review ${n + 1}`}
+                    className={`v2_dot_btn${n === i ? " is_on" : ""}`}
+                    onClick={() => {
+                      setDir(n > i ? 1 : -1);
+                      setI(n);
+                    }}
+                  >
+                    <span
+                      className="v2_dot_fill"
+                      style={{ animationDuration: `${DELAY}ms`, animationPlayState: paused ? "paused" : "running" }}
+                    />
+                  </button>
+                ))}
+              </div>
+
               <span className="v2_quote_count">
                 {String(i + 1).padStart(2, "0")} / {String(QUOTES.length).padStart(2, "0")}
               </span>
