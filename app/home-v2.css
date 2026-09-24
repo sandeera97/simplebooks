@@ -661,6 +661,126 @@
 .v2_foot_bot a:hover { color: #fff; }
 
 /* =========================================================================
+   Inner pages (Dashboard tools) — built on the same tokens as the homepage
+   ========================================================================= */
+
+/* ---------- Page hero ---------- */
+.v2_phero { padding: 88px 0 84px; text-align: center; }
+.v2_phero_in { position: relative; z-index: 2; max-width: 880px; }
+.v2_phero .v2_h1 { margin-top: 16px; font-size: clamp(38px, 4.6vw, 60px); }
+.v2_phero_lead { margin: 22px auto 0; max-width: 620px; font-size: 17px; }
+.v2_phero_cta { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 30px; }
+.v2_phero_note { margin-top: 16px; font-size: 13px; color: var(--v2-ink-5); }
+.v2_phero_stats {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 48px;
+  margin-top: 46px; padding-top: 34px; border-top: 1px solid rgba(10, 18, 51, 0.08);
+}
+.v2_phero_stat_n { font-size: 32px; font-weight: 800; letter-spacing: -0.03em; color: var(--v2-navy); }
+.v2_phero_stat_l { margin-top: 6px; font-size: 13px; font-weight: 600; color: var(--v2-ink-4); }
+
+.v2_sec_head_left { max-width: 620px; margin-bottom: 48px; }
+.v2_sec_head_left .v2_h2 { margin-top: 14px; }
+
+/* ---------- Card grid variants ---------- */
+.v2_cards_2 { grid-template-columns: repeat(2, 1fr); }
+.v2_cards_4 { grid-template-columns: repeat(4, 1fr); }
+.v2_steps_4 { grid-template-columns: repeat(4, 1fr); }
+
+/* ---------- Pricing ---------- */
+.v2_price { display: grid; gap: 20px; align-items: stretch; }
+.v2_price_2 { grid-template-columns: repeat(2, 1fr); max-width: 780px; margin: 0 auto; }
+.v2_price_3 { grid-template-columns: repeat(3, 1fr); }
+.v2_price_4 { grid-template-columns: repeat(4, 1fr); }
+.v2_plan {
+  position: relative; display: flex; flex-direction: column;
+  background: #fff; border: 1px solid rgba(10, 18, 51, 0.08); border-radius: 22px;
+  padding: 30px 28px 28px;
+  transition: transform .35s var(--v2-ease), box-shadow .35s var(--v2-ease), border-color .35s var(--v2-ease);
+}
+.v2_plan:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -36px rgba(10,18,51,0.55); border-color: rgba(10,18,51,0.16); }
+.v2_plan.is_featured { border-color: var(--v2-orange); box-shadow: 0 24px 50px -34px rgba(255,91,46,0.55); }
+.v2_plan_flag {
+  position: absolute; top: -11px; left: 28px;
+  background: var(--v2-orange); color: #fff; font-size: 11px; font-weight: 800;
+  letter-spacing: .8px; text-transform: uppercase; padding: 5px 12px; border-radius: 999px;
+}
+.v2_plan_name { font-size: 12px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: var(--v2-ink-5); }
+.v2_plan_price { margin-top: 12px; font-size: 34px; font-weight: 800; letter-spacing: -0.035em; color: var(--v2-navy); }
+.v2_plan_price span { font-size: 14px; font-weight: 600; color: var(--v2-ink-4); letter-spacing: 0; margin-left: 4px; }
+.v2_plan_blurb { margin-top: 8px; font-size: 14px; line-height: 1.6; color: var(--v2-ink-3); }
+.v2_plan_list { margin: 22px 0 26px; flex: 1; }
+.v2_plan_list li { display: flex; gap: 11px; align-items: flex-start; padding: 7px 0; font-size: 14.5px; line-height: 1.55; color: var(--v2-ink-2); }
+.v2_plan .v2_btn { justify-content: center; }
+.v2_price_note { margin-top: 22px; text-align: center; font-size: 13px; color: var(--v2-ink-5); }
+
+/* ---------- FAQ (light, for inner pages) ---------- */
+.v2_faq2 { max-width: 840px; margin: 0 auto; border-top: 1px solid rgba(10, 18, 51, 0.08); }
+.v2_faq2_item { border-bottom: 1px solid rgba(10, 18, 51, 0.08); }
+.v2_faq2_q {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 18px;
+  padding: 20px 4px; background: none; border: 0; cursor: pointer; text-align: left;
+  font: inherit; font-size: 16px; font-weight: 700; color: var(--v2-navy); line-height: 1.5;
+  transition: color .2s var(--v2-ease);
+}
+.v2_faq2_q:hover { color: var(--v2-orange); }
+.v2_faq2_item.is_open .v2_faq2_q { color: var(--v2-orange); }
+.v2_faq2_s { font-size: 20px; line-height: 1; color: var(--v2-orange); flex-shrink: 0; }
+.v2_faq2_wrap { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .4s var(--v2-ease); }
+.v2_faq2_item.is_open .v2_faq2_wrap { grid-template-rows: 1fr; }
+.v2_faq2_inner { overflow: hidden; min-height: 0; }
+.v2_faq2_a {
+  padding: 0 4px 22px; font-size: 15px; line-height: 1.75; color: var(--v2-ink-3);
+  opacity: 0; transition: opacity .35s var(--v2-ease) .06s;
+}
+.v2_faq2_item.is_open .v2_faq2_a { opacity: 1; }
+
+/* ---------- CTA band ---------- */
+.v2_ctaband { background: var(--v2-navy-deep); color: #fff; padding: 96px 0; text-align: center; }
+.v2_ctaband_in { position: relative; z-index: 2; max-width: 760px; }
+.v2_ctaband .v2_h2 { color: #fff; }
+.v2_ctaband_lead { margin: 20px auto 0; max-width: 560px; font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.6); }
+.sim_bk_v2 .v2_btn_on_dark { color: #fff; border-color: rgba(255,255,255,0.22); }
+.sim_bk_v2 .v2_btn_on_dark:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); }
+
+/* ---------- Tinted band used between sections ---------- */
+.v2_band { background: var(--v2-sand); padding: 110px 0; }
+.v2_band_white { background: #fff; padding: 110px 0; }
+
+/* ---------- Inline visual panel (sits beside copy) ---------- */
+.v2_panel {
+  background: linear-gradient(160deg, #fff 0%, #f6f3ee 100%);
+  border: 1px solid var(--v2-line); border-radius: 22px; padding: 28px;
+  box-shadow: 0 40px 90px -56px rgba(10,18,51,0.9);
+}
+.v2_panel_row { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 13px 0; border-top: 1px solid var(--v2-line); }
+.v2_panel_row:first-of-type { border-top: 0; }
+.v2_panel_row b { font-size: 14px; font-weight: 700; color: var(--v2-navy); }
+.v2_panel_row span { font-size: 12.5px; font-weight: 700; color: var(--v2-ink-4); }
+.v2_panel_row .ok { color: var(--v2-green); }
+.v2_panel_h { font-size: 11px; font-weight: 800; letter-spacing: 1.3px; text-transform: uppercase; color: var(--v2-ink-5); margin-bottom: 14px; }
+
+@media (max-width: 1080px) {
+  .v2_cards_4, .v2_steps_4, .v2_price_4 { grid-template-columns: repeat(2, 1fr); }
+  .v2_price_3 { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
+  .v2_phero { padding: 64px 0 68px; }
+}
+@media (max-width: 860px) {
+  .v2_phero_stats { gap: 30px; }
+}
+@media (max-width: 720px) {
+  .v2_cards_2, .v2_cards_4, .v2_steps_4, .v2_price_2, .v2_price_4 { grid-template-columns: 1fr; }
+  .v2_band, .v2_band_white, .v2_ctaband { padding: 72px 0; }
+  .v2_phero { padding: 48px 0 56px; }
+  .v2_phero_stats { gap: 24px 36px; margin-top: 34px; padding-top: 26px; }
+  .v2_phero_stat_n { font-size: 26px; }
+  .v2_plan { padding: 26px 22px; }
+}
+@media (max-width: 430px) {
+  .v2_band, .v2_band_white, .v2_ctaband { padding: 60px 0; }
+  .v2_faq2_q { font-size: 15px; padding: 17px 2px; }
+}
+
+/* =========================================================================
    Responsive
    ========================================================================= */
 
