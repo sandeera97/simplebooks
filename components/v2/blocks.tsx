@@ -352,3 +352,52 @@ export function ReviewStrip({
     </div>
   );
 }
+
+/* =================== Alternating service section =================== */
+export function SplitSection({
+  eyebrow,
+  title,
+  paras,
+  bullets,
+  cta,
+  flip = false,
+  aside,
+}: {
+  eyebrow?: string;
+  title: string;
+  paras: string[];
+  bullets?: string[];
+  cta?: { label: string; href: string };
+  flip?: boolean;
+  aside?: React.ReactNode;
+}) {
+  return (
+    <div className={`v2_split${flip ? " is_flip" : ""}`}>
+      <div className="v2_split_copy">
+        {eyebrow && <p className="v2_eyebrow v2_reveal">{eyebrow}</p>}
+        <h2 className="v2_h2 v2_split_h v2_reveal">
+          {title}
+          <span className="v2_dot">.</span>
+        </h2>
+        {paras.map((t) => (
+          <p key={t.slice(0, 24)} className="v2_lead v2_split_p v2_reveal">
+            {t}
+          </p>
+        ))}
+        {bullets && (
+          <ul className="v2_chips v2_reveal">
+            {bullets.map((b) => (
+              <li key={b}>{b}</li>
+            ))}
+          </ul>
+        )}
+        {cta && (
+          <Link className="v2_btn v2_btn_navy v2_reveal" href={cta.href} style={{ marginTop: 26 }}>
+            {cta.label} <span className="v2_arrow">→</span>
+          </Link>
+        )}
+      </div>
+      {aside && <div className="v2_split_aside v2_reveal">{aside}</div>}
+    </div>
+  );
+}
