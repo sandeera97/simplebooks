@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import ChatWidget from "@/components/layout/ChatWidget";
+import "@/app/home-v2.css";
+import PageShell from "@/components/v2/PageShell";
+import { CtaBand } from "@/components/v2/blocks";
 
 export const metadata: Metadata = {
   title: "Thank You - Sri Lanka",
@@ -11,35 +11,35 @@ export const metadata: Metadata = {
 
 export default function ThankYouPage() {
   return (
-    <>
-      <Header />
-      <main>
-        <section style={{ padding: "60px 0 80px", textAlign: "center" }}>
-          <div className="sim_bk_container">
-            <h1
-              style={{
-                fontSize: 40,
-                lineHeight: 1.2,
-                fontWeight: 800,
-                margin: "0 0 34px",
-                letterSpacing: "-1px",
-                color: "#14143d",
-              }}
-            >
-              Thank You!
-            </h1>
-            <img
-              src="/images/status/thank-you.png"
-              alt="Your request is submitted"
-              width={768}
-              height={769}
-              style={{ width: "100%", maxWidth: 520, height: "auto", display: "block", margin: "0 auto" }}
-            />
-          </div>
-        </section>
-      </main>
-      <Footer />
-      <ChatWidget />
-    </>
+    <PageShell>
+      <section className="v2_sec v2_status">
+        <div className="v2_grid_bg" />
+        <div className="v2_blob v2_blob_a" style={{ width: 620, height: 620, top: -240, left: -160 }} />
+        <div className="v2_wrap v2_status_in">
+          <p className="v2_eyebrow v2_reveal">Request received</p>
+          <h1 className="v2_h1 v2_reveal">
+            Thank you<span className="v2_dot">!</span>
+          </h1>
+          <p className="v2_lead v2_status_lead v2_reveal">
+            Your request is submitted. One of our consultants will be in touch within one working
+            day — usually sooner.
+          </p>
+          <img
+            className="v2_reveal"
+            src="/images/status/thank-you.png"
+            alt="Your request is submitted"
+            width={768}
+            height={769}
+          />
+        </div>
+      </section>
+
+      <CtaBand
+        title="While you wait"
+        lead="Have a look at how registration works, or check whether your company name is free."
+        primary={{ label: "Check a company name", href: "/srilanka/company-name-check" }}
+        secondary={{ label: "Back to home", href: "/" }}
+      />
+    </PageShell>
   );
 }

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import ChatWidget from "@/components/layout/ChatWidget";
-import Accordion from "./Accordion";
+import "@/app/home-v2.css";
+import PageShell from "@/components/v2/PageShell";
+import { PageHero, CtaBand } from "@/components/v2/blocks";
+import FaqGroups from "./FaqGroups";
 import { faqGroups } from "./content";
 
 export const metadata: Metadata = {
@@ -13,41 +13,24 @@ export const metadata: Metadata = {
 
 export default function FaqPage() {
   return (
-    <>
-      <Header />
-      <main>
-        <section style={{ background: "#eef0fb", padding: "70px 0 64px" }}>
-          <div className="sim_bk_container" style={{ textAlign: "center" }}>
-            <h1
-              style={{
-                fontSize: 44,
-                lineHeight: 1.15,
-                fontWeight: 800,
-                margin: 0,
-                letterSpacing: "-1px",
-                color: "#14143d",
-              }}
-            >
-              Frequently Asked Questions
-            </h1>
-          </div>
-        </section>
+    <PageShell>
+      <PageHero
+        eyebrow="Your questions, answered"
+        title="Frequently asked questions"
+        lead="The questions we answer every day, grouped by what you're trying to do."
+      />
 
-        <section style={{ padding: "60px 0 80px" }}>
-          <div className="sim_bk_container">
-            <div style={{ maxWidth: 900, margin: "0 auto" }}>
-              {faqGroups.map((g) => (
-                <div key={g.name} className="sim_bk_faq_group">
-                  <h2 className="sim_bk_faq_group_title">{g.name}</h2>
-                  <Accordion items={g.items} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-      <ChatWidget />
-    </>
+      <section className="v2_sec v2_sec_pad">
+        <div className="v2_wrap">
+          <FaqGroups groups={faqGroups} />
+        </div>
+      </section>
+
+      <CtaBand
+        title="Still stuck on something"
+        lead="If your question isn't here, ask us directly. A consultant will get back to you within one working day."
+        primary={{ label: "Ask us yours", href: "/srilanka/contact" }}
+      />
+    </PageShell>
   );
 }

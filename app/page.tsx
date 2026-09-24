@@ -1,34 +1,46 @@
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import ChatWidget from "@/components/layout/ChatWidget";
-import Hero from "@/components/sections/Hero";
-import Services from "@/components/sections/Services";
-import Platform from "@/components/sections/Platform";
-import BankingPartners from "@/components/sections/BankingPartners";
-import Testimonials from "@/components/sections/Testimonials";
-import ContactForm from "@/components/sections/ContactForm";
+import type { Metadata } from "next";
+import "./home-v2.css";
+
+import HeaderV2 from "@/components/v2/HeaderV2";
+import Hero from "@/components/v2/Hero";
+import Platform from "@/components/v2/Platform";
+import Customers from "@/components/v2/Customers";
+import GetStarted from "@/components/v2/GetStarted";
+import Reveal from "@/components/v2/Reveal";
+import {
+  BankStrip,
+  Stats,
+  WhatWeDo,
+  HowItWorks,
+  WhySimplebooks,
+  FaqMarquee,
+  FooterV2,
+} from "@/components/v2/Sections";
+
+export const metadata: Metadata = {
+  title: "Simplebooks — The right place to start your business",
+  description:
+    "We've helped over 4,500 business owners set up, run and grow — from incorporation and bookkeeping to payroll, tax and legal. One team, one platform, across South Asia.",
+};
 
 export default function HomePage() {
   return (
-    <>
-      <Header />
+    <div className="sim_bk_v2">
+      <HeaderV2 />
       <main>
         <Hero />
-        <Services />
+        <BankStrip />
+        <Stats />
+        <WhatWeDo />
         <Platform />
-        <BankingPartners />
-
-        {/* Testimonials + lead form share one lavender section */}
-        <section className="sim_bk_testimonials">
-          <h2>
-            Thousands of repeat customers<br />can&apos;t all be wrong
-          </h2>
-          <Testimonials />
-          <ContactForm />
-        </section>
+        <HowItWorks />
+        <WhySimplebooks />
+        <Customers />
+        <FaqMarquee />
+        <GetStarted />
       </main>
-      <Footer />
-      <ChatWidget />
-    </>
+      <FooterV2 />
+      <Reveal />
+    </div>
   );
 }
