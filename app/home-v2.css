@@ -400,6 +400,10 @@
 
 /* ---------- Section headers ---------- */
 .v2_sec_pad { padding: 120px 0; }
+/* For a section that follows a hero and opens straight onto a card or a
+   list rather than a SecHead — 84px of hero pad plus 120px here leaves a
+   dead band with nothing in it. */
+.v2_sec_pad.v2_sec_pad_tight { padding-top: 64px; }
 .v2_sec_head { display: grid; grid-template-columns: 1fr 1fr; gap: 43.2px; align-items: end; margin-bottom: 54px; }
 .v2_sec_head .v2_h2 { margin-top: 14px; }
 .v2_sec_head_center { text-align: center; max-width: 680px; margin: 0 auto 54px; }
@@ -934,6 +938,7 @@
 @media (max-width: 1000px) {
   .v2_steps, .v2_mini { grid-template-columns: 1fr; }
   .v2_sec_pad, .v2_platform, .v2_how, .v2_cust { padding: 96px 0; }
+  .v2_sec_pad.v2_sec_pad_tight { padding-top: 56px; }
   .v2_faq { padding: 88px 0; }
 }
 
@@ -948,6 +953,7 @@
 @media (max-width: 720px) {
   .v2_wrap { padding: 0 22px; }
   .v2_sec_pad, .v2_platform, .v2_how, .v2_cust, .v2_faq { padding: 72px 0; }
+  .v2_sec_pad.v2_sec_pad_tight { padding-top: 44px; }
   .v2_hero { padding: 44px 0 64px; }
   .v2_banks { padding: 0 0 44px; }
   .v2_cards, .v2_grid2 { grid-template-columns: 1fr; }
@@ -992,6 +998,7 @@
   .v2_logo { font-size: 18px; gap: 7px; }
   .v2_logo_mark { width: 11px; height: 11px; }
   .v2_sec_pad, .v2_platform, .v2_how, .v2_cust, .v2_faq { padding: 60px 0; }
+  .v2_sec_pad.v2_sec_pad_tight { padding-top: 38px; }
   .v2_card, .v2_step, .v2_col { padding: 24px 20px; }
   .v2_dash_main { padding: 14px; }
   .v2_dash_kpis { gap: 6px; }
@@ -1019,4 +1026,120 @@
   .v2_score { gap: 16px 24px; }
   .v2_dash_kpi { padding: 8px; }
   .v2_dash_kpi b { font-size: 16px; }
+}
+
+/* ==========================================================================
+   Contact page
+   ========================================================================== */
+.v2_contact { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 28px; align-items: start; }
+
+.v2_contact_form {
+  min-width: 0; padding: 34px 34px 36px; border-radius: 22px;
+  background: #fff; border: 1px solid var(--v2-line);
+  box-shadow: 0 40px 90px -60px rgba(10, 18, 51, 0.9);
+}
+.v2_contact_form_h {
+  margin-bottom: 22px; font-size: 20px; line-height: 1.25;
+  letter-spacing: -0.4px; font-weight: 800; color: var(--v2-navy);
+}
+
+.v2_contact_side { display: grid; gap: 14px; }
+.v2_office_card { padding: 24px 24px 26px; border-radius: 18px; background: var(--v2-sand); border: 1px solid var(--v2-line); }
+.v2_office_city { margin-bottom: 12px; font-size: 14.5px; font-weight: 800; color: var(--v2-navy); letter-spacing: -0.2px; }
+.v2_office_lines { display: grid; gap: 3px; font-size: 13.5px; line-height: 1.65; color: var(--v2-ink-3); }
+.v2_office_tel {
+  display: inline-block; margin-top: 14px; font-size: 14px; font-weight: 700;
+  color: var(--v2-orange); transition: opacity .25s var(--v2-ease);
+}
+.v2_office_tel:hover { opacity: 0.72; }
+.v2_office_hours { background: var(--v2-navy); border-color: var(--v2-navy); }
+.v2_office_hours .v2_office_city { color: #fff; }
+.v2_office_hours .v2_office_lines { color: var(--v2-ink-5); }
+
+/* --- The shared ContactForm still uses the original sim_bk_ classes. These
+       rules re-skin it inside the v2 scope only, so the old pages are
+       untouched. Two classes deep, to outrank the single-class originals. --- */
+.sim_bk_v2 { --sim-navy: var(--v2-navy); --sim-orange: var(--v2-orange); --sim-muted: var(--v2-ink-4); --sim-text-soft: var(--v2-ink-4); }
+.sim_bk_v2 .sim_bk_form { max-width: none; margin: 0; }
+.sim_bk_v2 .sim_bk_form_required { margin-bottom: 18px; font-size: 12.5px; color: var(--v2-ink-4); }
+.sim_bk_v2 .sim_bk_form_required span { color: var(--v2-orange); }
+.sim_bk_v2 .sim_bk_name_grid { gap: 12px; margin-bottom: 12px; }
+.sim_bk_v2 .sim_bk_input,
+.sim_bk_v2 .sim_bk_select,
+.sim_bk_v2 .sim_bk_textarea {
+  padding: 15px 16px; border: 1px solid var(--v2-line); border-radius: 12px;
+  background: var(--v2-cream); color: var(--v2-navy);
+  font-family: inherit; font-size: 15px; box-shadow: none; margin-bottom: 12px;
+  transition: border-color .2s var(--v2-ease), box-shadow .2s var(--v2-ease), background-color .2s var(--v2-ease);
+}
+.sim_bk_v2 .sim_bk_textarea { margin-bottom: 20px; min-height: 120px; }
+.sim_bk_v2 .sim_bk_input::placeholder,
+.sim_bk_v2 .sim_bk_textarea::placeholder { color: var(--v2-ink-5); opacity: 1; }
+.sim_bk_v2 .sim_bk_input:focus,
+.sim_bk_v2 .sim_bk_select:focus,
+.sim_bk_v2 .sim_bk_textarea:focus {
+  outline: 0; border-color: var(--v2-orange); background: #fff;
+  box-shadow: 0 0 0 4px rgba(255, 91, 46, 0.18);
+}
+.sim_bk_v2 .sim_bk_phone_row {
+  margin-bottom: 12px; border: 1px solid var(--v2-line); border-radius: 12px;
+  background: var(--v2-cream); box-shadow: none;
+  transition: border-color .2s var(--v2-ease), box-shadow .2s var(--v2-ease), background-color .2s var(--v2-ease);
+}
+.sim_bk_v2 .sim_bk_phone_row:focus-within { border-color: var(--v2-orange); background: #fff; box-shadow: 0 0 0 4px rgba(255, 91, 46, 0.18); }
+.sim_bk_v2 .sim_bk_phone_code {
+  padding: 15px 14px; background: var(--v2-sand-deep); color: var(--v2-navy);
+  font-family: inherit; font-size: 14.5px; border-right: 1px solid var(--v2-line);
+}
+.sim_bk_v2 .sim_bk_phone_input { padding: 15px 16px; font-family: inherit; font-size: 15px; color: var(--v2-navy); }
+.sim_bk_v2 .sim_bk_phone_input::placeholder { color: var(--v2-ink-5); opacity: 1; }
+.sim_bk_v2 .sim_bk_select_arrow { right: 18px; font-size: 10px; color: var(--v2-ink-4); }
+.sim_bk_v2 .sim_bk_form_submit { text-align: left; }
+.sim_bk_v2 .sim_bk_form_submit .sim_bk_btn_orange {
+  padding: 15px 30px; border-radius: 999px; background: var(--v2-orange); color: #fff;
+  font-family: inherit; font-size: 15.5px; font-weight: 700;
+  box-shadow: 0 10px 26px -10px rgba(255, 91, 46, 0.85);
+  transition: transform .3s var(--v2-ease), box-shadow .3s var(--v2-ease);
+}
+.sim_bk_v2 .sim_bk_form_submit .sim_bk_btn_orange:hover { transform: translateY(-2px); box-shadow: 0 18px 38px -12px rgba(255, 91, 46, 0.9); }
+.sim_bk_v2 .sim_bk_form_submit .sim_bk_btn_orange:disabled { opacity: 0.6; transform: none; cursor: progress; }
+
+@media (max-width: 1000px) {
+  .v2_contact { grid-template-columns: 1fr; }
+  .v2_contact_side { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .v2_contact_form { padding: 26px 22px 28px; border-radius: 18px; }
+  .v2_contact_side { grid-template-columns: 1fr; }
+  .sim_bk_v2 .sim_bk_form_submit,
+  .sim_bk_v2 .sim_bk_form_submit .sim_bk_btn_orange { width: 100%; text-align: center; }
+}
+
+/* ==========================================================================
+   Video gallery — re-skin of the original sim_bk_vid_ classes
+   ========================================================================== */
+.sim_bk_v2 .sim_bk_vid_cat { margin-bottom: 72px; }
+.sim_bk_v2 .sim_bk_vid_cat_title {
+  margin-bottom: 22px; color: var(--v2-navy);
+  font-size: 28px; line-height: 1.2; letter-spacing: -0.035em; font-weight: 800;
+}
+.sim_bk_v2 .sim_bk_vid_stage {
+  border-radius: 18px; background: var(--v2-navy);
+  box-shadow: 0 34px 70px -44px rgba(10, 18, 51, 0.85);
+}
+.sim_bk_v2 .sim_bk_vid_stage_title { margin: 16px 0 26px; color: var(--v2-navy); font-size: 15.5px; font-weight: 700; }
+.sim_bk_v2 .sim_bk_vid_play { background: var(--v2-orange); box-shadow: 0 12px 30px -10px rgba(255, 91, 46, 0.9); transition: transform .3s var(--v2-ease); }
+.sim_bk_v2 .sim_bk_vid_stage button:hover .sim_bk_vid_play { transform: translate(-50%, -50%) scale(1.07); }
+.sim_bk_v2 .sim_bk_vid_thumb { border-radius: 14px; background: var(--v2-sand-deep); }
+.sim_bk_v2 .sim_bk_vid_thumb img { transition: transform .5s var(--v2-ease); }
+.sim_bk_v2 .sim_bk_vid_grid button:hover .sim_bk_vid_thumb img { transform: scale(1.05); }
+.sim_bk_v2 .sim_bk_vid_title { margin-top: 11px; color: var(--v2-ink-3); font-size: 13.5px; font-weight: 600; transition: color .25s var(--v2-ease); }
+.sim_bk_v2 .sim_bk_vid_grid button:hover .sim_bk_vid_title { color: var(--v2-navy); }
+.sim_bk_v2 .sim_bk_vid_grid button.is_active .sim_bk_vid_thumb { outline: 3px solid var(--v2-orange); outline-offset: 3px; }
+.sim_bk_v2 .sim_bk_vid_grid button.is_active .sim_bk_vid_title { color: var(--v2-orange); font-weight: 700; }
+
+@media (max-width: 560px) {
+  .sim_bk_v2 .sim_bk_vid_cat { margin-bottom: 54px; }
+  .sim_bk_v2 .sim_bk_vid_cat_title { font-size: 23px; }
+  .sim_bk_v2 .sim_bk_vid_stage { border-radius: 14px; }
 }

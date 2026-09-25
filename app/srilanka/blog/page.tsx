@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import HeaderV2 from "@/components/v2/HeaderV2";
+import Reveal from "@/components/v2/Reveal";
+import { FooterV2 } from "@/components/v2/Sections";
 import BlogArchive from "./BlogArchive";
+import "@/app/home-v2.css";
 import "./blog-index.css";
 
 export const metadata: Metadata = {
@@ -13,10 +15,13 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <div className="blog-index-page">
-      <Header />
+    /* BlogArchive renders its own <main>, so this wraps it directly instead of
+       going through PageShell (which would nest a second <main>). */
+    <div className="sim_bk_v2 blog-index-page">
+      <HeaderV2 />
       <BlogArchive />
-      <Footer />
+      <FooterV2 />
+      <Reveal />
     </div>
   );
 }
