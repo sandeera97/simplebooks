@@ -1,8 +1,9 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import ChatWidget from "@/components/layout/ChatWidget";
+import HeaderV2 from "@/components/v2/HeaderV2";
+import Reveal from "@/components/v2/Reveal";
+import { FooterV2 } from "@/components/v2/Sections";
+import "@/app/home-v2.css";
 import BlogLeadForm from "./BlogLeadForm";
 import TableOfContents from "./TableOfContents";
 import "./blog-post.css";
@@ -35,8 +36,8 @@ export default function BlogPostLayout({
   children,
 }: BlogPostLayoutProps) {
   return (
-    <>
-      <Header />
+    <div className="sim_bk_v2">
+      <HeaderV2 />
       <main className="blog-page">
         <header className="blog-hero">
           <div className="blog-hero-inner">
@@ -97,8 +98,8 @@ export default function BlogPostLayout({
           </aside>
         </div>
       </main>
-      <Footer />
-      <ChatWidget />
-    </>
+      <FooterV2 />
+      <Reveal />
+    </div>
   );
 }
