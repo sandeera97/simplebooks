@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import ChatWidget from "@/components/layout/ChatWidget";
+import "@/app/home-v2.css";
+import PageShell from "@/components/v2/PageShell";
+import { PageHero, CtaBand } from "@/components/v2/blocks";
 
 export const metadata: Metadata = {
   title: "PAYABLE - Sri Lanka",
   description:
     "Simplebooks is now integrated with Payable — no setup fee, free for the first year, market-leading rates and transparent percentage-based pricing.",
+  alternates: { canonical: "https://simplebooks.com/srilanka/payable" },
 };
 
 const benefits: { text: string; sub?: string[] }[] = [
@@ -31,55 +32,41 @@ const benefits: { text: string; sub?: string[] }[] = [
 
 function Tick() {
   return (
-    <svg
-      className="sim_bk_payable_tick"
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden="true"
-    >
-      <circle cx="12" cy="12" r="11" fill="#f15f2c" />
-      <path
-        d="M7 12.5l3.2 3.2L17 9"
-        stroke="#fff"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+    <svg className="v2_payable_tick" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="11" fill="currentColor" />
+      <path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
 
 export default function PayablePage() {
   return (
-    <>
-      <Header />
-      <main>
-        <section style={{ padding: "60px 0 80px" }}>
-          <div className="sim_bk_container sim_bk_payable_row">
-            <div>
-              <p className="sim_bk_payable_kicker">Now integrated with</p>
-              <h1 className="sim_bk_payable_title">PAYABLE</h1>
-              <p className="sim_bk_payable_lead">
-                Simplify your payments with seamless processing and unmatched value
-              </p>
+    <PageShell>
+      <PageHero
+        eyebrow="Now integrated with"
+        title="Payable"
+        lead="Simplify your payments with seamless processing and unmatched value."
+      />
+
+      <section className="v2_sec v2_sec_pad v2_sec_pad_tight">
+        <div className="v2_wrap">
+          <div className="v2_payable_row">
+            <div className="v2_payable_media v2_reveal">
               <img
                 src="/images/payable/webxpay.png"
                 alt="Payable online payment processing"
-                style={{ width: "100%", maxWidth: 420, height: "auto", display: "block", marginTop: 28 }}
               />
             </div>
 
-            <div>
-              <ul className="sim_bk_payable_list">
+            <div className="v2_payable_body v2_reveal">
+              <ul className="v2_payable_list">
                 {benefits.map((b) => (
                   <li key={b.text}>
                     <Tick />
                     <div>
                       <span>{b.text}</span>
                       {b.sub && (
-                        <ul className="sim_bk_payable_sublist">
+                        <ul className="v2_payable_sublist">
                           {b.sub.map((s) => (
                             <li key={s}>{s}</li>
                           ))}
@@ -89,16 +76,21 @@ export default function PayablePage() {
                   </li>
                 ))}
               </ul>
-              <p className="sim_bk_payable_outro">
+              <p className="v2_payable_outro">
                 Partner with Payable for a faster, more cost-effective, and professional payment
                 experience tailored to your business needs.
               </p>
             </div>
           </div>
-        </section>
-      </main>
-      <Footer />
-      <ChatWidget />
-    </>
+        </div>
+      </section>
+
+      <CtaBand
+        title="Ready to start taking payments?"
+        lead="Talk to us and we'll handle the paperwork with the payment provider for you."
+        primary={{ label: "Talk to a consultant", href: "/srilanka/contact" }}
+        secondary={{ label: "Pay online", href: "https://dashboard.simplebooks.com/pay-online" }}
+      />
+    </PageShell>
   );
 }
