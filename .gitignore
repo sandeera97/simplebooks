@@ -32,6 +32,10 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+# ...except the free-tools build env: the pixel id in it is already public
+# in the bundle we commit under public/tools, and without it a rebuild of
+# their app produces pages that crash on load.
+!.env.free-tools
 
 # vercel
 .vercel
@@ -39,3 +43,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Vendored free-tools calculators (see external/free-tools/README-INTEGRATION.md).
+# Their build artefacts are rebuilt by scripts/update-free-tools.sh; only the
+# published export in public/tools is committed. Kept here rather than in their
+# .gitignore so a new drop from the tools team cannot undo it.
+/external/free-tools/node_modules/
+/external/free-tools/out/
+/external/free-tools/.next/
