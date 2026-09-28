@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { submitLead, LeadNotConfiguredError } from "@/lib/leads";
 
 const PERKS = [
   "Fixed quote before any work starts",
@@ -22,13 +23,36 @@ const SERVICES = [
 export default function GetStarted() {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [failed, setFailed] = useState(false);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 800));
-    setLoading(false);
-    setSent(true);
+    setFailed(false);
+
+    const d = new FormData(e.currentTarget);
+    const get = (k: string) => String(d.get(k) ?? "").trim();
+    try {
+      await submitLead({
+        firstName: get("firstName"),
+        lastName: get("lastName"),
+        email: get("email"),
+        phoneCountry: get("phoneCountry"),
+        phone: get("phone"),
+        service: get("service"),
+        language: get("language"),
+        message: get("message"),
+        source: "/",
+      });
+      setSent(true);
+    } catch (err) {
+      /* Showing "Thank you" for an enquiry that never left the browser is
+         worse than an error — the visitor stops trying. */
+      if (!(err instanceof LeadNotConfiguredError)) console.error(err);
+      setFailed(true);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -84,34 +108,34 @@ export default function GetStarted() {
               <div className="v2_grid2">
                 <div className="v2_field">
                   <label htmlFor="v2fn">First name <span>*</span></label>
-                  <input id="v2fn" className="v2_input" required placeholder="Nimal" />
+                  <input id="v2fn" name="firstName" className="v2_input" required placeholder="Nimal" />
                 </div>
                 <div className="v2_field">
                   <label htmlFor="v2ln">Last name <span>*</span></label>
-                  <input id="v2ln" className="v2_input" required placeholder="Perera" />
+                  <input id="v2ln" name="lastName" className="v2_input" required placeholder="Perera" />
                 </div>
               </div>
 
               <div className="v2_field">
                 <label htmlFor="v2em">Email <span>*</span></label>
-                <input id="v2em" type="email" className="v2_input" required placeholder="you@company.lk" />
+                <input id="v2em" type="email" name="email" className="v2_input" required placeholder="you@company.lk" />
               </div>
 
               <div className="v2_field">
                 <label htmlFor="v2ph">Phone <span>*</span></label>
                 <div className="v2_phone">
-                  <select className="v2_select" aria-label="Country code">
+                  <select name="phoneCountry" className="v2_select" aria-label="Country code">
                     <option>🇱🇰 +94</option>
                     <option>🇧🇩 +880</option>
                     <option>🇮🇳 +91</option>
                   </select>
-                  <input id="v2ph" type="tel" className="v2_input" required placeholder="77 123 4567" />
+                  <input id="v2ph" type="tel" name="phone" className="v2_input" required placeholder="77 123 4567" />
                 </div>
               </div>
 
               <div className="v2_field">
                 <label htmlFor="v2sv">Service required <span>*</span></label>
-                <select id="v2sv" className="v2_select" required defaultValue="">
+                <select id="v2sv" name="service" className="v2_select" required defaultValue="">
                   <option value="" disabled>Select a service</option>
                   {SERVICES.map((s) => (
                     <option key={s}>{s}</option>
@@ -121,7 +145,7 @@ export default function GetStarted() {
 
               <div className="v2_field">
                 <label htmlFor="v2lg">Preferred language</label>
-                <select id="v2lg" className="v2_select" defaultValue="English">
+                <select id="v2lg" name="language" className="v2_select" defaultValue="English">
                   <option>English</option>
                   <option>Sinhala</option>
                   <option>Tamil</option>
@@ -132,10 +156,20 @@ export default function GetStarted() {
                 <label htmlFor="v2ms">Your message (optional)</label>
                 <textarea
                   id="v2ms"
+                  name="message"
                   className="v2_textarea"
                   placeholder="Tell us a little about the business"
                 />
               </div>
+
+              {failed && (
+                <p className="v2_leadform_err" role="alert">
+                  Sorry — we couldn&rsquo;t send that just now. Please call{" "}
+                  <a href="tel:+94117555878">0117 555 878</a> or email{" "}
+                  <a href="mailto:info@simplebooks.com">info@simplebooks.com</a>{" "}
+                  and we&rsquo;ll pick it up.
+                </p>
+              )}
 
               <button type="submit" className="v2_btn v2_btn_primary" disabled={loading}>
                 {loading ? "Sending…" : "Set up a free consultation"}

@@ -1,13 +1,37 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { submitLead, LeadNotConfiguredError } from "@/lib/leads";
 
 export default function BlogLeadForm() {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [failed, setFailed] = useState(false);
 
-  function submit(event: FormEvent<HTMLFormElement>) {
+  async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSent(true);
+    setLoading(true);
+    setFailed(false);
+
+    const d = new FormData(event.currentTarget);
+    const get = (k: string) => String(d.get(k) ?? "").trim();
+    try {
+      await submitLead({
+        firstName: get("firstName"),
+        lastName: get("lastName"),
+        email: get("email"),
+        phoneCountry: "",
+        phone: get("mobile"),
+        source: typeof window === "undefined" ? "/srilanka/blog" : window.location.pathname,
+      });
+      setSent(true);
+    } catch (err) {
+      /* This used to flip straight to "Thank you!" without sending anything. */
+      if (!(err instanceof LeadNotConfiguredError)) console.error(err);
+      setFailed(true);
+    } finally {
+      setLoading(false);
+    }
   }
 
   if (sent) {
@@ -64,7 +88,18 @@ export default function BlogLeadForm() {
             required
           />
         </label>
-        <button type="submit">Get a free consultation</button>
+        {failed && (
+          <p className="v2_leadform_err" role="alert">
+            Sorry — we couldn&apos;t send that just now. Please call{" "}
+            <a href="tel:+94117555878">0117 555 878</a> or email{" "}
+            <a href="mailto:info@simplebooks.com">info@simplebooks.com</a>{" "}
+            and we&apos;ll pick it up.
+          </p>
+        )}
+
+        <button type="submit" disabled={loading}>
+          {loading ? "Sending…" : "Get a free consultation"}
+        </button>
       </form>
     </aside>
   );

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import {
   PageHero, SecHead, Steps, Compare, CtaBand,
 } from "@/components/v2/blocks";
@@ -85,6 +87,9 @@ export default function TinRegistrationPage() {
         primary={{ label: "Start your TIN registration", href: "/srilanka/contact" }}
         secondary={{ label: "See all tax services", href: "/tax/income-tax" }}
       />
+
+      <LeadForm source="/tax/tin-registration" {...leadFormFor("/tax/tin-registration")!} />
+
     </PageShell>
   );
 }

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import { PageHero, SecHead, FeatureGrid, Compare, CtaBand } from "@/components/v2/blocks";
 
 export const metadata: Metadata = {
@@ -80,6 +82,9 @@ export default function ApitPage() {
         primary={{ label: "Set up a free consultation", href: "/srilanka/contact" }}
         secondary={{ label: "See payroll services", href: "/srilanka/services/payroll-managment" }}
       />
+
+      <LeadForm source="/tax/apit" {...leadFormFor("/tax/apit")!} />
+
     </PageShell>
   );
 }

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import {
   PageHero, SecHead, Steps, FeatureGrid, CheckSplit, ReviewStrip, CtaBand,
 } from "@/components/v2/blocks";
@@ -108,6 +110,9 @@ export default function PayrollServicesPage() {
         primary={{ label: "Talk to the team", href: "/srilanka/contact" }}
         secondary={{ label: "See all services", href: "/srilanka/services" }}
       />
+
+      <LeadForm source="/srilanka/services/payroll-managment" {...leadFormFor("/srilanka/services/payroll-managment")!} />
+
     </PageShell>
   );
 }

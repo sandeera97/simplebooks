@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import {
   PageHero, SecHead, FeatureGrid, Steps, CheckSplit, Faq, CtaBand, ReviewStrip,
 } from "@/components/v2/blocks";
@@ -141,6 +143,9 @@ export default function PayrollPage() {
         primary={{ label: "Set up a free consultation", href: "/srilanka/contact" }}
         secondary={{ label: "See the dashboard", href: "/srilanka/dashboard/accounting-tool" }}
       />
+
+      <LeadForm source="/srilanka/dashboard/payroll-management-system" {...leadFormFor("/srilanka/dashboard/payroll-management-system")!} />
+
     </PageShell>
   );
 }

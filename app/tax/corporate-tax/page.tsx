@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import { PageHero, SecHead, Steps, FeatureGrid, CtaBand } from "@/components/v2/blocks";
 
 export const metadata: Metadata = {
@@ -66,6 +68,9 @@ export default function CorporateTaxPage() {
         primary={{ label: "Talk to our expertise", href: "/srilanka/contact" }}
         secondary={{ label: "See bookkeeping", href: "/srilanka/services/accounting-services" }}
       />
+
+      <LeadForm source="/tax/corporate-tax" {...leadFormFor("/tax/corporate-tax")!} />
+
     </PageShell>
   );
 }

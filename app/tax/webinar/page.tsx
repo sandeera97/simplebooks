@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import { PageHero, SecHead, FeatureGrid, CtaBand } from "@/components/v2/blocks";
 
 export const metadata: Metadata = {
@@ -82,6 +84,9 @@ export default function WebinarPage() {
         primary={{ label: "Browse tax topics", href: "/srilanka/contact" }}
         secondary={{ label: "Watch past sessions", href: "/srilanka/videos" }}
       />
+
+      <LeadForm source="/tax/webinar" {...leadFormFor("/tax/webinar")!} />
+
     </PageShell>
   );
 }
