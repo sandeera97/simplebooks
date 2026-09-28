@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import { PageHero, SecHead, Steps, FeatureGrid, CtaBand } from "@/components/v2/blocks";
 
 export const metadata: Metadata = {
@@ -66,6 +68,9 @@ export default function VatPage() {
         primary={{ label: "Free VAT assessment", href: "/srilanka/contact" }}
         secondary={{ label: "See the VAT tool", href: "/srilanka/services/value-added-tax-filling" }}
       />
+
+      <LeadForm source="/tax/vat" {...leadFormFor("/tax/vat")!} />
+
     </PageShell>
   );
 }

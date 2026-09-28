@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import {
   PageHero, SecHead, FeatureGrid, Steps, CheckSplit, Pricing, Faq, CtaBand, ReviewStrip,
 } from "@/components/v2/blocks";
@@ -184,6 +186,9 @@ export default function BusinessRegistrationPage() {
         primary={{ label: "Set up a free consultation", href: "/srilanka/contact" }}
         secondary={{ label: "Check a company name", href: "/srilanka/company-name-check" }}
       />
+
+      <LeadForm source="/business-registration" {...leadFormFor("/business-registration")!} />
+
     </PageShell>
   );
 }

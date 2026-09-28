@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import {
   PageHero, SecHead, FeatureGrid, Steps, CheckSplit, Faq, CtaBand, ReviewStrip,
 } from "@/components/v2/blocks";
@@ -140,6 +142,9 @@ export default function InvoicingPage() {
         primary={{ label: "Create your account", href: "https://dashboard.simplebooks.com" }}
         secondary={{ label: "Talk to an expert", href: "/srilanka/contact" }}
       />
+
+      <LeadForm source="/srilanka/dashboard/accounting-software" {...leadFormFor("/srilanka/dashboard/accounting-software")!} />
+
     </PageShell>
   );
 }

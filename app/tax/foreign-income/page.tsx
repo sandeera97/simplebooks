@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import { PageHero, SecHead, Steps, FeatureGrid, CtaBand } from "@/components/v2/blocks";
 
 export const metadata: Metadata = {
@@ -62,6 +64,9 @@ export default function ForeignIncomePage() {
         primary={{ label: "Get free tax assessment", href: "/srilanka/contact" }}
         secondary={{ label: "File your return", href: "/tax/income-tax" }}
       />
+
+      <LeadForm source="/tax/foreign-income" {...leadFormFor("/tax/foreign-income")!} />
+
     </PageShell>
   );
 }

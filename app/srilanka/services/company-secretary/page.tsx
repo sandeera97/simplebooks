@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import {
   PageHero, SecHead, FeatureGrid, Steps, Pricing, ReviewStrip, CtaBand,
 } from "@/components/v2/blocks";
@@ -131,6 +133,9 @@ export default function CompanySecretaryPage() {
         primary={{ label: "Get started now", href: "/srilanka/contact" }}
         secondary={{ label: "Register a company", href: "/srilanka/services/register-a-company" }}
       />
+
+      <LeadForm source="/srilanka/services/company-secretary" {...leadFormFor("/srilanka/services/company-secretary")!} />
+
     </PageShell>
   );
 }

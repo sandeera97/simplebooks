@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import { PageHero, SecHead, Steps, FeatureGrid, CtaBand } from "@/components/v2/blocks";
 
 export const metadata: Metadata = {
@@ -61,6 +63,9 @@ export default function CapitalGainsPage() {
         primary={{ label: "Get CGT assessment", href: "/srilanka/contact" }}
         secondary={{ label: "See all tax services", href: "/tax/income-tax" }}
       />
+
+      <LeadForm source="/tax/capital-gains" {...leadFormFor("/tax/capital-gains")!} />
+
     </PageShell>
   );
 }

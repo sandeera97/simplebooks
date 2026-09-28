@@ -1265,3 +1265,75 @@
   .v2_404_grid { grid-template-columns: 1fr; gap: 12px; }
   .v2_404_card { padding: 20px 22px 22px; border-radius: 16px; }
 }
+
+/* ==========================================================================
+   Lead / consultation form (components/v2/LeadForm.tsx)
+   The live pages centre this under a "Free consultation" heading at the foot
+   of the page, so it is a centred column rather than the homepage's split.
+   ========================================================================== */
+.v2_leadform { width: 100%; max-width: 660px; margin: 0 auto; }
+.v2_leadform_h {
+  margin-bottom: 10px; text-align: center; color: var(--v2-navy);
+  font-size: clamp(28px, 3.4vw, 40px); line-height: 1.1;
+  letter-spacing: -0.04em; font-weight: 800;
+}
+.v2_leadform_lead {
+  max-width: 520px; margin: 0 auto 30px; text-align: center;
+  color: var(--v2-ink-3); font-size: 16px; line-height: 1.7;
+}
+.v2_leadform_form {
+  padding: 34px; border-radius: 24px; background: #fff;
+  border: 1px solid var(--v2-line);
+  box-shadow: 0 40px 90px -56px rgba(10, 18, 51, 0.9);
+}
+.v2_leadform_form .v2_btn { width: 100%; justify-content: center; margin-top: 18px; }
+
+.v2_consent {
+  display: flex; align-items: flex-start; gap: 10px; margin-top: 4px;
+  cursor: pointer; color: var(--v2-ink-3); font-size: 13.5px; line-height: 1.6;
+}
+.v2_consent input {
+  width: 18px; height: 18px; flex: 0 0 18px; margin-top: 1px;
+  accent-color: var(--v2-orange); cursor: pointer;
+}
+
+.v2_leadform_err {
+  margin-top: 16px; padding: 13px 15px; border-radius: 12px;
+  background: rgba(255, 91, 46, 0.08); border: 1px solid rgba(255, 91, 46, 0.3);
+  color: var(--v2-ink-2); font-size: 13.5px; line-height: 1.6;
+}
+.v2_leadform_err a { color: var(--v2-orange); font-weight: 700; }
+
+.v2_leadform_done {
+  padding: 52px 34px; border-radius: 24px; background: #fff; text-align: center;
+  border: 1px solid var(--v2-line);
+  box-shadow: 0 40px 90px -56px rgba(10, 18, 51, 0.9);
+}
+.v2_leadform_done_icon { font-size: 44px; margin-bottom: 14px; }
+.v2_leadform_done h3 { margin-bottom: 8px; color: var(--v2-navy); font-size: 22px; font-weight: 800; letter-spacing: -0.3px; }
+.v2_leadform_done p { color: var(--v2-ink-3); font-size: 15px; line-height: 1.7; }
+
+@media (max-width: 720px) {
+  .v2_leadform_form, .v2_leadform_done { padding: 24px 20px; border-radius: 18px; }
+  .v2_leadform_done { padding-block: 40px; }
+  .v2_grid2 { grid-template-columns: 1fr; }
+}
+
+/* Multi-select question (the webinar page's "Areas of Interest"). */
+.v2_checkgroup { border: 0; padding: 0; margin-bottom: 13px; }
+.v2_checkgroup legend { display: block; margin-bottom: 8px; font-size: 13px; font-weight: 700; color: var(--v2-navy); }
+.v2_checkgroup legend span { color: var(--v2-orange); }
+.v2_checkgroup_opts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; }
+.v2_checkgroup_opts label {
+  display: flex; align-items: center; gap: 9px; cursor: pointer;
+  color: var(--v2-ink-3); font-size: 14px;
+}
+/* The fieldset carries .v2_field, so `.v2_field label span` — the rule that
+   paints the required asterisk orange — was also painting every option label
+   orange. Three classes deep to outrank it. */
+.v2_checkgroup_opts label span { color: var(--v2-ink-3); font-weight: 500; }
+.v2_checkgroup_opts input {
+  width: 17px; height: 17px; flex: 0 0 17px;
+  accent-color: var(--v2-orange); cursor: pointer;
+}
+@media (max-width: 560px) { .v2_checkgroup_opts { grid-template-columns: 1fr; } }

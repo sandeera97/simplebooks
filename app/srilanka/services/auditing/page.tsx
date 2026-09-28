@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import { PageHero, SecHead, Steps, FeatureGrid, ReviewStrip, CtaBand } from "@/components/v2/blocks";
 
 export const metadata: Metadata = {
@@ -73,6 +75,9 @@ export default function AuditingPage() {
         primary={{ label: "Get audit help", href: "/srilanka/contact" }}
         secondary={{ label: "See all services", href: "/srilanka/services" }}
       />
+
+      <LeadForm source="/srilanka/services/auditing" {...leadFormFor("/srilanka/services/auditing")!} />
+
     </PageShell>
   );
 }
