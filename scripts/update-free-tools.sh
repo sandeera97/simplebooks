@@ -92,6 +92,12 @@ step "Publishing to public/tools"
 rm -rf "$PUBLISH"
 cp -R "$BUILT" "$PUBLISH"
 
+# Re-apply our 2026 theme overlay. Their code is never edited, so the restyle
+# lives in styles/tools-v2-theme.css and is linked into the freshly published
+# pages here — which is what makes it survive a new drop.
+step "Applying the 2026 theme overlay"
+node "$ROOT/scripts/apply-tools-theme.mjs"
+
 # basePath is what mounts the export at /tools. Without it every asset URL
 # points at the site root and the pages render bare.
 grep -q 'basePath:.*"/tools"' "$VENDOR/next.config.ts" 2>/dev/null \
@@ -109,3 +115,5 @@ step "Published"
 find "$PUBLISH" -name index.html | sed "s|$PUBLISH|  /tools|;s|/index.html|/|" | sort | grep -v '/404/'
 printf "\nThese are hand-listed in components/layout/navData.ts — compare, then commit\n"
 printf "public/tools and external/free-tools.\n"
+printf "\nIf their markup changed a lot, eyeball a page or two: the theme in\n"
+printf "styles/tools-v2-theme.css targets classes their build emits.\n"

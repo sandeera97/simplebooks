@@ -1,0 +1,184 @@
+/* ==========================================================================
+   free-tools → 2026 design overlay
+   --------------------------------------------------------------------------
+   This file is OURS. It is not part of the tools team's repo and is never
+   edited by their drops; scripts/update-free-tools.sh copies it into
+   public/tools/ and links it from every exported page AFTER their own
+   stylesheet, so it re-applies itself on every update.
+
+   That is the whole point: their source stays untouched, so a new drop still
+   just lands, and the restyle comes back with it.
+
+   It works by overriding three things their build produces:
+     1. the shadcn/ui HSL custom properties  (cascades through bg-card,
+        text-muted-foreground, border, ring, …)
+     2. the Tailwind arbitrary-value classes they hardcode their old brand
+        colours with — .text-[#080A3C] and .bg-[#FF612F] compile to
+        .text-\[\#080A3C\] and .bg-\[\#FF612F\]
+     3. their tailwind.config sidebar palette (bg-sidebar-bg, …)
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --v2-navy: #0a1233;
+  --v2-navy-deep: #060c24;
+  --v2-orange: #ff5b2e;
+  --v2-cream: #fbfaf7;
+  --v2-sand: #f5f2ec;
+  --v2-sand-deep: #efece6;
+  --v2-line: #e6e3dd;
+  --v2-ink-2: #3a4460;
+  --v2-ink-3: #59637f;
+  --v2-ink-4: #7a839c;
+  --v2-ink-5: #98a0b8;
+  --v2-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --- 1. shadcn tokens, restated in the v2 palette ------------------------ */
+:root {
+  --background: 45 33% 98%;      /* cream  #fbfaf7 */
+  --foreground: 228 67% 12%;     /* navy   #0a1233 */
+  --card: 0 0% 100%;
+  --card-foreground: 228 67% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 228 67% 12%;
+  --primary: 228 67% 12%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 40 31% 94%;       /* sand   #f5f2ec */
+  --secondary-foreground: 228 67% 12%;
+  --muted: 40 31% 94%;
+  --muted-foreground: 224 18% 42%;   /* ink-3 #59637f */
+  --accent: 40 31% 94%;
+  --accent-foreground: 228 67% 12%;
+  --border: 40 15% 88%;          /* line   #e6e3dd */
+  --input: 40 15% 88%;
+  --ring: 13 100% 59%;           /* orange #ff5b2e */
+  --radius: 0.875rem;
+}
+
+/* --- 2. Typography ------------------------------------------------------- */
+/* Their layout sets `font-poppins` on <body> from a next/font variable, so the
+   override has to beat that class, not just inherit. */
+body,
+body.font-poppins,
+.font-poppins {
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  background: var(--v2-cream);
+  color: var(--v2-navy);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { letter-spacing: -0.03em; }
+h1, .font-bold { font-weight: 800; }
+h1 { letter-spacing: -0.04em; line-height: 1.1; }
+h2 { line-height: 1.2; }
+
+/* --- 3. Their hardcoded brand colours ----------------------------------- */
+.text-\[\#080A3C\] { color: var(--v2-navy); }
+.bg-\[\#080A3C\]   { background-color: var(--v2-navy); }
+.border-\[\#080A3C\] { border-color: var(--v2-navy); }
+.from-\[\#080A3C\] { --tw-gradient-from: var(--v2-navy) var(--tw-gradient-from-position); }
+
+.text-\[\#FF612F\] { color: var(--v2-orange); }
+.bg-\[\#FF612F\]   { background-color: var(--v2-orange); }
+.border-\[\#FF612F\] { border-color: var(--v2-orange); }
+.focus\:ring-\[\#FF612F\]:focus { --tw-ring-color: rgba(255, 91, 46, 0.35); }
+.ring-\[\#FF612F\] { --tw-ring-color: rgba(255, 91, 46, 0.35); }
+
+/* --- 4. Sidebar ---------------------------------------------------------- */
+.bg-sidebar-bg { background-color: var(--v2-navy) !important; }
+.bg-sidebar-highlight { background-color: var(--v2-orange) !important; }
+.text-sidebar-highlight { color: var(--v2-orange) !important; }
+
+/* Their nav rows are square; the redesign rounds them and keeps the active
+   row on the orange. */
+aside nav a,
+aside a[href^="/tools"] {
+  border-radius: 10px;
+  transition: background-color .25s var(--v2-ease), color .25s var(--v2-ease);
+}
+
+/* The wordmark sits in a white block at the top of the rail. */
+aside h1 {
+  background: #fff;
+  color: var(--v2-navy) !important;
+  border-radius: 14px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+/* --- 5. Cards, inputs, buttons ------------------------------------------ */
+.rounded-lg { border-radius: 20px; }
+.rounded-md { border-radius: 12px; }
+.rounded    { border-radius: 10px; }
+
+.shadow-sm {
+  box-shadow: 0 24px 54px -44px rgba(10, 18, 51, 0.65) !important;
+}
+
+.bg-card {
+  background-color: #fff;
+  border-color: var(--v2-line);
+}
+
+input[type="text"],
+input[type="number"],
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  border-radius: 12px;
+  border-color: var(--v2-line);
+  background-color: var(--v2-cream);
+  color: var(--v2-navy);
+  font-family: inherit;
+  transition: border-color .2s var(--v2-ease), box-shadow .2s var(--v2-ease),
+              background-color .2s var(--v2-ease);
+}
+input::placeholder, textarea::placeholder { color: var(--v2-ink-5); opacity: 1; }
+/* Their shadcn inputs ring only on focus-visible, so clicking into a field
+   with a mouse gave no ring at all — unlike every other form on the site. The
+   :not() pair is here for specificity: it outranks .focus-visible\:ring-2 so
+   the ring shows on any focus, not just keyboard. */
+input:focus:not([type="checkbox"]):not([type="radio"]),
+select:focus:not([multiple]),
+textarea:focus:not([readonly]) {
+  outline: 0;
+  border-color: var(--v2-orange);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(255, 91, 46, 0.18);
+}
+
+/* Buttons become the redesign's pills. The sidebar's collapse chevron is a
+   circle already, so it is left alone. */
+button:not([class*="rounded-full"]),
+a[role="button"] {
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform .3s var(--v2-ease), box-shadow .3s var(--v2-ease),
+              background-color .3s var(--v2-ease), color .3s var(--v2-ease);
+}
+button.bg-\[\#FF612F\]:hover,
+a.bg-\[\#FF612F\]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px -12px rgba(255, 91, 46, 0.9);
+}
+
+/* --- 6. Tables and tinted panels ---------------------------------------- */
+table { border-color: var(--v2-line); }
+thead, tfoot, .bg-gray-50, .bg-gray-100, .bg-slate-50, .bg-\[\#f8f9fa\], .bg-\[\#f9f9f9\] {
+  background-color: var(--v2-sand) !important;
+}
+td, th { border-color: var(--v2-line); }
+.text-muted-foreground { color: var(--v2-ink-3); }
+.border { border-color: var(--v2-line); }
+
+/* --- 7. Mobile overflow on the bracket-table pages ----------------------- */
+/* A flex item defaults to min-width:auto, so <main> refused to shrink below
+   the intrinsic width of the widest tax-bracket table and pushed the whole
+   page sideways on phones (local-income, foreign-income, cumulative-income).
+   They already wrap those tables in an overflow-auto div — it just never got
+   the chance to scroll, because nothing above it was ever constrained.
+   Letting main shrink hands the job back to their own wrapper.
+   Pre-existing: it is slightly worse with this overlay removed. */
+main { min-width: 0; }
