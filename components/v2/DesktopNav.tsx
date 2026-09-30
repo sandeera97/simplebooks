@@ -34,13 +34,18 @@ function Panel({ item, onPick }: { item: NavItem; onPick: () => void }) {
   const groups = kids.filter((k) => k.children?.length);
   const flat = kids.filter((k) => !k.children?.length);
 
+  /* Since the September 2026 restructure every menu is a flat list, and Tax
+     has twelve entries — one column of that is a very tall, thin panel. Long
+     lists flow into two columns instead. */
+  const cols = flat.length > 6 ? 2 : 1;
+
   // A group becomes its own column; the plain links share the first column.
   return (
     <div className="v2_mega_grid">
       {flat.length > 0 && (
-        <div className="v2_mega_col">
+        <div className={`v2_mega_col${cols > 1 ? " v2_mega_col_wide" : ""}`}>
           <p className="v2_mega_h">{item.label}</p>
-          <ul>
+          <ul style={cols > 1 ? { columnCount: cols, columnGap: 26 } : undefined}>
             {flat.map((c) => (
               <li key={c.label}>
                 {c.external ? (

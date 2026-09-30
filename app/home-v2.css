@@ -1337,3 +1337,23 @@
   accent-color: var(--v2-orange); cursor: pointer;
 }
 @media (max-width: 560px) { .v2_checkgroup_opts { grid-template-columns: 1fr; } }
+
+/* A mega-menu column that flows its links into two columns (the Tax and Free
+   Tools menus, which carry 11–12 entries each after the 2026 restructure). */
+.v2_mega_col_wide { min-width: 400px; }
+.v2_mega_col_wide ul li { break-inside: avoid; }
+.v2_mega_col_wide ul li + li { margin-top: 0; }
+
+/* The mega panel is centred on its trigger, which pushes the right-hand menus
+   off screen once a panel is wide — Free Tools (11 links, two columns) ran
+   50px past the viewport at 1201px, just above the burger breakpoint. The last
+   two menus anchor to their right edge instead. Both the resting and open
+   transforms need overriding, since the base rule carries translate(-50%). */
+.v2_nav_has:nth-last-child(-n + 2) .v2_mega {
+  left: auto; right: 0; transform: translate(0, -8px);
+}
+.v2_nav_has:nth-last-child(-n + 2).is_open .v2_mega {
+  transform: translate(0, 0);
+}
+/* Belt and braces: never wider than the viewport, whatever the anchoring. */
+.v2_mega_in { max-width: calc(100vw - 32px); }
