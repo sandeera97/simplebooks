@@ -182,3 +182,21 @@ td, th { border-color: var(--v2-line); }
    Letting main shrink hands the job back to their own wrapper.
    Pre-existing: it is slightly worse with this overlay removed. */
 main { min-width: 0; }
+
+/* --- 8. Touch targets in the sidebar ------------------------------------ */
+/* On a phone the rail is the ONLY way to move between calculators, and its
+   rows were 28–32px tall (6px of vertical padding on the nested ones), which
+   is fiddly to hit. Coarse pointers only, so the desktop rail is unchanged. */
+@media (hover: none) and (pointer: coarse) {
+  aside nav a,
+  aside a[href*="/tools"],
+  aside button[class*="w-full"] {
+    min-height: 44px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  /* The rail scrolls when every row grows; let it. */
+  aside { overflow-y: auto; -webkit-overflow-scrolling: touch; }
+}
