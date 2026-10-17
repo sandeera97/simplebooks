@@ -362,7 +362,11 @@
   border: 1px solid var(--v2-line); border-radius: 22px; padding: 26px;
   box-shadow: 0 44px 90px -56px rgba(10,18,51,0.95);
 }
-.v2_hero_card img { width: 100%; height: auto; display: block; border-radius: 16px; }
+.v2_hero_card img,
+.v2_hero_video { width: 100%; height: auto; display: block; border-radius: 16px; }
+/* The source is square, so reserving the ratio keeps the card from reflowing
+   between the poster painting and the video being ready. */
+.v2_hero_video { aspect-ratio: 1 / 1; object-fit: cover; background: #fff; }
 .v2_hero_foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 18px; font-size: 12.5px; font-weight: 700; color: var(--v2-ink-3); }
 .v2_hero_foot_live { display: inline-flex; align-items: center; gap: 8px; }
 .v2_hero_foot_live::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--v2-green); animation: v2pulseDot 2.6s ease infinite; }
