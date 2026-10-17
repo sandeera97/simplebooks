@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import { submitLead, LeadNotConfiguredError } from "@/lib/leads";
+import { SuccessIcon } from "@/components/v2/icons";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -41,7 +42,9 @@ export default function ContactForm() {
   if (submitted) {
     return (
       <div className="sim_bk_form" style={{ textAlign: "center" }}>
-        <div style={{ fontSize: 46, marginBottom: 12 }}>🎉</div>
+        <div style={{ marginBottom: 12, color: "var(--v2-green, #2ec48a)", lineHeight: 0 }}>
+          <SuccessIcon />
+        </div>
         <h3 style={{ fontSize: 24, fontWeight: 800, color: "var(--sim-navy)", margin: "0 0 8px" }}>
           Thank you!
         </h3>
