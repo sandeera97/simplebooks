@@ -1,15 +1,14 @@
 /**
  * The one place a lead submission leaves the site.
  *
- * Every consultation form on every page funnels through submitLead(). When we
- * pick a provider — Formspree, HubSpot, a Google Apps Script, an API route,
- * whatever — it gets wired in HERE and every form starts working at once.
- * Nothing else needs to change.
+ * Every consultation form funnels through submitLead(), which posts to
+ * /api/leads. The route holds the Pipedrive tokens server-side and decides
+ * which of the two accounts a submission belongs to — see lib/pipedrive.ts.
  *
- * Until then this deliberately THROWS rather than pretending to succeed. The
- * old contact form faked an 800ms delay and showed "Thank you!" while dropping
- * the enquiry on the floor, which is worse than an honest error: the visitor
- * believes they have reached us and stops trying.
+ * This THROWS on failure rather than pretending to succeed. The old contact
+ * form faked an 800ms delay and showed "Thank you!" while dropping the enquiry
+ * on the floor, which is worse than an honest error: the visitor believes they
+ * have reached us and stops trying.
  */
 
 export interface Lead {
@@ -30,36 +29,36 @@ export interface Lead {
   marketingConsent?: boolean;
   /** Which page the enquiry came from, e.g. "/srilanka/services/auditing". */
   source: string;
+  /** Honeypot. Hidden from people, so anything here means a bot. */
+  company?: string;
 }
 
+/** Thrown when the Pipedrive tokens are not in place yet. */
 export class LeadNotConfiguredError extends Error {
-  constructor() {
-    super("Lead submission is not configured yet.");
+  constructor(message = "Lead submission is not configured yet.") {
+    super(message);
     this.name = "LeadNotConfiguredError";
   }
 }
 
-/** True once a provider is wired up, so forms can warn during development. */
-export const LEADS_CONFIGURED = false;
-
 export async function submitLead(lead: Lead): Promise<void> {
-  if (!LEADS_CONFIGURED) {
-    // Keep the payload visible while we are still wiring this up, so a form can
-    // be exercised end to end and the shape checked against the provider.
-    if (process.env.NODE_ENV !== "production") {
-      console.info("[lead] would submit:", lead);
-    }
-    throw new LeadNotConfiguredError();
+  const res = await fetch("/api/leads", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(lead),
+  });
+
+  let payload: { ok?: boolean; error?: string } = {};
+  try {
+    payload = await res.json();
+  } catch {
+    /* Fall through to the status check below. */
   }
 
-  // ---------------------------------------------------------------------
-  // Wire the provider in here. For example, an API route:
-  //
-  //   const res = await fetch("/api/leads", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(lead),
-  //   });
-  //   if (!res.ok) throw new Error(`Lead submission failed: ${res.status}`);
-  // ---------------------------------------------------------------------
+  if (res.ok && payload.ok) return;
+
+  /* 503 means the account has no token yet — a setup state, not a bug, so it
+     is typed separately from a genuine failure. */
+  if (res.status === 503) throw new LeadNotConfiguredError(payload.error);
+  throw new Error(payload.error || `Lead submission failed (${res.status}).`);
 }

@@ -113,6 +113,7 @@ export default function LeadForm({
         language: showLanguage ? get("language") : undefined,
         message: showMessage ? get("message") : undefined,
         marketingConsent: showConsent ? d.get("consent") === "on" : undefined,
+        company: get("company"),
         source,
       });
       setSent(true);
@@ -158,6 +159,13 @@ export default function LeadForm({
               {requiredNote && (
                 <p className="v2_form_req"><span>*</span> indicates required fields</p>
               )}
+
+              {/* Honeypot. Hidden from people and from assistive tech, so
+                  anything in it came from a bot. */}
+              <div className="v2_hp" aria-hidden="true">
+                <label htmlFor={`${uid}-co`}>Company</label>
+                <input id={`${uid}-co`} name="company" tabIndex={-1} autoComplete="off" />
+              </div>
 
               {nameMode === "split" ? (
                 <div className="v2_grid2">

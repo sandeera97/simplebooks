@@ -36,6 +36,8 @@ yarn-error.log*
 # in the bundle we commit under public/tools, and without it a rebuild of
 # their app produces pages that crash on load.
 !.env.free-tools
+# Template only, no secrets in it.
+!.env.example
 
 # vercel
 .vercel
