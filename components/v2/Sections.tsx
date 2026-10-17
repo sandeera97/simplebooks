@@ -186,6 +186,18 @@ export function HowItWorks() {
 }
 
 /* ---------------- Why Simplebooks ---------------- */
+/* Illustrative, not a statutory schedule — month labels only, no filing dates,
+   so nothing here can be read as a deadline. */
+const CALENDAR = [
+  { when: "Jan", name: "VAT return", label: "Filed", state: "done" },
+  { when: "Jan", name: "APIT schedule", label: "Filed", state: "done" },
+  { when: "Feb", name: "VAT return", label: "Filed", state: "done" },
+  { when: "Feb", name: "EPF / ETF", label: "Filed", state: "done" },
+  { when: "Mar", name: "Annual return", label: "In progress", state: "live" },
+  { when: "Mar", name: "Income tax instalment", label: "Scheduled", state: "next" },
+  { when: "Apr", name: "Audited accounts", label: "Scheduled", state: "next" },
+];
+
 const ALONE = [
   "Chasing name approval and form corrections yourself",
   "Documents scattered across email, WhatsApp and drawers",
@@ -220,10 +232,29 @@ export function WhySimplebooks() {
           </div>
 
           <div className="v2_why_media v2_reveal">
-            {/* The redesign leaves this slot for a team photo. */}
-            <div className="v2_why_ph">Photo of the team at work</div>
+            {/* The redesign left this slot for a team photo we do not have.
+                A compliance calendar shows what the copy beside it promises —
+                the returns and renewals all tracked in one place — and makes
+                the "0 missed deadlines" badge below it mean something. */}
+            <div className="v2_cal" aria-hidden="true">
+              <div className="v2_cal_top">
+                <p className="v2_cal_title">Compliance calendar</p>
+                <span className="v2_cal_year">2026</span>
+              </div>
+              <ul className="v2_cal_rows">
+                {CALENDAR.map((r) => (
+                  <li key={r.name + r.when}>
+                    <span className="v2_cal_when">{r.when}</span>
+                    <span className="v2_cal_name">{r.name}</span>
+                    <span className={`v2_cal_tag v2_cal_${r.state}`}>{r.label}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <div className="v2_why_badge">
-              <p className="v2_float_k">Compliance calendar</p>
+              {/* The card above is already headed "Compliance calendar", so this
+                  carries the claim rather than repeating the label. */}
+              <p className="v2_float_k">Track record</p>
               <p className="v2_float_v">0 missed deadlines this year</p>
             </div>
           </div>
