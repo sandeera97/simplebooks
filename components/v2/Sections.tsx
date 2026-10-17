@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FacebookIcon, InstagramIcon, YouTubeIcon, WhatsAppIcon } from "./icons";
 
 /* ---------------- Banking partners ---------------- */
 export function BankStrip() {
@@ -379,10 +380,18 @@ export function FooterV2() {
               offices in Sri Lanka, Bangladesh and India.
             </p>
             <div className="v2_socials">
-              <a href="https://facebook.com/simplebooks" aria-label="Facebook">f</a>
-              <a href="https://instagram.com/simplebooks" aria-label="Instagram">IG</a>
-              <a href="https://youtube.com/@simplebooks" aria-label="YouTube">▶</a>
-              <a href="https://wa.me/94117555878" aria-label="WhatsApp">WA</a>
+              <a href="https://facebook.com/simplebooks" aria-label="Simplebooks on Facebook">
+                <FacebookIcon />
+              </a>
+              <a href="https://instagram.com/simplebooks" aria-label="Simplebooks on Instagram">
+                <InstagramIcon />
+              </a>
+              <a href="https://youtube.com/@simplebooks" aria-label="Simplebooks on YouTube">
+                <YouTubeIcon />
+              </a>
+              <a href="https://wa.me/94117555878" aria-label="Message Simplebooks on WhatsApp">
+                <WhatsAppIcon />
+              </a>
             </div>
           </div>
 

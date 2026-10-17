@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import { submitLead, LeadNotConfiguredError } from "@/lib/leads";
+import { SuccessIcon } from "./icons";
 
 /**
  * The consultation form that sits at the foot of the live pages.
@@ -150,7 +151,7 @@ export default function LeadForm({
 
           {sent ? (
             <div className="v2_leadform_done">
-              <p className="v2_leadform_done_icon" aria-hidden="true">🎉</p>
+              <p className="v2_leadform_done_icon"><SuccessIcon /></p>
               <h3>Thank you</h3>
               <p>We&rsquo;ve received your enquiry and will reply within one working day.</p>
             </div>

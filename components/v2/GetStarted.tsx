@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import { submitLead, LeadNotConfiguredError } from "@/lib/leads";
+import { SuccessIcon } from "./icons";
 
 const PERKS = [
   "Fixed quote before any work starts",
@@ -93,7 +94,7 @@ export default function GetStarted() {
         <div className="v2_form v2_reveal">
           {sent ? (
             <div style={{ textAlign: "center", padding: "40px 0" }}>
-              <p style={{ fontSize: 44, marginBottom: 14 }}>🎉</p>
+              <p style={{ marginBottom: 14 }}><SuccessIcon /></p>
               <h3 className="v2_h3" style={{ marginBottom: 8 }}>Thank you!</h3>
               <p className="v2_body">
                 We&rsquo;ve received your enquiry and will reply within one working day.
