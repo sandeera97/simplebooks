@@ -1403,3 +1403,10 @@
 }
 /* Belt and braces: never wider than the viewport, whatever the anchoring. */
 .v2_mega_in { max-width: calc(100vw - 32px); }
+
+/* Honeypot: off-screen rather than display:none, since some bots skip hidden
+   fields but fill anything still in the layout. */
+.v2_hp {
+  position: absolute; left: -9999px; top: auto;
+  width: 1px; height: 1px; overflow: hidden;
+}
