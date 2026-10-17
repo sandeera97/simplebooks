@@ -1,4 +1,5 @@
 import Link from "next/link";
+import HeroVideo from "./HeroVideo";
 
 const TRUST_FACES = [
   "/images/avatars/sarath-senanayake.jpg",
@@ -77,13 +78,7 @@ export default function Hero() {
 
         <div className="v2_hero_art v2_reveal">
           <div className="v2_hero_card">
-            <img
-              src="/images/v2/hero-team.png"
-              alt="The Simplebooks team celebrating a completed registration"
-              width={768}
-              height={768}
-              fetchPriority="high"
-            />
+            <HeroVideo />
             <div className="v2_hero_foot">
               <span className="v2_hero_foot_live">14 companies registered this week</span>
               <span>Avg. 3 working days</span>
