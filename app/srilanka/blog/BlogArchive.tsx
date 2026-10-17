@@ -3,36 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useMemo, useState } from "react";
+import { CATEGORIES as categories, LEGACY_POSTS, type ArchivePost } from "./posts";
 
-const categories = [
-  "All Categories",
-  "Secretarial Service",
-  "Payroll Management",
-  "Business Registration",
-  "Tax",
-  "Other",
-] as const;
 
-const posts = [
-  {
-    title: "New update to company registration law: Beneficial Ownership",
-    excerpt:
-      "From 30th March 2026, all newly incorporated companies in Sri Lanka must disclose their beneficial ownership details.",
-    href: "/srilanka/new-update-to-company-registration-law-beneficial-ownership",
-    image: "/blog/beneficial-ownership-thumbnail.png",
-    category: "Business Registration",
-  },
-  {
-    title: "TIN Registration in Sri Lanka (2026): Everything You Need to Know",
-    excerpt:
-      "Sri Lanka’s tax landscape has undergone a major transformation in recent years. Here is what you need to know about TIN registration.",
-    href: "/srilanka/tin-registration-in-sri-lanka-latest-update",
-    image: "/blog/tin-registration-thumbnail.jpg",
-    category: "Tax",
-  },
-] as const;
 
-export default function BlogArchive() {
+export default function BlogArchive({ posts = LEGACY_POSTS as readonly ArchivePost[] }: { posts?: readonly ArchivePost[] }) {
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>(
     "All Categories",
   );
@@ -96,14 +71,19 @@ export default function BlogArchive() {
               {visiblePosts.map((post) => (
                 <article className="blog-index-card" key={post.href}>
                   <Link href={post.href} className="blog-index-image" tabIndex={-1}>
-                    {/* The source archive supplies these exact editorial thumbnails. */}
-                    <Image
-                      src={post.image}
-                      alt=""
-                      width={1024}
-                      height={538}
-                      sizes="(max-width: 620px) calc(100vw - 32px), (max-width: 900px) 50vw, 397px"
-                    />
+                    {/* A CMS post may have no cover yet; the tinted block keeps
+                        the card's shape rather than leaving a broken image. */}
+                    {post.image ? (
+                      <Image
+                        src={post.image}
+                        alt=""
+                        width={1024}
+                        height={538}
+                        sizes="(max-width: 620px) calc(100vw - 32px), (max-width: 900px) 50vw, 397px"
+                      />
+                    ) : (
+                      <span className="blog-index-image_empty" aria-hidden="true" />
+                    )}
                   </Link>
                   <div className="blog-index-card-body">
                     <h2>
