@@ -1,6 +1,23 @@
 import type { NextConfig } from "next";
 
+/* Covers uploaded to Strapi are served from wherever the CMS runs, so
+   next/image has to be told that host is allowed. */
+const strapiHost = process.env.STRAPI_URL ? new URL(process.env.STRAPI_URL) : undefined;
+
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: strapiHost
+      ? [
+          {
+            protocol: strapiHost.protocol.replace(":", "") as "http" | "https",
+            hostname: strapiHost.hostname,
+            port: strapiHost.port || undefined,
+            pathname: "/uploads/**",
+          },
+        ]
+      : [],
+  },
+
   async rewrites() {
     return {
       /**
