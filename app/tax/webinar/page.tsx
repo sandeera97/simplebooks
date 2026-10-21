@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
 import { leadFormFor } from "@/lib/leadForms";
 import { PageHero, SecHead, FeatureGrid, CtaBand } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Tax Webinar | Simplebooks",
-  description:
-    "Master Sri Lankan tax compliance with expert-led webinars. Choose from specialised tax topics tailored to your business needs.",
-};
+export const metadata: Metadata = pageMetadata("/tax/webinar");
 
 const WHY = [
   { t: "Multi-device access", d: "Connect from anywhere using your laptop, desktop, or mobile phone.", tags: ["Any device"] },

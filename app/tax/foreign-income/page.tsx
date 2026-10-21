@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
 import { leadFormFor } from "@/lib/leadForms";
 import { PageHero, SecHead, Steps, FeatureGrid, CtaBand } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Foreign Income Tax | Simplebooks",
-  description:
-    "From April 2025, freelancers and remote employees earning in USD face 15% tax regulations. Don't let confusion cost you thousands in penalties.",
-};
+export const metadata: Metadata = pageMetadata("/tax/foreign-income");
 
 const CHALLENGES = [
   { t: "Tax rate confusion", d: "Complex 15% tax calculations on USD bank remittances requiring professional guidance.", tags: ["15%"] },

@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import { CtaBand } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Thank You - Sri Lanka",
-  description: "Your request has been submitted. The Simplebooks team will be in touch shortly.",
-  robots: { index: false, follow: true },
-};
+export const metadata: Metadata = pageMetadata("/srilanka/thank-you");
 
 export default function ThankYouPage() {
   return (

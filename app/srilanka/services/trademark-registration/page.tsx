@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
@@ -7,11 +8,7 @@ import {
   PageHero, SecHead, FeatureGrid, Steps, Pricing, ReviewStrip, CtaBand,
 } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Trademark Registration | Simplebooks",
-  description:
-    "Trademark your name, logo or slogan and protect your brand from copycat competitors. Hassle free registration with Simplebooks.",
-};
+export const metadata: Metadata = pageMetadata("/srilanka/services/trademark-registration");
 
 const WHY = [
   { t: "Own your brand", d: "Your name, logo, and slogans all belong to you.", tags: ["Ownership"] },

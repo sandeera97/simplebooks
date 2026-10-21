@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import {
   PageHero, SecHead, FeatureGrid, Steps, CheckSplit, Faq, CtaBand, ReviewStrip,
 } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "All-in-One Accounting Tool | Simplebooks",
-  description:
-    "Manage invoices, expenses and financial records securely, and generate the reports that guide smart business decisions — all in one tool.",
-};
+export const metadata: Metadata = pageMetadata("/srilanka/dashboard/accounting-tool");
 
 const STEPS = [
   { t: "Record your transactions", d: "Income, expenses, invoices and purchases, captured as they happen rather than at year end." },

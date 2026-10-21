@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import { PageHero, CtaBand } from "@/components/v2/blocks";
 import { avatarFor } from "@/components/avatars";
 import { reviews } from "./content";
 
-export const metadata: Metadata = {
-  title: "Simplebooks — Trusted by Sri Lankan customers",
-  description:
-    "Read what Sri Lankan business owners say about Simplebooks — company registration, bookkeeping, payroll, tax and legal services.",
-  alternates: { canonical: "https://simplebooks.com/srilanka/testimonials" },
-};
+export const metadata: Metadata = pageMetadata("/srilanka/testimonials");
 
 function Stars() {
   return (

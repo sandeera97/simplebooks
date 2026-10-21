@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import { CtaBand } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Payment complete - Sri Lanka",
-  description: "Your payment was successful. Thank you for choosing Simplebooks.",
-  robots: { index: false, follow: true },
-};
+export const metadata: Metadata = pageMetadata("/srilanka/payment-complete");
 
 export default function PaymentCompletePage() {
   return (

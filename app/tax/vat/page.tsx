@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
 import { leadFormFor } from "@/lib/leadForms";
 import { PageHero, SecHead, Steps, FeatureGrid, CtaBand } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "VAT Compliance | Simplebooks",
-  description:
-    "Transform your VAT compliance journey. We'll guide you to compliance confidence with 100% guaranteed accuracy — registration, returns and ongoing support.",
-};
+export const metadata: Metadata = pageMetadata("/tax/vat");
 
 const STEPS = [
   { t: "Expert registration & setup", d: "Complete VAT registration within 2 working days (Premier) or 2 weeks (Basic). We handle everything from document preparation to RAMIS portal setup." },

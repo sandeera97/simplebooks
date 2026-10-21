@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
@@ -7,11 +8,7 @@ import {
   PageHero, SecHead, Steps, Compare, CtaBand,
 } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "TIN Registration | Simplebooks",
-  description:
-    "Get your Tax Identification Number registered quickly and correctly with expert guidance. No stress, no confusion, just results.",
-};
+export const metadata: Metadata = pageMetadata("/tax/tin-registration");
 
 const STEPS = [
   { t: "Document collection", d: "We guide you through gathering all required documents and ensure everything is complete and accurate." },

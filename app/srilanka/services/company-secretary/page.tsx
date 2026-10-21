@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
@@ -7,11 +8,7 @@ import {
   PageHero, SecHead, FeatureGrid, Steps, Pricing, ReviewStrip, CtaBand,
 } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Company Secretarial Services | Simplebooks",
-  description:
-    "Hire your very own company secretary in Sri Lanka and have your paperwork done right, on time. Secretary registration number RCS2000335.",
-};
+export const metadata: Metadata = pageMetadata("/srilanka/services/company-secretary");
 
 const WHAT = [
   { t: "Tidy up your documents", d: "Do you have a backlog of messy files and records? Well, not anymore.", tags: ["Backlog"] },

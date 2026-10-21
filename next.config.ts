@@ -18,6 +18,55 @@ const nextConfig: NextConfig = {
       : [],
   },
 
+
+  /**
+   * Permanent redirects for URLs the live simplebooks.com serves today but
+   * this rebuild does not, so nothing that currently ranks 404s at cutover.
+   *
+   * The tax pages are the bulk of it: live serves them from the domain root
+   * (/vat, /sscl, /corporate-tax) and from /srilanka/tax/*, where ours sit
+   * under /tax/*. Verified against the live Yoast sitemaps and by fetching
+   * each page.
+   */
+  async redirects() {
+    const map: Record<string, string> = {
+      // Tax pages — live root-level URLs
+      "/corporate-tax": "/tax/corporate-tax",
+      "/vat": "/tax/vat",
+      "/sscl": "/tax/sscl",
+      "/capital-gain-tax": "/tax/capital-gains",
+      "/foreign-income-tax": "/tax/foreign-income",
+      "/tin-registration": "/tax/tin-registration",
+      "/webinar": "/tax/webinar",
+      "/whatsapp-ai-chatbot": "/tax/ai-bot",
+
+      // Tax pages — live /srilanka/tax/* URLs
+      "/srilanka/tax/apit": "/tax/apit",
+      "/srilanka/tax/income-tax": "/tax/income-tax",
+      "/srilanka/tax/corporate-tax": "/tax/corporate-tax",
+      "/srilanka/tax/vat": "/tax/vat",
+
+      // Live service URLs that moved
+      "/srilanka/services/apit-landing-page": "/tax/apit",
+      "/srilanka/services/income-tax": "/tax/income-tax",
+      "/srilanka/dashboard/business-registration": "/business-registration",
+      "/srilanka/dashboard/simplebooks-tax-tool": "/income-tax-filing",
+
+      // Calculators now live under /tools
+      "/srilanka/salary-calculator": "/tools/payroll/salary-calculator-sri-lanka",
+      "/srilanka/tax-calculator": "/tools/tax-calculators/local-income",
+
+      // The Sri Lanka landing page is this site's home
+      "/srilanka": "/",
+    };
+
+    return Object.entries(map).map(([source, destination]) => ({
+      source,
+      destination,
+      permanent: true,
+    }));
+  },
+
   async rewrites() {
     return {
       /**

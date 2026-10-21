@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import { PageHero, SplitSection, CtaBand } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Our Services | Simplebooks",
-  description:
-    "Business registration, bookkeeping, legal consulting, trademarks, tax and payroll — one team of accountants, company secretaries and lawyers.",
-};
+export const metadata: Metadata = pageMetadata("/srilanka/services");
 
 const LEGAL_DOCS = [
   "Lease Agreements",

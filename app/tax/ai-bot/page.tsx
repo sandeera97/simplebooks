@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import {
   PageHero, SecHead, FeatureGrid, CheckSplit, CtaBand,
 } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "WhatsApp AI Tax Bot | Simplebooks",
-  description:
-    "File your taxes in one WhatsApp chat. Ask any tax question instantly, get a free computation, and pay only if you file.",
-};
+export const metadata: Metadata = pageMetadata("/tax/ai-bot");
 
 const HOW = [
   { t: "Instant calculations", d: "Get accurate computations instantly via a simple query.", tags: ["Instant"] },

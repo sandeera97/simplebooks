@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
 import { leadFormFor } from "@/lib/leadForms";
 import { PageHero, SecHead, FeatureGrid, Compare, CtaBand } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "APIT Filing | Simplebooks",
-  description:
-    "Sri Lanka's most trusted APIT filing service provider. Don't let APIT filing slow your business down — let the #1 service provider take care of it.",
-};
+export const metadata: Metadata = pageMetadata("/tax/apit");
 
 const FEATURES = [
   { t: "End-to-end APIT filing & submission", d: "From data collection to final submission — we handle the entire APIT process for you.", tags: ["End to end"] },

@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import {
   PageHero, SecHead, FeatureGrid, Steps, Compare, Faq, CtaBand,
 } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "VAT Filing Made Simple for Sri Lankan Accountants | Simplebooks",
-  description:
-    "Turn hours of manual schedule creation, validation headaches and RAMIS portal struggles into a few clicks. Built for Sri Lankan accountants.",
-};
+export const metadata: Metadata = pageMetadata("/srilanka/services/value-added-tax-filling");
 
 const STEPS = [
   { t: "Upload", d: "Drop your existing documents — invoices, TIN lists, anything. No reformatting needed." },

@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
 import { leadFormFor } from "@/lib/leadForms";
 import { PageHero, SecHead, Steps, FeatureGrid, CtaBand } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Capital Gains Tax | Simplebooks",
-  description:
-    "Expert CGT compliance and filing support that protects your investments and keeps you penalty-free — from property sales to share transactions.",
-};
+export const metadata: Metadata = pageMetadata("/tax/capital-gains");
 
 const CHALLENGES = [
   { t: "Complex calculations", d: "CGT calculations involve cost basis, improvements, selling costs, and exemptions that are easy to get wrong.", tags: ["Cost basis"] },

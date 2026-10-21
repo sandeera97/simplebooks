@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
@@ -7,11 +8,7 @@ import {
   PageHero, SecHead, FeatureGrid, Steps, CheckSplit, Faq, CtaBand, ReviewStrip,
 } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Payroll Made Simple | Simplebooks",
-  description:
-    "A guided payroll tool with a professional touch. EPF and ETF, payslips and bank files handled in full accordance with Sri Lankan labour law.",
-};
+export const metadata: Metadata = pageMetadata("/srilanka/dashboard/payroll-management-system");
 
 const STEPS = [
   { t: "Enter data", d: "Our team enters your employee details into the system — you don't have to learn the software first." },

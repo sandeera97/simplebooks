@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "./home-v2.css";
 
 import HeaderV2 from "@/components/v2/HeaderV2";
@@ -17,11 +18,7 @@ import {
   FooterV2,
 } from "@/components/v2/Sections";
 
-export const metadata: Metadata = {
-  title: "Simplebooks — The right place to start your business",
-  description:
-    "We've helped over 4,500 business owners set up, run and grow — from incorporation and bookkeeping to payroll, tax and legal. One team, one platform, across South Asia.",
-};
+export const metadata: Metadata = pageMetadata("/");
 
 export default function HomePage() {
   return (

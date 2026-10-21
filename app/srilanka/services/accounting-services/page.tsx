@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
@@ -7,11 +8,7 @@ import {
   PageHero, SecHead, Steps, FeatureGrid, CheckSplit, ReviewStrip, CtaBand,
 } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Bookkeeping & Accounting Services | Simplebooks",
-  description:
-    "A professional bookkeeper on call at an affordable price. Get powerful insights about your business and grow the right way.",
-};
+export const metadata: Metadata = pageMetadata("/srilanka/services/accounting-services");
 
 const STEPS = [
   { t: "Tell us about your business", d: "What you do, how you bill, and where your records live today." },

@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import { PageHero, CtaBand } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "PAYABLE - Sri Lanka",
-  description:
-    "Simplebooks is now integrated with Payable — no setup fee, free for the first year, market-leading rates and transparent percentage-based pricing.",
-  alternates: { canonical: "https://simplebooks.com/srilanka/payable" },
-};
+export const metadata: Metadata = pageMetadata("/srilanka/payable");
 
 const benefits: { text: string; sub?: string[] }[] = [
   {

@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import { PageHero, SecHead, Steps, CtaBand } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Simplebooks - Loyalty Program",
-  description:
-    "Karma is our discount program — share a picture of you and your team on social media and get 10% cashback on whatever bill you've paid us, for life.",
-};
+export const metadata: Metadata = pageMetadata("/srilanka/karma");
 
 const STEPS = [
   {

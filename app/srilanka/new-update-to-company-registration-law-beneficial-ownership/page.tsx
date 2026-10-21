@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import BlogPostLayout from "@/components/blog/BlogPostLayout";
 
 const canonical =
@@ -8,47 +9,7 @@ const title =
 const description =
   "From 30th March 2026, all newly incorporated companies in Sri Lanka must disclose their beneficial owners to the Registrar of Companies. The rule comes under the Companies (Amendment) Act No. 12 of 2025 and the Companies (Beneficial Ownership) Regulation No. 1 of 2026. After completing eROC registration, Companies must submit beneficial ownership details through a […]";
 
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: { canonical },
-  authors: [{ name: "Team simplebooks" }],
-  openGraph: {
-    locale: "en_GB",
-    type: "article",
-    title,
-    description,
-    url: canonical,
-    siteName: "Sri Lanka",
-    publishedTime: "2026-04-20T17:12:29+00:00",
-    modifiedTime: "2026-04-20T17:15:31+00:00",
-    authors: ["Team simplebooks"],
-    images: [
-      {
-        url: "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2026/04/ChatGPT-Image-Apr-20-2026-10_41_07-PM.png",
-        width: 1536,
-        height: 1024,
-        type: "image/png",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description,
-    images: [
-      "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2026/04/ChatGPT-Image-Apr-20-2026-10_41_07-PM.png",
-    ],
-  },
-  other: {
-    "twitter:label1": "Written by",
-    "twitter:data1": "Team simplebooks",
-    "twitter:label2": "Estimated reading time",
-    "twitter:data2": "6 minutes",
-    "article:publisher": "https://www.facebook.com/teamsimplebooks/",
-    "article:section": "Business Registration",
-  },
-};
+export const metadata: Metadata = pageMetadata("/srilanka/new-update-to-company-registration-law-beneficial-ownership");
 
 const portal = (
   <a href="https://bo.drc.gov.lk/" target="_blank" rel="noopener noreferrer">

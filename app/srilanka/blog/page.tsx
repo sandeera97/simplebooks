@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import HeaderV2 from "@/components/v2/HeaderV2";
 import Reveal from "@/components/v2/Reveal";
 import { FooterV2 } from "@/components/v2/Sections";
@@ -8,12 +9,7 @@ import { getArticles, articleToArchivePost } from "@/lib/cms";
 import "@/app/home-v2.css";
 import "./blog-index.css";
 
-export const metadata: Metadata = {
-  title: "Blog - Sri Lanka",
-  description:
-    "Explore Simplebooks guides and updates on tax, business registration, payroll, and company compliance in Sri Lanka.",
-  alternates: { canonical: "https://simplebooks.com/srilanka/blog" },
-};
+export const metadata: Metadata = pageMetadata("/srilanka/blog");
 
 /* CMS posts are fetched per request (cached 60s in lib/cms.ts) so a newly
    published article appears without a redeploy. */
