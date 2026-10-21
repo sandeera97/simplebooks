@@ -1,0 +1,4 @@
+# The CMS is its own Railway service built from cms/ — Vercel only builds the
+# website, so shipping Strapi's source to the build host just slows it down.
+cms/
+external/free-tools/node_modules/
