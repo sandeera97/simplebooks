@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
 import { leadFormFor } from "@/lib/leadForms";
 import { PageHero, SecHead, Steps, FeatureGrid, ReviewStrip, CtaBand } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Auditing Made Easy | Simplebooks",
-  description:
-    "Company audits stressing you out? We can fix that. Make the right decisions about your company by having access to the right metrics.",
-};
+export const metadata: Metadata = pageMetadata("/srilanka/services/auditing");
 
 const STEPS = [
   { t: "Contact the Simplebooks team", d: "Tell us about your company and your financial year. We'll tell you exactly what the audit needs." },

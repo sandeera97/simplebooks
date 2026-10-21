@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/seo";
 import { Poppins, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
@@ -19,15 +20,24 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Simplebooks — Business Registration, Accounting & Tax Services Sri Lanka",
+  /* Without metadataBase, Next resolves canonical and OG URLs relative to the
+     deploy host, so a preview build would advertise its own vercel.app URL as
+     canonical. */
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Simplebooks — Business Registration, Accounting & Tax Services Sri Lanka",
+    template: "%s",
+  },
   description:
     "Simplebooks has helped over 4,500 businesses register and grow across Sri Lanka, Bangladesh and India. Get expert help with company registration, bookkeeping, payroll, legal and tax services.",
   openGraph: {
     type: "website",
     locale: "en_LK",
-    url: "https://simplebooks.com",
+    url: SITE_URL,
     siteName: "Simplebooks",
   },
+  twitter: { card: "summary_large_image" },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({

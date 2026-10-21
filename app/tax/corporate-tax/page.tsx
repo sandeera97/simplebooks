@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
 import { leadFormFor } from "@/lib/leadForms";
 import { PageHero, SecHead, Steps, FeatureGrid, CtaBand } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Corporate Tax | Simplebooks",
-  description:
-    "Corporate tax made simple for Sri Lankan businesses. A complete financial back office with year-round compliance so you can focus on growth.",
-};
+export const metadata: Metadata = pageMetadata("/tax/corporate-tax");
 
 const STEPS = [
   { t: "Get financially clear", d: "We start with your books, audit status, and real-time cash flows. Fix bookkeeping gaps and align audited financials for Y/A 2024/25." },

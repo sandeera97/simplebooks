@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import { PageHero, SecHead, FeatureGrid, CtaBand } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Company Name Check & Domain Availability Check in Sri Lanka",
-  description:
-    "Enter your company name to check its availability at the Registrar of Companies and whether the matching domain is free — instantly.",
-};
+export const metadata: Metadata = pageMetadata("/srilanka/company-name-check");
 
 const TIPS = [
   { t: "Names must be distinctive", d: "The ROC will reject a name that is identical or too similar to one already on the register.", tags: ["ROC rule"] },

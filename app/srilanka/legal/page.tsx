@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
@@ -7,11 +8,7 @@ import {
   PageHero, SecHead, FeatureGrid, Steps, CheckSplit, ReviewStrip, CtaBand,
 } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "On-demand Legal Services | Simplebooks",
-  description:
-    "Ensure legal compliance in your company with Simplebooks as your legal counsel. Commission, review and close contracts without complications.",
-};
+export const metadata: Metadata = pageMetadata("/srilanka/legal");
 
 const WHY = [
   { t: "Legal help for busy entrepreneurs", d: "We have years of experience in helping companies stay legally compliant.", tags: ["Experienced"] },

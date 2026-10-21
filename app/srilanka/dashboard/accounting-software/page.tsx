@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
@@ -7,11 +8,7 @@ import {
   PageHero, SecHead, FeatureGrid, Steps, CheckSplit, Faq, CtaBand, ReviewStrip,
 } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Invoicing Streamlined, Payments Boosted | Simplebooks",
-  description:
-    "Create professional invoices, send them in seconds and get paid faster with the Simplebooks dashboard. Free for two months, no credit card required.",
-};
+export const metadata: Metadata = pageMetadata("/srilanka/dashboard/accounting-software");
 
 const FEATURES = [
   { t: "Create and customise invoices", d: "Maintaining your brand image by sending professional invoices matters. Set your logo, colours and terms once.", tags: ["Branded", "Templates"] },

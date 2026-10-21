@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import { PageHero, CtaBand } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Terms & Conditions - Sri Lanka",
-  description:
-    "Simplebooks terms and conditions — company registration at cost, and our Basic and Premium company secretarial packages.",
-};
+export const metadata: Metadata = pageMetadata("/srilanka/terms-conditions");
 
 const DUTIES = [
   "We will help you with your company incorporation and maintain important documents like: incorporation papers, director agreements and shareholder agreements.",

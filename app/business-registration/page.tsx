@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
@@ -7,11 +8,7 @@ import {
   PageHero, SecHead, FeatureGrid, Steps, CheckSplit, Pricing, Faq, CtaBand, ReviewStrip,
 } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Register Your Business in Sri Lanka — 100% Online | Simplebooks",
-  description:
-    "Launch your business with zero hassle. Simplebooks handles your entire company registration — from name approval to certification — so you can focus on what matters.",
-};
+export const metadata: Metadata = pageMetadata("/business-registration");
 
 const WHY = [
   { t: "Instant company name check", d: "Check if your company name is available in seconds, before you commit to anything." , tags: ["ROC search", "Instant"] },

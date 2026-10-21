@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import { PageHero } from "@/components/v2/blocks";
 import VideoGallery from "./VideoGallery";
 import { videoCategories } from "./content";
 
-export const metadata: Metadata = {
-  title: "Videos - Sri Lanka",
-  description:
-    "The Simplebooks channel — business registration, tax, payroll, company law, bookkeeping and case studies, in English and Sinhala.",
-  alternates: { canonical: "https://simplebooks.com/srilanka/videos" },
-};
+export const metadata: Metadata = pageMetadata("/srilanka/videos");
 
 export default function VideosPage() {
   return (

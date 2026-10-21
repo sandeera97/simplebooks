@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import { PageHero, CtaBand } from "@/components/v2/blocks";
 import FaqGroups from "./FaqGroups";
 import { faqGroups } from "./content";
 
-export const metadata: Metadata = {
-  title: "FAQ - Sri Lanka",
-  description:
-    "Answers to common questions about company registration, bookkeeping and working with Simplebooks in Sri Lanka.",
-};
+export const metadata: Metadata = pageMetadata("/srilanka/faq");
 
 export default function FaqPage() {
   return (

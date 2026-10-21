@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
 import { leadFormFor } from "@/lib/leadForms";
 import { PageHero, SecHead, FeatureGrid, Pricing, CtaBand } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "SSCL | Simplebooks",
-  description:
-    "Navigate Sri Lanka's Social Security Contribution Levy with confidence. From liable turnover calculations to penalty avoidance, we keep your business compliant.",
-};
+export const metadata: Metadata = pageMetadata("/tax/sscl");
 
 const CHALLENGES = [
   { t: "Complex calculations", d: "Different liable turnover percentages for different business types make SSCL calculations confusing and error-prone.", tags: ["Liable turnover"] },

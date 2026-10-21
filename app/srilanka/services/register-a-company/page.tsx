@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
@@ -7,11 +8,7 @@ import {
   PageHero, SecHead, Steps, FeatureGrid, Pricing, ReviewStrip, CtaBand,
 } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Register Your Business with Us | Simplebooks",
-  description:
-    "We'll guide you through the entire process. Register your company with an experienced team of company secretaries who have helped over 5,000 businesses.",
-};
+export const metadata: Metadata = pageMetadata("/srilanka/services/register-a-company");
 
 const DASH = [
   { t: "Hassle free business registration", d: "Make an account for zero cost and get started on your online journey to register your company.", tags: ["Free account"] },

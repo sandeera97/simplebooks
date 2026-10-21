@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import BlogPostLayout from "@/components/blog/BlogPostLayout";
 import BlogFaq, { type BlogFaqItem } from "@/components/blog/BlogFaq";
 
@@ -32,32 +33,7 @@ const faqs: BlogFaqItem[] = [
   },
 ];
 
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: { canonical },
-  authors: [{ name: "Dinithi Palliyaguru" }],
-  openGraph: {
-    locale: "en_GB",
-    type: "article",
-    title,
-    description,
-    url: canonical,
-    siteName: "Sri Lanka",
-    publishedTime: "2026-03-15T00:00:00+05:30",
-    authors: ["Dinithi Palliyaguru"],
-  },
-  twitter: {
-    card: "summary",
-    title,
-    description,
-  },
-  other: {
-    "twitter:label1": "Written by",
-    "twitter:data1": "Dinithi Palliyaguru",
-    "article:section": "Tax",
-  },
-};
+export const metadata: Metadata = pageMetadata("/srilanka/tin-registration-in-sri-lanka-latest-update");
 
 export default function TinRegistrationPost() {
   return (

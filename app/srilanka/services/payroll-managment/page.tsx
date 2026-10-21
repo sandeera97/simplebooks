@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
@@ -7,11 +8,7 @@ import {
   PageHero, SecHead, Steps, FeatureGrid, CheckSplit, ReviewStrip, CtaBand,
 } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Payroll Management Services | Simplebooks",
-  description:
-    "All-in-one payroll management. We are here to help you effectively manage your payroll — EPF/ETF, reports and returns handled for you.",
-};
+export const metadata: Metadata = pageMetadata("/srilanka/services/payroll-managment");
 
 const STEPS = [
   { t: "We'll handle your paperwork", d: "Send us the changes and we take the paperwork off your desk." },

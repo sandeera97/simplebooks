@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import {
   PageHero, SecHead, Steps, FeatureGrid, CheckSplit, Pricing, Faq, ReviewStrip, CtaBand,
 } from "@/components/v2/blocks";
 
-export const metadata: Metadata = {
-  title: "Income Tax Filing | Simplebooks",
-  description:
-    "Upload your forms, answer a few simple questions, and get your tax return done — 100% accurate with all eligible deductions applied, and expert support every step of the way.",
-};
+export const metadata: Metadata = pageMetadata("/tax/income-tax");
 
 const STEPS = [
   { t: "Quick pick", d: "Select your sources of income — salary, freelance, or other." },

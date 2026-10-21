@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import { PageHero, CtaBand } from "@/components/v2/blocks";
 import ContactForm from "@/components/sections/ContactForm";
 
-export const metadata: Metadata = {
-  title: "Contact Us - Sri Lanka",
-  description:
-    "Drop us a message and we'll set up a free consultation. Simplebooks helps Sri Lankan businesses with registration, bookkeeping, payroll, tax and legal services.",
-  alternates: { canonical: "https://simplebooks.com/srilanka/contact" },
-};
+export const metadata: Metadata = pageMetadata("/srilanka/contact");
 
 /* Office details are the same ones published in the footer. */
 const OFFICES = [
