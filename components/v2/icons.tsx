@@ -50,7 +50,19 @@ export const WhatsAppIcon = (p: IconProps) => (
 
 /** Replaces the 🎉 emoji on form success states. */
 export const SuccessIcon = ({ size = 44 }: IconProps) => (
-  <svg width={size} height={size} viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false">
+  /* Tailwind's preflight sets svg { display: block }, so the text-align:center
+     on every "Thank you" card has no effect on it and the tick sits hard left.
+     Centred here rather than in each of the three cards, which are styled by
+     two different systems and would otherwise each need their own rule. */
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 48 48"
+    fill="none"
+    aria-hidden="true"
+    focusable="false"
+    style={{ display: "block", marginInline: "auto" }}
+  >
     <circle cx="24" cy="24" r="23" fill="currentColor" opacity="0.1" />
     <circle cx="24" cy="24" r="16" fill="currentColor" />
     <path d="M17 24.5l4.8 4.8L31.5 19.5" stroke="#fff" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" />
