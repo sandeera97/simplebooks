@@ -1,9 +1,14 @@
 import { NextResponse } from "next/server";
 import type { Lead } from "@/lib/leads";
 import { accountFor, isConfigured, sendToPipedrive, PipedriveError } from "@/lib/pipedrive";
+import { sanitizeAttribution } from "@/lib/attribution";
 
 /** Tokens are read at request time, so this must not be prerendered. */
 export const dynamic = "force-dynamic";
+
+/* Up to four Pipedrive calls at 6s each, so the default 10s would cut a slow
+   run short after the deal was created but before the note was attached. */
+export const maxDuration = 30;
 
 function bad(message: string, status = 400) {
   return NextResponse.json({ ok: false, error: message }, { status });
@@ -42,6 +47,9 @@ export async function POST(request: Request) {
     message: body.message?.trim() || undefined,
     marketingConsent: body.marketingConsent,
     source,
+    /* Straight from the visitor's browser, so re-checked rather than trusted:
+       unknown keys dropped, values trimmed to what Pipedrive will hold. */
+    attribution: sanitizeAttribution(body.attribution),
   };
 
   const account = accountFor(lead.source);

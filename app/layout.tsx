@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/seo";
 import { Poppins, Plus_Jakarta_Sans } from "next/font/google";
+import AttributionCapture from "@/components/AttributionCapture";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -47,7 +48,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable} ${jakarta.variable} h-full`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        {/* Records utm_* / fbclid on arrival so any form can report the ad
+            that produced the enquiry. Renders nothing. */}
+        <AttributionCapture />
+      </body>
     </html>
   );
 }
