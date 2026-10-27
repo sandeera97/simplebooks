@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FacebookIcon, InstagramIcon, YouTubeIcon, WhatsAppIcon } from "./icons";
+import NewsletterForm from "./NewsletterForm";
 
 /* ---------------- Banking partners ---------------- */
 export function BankStrip() {
@@ -363,12 +364,7 @@ export function FooterV2() {
               Registrar changes, tax deadlines and practical guides — once a month, nothing else.
             </p>
           </div>
-          <form className="v2_news_form" action="/srilanka/contact" method="get">
-            <input type="email" name="email" placeholder="you@company.lk" aria-label="Your email" />
-            <button type="submit" className="v2_btn v2_btn_primary">
-              Subscribe
-            </button>
-          </form>
+          <NewsletterForm />
         </div>
 
         <div className="v2_foot_cols">
