@@ -5,11 +5,17 @@
  * /api/leads. The route holds the Pipedrive tokens server-side and decides
  * which of the two accounts a submission belongs to — see lib/pipedrive.ts.
  *
+ * Ad attribution rides along automatically: submitLead() reads whatever was
+ * stored when the visitor landed, so no form has to know about it. See
+ * lib/attribution.ts.
+ *
  * This THROWS on failure rather than pretending to succeed. The old contact
  * form faked an 800ms delay and showed "Thank you!" while dropping the enquiry
  * on the floor, which is worse than an honest error: the visitor believes they
  * have reached us and stops trying.
  */
+
+import { readAttribution, clearAttribution, type Attribution } from "./attribution";
 
 export interface Lead {
   firstName: string;
@@ -29,6 +35,8 @@ export interface Lead {
   marketingConsent?: boolean;
   /** Which page the enquiry came from, e.g. "/srilanka/services/auditing". */
   source: string;
+  /** Ad parameters from the visit that brought them here. Attached by submitLead(). */
+  attribution?: Attribution;
   /** Honeypot. Hidden from people, so anything here means a bot. */
   company?: string;
 }
@@ -45,7 +53,9 @@ export async function submitLead(lead: Lead): Promise<void> {
   const res = await fetch("/api/leads", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(lead),
+    /* Attribution is read here rather than in each form, so every form on the
+       site carries it without having to opt in. */
+    body: JSON.stringify({ ...lead, attribution: lead.attribution ?? readAttribution() }),
   });
 
   let payload: { ok?: boolean; error?: string } = {};
@@ -55,7 +65,12 @@ export async function submitLead(lead: Lead): Promise<void> {
     /* Fall through to the status check below. */
   }
 
-  if (res.ok && payload.ok) return;
+  if (res.ok && payload.ok) {
+    /* Only once it is safely in the CRM. Clearing earlier would mean a visitor
+       who hits a network error and resubmits loses the ad that brought them. */
+    clearAttribution();
+    return;
+  }
 
   /* 503 means the account has no token yet — a setup state, not a bug, so it
      is typed separately from a genuine failure. */
