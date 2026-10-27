@@ -716,13 +716,18 @@
 .v2_news { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.1); }
 .v2_news h2 { font-size: 27px; font-weight: 800; letter-spacing: -0.5px; }
 .v2_news p { font-size: 14.5px; color: rgba(255,255,255,0.55); margin-top: 10px; }
-.v2_news_form { display: flex; gap: 10px; }
+/* flex-wrap gives the status line its own row beneath the input and button —
+   the signup posts to Pipedrive now, so it has something to report. */
+.v2_news_form { display: flex; flex-wrap: wrap; gap: 10px; }
 .v2_news_form input {
   flex: 1; min-width: 0; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14);
   border-radius: 999px; padding: 15px 22px; font: inherit; font-size: 14.5px; color: #fff; outline: 0;
 }
 .v2_news_form input::placeholder { color: rgba(255,255,255,0.4); }
 .v2_news_form input:focus { border-color: var(--v2-orange); }
+.v2_news_err { flex-basis: 100%; margin-top: 0; font-size: 13px; color: #ffb4a0; }
+.v2_news_err a { color: #fff; }
+.v2_news_done { font-size: 14.5px; color: rgba(255,255,255,0.78); }
 
 .v2_foot_cols { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.4fr; gap: 42px; padding: 48px 0 40px; }
 .v2_foot_about { font-size: 13.5px; line-height: 1.75; color: rgba(255,255,255,0.55); margin: 18px 0 22px; max-width: 280px; }
