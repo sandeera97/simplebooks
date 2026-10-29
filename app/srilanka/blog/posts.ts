@@ -12,14 +12,20 @@ export interface ArchivePost {
   href: string;
   image?: string;
   category: string;
+  /** Publish date, so every source can be merged into one newest-first list. */
+  date?: string;
 }
 
+/* Ordered by how much of the archive each one holds, so the filters people
+   actually use are the ones they reach first. */
 export const CATEGORIES = [
   "All Categories",
-  "Secretarial Service",
-  "Payroll Management",
-  "Business Registration",
   "Tax",
+  "Business Registration",
+  "Legal Services",
+  "Secretarial Service",
+  "Bookkeeping",
+  "Payroll Management",
   "Other",
 ] as const;
 
@@ -32,6 +38,7 @@ export const LEGACY_POSTS = [
     href: "/srilanka/new-update-to-company-registration-law-beneficial-ownership",
     image: "/blog/beneficial-ownership-thumbnail.png",
     category: "Business Registration",
+    date: "2026-04-20T00:00:00",
   },
   {
     title: "TIN Registration in Sri Lanka (2026): Everything You Need to Know",
@@ -40,5 +47,6 @@ export const LEGACY_POSTS = [
     href: "/srilanka/tin-registration-in-sri-lanka-latest-update",
     image: "/blog/tin-registration-thumbnail.jpg",
     category: "Tax",
+    date: "2026-09-20T00:00:00",
   },
 ] as const satisfies readonly ArchivePost[];

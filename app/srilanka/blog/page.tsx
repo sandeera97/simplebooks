@@ -6,6 +6,7 @@ import { FooterV2 } from "@/components/v2/Sections";
 import BlogArchive from "./BlogArchive";
 import { LEGACY_POSTS, type ArchivePost } from "./posts";
 import { getArticles, articleToArchivePost } from "@/lib/cms";
+import { getPostIndex } from "@/lib/blogPosts";
 import "@/app/home-v2.css";
 import "./blog-index.css";
 
@@ -18,9 +19,24 @@ export const revalidate = 60;
 export default async function BlogPage() {
   const fromCms = (await getArticles()).map(articleToArchivePost);
 
-  /* The two originals keep their hand-built pages, so they are appended rather
-     than replaced. CMS posts lead, newest first. */
-  const posts: ArchivePost[] = [...fromCms, ...LEGACY_POSTS];
+  /* The 93 posts brought across from the live WordPress site. They keep their
+     live URLs, which is why the href is /srilanka/<route> and not /blog/. */
+  const migrated: ArchivePost[] = getPostIndex().map((post) => ({
+    title: post.title,
+    excerpt: post.excerpt,
+    href: `/srilanka/${post.route}`,
+    image: post.image ?? undefined,
+    category: post.category,
+    date: post.date,
+  }));
+
+  /* Three sources, one list. Anything without a date is a CMS post, which is
+     newer than the archive by definition, so it sorts to the top. */
+  /* Annotated before sorting, otherwise the comparator sees the union of three
+     element types rather than ArchivePost. Anything without a date is a CMS
+     post, which is newer than the archive by definition, so it sorts first. */
+  const all: ArchivePost[] = [...fromCms, ...migrated, ...LEGACY_POSTS];
+  const posts = all.sort((a, b) => (b.date ?? "9999").localeCompare(a.date ?? "9999"));
 
   return (
     /* BlogArchive renders its own <main>, so this wraps it directly instead of

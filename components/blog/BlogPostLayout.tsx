@@ -5,7 +5,7 @@ import Reveal from "@/components/v2/Reveal";
 import { FooterV2 } from "@/components/v2/Sections";
 import "@/app/home-v2.css";
 import BlogLeadForm from "./BlogLeadForm";
-import TableOfContents from "./TableOfContents";
+import TableOfContents, { type Heading } from "./TableOfContents";
 import "./blog-post.css";
 
 type BlogPostLayoutProps = {
@@ -19,6 +19,8 @@ type BlogPostLayoutProps = {
   authorImage?: string;
   authorRole?: string;
   authorBio?: string;
+  /** Known at build time for the migrated posts; scanned from the DOM without it. */
+  headings?: Heading[];
   children: ReactNode;
 };
 
@@ -33,6 +35,7 @@ export default function BlogPostLayout({
   authorImage,
   authorRole,
   authorBio,
+  headings,
   children,
 }: BlogPostLayoutProps) {
   return (
@@ -57,7 +60,7 @@ export default function BlogPostLayout({
 
         <div className="blog-shell">
           <aside className="blog-left">
-            <TableOfContents />
+            <TableOfContents headings={headings} />
           </aside>
 
           <article className="blog-post-content">
