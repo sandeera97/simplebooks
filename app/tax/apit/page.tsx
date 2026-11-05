@@ -40,9 +40,9 @@ export default function ApitPage() {
         secondary={{ label: "See all tax services", href: "/tax/income-tax" }}
         note="APIT tax update 2025."
         stats={[
-          { n: "5,000+", l: "Businesses in Sri Lanka" },
+          { n: "10000+", l: "Businesses in Sri Lanka" },
           { n: "4.9★", l: "Google rating" },
-          { n: "500+", l: "Customer reviews" },
+          { n: "1400+", l: "Google reviews" },
         ]}
       />
 

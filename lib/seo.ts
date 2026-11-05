@@ -78,7 +78,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   },
   "/srilanka/karma": {
     title: "Simplebooks - Loyalty Program",
-    description: "We’ve helped over 1,500 business owners set up, run and grow their business across south asia from set up, finance to legal",
+    description: "We’ve helped over 10000+ business owners set up, run and grow their business across south asia from set up, finance to legal",
     fromLive: true,
   },
   "/srilanka/legal": {
@@ -151,7 +151,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   },
   "/srilanka/testimonials": {
     title: "Simplebooks - Trusted by Sri Lankan customers",
-    description: "We’ve helped over 1,500 business owners set up, run and grow their business across south asia from set up, finance to legal",
+    description: "We’ve helped over 10000+ business owners set up, run and grow their business across south asia from set up, finance to legal",
     fromLive: true,
   },
   "/srilanka/thank-you": {

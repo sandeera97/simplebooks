@@ -31,8 +31,7 @@ export default function Hero() {
           </h1>
 
           <p className="v2_lead v2_hero_p v2_reveal">
-            We&rsquo;ve helped over 4,500 business owners set up, run and grow — from incorporation
-            and bookkeeping to payroll, tax and legal. One team, one platform, across South Asia.
+            We’ve helped over 10000+ business owners set up, run, and grow — from incorporation and bookkeeping to payroll, tax, and legal—one team, one platform, across South Asia.
           </p>
 
           <div className="v2_hero_cta v2_reveal">
@@ -70,8 +69,8 @@ export default function Hero() {
               ))}
             </div>
             <div>
-              <p className="v2_trust_a">4.9 / 5 across 400+ Google reviews</p>
-              <p className="v2_trust_b">4,500+ businesses registered since 2014</p>
+              <p className="v2_trust_a">4.9 / 5 across 1400+ Google reviews</p>
+              <p className="v2_trust_b">10000+ businesses registered since 2014</p>
             </div>
           </div>
         </div>

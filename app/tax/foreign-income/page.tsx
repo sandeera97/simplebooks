@@ -31,7 +31,7 @@ export default function ForeignIncomePage() {
         primary={{ label: "Get free tax assessment", href: "/srilanka/contact" }}
         secondary={{ label: "Free consultation", href: "/srilanka/contact" }}
         stats={[
-          { n: "1,000+", l: "USD earners helped" },
+          { n: "10000+", l: "Business owners supported" },
           { n: "Zero", l: "Penalty track record" },
           { n: "15%", l: "On USD remittances" },
         ]}

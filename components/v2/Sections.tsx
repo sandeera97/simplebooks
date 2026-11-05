@@ -20,7 +20,7 @@ export function BankStrip() {
 
 /* ---------------- Stats ---------------- */
 const STATS = [
-  { n: "4,500", plus: true, l: "Businesses registered" },
+  { n: "10000", plus: true, l: "Businesses registered" },
   { n: "12", plus: true, l: "Years of practice" },
   { n: "3", plus: false, l: "Countries, local offices" },
   { n: "4.9", star: true, l: "Average customer rating" },
@@ -54,7 +54,7 @@ const SERVICES = [
   {
     n: "01",
     t: "Business setup",
-    d: "We guide you through registering your business from A–Z. We've set up 4,500 companies covering every industry imaginable.",
+    d: "We guide you through registering your business from A–Z. We've set up 10000 companies covering every industry imaginable.",
     tags: ["Private Ltd", "Sole proprietor", "Name approval"],
     href: "/srilanka/services/register-a-company",
   },

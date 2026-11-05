@@ -53,9 +53,9 @@ export default function AccountingToolPage() {
         primary={{ label: "Explore the dashboard", href: "https://dashboard.simplebooks.com" }}
         secondary={{ label: "Talk to an expert", href: "/srilanka/contact" }}
         stats={[
-          { n: "5,000+", l: "Businesses in Sri Lanka" },
+          { n: "10000+", l: "Businesses in Sri Lanka" },
           { n: "3 clicks", l: "To a full report" },
-          { n: "4.9★", l: "Across 400+ reviews" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
 
@@ -105,7 +105,7 @@ export default function AccountingToolPage() {
 
       <section className="v2_band_white">
         <div className="v2_wrap">
-          <SecHead eyebrow="Customers" title="Trusted by 5,000 Sri Lankan businesses" />
+          <SecHead eyebrow="Customers" title="Trusted by 10000+ business owners" />
           <ReviewStrip items={REVIEWS} />
         </div>
       </section>
@@ -119,7 +119,7 @@ export default function AccountingToolPage() {
 
       <CtaBand
         title="Put your books on autopilot"
-        lead="Join over 5,000 Sri Lankan businesses that trust us to keep their numbers straight."
+        lead="Join over 10000+ business owners that trust us to keep their numbers straight."
         primary={{ label: "Explore the dashboard", href: "https://dashboard.simplebooks.com" }}
         secondary={{ label: "Talk to a consultant", href: "/srilanka/contact" }}
       />

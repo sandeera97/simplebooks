@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "Simplebooks has helped over 4,500 businesses register and grow across Sri Lanka, Bangladesh and India. Get expert help with company registration, bookkeeping, payroll, legal and tax services.",
+    "Simplebooks has helped over 10000+ businesses register and grow across Sri Lanka, Bangladesh and India. Get expert help with company registration, bookkeeping, payroll, legal and tax services.",
   openGraph: {
     type: "website",
     locale: "en_LK",

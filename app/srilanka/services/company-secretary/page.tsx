@@ -69,7 +69,7 @@ export default function CompanySecretaryPage() {
         secondary={{ label: "See all services", href: "/srilanka/services" }}
         note="Secretary registration number: RCS2000335"
         stats={[
-          { n: "5,000+", l: "Businesses registered" },
+          { n: "10000+", l: "Businesses registered" },
           { n: "LKR 20,000", l: "Annually, all in" },
           { n: "RCS2000335", l: "Registration number" },
         ]}
