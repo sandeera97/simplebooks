@@ -5,6 +5,7 @@ import "./home-v2.css";
 import HeaderV2 from "@/components/v2/HeaderV2";
 import Hero from "@/components/v2/Hero";
 import Platform from "@/components/v2/Platform";
+import PaperworkStory from "@/components/v2/PaperworkStory";
 import Customers from "@/components/v2/Customers";
 import GetStarted from "@/components/v2/GetStarted";
 import Reveal from "@/components/v2/Reveal";
@@ -28,6 +29,7 @@ export default function HomePage() {
         <Hero />
         <BankStrip />
         <Stats />
+        <PaperworkStory />
         <WhatWeDo />
         <Platform />
         <HowItWorks />
