@@ -356,34 +356,10 @@
 .v2_namecheck_row input { flex: 1; min-width: 0; border: 0; outline: 0; background: none; font-size: 14.5px; color: var(--v2-navy); }
 .v2_namecheck_row input::placeholder { color: var(--v2-ink-5); }
 
-.v2_hero_art { position: relative; }
-.v2_hero_card {
-  background: linear-gradient(160deg, #fff 0%, #f6f3ee 100%);
-  border: 1px solid var(--v2-line); border-radius: 22px; padding: 26px;
-  box-shadow: 0 44px 90px -56px rgba(10,18,51,0.95);
-}
-.v2_hero_card img,
-.v2_hero_video { width: 100%; height: auto; display: block; border-radius: 16px; }
-/* The source is square, so reserving the ratio keeps the card from reflowing
-   between the poster painting and the video being ready. */
-.v2_hero_video { aspect-ratio: 1 / 1; object-fit: cover; background: #fff; }
-.v2_hero_foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 18px; font-size: 12.5px; font-weight: 700; color: var(--v2-ink-3); }
-.v2_hero_foot_live { display: inline-flex; align-items: center; gap: 8px; }
-.v2_hero_foot_live::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--v2-green); animation: v2pulseDot 2.6s ease infinite; }
-
-.v2_float {
-  position: absolute; background: #fff; border: 1px solid var(--v2-line);
-  border-radius: 14px; padding: 12px 16px; box-shadow: 0 24px 50px -30px rgba(10,18,51,0.7);
-}
+/* Label and value pair, used by the "Track record" badge in Why Simplebooks.
+   The hero card these were first written for is now components/v2/Hero3D. */
 .v2_float_k { font-size: 10px; font-weight: 800; letter-spacing: 1.2px; color: var(--v2-ink-5); text-transform: uppercase; }
 .v2_float_v { font-size: 14px; font-weight: 800; color: var(--v2-navy); margin-top: 3px; }
-.v2_float_payroll { left: -26px; bottom: 96px; animation: v2floatA 7s ease-in-out infinite; }
-.v2_float_filing {
-  right: -18px; top: 58px; background: var(--v2-navy); border-color: transparent;
-  animation: v2floatB 8.5s ease-in-out infinite;
-}
-.v2_float_filing .v2_float_k { color: var(--v2-orange); }
-.v2_float_filing .v2_float_v { color: #fff; }
 
 /* ---------- Banking strip ---------- */
 /* the banking strip sits directly under the hero, 58px above the stats bar */
@@ -973,10 +949,6 @@
   .v2_mega { display: none; }
   .v2_burger { display: grid; }
   .v2_mnav { display: grid; }
-  .v2_float_payroll { left: 0; bottom: 60px; }
-  .v2_float_filing { right: 0; }
-  /* the hero image no longer needs to fill half the screen */
-  .v2_hero_card { max-width: 620px; margin: 0 auto; }
 }
 
 /* Three-up rows go straight from 3 to 1. At 2 columns the last card is
@@ -1011,7 +983,6 @@
   .v2_form { padding: 24px; }
   .v2_quote { padding: 28px; }
   .v2_quote_t { font-size: 17px; }
-  .v2_float { display: none; }
   .v2_news_form { flex-direction: column; }
   .v2_news_form .v2_btn { justify-content: center; }
   .v2_banks_in { gap: 16px 22px; }
