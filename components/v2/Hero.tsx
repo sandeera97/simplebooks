@@ -50,7 +50,7 @@ export default function Hero() {
           </h1>
 
           <p className="v2_lead v2_hero_p h3d_rise" style={{ "--d": 3 } as React.CSSProperties}>
-            One team and one platform behind 4,500+ businesses since 2014 — with tax and
+            One team and one platform behind 10000+ businesses since 2014 — with tax and
             compliance handled alongside, across Sri Lanka, Bangladesh and India.
           </p>
 
@@ -89,8 +89,8 @@ export default function Hero() {
               ))}
             </div>
             <div>
-              <p className="v2_trust_a">4.9 / 5 across 400+ Google reviews</p>
-              <p className="v2_trust_b">4,500+ businesses registered since 2014</p>
+              <p className="v2_trust_a">4.9 / 5 across 1400+ Google reviews</p>
+              <p className="v2_trust_b">10000+ businesses registered since 2014</p>
             </div>
           </div>
         </div>

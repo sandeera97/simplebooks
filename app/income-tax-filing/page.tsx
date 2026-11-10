@@ -70,9 +70,9 @@ export default function TaxToolPage() {
         secondary={{ label: "Talk to an expert", href: "/srilanka/contact" }}
         note="No credit card until final review."
         stats={[
-          { n: "1,000+", l: "Individuals filed" },
+          { n: "10000+", l: "Business owners supported" },
           { n: "100%", l: "Human reviewed" },
-          { n: "4.9★", l: "Across 400+ reviews" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
 

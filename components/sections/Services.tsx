@@ -30,7 +30,7 @@ const services: Service[] = [
     ),
     title: "Business Setup",
     description:
-      "We'll guide you through the process of registering your business from A–Z. We've set up 4,500 businesses covering every industry imaginable.",
+      "We'll guide you through the process of registering your business from A–Z. We've set up 10000 businesses covering every industry imaginable.",
     href: "/srilanka/services/register-a-company",
   },
   {

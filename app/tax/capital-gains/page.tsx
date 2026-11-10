@@ -30,7 +30,7 @@ export default function CapitalGainsPage() {
         primary={{ label: "Get CGT assessment", href: "/srilanka/contact" }}
         secondary={{ label: "Learn about CGT", href: "/srilanka/contact" }}
         stats={[
-          { n: "5,000+", l: "Satisfied clients" },
+          { n: "10000+", l: "Satisfied clients" },
           { n: "30 days", l: "Filing window" },
           { n: "Maximum", l: "Exemptions applied" },
         ]}
@@ -41,7 +41,7 @@ export default function CapitalGainsPage() {
           <SecHead
             eyebrow="The problem"
             title="Capital gains tax confusion is costing you money"
-            lead="Over 5,000 satisfied clients rely on us for seamless, accurate, and compliant tax returns. Don't let CGT complexities put your investments at risk."
+            lead="Over 10000+ business owners rely on us for seamless, accurate, and compliant tax returns. Don't let CGT complexities put your investments at risk."
           />
           <FeatureGrid items={CHALLENGES} cols={3} />
         </div>

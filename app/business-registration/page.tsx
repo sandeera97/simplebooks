@@ -92,9 +92,9 @@ export default function BusinessRegistrationPage() {
         secondary={{ label: "Talk to an expert", href: "/srilanka/contact" }}
         note="No paperwork. No queues. No confusion."
         stats={[
-          { n: "4,500+", l: "Companies registered" },
+          { n: "10000+", l: "Companies registered" },
           { n: "3–5 days", l: "Typical turnaround" },
-          { n: "4.9★", l: "Across 400+ reviews" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
 

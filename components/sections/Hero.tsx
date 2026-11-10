@@ -8,8 +8,7 @@ export default function Hero() {
           The right place to<br />start your business.
         </h1>
         <p>
-          We&apos;ve helped over 4,500+ business owners set up, run and grow their
-          business across south asia from set up, finance to legal.
+          We’ve helped over 10000+ business owners set up, run, and grow — from incorporation and bookkeeping to payroll, tax, and legal—one team, one platform, across South Asia.
         </p>
         <Link href="/srilanka/contact" className="sim_bk_btn_orange sim_bk_hero_cta">
           Start Now
