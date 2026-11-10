@@ -41,6 +41,7 @@ export default function WebinarPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/tax-webinar/02.png", w: 600, h: 600, chip: "Sessions for your finance team" }}
         eyebrow="Tax webinars"
         title="Master Sri Lankan tax compliance with expert-led webinars"
         lead="Choose from specialized tax topics tailored to your business needs. Organizations can select specific tax areas they want to focus on, from individual income tax to USD earnings taxation."

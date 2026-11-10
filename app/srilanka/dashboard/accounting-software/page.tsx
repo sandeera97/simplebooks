@@ -55,6 +55,7 @@ export default function InvoicingPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/invoicing/01.png", w: 609, h: 685, alt: "Two invoices made in the Simplebooks invoicing tool", chip: "Free for two months" }}
         eyebrow="Invoicing"
         title="Invoicing streamlined, payments boosted"
         lead="Create professional invoices and get paid faster, from a dashboard your whole team can actually use."

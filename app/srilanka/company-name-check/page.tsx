@@ -17,6 +17,7 @@ export default function CompanyNameCheckPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/business-registration/03.png", w: 1080, h: 780, alt: "The company name check in the Simplebooks dashboard, showing a name as available", chip: "Instant availability check" }}
         eyebrow="Company name check"
         title="Check your company name and domain, instantly"
         lead="Enter the name you have in mind. We check it against the Registrar of Companies and tell you whether the matching domain is free."

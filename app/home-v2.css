@@ -416,6 +416,22 @@
 .v2_card_dark .v2_tag { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.88); }
 .v2_card_dark .v2_card_go { border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.75); }
 
+/* Feature cards (FeatureGrid) cycle the brand tints, with the number in a
+   matching badge (website audit: "too many similar cards"). */
+.v2_card_fg.v2_fg_c0 { background: #fff4ee; border-color: rgba(255, 91, 46, 0.14); }
+.v2_card_fg.v2_fg_c1 { background: #eef2ff; border-color: rgba(70, 88, 218, 0.13); }
+.v2_card_fg.v2_fg_c2 { background: #eaf7f0; border-color: rgba(46, 196, 138, 0.18); }
+.v2_card_fg.v2_fg_c3 { background: #f3f0ff; border-color: rgba(120, 90, 230, 0.13); }
+.v2_card_fg .v2_card_num {
+  display: inline-grid; place-items: center; min-width: 36px; height: 36px; padding: 0 8px;
+  border-radius: 12px; background: #fff; box-shadow: 0 8px 18px -12px rgba(10, 18, 51, 0.45);
+}
+.v2_fg_c0 .v2_card_num { color: #e14a1f; }
+.v2_fg_c1 .v2_card_num { color: #4658da; }
+.v2_fg_c2 .v2_card_num { color: #178a5d; }
+.v2_fg_c3 .v2_card_num { color: #6a4fd6; }
+.v2_card_fg .v2_tag { background: rgba(255, 255, 255, 0.78); }
+
 /* ---------- Platform (dark) ---------- */
 .v2_platform { background: var(--v2-navy-deep); color: #fff; padding: 120px 0; }
 .v2_platform_in { display: grid; grid-template-columns: 1fr 1.05fr; gap: 57.6px; align-items: center; position: relative; z-index: 2; }
@@ -759,6 +775,70 @@
 }
 .v2_phero_stat_n { font-size: 32px; font-weight: 800; letter-spacing: -0.03em; color: var(--v2-navy); }
 .v2_phero_stat_l { margin-top: 6px; font-size: 13px; font-weight: 600; color: var(--v2-ink-4); }
+
+/* ---------- Page hero with an image (website audit: "break the grid") ----------
+   Text on the left, the page's illustration on the right in a white frame
+   (several are JPGs on white), over a tilted orange panel, with one fact. */
+.v2_phero_split { text-align: left; padding: 72px 0 76px; }
+.v2_phero_split .v2_phero_in {
+  max-width: 1200px; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 64px; align-items: center;
+}
+.v2_phero_split .v2_h1 { font-size: clamp(36px, 3.9vw, 54px); }
+.v2_phero_split .v2_phero_lead { margin-left: 0; margin-right: 0; }
+.v2_phero_split .v2_phero_cta { justify-content: flex-start; }
+.v2_phero_split .v2_phero_stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 22px 28px;
+  margin-top: 38px; padding-top: 28px;
+}
+.v2_phero_split .v2_phero_stat_n { white-space: nowrap; font-size: clamp(22px, 2vw, 28px); }
+.v2_phero_visual {
+  position: relative; margin: 0; width: 100%; max-width: 540px; justify-self: end;
+  animation: v2_phero_rise .9s var(--v2-ease) both;
+}
+.v2_phero_visual::before {
+  content: ""; position: absolute; inset: 9% -5% -6% 12%; border-radius: 40px;
+  background: linear-gradient(140deg, rgba(255, 91, 46, 0.2), rgba(255, 91, 46, 0.04));
+  transform: rotate(5deg);
+}
+.v2_phero_frame {
+  position: relative; background: #fff; border-radius: 30px; padding: 18px;
+  border: 1px solid rgba(10, 18, 51, 0.06); box-shadow: 0 46px 90px -56px rgba(10, 18, 51, 0.55);
+}
+.v2_phero_frame img { display: block; width: 100%; height: auto; border-radius: 18px; }
+.v2_phero_chip {
+  position: absolute; left: -22px; bottom: 30px; max-width: calc(100% - 20px);
+  display: flex; align-items: center; gap: 10px; padding: 11px 16px;
+  background: #fff; border-radius: 14px; box-shadow: 0 20px 44px -22px rgba(10, 18, 51, 0.45);
+  font-size: 13.5px; font-weight: 700; color: var(--v2-navy);
+}
+.v2_phero_chip i {
+  width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0;
+  background: var(--v2-green); box-shadow: 0 0 0 4px rgba(46, 196, 138, 0.18);
+}
+/* transform only, so the image is painted (and counted for LCP) at once */
+@keyframes v2_phero_rise { from { transform: translateY(18px); } to { transform: none; } }
+
+/* One column: the image sits between the buttons and the stats, not after
+   everything. display: contents lets the text block's children be ordered. */
+@media (max-width: 1000px) {
+  .v2_phero_split { text-align: center; padding: 60px 0 64px; }
+  .v2_phero_split .v2_phero_in { display: flex; flex-direction: column; gap: 0; max-width: 760px; }
+  .v2_phero_split .v2_phero_text { display: contents; }
+  .v2_phero_split .v2_phero_text > * { order: 1; }
+  .v2_phero_split .v2_phero_lead { margin-left: auto; margin-right: auto; }
+  .v2_phero_split .v2_phero_cta { justify-content: center; }
+  .v2_phero_split .v2_phero_stats { justify-items: center; }
+  .v2_phero_split .v2_phero_visual { order: 2; justify-self: auto; align-self: center; max-width: 480px; margin-top: 42px; }
+  .v2_phero_split .v2_phero_stats { order: 3; }
+}
+@media (max-width: 720px) {
+  .v2_phero_split { padding: 44px 0 52px; }
+  .v2_phero_split .v2_phero_visual { max-width: 400px; margin-top: 34px; }
+  .v2_phero_frame { padding: 12px; border-radius: 24px; }
+  .v2_phero_chip { left: 50%; bottom: -16px; transform: translateX(-50%); white-space: nowrap; font-size: 12.5px; }
+}
+@media (prefers-reduced-motion: reduce) { .v2_phero_visual { animation: none; } }
 
 .v2_sec_head_left { max-width: 620px; margin-bottom: 48px; }
 .v2_sec_head_left .v2_h2 { margin-top: 14px; }

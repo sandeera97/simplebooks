@@ -25,6 +25,7 @@ export default function CorporateTaxPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/tax-corporate/01.png", w: 600, h: 600, chip: "Year-round compliance" }}
         eyebrow="Corporate tax"
         title="Corporate tax made simple for Sri Lankan businesses"
         lead="Stop fighting the system. Get your business back on track with our complete financial back office solution: year-round compliance so you can focus on growth."

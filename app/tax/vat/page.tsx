@@ -25,6 +25,7 @@ export default function VatPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/tax-vat/06.png", w: 600, h: 600, chip: "100% compliance guaranteed" }}
         eyebrow="VAT compliance"
         title="Transform your VAT compliance journey"
         lead="Stop letting VAT complications drain your energy and resources. We'll guide you to compliance confidence with 100% guaranteed accuracy."

@@ -46,6 +46,7 @@ export default function BookkeepingPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/bookkeeping/01.png", w: 768, h: 512, chip: "Your own finance team" }}
         eyebrow="Bookkeeping"
         title="Don't worry about bookkeeping and accounting services"
         lead="We'll take care of it for you. A professional bookkeeper on call at an affordable price. Get powerful insights about your business and grow the right way."

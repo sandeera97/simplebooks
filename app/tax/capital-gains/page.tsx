@@ -24,6 +24,7 @@ export default function CapitalGainsPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/tax-capital-gains/01.png", w: 600, h: 600, chip: "Filed within the 30 days" }}
         eyebrow="Capital gains tax"
         title="Navigate Sri Lanka's capital gains tax without the stress"
         lead="Get expert CGT compliance and filing support that protects your investments and keeps you penalty-free. From property sales to share transactions, we ensure full compliance with Sri Lankan tax regulations."

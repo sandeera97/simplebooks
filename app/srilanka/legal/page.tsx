@@ -52,6 +52,7 @@ export default function LegalPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/services/03.jpg", w: 768, h: 769, chip: "Reviewed by our lawyers" }}
         eyebrow="Legal services"
         title="On-demand legal services"
         lead="Ensure legal compliance in your company with Simplebooks as your legal counsel. Commission, review and close contracts without complications."

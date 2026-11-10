@@ -33,6 +33,7 @@ export default function ApitPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/payroll-services/02.png", w: 768, h: 768, chip: "APIT handled end to end" }}
         eyebrow="APIT filing"
         title="Sri Lanka's most trusted APIT filing service provider"
         lead="Don't let APIT filing slow your business down. Let the #1 service provider take care of it."

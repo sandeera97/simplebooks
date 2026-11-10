@@ -36,6 +36,7 @@ export default function ServicesPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/services/01.jpg", w: 768, h: 769, chip: "One team for every service" }}
         eyebrow="What we do"
         title="Everything your business needs, under one roof"
         lead="One team of accountants, company secretaries and lawyers, so you're never handed off to a stranger halfway through."

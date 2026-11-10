@@ -47,6 +47,7 @@ export default function AccountingToolPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/bookkeeping/02.png", w: 768, h: 512, chip: "A full report in 3 clicks" }}
         eyebrow="Accounting tool"
         title="All-in-one accounting that simplifies your business"
         lead="Manage invoices, expenses and financial records securely, and generate the reports that guide smart decisions, all in one tool."

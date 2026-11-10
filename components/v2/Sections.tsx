@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FacebookIcon, InstagramIcon, YouTubeIcon, WhatsAppIcon } from "./icons";
 import NewsletterForm from "./NewsletterForm";
+import ServiceArt, { type ServiceArtKind } from "./ServiceArt";
 
 /* ---------------- Banking partners ---------------- */
 export function BankStrip() {
@@ -57,6 +58,8 @@ const SERVICES = [
     d: "We guide you through registering your business from A–Z. We've set up 10000 companies covering every industry imaginable.",
     tags: ["Private Ltd", "Name approval", "Bank account"],
     href: "/srilanka/services/register-a-company",
+    art: "setup" as ServiceArtKind,
+    tint: "orange",
   },
   {
     n: "02",
@@ -64,6 +67,8 @@ const SERVICES = [
     d: "Your own finance team looking after the books, while you focus on capturing invoices, receipts and bills. It's simple.",
     tags: ["Monthly books", "Reconciliations", "Management reports"],
     href: "/srilanka/services/accounting-services",
+    art: "books" as ServiceArtKind,
+    tint: "blue",
   },
   {
     n: "03",
@@ -71,6 +76,8 @@ const SERVICES = [
     d: "Protect your trademarks and intellectual property, or get your contracts in order with someone who specialises in it.",
     tags: ["Contracts", "Trademarks", "IP"],
     href: "/srilanka/legal",
+    art: "legal" as ServiceArtKind,
+    tint: "green",
   },
   {
     n: "04",
@@ -78,6 +85,8 @@ const SERVICES = [
     d: "As your team grows, so does the paperwork. We make sure the busy work is handled, so you can grow and train your team.",
     tags: ["EPF / ETF", "Payslips", "Bonuses"],
     href: "/srilanka/services/payroll-managment",
+    art: "payroll" as ServiceArtKind,
+    tint: "violet",
   },
   {
     n: "05",
@@ -85,6 +94,8 @@ const SERVICES = [
     d: "Most of our new customers are referred by old ones. You'll always have more than one way to get in touch and stay in touch.",
     tags: ["Sinhala", "English", "Tamil", "WhatsApp"],
     href: "/srilanka/contact",
+    art: "support" as ServiceArtKind,
+    tint: "sand",
   },
   {
     n: "06",
@@ -92,6 +103,7 @@ const SERVICES = [
     d: "We're not just here to do the paperwork. We build the tools, apps and capabilities that make running your business easier.",
     tags: ["Dashboard", "E-signing", "Deadline alerts"],
     href: "/srilanka/dashboard/accounting-tool",
+    art: "platform" as ServiceArtKind,
     dark: true,
   },
 ];
@@ -118,7 +130,7 @@ export function WhatWeDo() {
             <Link
               key={s.n}
               href={s.href}
-              className={`v2_card v2_reveal${s.dark ? " v2_card_dark" : ""}`}
+              className={`v2_card v2_card_art v2_reveal${s.dark ? " v2_card_dark" : ` v2_tint_${"tint" in s ? s.tint : "orange"}`}`}
             >
               <div className="v2_card_top">
                 <span className="v2_card_num">{s.n}</span>
@@ -133,6 +145,7 @@ export function WhatWeDo() {
                   </span>
                 ))}
               </div>
+              <ServiceArt kind={s.art} />
             </Link>
           ))}
         </div>

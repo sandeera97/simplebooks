@@ -97,6 +97,7 @@ export default function RegisterACompanyPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/business-registration/04.png", w: 1080, h: 1080, alt: "The Simplebooks business registration dashboard on a laptop", chip: "Real-time status at every step" }}
         eyebrow="Business registration"
         title="Register your business with us today"
         lead="We'll guide you through the entire process. Register with an experienced team of company secretaries who have successfully helped over 10000+ business owners before you."

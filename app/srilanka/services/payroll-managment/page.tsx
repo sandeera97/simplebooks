@@ -42,6 +42,7 @@ export default function PayrollServicesPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/payroll-services/01.png", w: 750, h: 750, chip: "EPF and ETF handled for you" }}
         eyebrow="Payroll services"
         title="All-in-one payroll management"
         lead="We are here to help you effectively manage your payroll."

@@ -47,6 +47,7 @@ export default function VatToolPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/tax-vat/07.png", w: 600, h: 600, chip: "VAT filing in a few clicks" }}
         eyebrow="VAT tool"
         title="VAT filing shouldn't take all day"
         lead="Simplebooks turns hours of manual schedule creation, validation headaches and RAMIS portal struggles into a few clicks. Built for Sri Lankan accountants."

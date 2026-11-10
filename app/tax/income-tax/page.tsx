@@ -65,6 +65,7 @@ export default function IncomeTaxPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/services/07.png", w: 768, h: 769, chip: "Every return checked by a person" }}
         eyebrow="Income tax"
         title="File your own taxes with confidence"
         lead="Upload your forms, answer a few simple questions, and get your tax return done: 100% accurate with all eligible deductions applied, and expert support by your side every step of the way."

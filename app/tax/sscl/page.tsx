@@ -46,6 +46,7 @@ export default function SsclPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/tax-sscl/01.png", w: 600, h: 600, chip: "SSCL filed on time" }}
         eyebrow="SSCL"
         title="SSCL tax compliance made simple"
         lead="Navigate Sri Lanka's Social Security Contribution Levy with confidence. From liable turnover calculations to penalty avoidance, Simplebooks ensures your business stays compliant with SSCL requirements."

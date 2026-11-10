@@ -56,6 +56,7 @@ export default function PayrollPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/payroll-services/02.png", w: 768, h: 768, chip: "5 minutes to calculate a run" }}
         eyebrow="Payroll"
         title="Payroll made simple, with a professional touch"
         lead="A guided payroll tool backed by a real team. You send the changes, we handle the calculations, the filings and the bank files."

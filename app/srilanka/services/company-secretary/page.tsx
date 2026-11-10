@@ -61,6 +61,7 @@ export default function CompanySecretaryPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/services/04.jpg", w: 768, h: 769, chip: "Registered secretary RCS2000335" }}
         eyebrow="Company secretary"
         title="Your business grows. We handle the compliance"
         lead="Hire your very own company secretary in Sri Lanka and have your paperwork done right, on time."

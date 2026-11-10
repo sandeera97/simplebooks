@@ -63,6 +63,7 @@ export default function TaxToolPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/bookkeeping/03.png", w: 750, h: 750, chip: "100% human reviewed" }}
         eyebrow="Tax tool"
         title="File your own taxes with confidence"
         lead="Answer a few simple questions and we take care of the rest. Your return is accurate, every eligible deduction applied, and a human checks it before it's filed."

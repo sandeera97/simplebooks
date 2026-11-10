@@ -25,6 +25,7 @@ export default function ForeignIncomePage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/tax-foreign/01.png", w: 600, h: 600, chip: "Zero penalty track record" }}
         eyebrow="Foreign income tax"
         title="Navigate Sri Lanka's new USD tax regulations with confidence"
         lead="From April 2025, freelancers and remote employees earning in USD now face 15% tax regulations. Don't let confusion cost you thousands in penalties."

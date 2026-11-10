@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { avatarFor } from "@/components/avatars";
 
 /* Headings end in the brand's orange full stop, unless the copy already
@@ -19,6 +20,7 @@ export function PageHero({
   primary,
   secondary,
   stats,
+  visual,
   children,
 }: {
   eyebrow: string;
@@ -29,53 +31,97 @@ export function PageHero({
   primary?: { label: string; href: string };
   secondary?: { label: string; href: string };
   stats?: { n: string; l: string }[];
+  /** An image beside the text (website audit: "break the grid"). The page's
+   *  own illustration from the live site, framed, with one short fact. */
+  visual?: HeroVisual;
   children?: React.ReactNode;
 }) {
+  const text = (
+    <>
+      <p className="v2_eyebrow v2_reveal">{eyebrow}</p>
+      <h1 className="v2_h1 v2_reveal">
+        {title}
+        {dot && brandDot(title) && <span className="v2_dot">.</span>}
+      </h1>
+      {lead && <p className="v2_lead v2_phero_lead v2_reveal">{lead}</p>}
+
+      {(primary || secondary) && (
+        <div className="v2_phero_cta v2_reveal">
+          {primary && (
+            <Link className="v2_btn v2_btn_primary" href={primary.href}>
+              {primary.label} <span className="v2_arrow">→</span>
+            </Link>
+          )}
+          {secondary && (
+            <Link className="v2_btn v2_btn_ghost" href={secondary.href}>
+              {secondary.label}
+            </Link>
+          )}
+        </div>
+      )}
+
+      {note && <p className="v2_phero_note v2_reveal">{note}</p>}
+
+      {stats && (
+        <div className="v2_phero_stats v2_reveal">
+          {stats.map((s) => (
+            <div key={s.l}>
+              <p className="v2_phero_stat_n">{s.n}</p>
+              <p className="v2_phero_stat_l">{s.l}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {children}
+    </>
+  );
+
   return (
-    <section className="v2_sec v2_phero">
+    <section className={`v2_sec v2_phero${visual ? " v2_phero_split" : ""}`}>
       <div className="v2_grid_bg" />
       <div className="v2_blob v2_blob_a" style={{ width: 760, height: 760, top: -300, left: -220 }} />
       <div className="v2_blob v2_blob_b" style={{ width: 680, height: 680, top: -180, right: -240 }} />
 
       <div className="v2_wrap v2_phero_in">
-        <p className="v2_eyebrow v2_reveal">{eyebrow}</p>
-        <h1 className="v2_h1 v2_reveal">
-          {title}
-          {dot && brandDot(title) && <span className="v2_dot">.</span>}
-        </h1>
-        {lead && <p className="v2_lead v2_phero_lead v2_reveal">{lead}</p>}
-
-        {(primary || secondary) && (
-          <div className="v2_phero_cta v2_reveal">
-            {primary && (
-              <Link className="v2_btn v2_btn_primary" href={primary.href}>
-                {primary.label} <span className="v2_arrow">→</span>
-              </Link>
-            )}
-            {secondary && (
-              <Link className="v2_btn v2_btn_ghost" href={secondary.href}>
-                {secondary.label}
-              </Link>
-            )}
-          </div>
+        {visual ? (
+          <>
+            <div className="v2_phero_text">{text}</div>
+            <HeroFigure {...visual} />
+          </>
+        ) : (
+          text
         )}
-
-        {note && <p className="v2_phero_note v2_reveal">{note}</p>}
-
-        {stats && (
-          <div className="v2_phero_stats v2_reveal">
-            {stats.map((s) => (
-              <div key={s.l}>
-                <p className="v2_phero_stat_n">{s.n}</p>
-                <p className="v2_phero_stat_l">{s.l}</p>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {children}
       </div>
     </section>
+  );
+}
+
+export type HeroVisual = { src: string; w: number; h: number; alt?: string; chip?: string };
+
+/* Not a .v2_reveal: this is usually the largest paint on the page, so it
+   must not wait for hydration to become visible. It rises in with CSS. */
+function HeroFigure({ src, w, h, alt = "", chip }: HeroVisual) {
+  return (
+    <figure className="v2_phero_visual">
+      <div className="v2_phero_frame">
+        <Image
+          src={src}
+          alt={alt}
+          width={w}
+          height={h}
+          sizes="(max-width: 1000px) 86vw, 520px"
+          fetchPriority="high"
+          loading="eager"
+        />
+      </div>
+      {chip && (
+        <figcaption className="v2_phero_chip">
+          <i aria-hidden="true" />
+          {chip}
+        </figcaption>
+      )}
+    </figure>
   );
 }
 
@@ -114,7 +160,8 @@ export function FeatureGrid({
   return (
     <div className={`v2_cards v2_cards_${cols}`}>
       {items.map((f, i) => (
-        <article key={f.t} className="v2_card v2_reveal">
+        // Cycles four brand tints so a row of cards doesn't read as one block (website audit).
+        <article key={f.t} className={`v2_card v2_card_fg v2_fg_c${i % 4} v2_reveal`}>
           <div className="v2_card_top">
             <span className="v2_card_num">{String(i + 1).padStart(2, "0")}</span>
           </div>

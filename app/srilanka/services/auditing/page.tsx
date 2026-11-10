@@ -34,6 +34,7 @@ export default function AuditingPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/auditing/01.png", w: 708, h: 454, chip: "Audited accounts on deadline" }}
         eyebrow="Auditing"
         title="Auditing made easy"
         lead="Company audits stressing you out? We can fix that. Make the right decisions about your company by having access to the right metrics."

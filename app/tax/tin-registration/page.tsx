@@ -38,6 +38,7 @@ export default function TinRegistrationPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/tax-tin/01.png", w: 600, h: 600, chip: "Registration handled for you" }}
         eyebrow="TIN registration"
         title="TIN registration made simple"
         lead="Get your Tax Identification Number registered quickly and correctly with expert guidance. No stress, no confusion, just results."

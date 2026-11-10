@@ -26,6 +26,7 @@ export default function TaxAiBotPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/tax-tool/01.png", w: 887, h: 599, alt: "The Simplebooks Tax Agent answering in a WhatsApp chat", chip: "Reviewed by tax specialists" }}
         eyebrow="AI-powered tax assistant"
         title="File your taxes in one WhatsApp chat"
         lead="Ask any tax question instantly, get a free computation, and pay only if you file. Every return is reviewed by tax specialists."

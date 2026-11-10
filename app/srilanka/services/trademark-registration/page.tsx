@@ -52,6 +52,7 @@ export default function TrademarkPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/services/05.png", w: 768, h: 769, chip: "LKR 28,920, all in" }}
         eyebrow="Trademark registration"
         title="Trademark your name, logo, or slogan"
         lead="Protect your brand from copycat competitors."

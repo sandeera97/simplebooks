@@ -62,6 +62,7 @@ export default function BusinessRegistrationPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/business-registration/01.png", w: 1024, h: 1024, alt: "A Simplebooks consultant showing the registration dashboard on a laptop", chip: "100% online, no office visits" }}
         eyebrow="Business registration"
         title="Register your business in Sri Lanka, entirely online"
         lead="Launch with zero hassle. We handle the whole registration, from name approval to certificate, so you can get on with the business."
