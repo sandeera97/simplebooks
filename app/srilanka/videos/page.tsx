@@ -14,7 +14,7 @@ export default function VideosPage() {
       <PageHero
         eyebrow="Videos"
         title="Simplebooks channel"
-        lead="Business registration, tax, payroll, company law and bookkeeping — explained in English and Sinhala."
+        lead="Business registration, tax, payroll, company law and bookkeeping, explained in English and Sinhala."
       />
 
       <section className="v2_sec v2_sec_pad v2_sec_pad_tight">

@@ -7,12 +7,12 @@ const ITEMS = [
   {
     n: "01",
     t: "Every document in one vault",
-    d: "Incorporation papers, Form 20s, share certificates, board resolutions and tax filings — stored once, searchable, and downloadable the moment a bank or investor asks for them.",
+    d: "Incorporation papers, Form 20s, share certificates, board resolutions and tax filings, stored once, searchable, and downloadable the moment a bank or investor asks for them.",
   },
   {
     n: "02",
     t: "Requests with a real status",
-    d: "No more “checking with the team”. Every request shows the stage it is at, who is holding it, and what happens next — updated by the consultant doing the work.",
+    d: "No more “checking with the team”. Every request shows the stage it is at, who is holding it, and what happens next, updated by the consultant doing the work.",
   },
   {
     n: "03",
@@ -27,7 +27,7 @@ const ITEMS = [
 ];
 
 const DEADLINES = [
-  { m: "MAY", d: "22", t: "RFE — Annual return", in: "6 days" },
+  { m: "MAY", d: "22", t: "RFE · Annual return", in: "6 days" },
   { m: "JUN", d: "10", t: "VAT filing · Q2", in: "25 days" },
   { m: "JUL", d: "01", t: "EPF / ETF remittance", in: "46 days" },
 ];
@@ -67,7 +67,7 @@ function DashboardMock() {
 
           <div className="v2_dash_row">
             <div className="v2_dash_row_h">
-              Annual return — FY 2025/26 <span>#SB-2487</span>
+              Annual return · FY 2025/26 <span>#SB-2487</span>
             </div>
             <div className="v2_dash_meta">
               <div><i>FILED</i><b>12 Mar</b></div>
@@ -131,7 +131,7 @@ export default function Platform() {
           </h2>
           <p className="v2_platform_p v2_reveal">
             Built on requests from thousands of business owners. Submit a request, issue shares or
-            ask for a contract in one place — with real-time status, reminders and no headaches.
+            ask for a contract in one place, with real-time status, reminders and no headaches.
           </p>
 
           <div className="v2_acc v2_reveal">

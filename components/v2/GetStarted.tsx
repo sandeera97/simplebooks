@@ -6,7 +6,7 @@ import { SuccessIcon } from "./icons";
 
 const PERKS = [
   "Fixed quote before any work starts",
-  "Sinhala, English or Tamil — your choice",
+  "Sinhala, English or Tamil, your choice",
   "One consultant stays with you after setup",
 ];
 
@@ -165,7 +165,7 @@ export default function GetStarted() {
 
               {failed && (
                 <p className="v2_leadform_err" role="alert">
-                  Sorry — we couldn&rsquo;t send that just now. Please call{" "}
+                  Sorry, we couldn&rsquo;t send that just now. Please call{" "}
                   <a href="tel:+94117555878">0117 555 878</a> or email{" "}
                   <a href="mailto:info@simplebooks.com">info@simplebooks.com</a>{" "}
                   and we&rsquo;ll pick it up.

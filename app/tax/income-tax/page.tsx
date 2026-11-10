@@ -9,21 +9,21 @@ import {
 export const metadata: Metadata = pageMetadata("/tax/income-tax");
 
 const STEPS = [
-  { t: "Quick pick", d: "Select your sources of income — salary, freelance, or other." },
+  { t: "Quick pick", d: "Select your sources of income: salary, freelance, or other." },
   { t: "Review your computation", d: "Get a clear breakdown and advice from our human experts." },
   { t: "File your tax return", d: "Get your return manually reviewed before you file." },
 ];
 
 const WHY = [
   { t: "Stop overpaying for tax help", d: "File your taxes confidently without spending thousands on third-party consultants.", tags: ["Fixed fee"] },
-  { t: "See everything, understand everything", d: "You'll always know exactly how your return is calculated — no mystery steps, no confusing math.", tags: ["Transparent"] },
+  { t: "See everything, understand everything", d: "You'll always know exactly how your return is calculated. No mystery steps, no confusing math.", tags: ["Transparent"] },
   { t: "Real support from real experts", d: "Got a question? Our expert team is just a click away via live chat, phone, or email.", tags: ["Live chat", "Phone"] },
   { t: "Smarter deductions, bigger savings", d: "We'll automatically apply the right deductions so you don't miss out on money that's yours.", tags: ["Deductions"] },
 ];
 
 const FEATURES = [
-  "Getting started is easy — just answer a few simple questions",
-  "Snap, upload, done — send your forms as photos",
+  "Getting started is easy: just answer a few simple questions",
+  "Snap, upload, done: send your forms as photos",
   "Expert support, every step of the way",
   "Always IRD-compliant",
   "No tax knowledge? No problem",
@@ -34,12 +34,12 @@ const PLANS = [
   {
     name: "Income tax return",
     price: "Rs. 4,999",
-    blurb: "Regular price Rs. 20,000. Instant tax results, real human review, IRD e-filing — all inclusive, no hidden fees.",
+    blurb: "Regular price Rs. 20,000. Instant tax results, real human review, IRD e-filing. All inclusive, no hidden fees.",
     features: [
       "Instant tax results",
       "Real human review",
       "IRD e-filing",
-      "All-inclusive — no hidden fees",
+      "All-inclusive, no hidden fees",
     ],
     featured: true,
     cta: "Begin filing your return",
@@ -47,7 +47,7 @@ const PLANS = [
 ];
 
 const REVIEWS = [
-  { q: "SUPERB!!! I highly recommend this place to everyone. Starting my business was the easiest thing — SimpleBooks handled the whole process with just a few emails 😍", name: "Chanux Bro", role: "Director, Chanux Bro" },
+  { q: "SUPERB!!! I highly recommend this place to everyone. Starting my business was the easiest thing. SimpleBooks handled the whole process with just a few emails 😍", name: "Chanux Bro", role: "Director, Chanux Bro" },
   { q: "Excellent and stress-free experience. The team guided me through my tax filing and answered every question patiently. Highly recommended!", name: "Damith Menaka", role: "Director, Animspire" },
   { q: "Fast, professional and transparent. I finally understand my own taxes. Will use Simplebooks again next year for sure.", name: "Sandul Perera", role: "Director" },
 ];
@@ -56,7 +56,7 @@ const FAQS = [
   { q: "Is this IRD compliant?", a: "Yes. Every return is prepared to IRD requirements and filed through IRD e-filing. Our tax advisors have filed over 2,500 returns for Sri Lankans." },
   { q: "Do I need tax knowledge to use it?", a: "No. You answer a few plain questions about your income and we handle the computation, the rules and the filing." },
   { q: "What if I need help?", a: "Our expert team is a click away via live chat, phone or email, and a human reviews your return before it is filed." },
-  { q: "Can I upload my T-10 forms?", a: "Yes. Snap a photo or upload the file — we read the figures off it so you don't have to retype anything." },
+  { q: "Can I upload my T-10 forms?", a: "Yes. Snap a photo or upload the file and we read the figures off it so you don't have to retype anything." },
   { q: "Will it help with deductions?", a: "Yes. We automatically apply the deductions you're entitled to, so you don't miss out on money that's yours." },
   { q: "Can I use this if I'm self-employed or have foreign income?", a: "Yes. Select those as your income sources at the start and we handle the relevant rules, including foreign income and any relief you're due." },
 ];
@@ -67,7 +67,7 @@ export default function IncomeTaxPage() {
       <PageHero
         eyebrow="Income tax"
         title="File your own taxes with confidence"
-        lead="Upload your forms, answer a few simple questions, and get your tax return done — 100% accurate with all eligible deductions applied, and expert support by your side every step of the way."
+        lead="Upload your forms, answer a few simple questions, and get your tax return done: 100% accurate with all eligible deductions applied, and expert support by your side every step of the way."
         primary={{ label: "Get free computation", href: "https://dashboard.simplebooks.com" }}
         secondary={{ label: "Talk to an expert", href: "/srilanka/contact" }}
         note="No credit card until final review."
@@ -83,7 +83,7 @@ export default function IncomeTaxPage() {
           <CheckSplit
             eyebrow="WhatsApp assistant"
             title="Sri Lanka's first free AI-powered WhatsApp tax assistant"
-            lead="Chat with our AI, get your computations, file your taxes and much more — all from your WhatsApp."
+            lead="Chat with our AI, get your computations, file your taxes and much more, all from your WhatsApp."
             items={[
               "Built with 1,000+ pages of tax rules and gazettes",
               "Updated with the latest information",
@@ -109,7 +109,7 @@ export default function IncomeTaxPage() {
           <SecHead
             eyebrow="How it works"
             title="Three simple steps to file your tax return"
-            lead="Just answer a few simple questions — we'll take care of the rest."
+            lead="Just answer a few simple questions and we'll take care of the rest."
           />
           <Steps items={STEPS} />
         </div>
@@ -141,7 +141,7 @@ export default function IncomeTaxPage() {
           <SecHead
             eyebrow="Pricing"
             title="Simple pricing, no surprises"
-            lead="Instant tax results, real human review, IRD e-filing — all inclusive, no hidden fees."
+            lead="Instant tax results, real human review, IRD e-filing. All inclusive, no hidden fees."
           />
           <Pricing plans={PLANS} />
         </div>

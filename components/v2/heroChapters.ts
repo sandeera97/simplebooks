@@ -30,7 +30,7 @@ export const HERO_CHAPTERS: HeroChapter[] = [
     seek: 0,
     line: "Register your company.",
     tab: "Business setup",
-    card: { icon: "building", title: "Company registered", meta: "Certificate in 3 days" },
+    card: { icon: "building", title: "Company registered", meta: "In 5–6 working weeks" },
   },
   {
     start: 10.4,

@@ -43,7 +43,7 @@ export default function CompanyNameCheckPage() {
 
       <CtaBand
         title="Found a name that's free"
-        lead="We can reserve it and have your company registered in three working days."
+        lead="We can reserve it and have your company registered within 5–6 working weeks, subject to the Registrar's approval."
         primary={{ label: "Start registration", href: "/business-registration" }}
         secondary={{ label: "Talk to a consultant", href: "/srilanka/contact" }}
       />

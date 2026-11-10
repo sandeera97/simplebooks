@@ -55,7 +55,7 @@ export default function NewsletterForm() {
   if (sent) {
     return (
       <p className="v2_news_done" role="status">
-        You&apos;re on the list — look out for the next one.
+        You&apos;re on the list. Look out for the next one.
       </p>
     );
   }

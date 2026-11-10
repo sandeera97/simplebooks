@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Hero3D from "./Hero3D";
 import { HERO_CHAPTERS } from "./heroChapters";
 import "./hero3d.css";
@@ -35,7 +34,7 @@ export default function Hero() {
       <div className="v2_wrap v2_hero_in">
         <div>
           <p className="v2_kicker h3d_rise" style={{ "--d": 0 } as React.CSSProperties}>
-            EST. 2014 · COLOMBO · DHAKA · BENGALURU
+            EST. 2016 · COLOMBO · DHAKA · BENGALURU
           </p>
           <p className="v2_pill_note h3d_rise" style={{ "--d": 1 } as React.CSSProperties}>
             The right place to start your business
@@ -50,17 +49,19 @@ export default function Hero() {
           </h1>
 
           <p className="v2_lead v2_hero_p h3d_rise" style={{ "--d": 3 } as React.CSSProperties}>
-            One team and one platform behind 10000+ businesses since 2014 — with tax and
+            One team and one platform behind 10000+ businesses since 2016, with tax and
             compliance handled alongside, across Sri Lanka, Bangladesh and India.
           </p>
 
           <div className="v2_hero_cta h3d_rise" style={{ "--d": 4 } as React.CSSProperties}>
-            <Link className="v2_btn v2_btn_primary" href="/srilanka/contact">
+            {/* Start now opens the dashboard, where registration begins.
+                Talk to an expert stays on this page: #start is the form below. */}
+            <a className="v2_btn v2_btn_primary" href="https://dashboard.simplebooks.com">
               Start now <span className="v2_arrow">→</span>
-            </Link>
-            <Link className="v2_btn v2_btn_ghost" href="/srilanka/contact">
+            </a>
+            <a className="v2_btn v2_btn_ghost" href="#start">
               Talk to an expert
-            </Link>
+            </a>
           </div>
 
           <div className="v2_namecheck h3d_rise" style={{ "--d": 5 } as React.CSSProperties}>
@@ -90,7 +91,7 @@ export default function Hero() {
             </div>
             <div>
               <p className="v2_trust_a">4.9 / 5 across 1400+ Google reviews</p>
-              <p className="v2_trust_b">10000+ businesses registered since 2014</p>
+              <p className="v2_trust_b">10000+ businesses registered since 2016</p>
             </div>
           </div>
         </div>

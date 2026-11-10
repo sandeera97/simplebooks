@@ -11,7 +11,7 @@ export const metadata: Metadata = pageMetadata("/srilanka/dashboard/accounting-t
 const STEPS = [
   { t: "Record your transactions", d: "Income, expenses, invoices and purchases, captured as they happen rather than at year end." },
   { t: "Reconcile accounts", d: "Match your bank statements and track cash flow in real time, without a spreadsheet in sight." },
-  { t: "Generate reports", d: "P&L, balance sheet and transaction reports on demand — the numbers a lender or investor asks for." },
+  { t: "Generate reports", d: "P&L, balance sheet and transaction reports on demand: the numbers a lender or investor asks for." },
 ];
 
 const COVERED = [
@@ -22,7 +22,7 @@ const COVERED = [
 ];
 
 const WHY = [
-  "Save time — the records build themselves as you work",
+  "Save time, as the records build themselves while you work",
   "Accuracy you can defend to a bank or an auditor",
   "Expert support included, not billed by the hour",
   "Reports ready whenever a lender or investor asks",
@@ -36,7 +36,7 @@ const REVIEWS = [
 ];
 
 const FAQS = [
-  { q: "Do I need accounting knowledge to use it?", a: "No. The tool is built around what a business owner actually does — raise an invoice, record a bill, match the bank. The accounting happens underneath." },
+  { q: "Do I need accounting knowledge to use it?", a: "No. The tool is built around what a business owner actually does: raise an invoice, record a bill, match the bank. The accounting happens underneath." },
   { q: "Can my accountant use it too?", a: "Yes. You can give your accountant their own access, so they work in the same records instead of asking you for exports." },
   { q: "Does it produce reports my bank will accept?", a: "Yes. Profit and loss, balance sheet and transaction reports are generated in standard formats that banks and lenders are used to seeing." },
   { q: "Can I import my existing records?", a: "You can. Tell us what you're coming from and we'll help you bring your opening balances and history across." },
@@ -49,7 +49,7 @@ export default function AccountingToolPage() {
       <PageHero
         eyebrow="Accounting tool"
         title="All-in-one accounting that simplifies your business"
-        lead="Manage invoices, expenses and financial records securely, and generate the reports that guide smart decisions — all in one tool."
+        lead="Manage invoices, expenses and financial records securely, and generate the reports that guide smart decisions, all in one tool."
         primary={{ label: "Explore the dashboard", href: "https://dashboard.simplebooks.com" }}
         secondary={{ label: "Talk to an expert", href: "/srilanka/contact" }}
         stats={[
@@ -86,7 +86,7 @@ export default function AccountingToolPage() {
           <CheckSplit
             eyebrow="Why simplebooks"
             title="Effortless accounting, expert backup"
-            lead="Save time, simplify your finances and keep the numbers accurate — with real accountants included rather than billed separately."
+            lead="Save time, simplify your finances and keep the numbers accurate, with real accountants included rather than billed separately."
             items={WHY}
             cta={{ label: "Start free", href: "https://dashboard.simplebooks.com" }}
             aside={

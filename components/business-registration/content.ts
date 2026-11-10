@@ -126,9 +126,9 @@ export const reviews = [
 ];
 
 export const faqs = [
-  { q: "How long does business registration take in Sri Lanka?", a: "Most registrations are completed within 3–5 working days once we have your documents and the ROC approves your company name. We keep you updated at every stage through your dashboard." },
+  { q: "How long does business registration take in Sri Lanka?", a: "Most registrations are completed within 5–6 working weeks, subject to the Registrar's approval. We keep you updated at every stage through your dashboard." },
   { q: "Do I need to visit an office or government department?", a: "No. The entire process is 100% online — from name approval to certification. There are no queues, no paperwork, and no office visits required." },
-  { q: "What type of companies can I register?", a: "We help register private limited companies, sole proprietorships, partnerships and more. If you're unsure which structure suits you, our experts will guide you." },
+  { q: "What type of companies can I register?", a: "We register private limited companies. If you're unsure which structure suits you, our experts will guide you." },
   { q: "Is this service compliant with Sri Lankan regulations?", a: "Yes. As a registered company secretary, Simplebooks ensures every document follows ROC rules and guidelines so your company is registered correctly the first time." },
   { q: "What happens after my company is registered?", a: "You'll receive official confirmation and downloadable certificates. You also get dashboard access for invoicing, payroll, document management and post-registration guidance." },
   { q: "Can foreigners register a company in Sri Lanka using this service?", a: "Yes. Foreign nationals can register a company in Sri Lanka. We'll guide you on the additional documentation and requirements that may apply." },

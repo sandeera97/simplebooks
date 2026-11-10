@@ -60,7 +60,7 @@ export const faqGroups: FaqGroup[] = [
       {
         q: "Who do I contact if I have a personal complain or question?",
         blocks: [
-          { type: "p", text: "For personal complains, questions, amendments or to correct any information given, you can contact our P.C.O (Privacy Compliance Officer) via this email – people@simplebooks.com or by sending a letter to our physical office." },
+          { type: "p", text: "For personal complains, questions, amendments or to correct any information given, you can contact our P.C.O (Privacy Compliance Officer) via this email: people@simplebooks.com or by sending a letter to our physical office." },
         ],
       },
       {
@@ -139,7 +139,7 @@ export const faqGroups: FaqGroup[] = [
           {
             type: "ul",
             items: [
-              "The first step is the pricing step. This has to do with knowing the package that suits you – from startups to enterprise.",
+              "The first step is the pricing step. This has to do with knowing the package that suits you, from startups to enterprise.",
               "Secondly, as our customer, you send your invoices and every details about your finances to us via Google Drive or Dropbox. We have a structure set up for only you so you can be rest assured your details are secured with us",
               "Lastly, after working on your financial details, we send your account statements to you via the same accounting structure or dashboard to make it easy for you to access it.",
             ],
@@ -216,7 +216,7 @@ export const faqGroups: FaqGroup[] = [
       {
         q: "How am I sure my details are safe with you?",
         blocks: [
-          { type: "p", text: "After employing our accountants, they agree to be discrete with customer’s details – this is what we call “non-disclosure agreement.’ This is signed by us and our employees. We also have a privacy policy which can be accessed on our website." },
+          { type: "p", text: "After employing our accountants, they agree to be discrete with customer’s details. This is what we call “non-disclosure agreement.’ This is signed by us and our employees. We also have a privacy policy which can be accessed on our website." },
         ],
       },
       {
@@ -228,7 +228,7 @@ export const faqGroups: FaqGroup[] = [
             items: [
               "We help to register your business starting from Rs. 16,100 LKR. We provide a quick and simple way to register your company.",
               "You can contact us for company secretary at a price of Rs. 12,000 LKR per year.",
-              "For Value Added Tax (VAT) and Nation Building Tax (NBT) – Rs. 3,000 onwards",
+              "For Value Added Tax (VAT) and Nation Building Tax (NBT): Rs. 3,000 onwards",
               "For payroll management , Our Packages start from Rs. 3,000 Onwards",
               "For registering import, we charge Rs. 12,500.",
               "We provide trademark registration for a price of Rs. 25,000.",

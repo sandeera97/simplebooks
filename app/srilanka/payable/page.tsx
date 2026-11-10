@@ -8,17 +8,17 @@ export const metadata: Metadata = pageMetadata("/srilanka/payable");
 
 const benefits: { text: string; sub?: string[] }[] = [
   {
-    text: "We'll handle the submission of your documents to the payment provider—saving you time, hassle, and unnecessary back-and-forth.",
+    text: "We'll handle the submission of your documents to the payment provider, saving you time, hassle, and unnecessary back-and-forth.",
   },
-  { text: "No setup fee – Get started instantly with zero upfront costs." },
+  { text: "No setup fee: get started instantly with zero upfront costs." },
   {
-    text: "Free for the first year – Enjoy a full year with no subscription fees, helping you save more.",
-  },
-  {
-    text: "Market-leading interest rates – Minimize your payment processing costs with the most competitive rates available.",
+    text: "Free for the first year: enjoy a full year with no subscription fees, helping you save more.",
   },
   {
-    text: "Transparent pricing – A simple, percentage-based fee per transaction—no hidden charges.",
+    text: "Market-leading interest rates: minimize your payment processing costs with the most competitive rates available.",
+  },
+  {
+    text: "Transparent pricing: a simple, percentage-based fee per transaction, with no hidden charges.",
   },
   {
     text: "Competitive MDR (Merchant Discount Rates):",

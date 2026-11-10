@@ -19,7 +19,7 @@ export default function ThankYouPage() {
           </h1>
           <p className="v2_lead v2_status_lead v2_reveal">
             Your request is submitted. One of our consultants will be in touch within one working
-            day — usually sooner.
+            day, usually sooner.
           </p>
           <img
             className="v2_reveal"

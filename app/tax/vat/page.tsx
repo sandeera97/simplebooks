@@ -28,11 +28,11 @@ export default function VatPage() {
         eyebrow="VAT compliance"
         title="Transform your VAT compliance journey"
         lead="Stop letting VAT complications drain your energy and resources. We'll guide you to compliance confidence with 100% guaranteed accuracy."
-        primary={{ label: "Free VAT assessment", href: "/srilanka/contact" }}
-        secondary={{ label: "Schedule consultation", href: "/srilanka/contact" }}
+        primary={{ label: "Free VAT assessment", href: "#consultation" }}
+        secondary={{ label: "Schedule consultation", href: "#consultation" }}
         stats={[
           { n: "100%", l: "Compliance guaranteed" },
-          { n: "2,500+", l: "Clients served" },
+          { n: "10000+", l: "Business owners supported" },
           { n: "2 days", l: "Registration (Premier)" },
         ]}
       />
@@ -42,7 +42,7 @@ export default function VatPage() {
           <SecHead
             eyebrow="How it works"
             title="A simple 3-step process"
-            lead="We understand your struggles. Having worked with over 2,500 businesses across Sri Lanka, we've seen how VAT compliance can overwhelm even the most successful entrepreneurs."
+            lead="We understand your struggles. Having worked with 10000+ business owners across Sri Lanka, we've seen how VAT compliance can overwhelm even the most successful entrepreneurs."
           />
           <Steps items={STEPS} />
         </div>
@@ -62,7 +62,7 @@ export default function VatPage() {
       <CtaBand
         title="Get your VAT under control"
         lead="A free assessment tells you where you stand and what the next quarter needs."
-        primary={{ label: "Free VAT assessment", href: "/srilanka/contact" }}
+        primary={{ label: "Free VAT assessment", href: "#consultation" }}
         secondary={{ label: "See the VAT tool", href: "/srilanka/services/value-added-tax-filling" }}
       />
 

@@ -45,7 +45,7 @@ export default function PayrollServicesPage() {
         eyebrow="Payroll services"
         title="All-in-one payroll management"
         lead="We are here to help you effectively manage your payroll."
-        primary={{ label: "Get a free consultation", href: "/srilanka/contact" }}
+        primary={{ label: "Get a free consultation", href: "#consultation" }}
         secondary={{ label: "See the payroll tool", href: "/srilanka/dashboard/payroll-management-system" }}
       />
 
@@ -64,7 +64,7 @@ export default function PayrollServicesPage() {
         <div className="v2_wrap">
           <SecHead
             eyebrow="Why simplebooks"
-            title="Running a business is not easy — let us handle the repetitive tasks"
+            title="Running a business is not easy. Let us handle the repetitive tasks"
           />
           <FeatureGrid items={WHY} cols={4} />
         </div>
@@ -77,7 +77,7 @@ export default function PayrollServicesPage() {
             title="What do we need from you"
             lead="Meeting your monthly payroll deadlines is crucial to avoiding unnecessary penalties. Have the team track your deadlines and remind you beforehand."
             items={NEED}
-            cta={{ label: "Book a free consultation", href: "/srilanka/contact" }}
+            cta={{ label: "Book a free consultation", href: "#consultation" }}
             aside={
               <div className="v2_panel">
                 <p className="v2_panel_h">Personalised reminders</p>
@@ -104,7 +104,7 @@ export default function PayrollServicesPage() {
       <CtaBand
         title="Want a quotation for payroll"
         lead="Tell us your headcount and we'll price it today. You pay less as you hire more."
-        primary={{ label: "Talk to the team", href: "/srilanka/contact" }}
+        primary={{ label: "Talk to the team", href: "#consultation" }}
         secondary={{ label: "See all services", href: "/srilanka/services" }}
       />
 

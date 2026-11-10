@@ -44,7 +44,7 @@ const REVIEWS = [
 ];
 
 const FAQS = [
-  { q: "Is it really free for two months?", a: "Yes — full access to invoicing for two months, no credit card required. You only decide whether to continue at the end of the trial." },
+  { q: "Is it really free for two months?", a: "Yes. Full access to invoicing for two months, no credit card required. You only decide whether to continue at the end of the trial." },
   { q: "Can I use my own branding?", a: "Yes. Upload your logo and set your colours and payment terms once, and every invoice you send carries them." },
   { q: "Can my customers pay online?", a: "Yes. Invoices can carry a payment link, and the dashboard marks them paid automatically when the money lands." },
   { q: "Does it handle VAT?", a: "It does. Set your VAT registration once and the tax lines are calculated and shown correctly on every invoice." },
@@ -59,7 +59,7 @@ export default function InvoicingPage() {
         title="Invoicing streamlined, payments boosted"
         lead="Create professional invoices and get paid faster, from a dashboard your whole team can actually use."
         primary={{ label: "Try free for 2 months", href: "https://dashboard.simplebooks.com" }}
-        secondary={{ label: "Talk to an expert", href: "/srilanka/contact" }}
+        secondary={{ label: "Talk to an expert", href: "#consultation" }}
         note="Full access for free. No credit card required."
         stats={[
           { n: "10000+", l: "Businesses in Sri Lanka" },
@@ -137,7 +137,7 @@ export default function InvoicingPage() {
         title="Get started with Simplebooks invoicing"
         lead="Full access to every feature for two months. See the difference it makes before you pay anything."
         primary={{ label: "Create your account", href: "https://dashboard.simplebooks.com" }}
-        secondary={{ label: "Talk to an expert", href: "/srilanka/contact" }}
+        secondary={{ label: "Talk to an expert", href: "#consultation" }}
       />
 
       <LeadForm source="/srilanka/dashboard/accounting-software" {...leadFormFor("/srilanka/dashboard/accounting-software")!} />

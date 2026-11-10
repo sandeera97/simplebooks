@@ -19,7 +19,7 @@ const POCKET = [
   "Verified by tax experts",
   "Instant, accurate answers to any tax question",
   "Tax computation calculated within WhatsApp itself",
-  "Free computation — pay only when you file",
+  "Free computation, pay only when you file",
 ];
 
 export default function TaxAiBotPage() {
@@ -28,7 +28,7 @@ export default function TaxAiBotPage() {
       <PageHero
         eyebrow="AI-powered tax assistant"
         title="File your taxes in one WhatsApp chat"
-        lead="Ask any tax question instantly, get a free computation, and pay only if you file — reviewed by tax specialists."
+        lead="Ask any tax question instantly, get a free computation, and pay only if you file. Every return is reviewed by tax specialists."
         primary={{ label: "Chat on WhatsApp", href: "https://wa.me/94117555878" }}
         secondary={{ label: "Talk to an expert", href: "/srilanka/contact" }}
         stats={[

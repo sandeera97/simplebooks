@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { avatarFor } from "@/components/avatars";
+
+/* Headings end in the brand's orange full stop, unless the copy already
+   ends in its own punctuation ("…secretary?" would otherwise read "?."). */
+const ENDS_PUNCTUATED = /[?!.]$/;
+const brandDot = (title: string) => !ENDS_PUNCTUATED.test(title.trim());
 
 /* ============================ Hero ============================ */
 export function PageHero({
@@ -35,7 +41,7 @@ export function PageHero({
         <p className="v2_eyebrow v2_reveal">{eyebrow}</p>
         <h1 className="v2_h1 v2_reveal">
           {title}
-          {dot && <span className="v2_dot">.</span>}
+          {dot && brandDot(title) && <span className="v2_dot">.</span>}
         </h1>
         {lead && <p className="v2_lead v2_phero_lead v2_reveal">{lead}</p>}
 
@@ -90,7 +96,7 @@ export function SecHead({
       {eyebrow && <p className="v2_eyebrow v2_reveal">{eyebrow}</p>}
       <h2 className="v2_h2 v2_reveal">
         {title}
-        <span className="v2_dot">.</span>
+        {brandDot(title) && <span className="v2_dot">.</span>}
       </h2>
       {lead && <p className="v2_lead v2_reveal" style={{ marginTop: 18 }}>{lead}</p>}
     </div>
@@ -167,7 +173,7 @@ export function CheckSplit({
         <p className="v2_eyebrow v2_reveal">{eyebrow}</p>
         <h2 className="v2_h2 v2_reveal" style={{ marginTop: 16 }}>
           {title}
-          <span className="v2_dot">.</span>
+          {brandDot(title) && <span className="v2_dot">.</span>}
         </h2>
         {lead && (
           <p className="v2_lead v2_reveal" style={{ margin: "22px 0 26px", maxWidth: 520 }}>
@@ -211,7 +217,7 @@ export function Compare({
         <p className="v2_col_h">{badTitle}</p>
         <ul>
           {bad.map((t) => (
-            <li key={t}><span className="v2_mark v2_mark_bad">—</span>{t}</li>
+            <li key={t}><span className="v2_mark v2_mark_bad">✕</span>{t}</li>
           ))}
         </ul>
       </div>
@@ -231,9 +237,12 @@ export function Compare({
 export function Pricing({
   plans,
   note,
+  href = "/srilanka/contact",
 }: {
   plans: { name: string; price: string; per?: string; blurb?: string; features: string[]; featured?: boolean; cta?: string }[];
   note?: string;
+  /** Where the plan buttons go. A page with a lead form passes "#consultation". */
+  href?: string;
 }) {
   return (
     <>
@@ -253,7 +262,7 @@ export function Pricing({
               ))}
             </ul>
             <Link
-              href="/srilanka/contact"
+              href={href}
               className={`v2_btn ${p.featured ? "v2_btn_primary" : "v2_btn_ghost"}`}
             >
               {p.cta ?? "Get started"} <span className="v2_arrow">→</span>
@@ -315,7 +324,7 @@ export function CtaBand({
       <div className="v2_wrap v2_ctaband_in">
         <h2 className="v2_h2 v2_reveal">
           {title}
-          <span className="v2_dot">.</span>
+          {brandDot(title) && <span className="v2_dot">.</span>}
         </h2>
         {lead && <p className="v2_ctaband_lead v2_reveal">{lead}</p>}
         <div className="v2_phero_cta v2_reveal" style={{ justifyContent: "center" }}>
@@ -334,6 +343,20 @@ export function CtaBand({
 }
 
 /* ========================= Reviews ============================ */
+/* The customer's own photo from the live site when we have one, otherwise
+   their initial. Never a stand-in face. */
+function ReviewAvatar({ name }: { name: string }) {
+  const src = avatarFor(name);
+  if (src) {
+    return <img className="v2_mini_av" src={src} alt="" width={44} height={44} loading="lazy" decoding="async" />;
+  }
+  return (
+    <span className="v2_mini_av v2_mini_av_i" aria-hidden="true">
+      {name.trim().charAt(0).toUpperCase()}
+    </span>
+  );
+}
+
 export function ReviewStrip({
   items,
 }: {
@@ -345,8 +368,13 @@ export function ReviewStrip({
         <article key={m.name + m.q.slice(0, 12)} className="v2_mini_c v2_reveal">
           <p className="v2_stars">★★★★★</p>
           <p>{m.q}</p>
-          <b>{m.name}</b>
-          {m.role && <span>{m.role}</span>}
+          <div className="v2_mini_who">
+            <ReviewAvatar name={m.name} />
+            <div>
+              <b>{m.name}</b>
+              {m.role && <span>{m.role}</span>}
+            </div>
+          </div>
         </article>
       ))}
     </div>
@@ -377,7 +405,7 @@ export function SplitSection({
         {eyebrow && <p className="v2_eyebrow v2_reveal">{eyebrow}</p>}
         <h2 className="v2_h2 v2_split_h v2_reveal">
           {title}
-          <span className="v2_dot">.</span>
+          {brandDot(title) && <span className="v2_dot">.</span>}
         </h2>
         {paras.map((t) => (
           <p key={t.slice(0, 24)} className="v2_lead v2_split_p v2_reveal">

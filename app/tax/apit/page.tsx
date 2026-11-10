@@ -9,7 +9,7 @@ import { PageHero, SecHead, FeatureGrid, Compare, CtaBand } from "@/components/v
 export const metadata: Metadata = pageMetadata("/tax/apit");
 
 const FEATURES = [
-  { t: "End-to-end APIT filing & submission", d: "From data collection to final submission — we handle the entire APIT process for you.", tags: ["End to end"] },
+  { t: "End-to-end APIT filing & submission", d: "From data collection to final submission, we handle the entire APIT process for you.", tags: ["End to end"] },
   { t: "100% accurate tax calculations", d: "We use the latest IRD rates and guidelines to deliver fully accurate tax figures.", tags: ["Latest rates"] },
   { t: "Compliance check & penalty prevention", d: "Stay ahead of deadlines and avoid fines with our proactive compliance monitoring.", tags: ["Proactive"] },
   { t: "Personalised tax consultation", d: "Get one-on-one expert advice tailored to your business.", tags: ["1-to-1"] },
@@ -35,8 +35,8 @@ export default function ApitPage() {
       <PageHero
         eyebrow="APIT filing"
         title="Sri Lanka's most trusted APIT filing service provider"
-        lead="Don't let APIT filing slow your business down — let the #1 service provider take care of it."
-        primary={{ label: "Get free consultation", href: "/srilanka/contact" }}
+        lead="Don't let APIT filing slow your business down. Let the #1 service provider take care of it."
+        primary={{ label: "Get free consultation", href: "#consultation" }}
         secondary={{ label: "See all tax services", href: "/tax/income-tax" }}
         note="APIT tax update 2025."
         stats={[
@@ -76,7 +76,7 @@ export default function ApitPage() {
       <CtaBand
         title="Stop stressing over APIT filing"
         lead="Let our experts take care of it. Set up a free consultation and we'll tell you exactly what's needed."
-        primary={{ label: "Set up a free consultation", href: "/srilanka/contact" }}
+        primary={{ label: "Set up a free consultation", href: "#consultation" }}
         secondary={{ label: "See payroll services", href: "/srilanka/services/payroll-managment" }}
       />
 

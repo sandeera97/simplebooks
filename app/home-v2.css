@@ -640,6 +640,12 @@
 .v2_mini_c p { font-size: 14.5px; line-height: 1.6; color: var(--v2-ink-2); margin: 12px 0 18px; }
 .v2_mini_c b { display: block; font-size: 14px; font-weight: 800; }
 .v2_mini_c span { font-size: 12.5px; color: var(--v2-ink-5); }
+/* Audit: the customers' faces on the review cards (photos from the live site). */
+.v2_mini_who { display: flex; align-items: center; gap: 12px; }
+.v2_mini_av { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex-shrink: 0; background: var(--v2-sand); }
+.v2_mini_c .v2_mini_av_i { display: grid; place-items: center; font-size: 17px; font-weight: 800; color: var(--v2-orange); background: rgba(255,91,46,0.12); }
+/* Buttons now scroll to the form on the same page; keep it clear of the sticky header. */
+#consultation, #start { scroll-margin-top: 90px; }
 
 /* ---------- FAQ marquee ---------- */
 .v2_faq { background: var(--v2-sand); padding: 104px 0; overflow: hidden; }
@@ -1241,7 +1247,7 @@
 .v2_payable_tick { flex: 0 0 20px; margin-top: 3px; color: var(--v2-orange); }
 .v2_payable_sublist { display: grid; gap: 4px; margin: 10px 0 0 4px; }
 .v2_payable_sublist li { color: var(--v2-ink-3); font-size: 14.5px; line-height: 1.7; }
-.v2_payable_sublist li::before { content: "— "; color: var(--v2-ink-5); }
+.v2_payable_sublist li::before { content: "• "; color: var(--v2-ink-5); }
 .v2_payable_outro {
   margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--v2-line);
   color: var(--v2-ink-2); font-size: 15.5px; line-height: 1.7;

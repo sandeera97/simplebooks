@@ -10,7 +10,7 @@ export const metadata: Metadata = pageMetadata("/srilanka/karma");
 const STEPS = [
   {
     t: "Grab a pic & go social",
-    d: "Take a picture of you and your team — a selfie, the office, even a smile and a thumbs-up. Publish it on Instagram or Facebook with a short write-up of your business.",
+    d: "Take a picture of you and your team: a selfie, the office, even a smile and a thumbs-up. Publish it on Instagram or Facebook with a short write-up of your business.",
   },
   {
     t: "Message the team",
@@ -53,10 +53,10 @@ export default function KarmaPage() {
         eyebrow="Loyalty programme"
         title="Get Karma, get 10% off"
         dot={false}
-        lead="Karma is a discount program we've made to share the love. New customer or old — get 10% cashback on whatever bill you've paid us."
+        lead="Karma is a discount program we've made to share the love. New customer or old, get 10% cashback on whatever bill you've paid us."
         primary={{ label: "Claim your Karma", href: "mailto:karma@simplebooks.com" }}
         secondary={{ label: "Talk to us", href: "/srilanka/contact" }}
-        note="Not stackable — one per service, but it applies for life."
+        note="Not stackable. One per service, but it applies for life."
       />
 
       <section className="v2_sec v2_sec_pad">
@@ -69,7 +69,7 @@ export default function KarmaPage() {
                 <span className="v2_dot">.</span>
               </h2>
               <p className="v2_lead v2_reveal" style={{ margin: "22px 0 18px", maxWidth: 520 }}>
-                Even if we&rsquo;ve done something for you at cost. Karma isn&rsquo;t stackable —
+                Even if we&rsquo;ve done something for you at cost. Karma isn&rsquo;t stackable:
                 you can only do it once per service. But if you have two active services with us,
                 you can get 10% off each one, for life.
               </p>

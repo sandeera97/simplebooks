@@ -11,7 +11,7 @@ export const reviews: Review[] = [
   {
     title: "It's a superb experience",
     quote:
-      "It's a superb experience that I got from Simple Books. I got the contact through online. From there onwards up to now — I came to collect my documents — they gave me very good service. Responding via mails for my queries, updating the process etc. everything is good. When I visited the premises, the personnel service was also the same. I can recommend to anyone who is looking for a service. Superb!!! Keep it up.",
+      "It's a superb experience that I got from Simple Books. I got the contact through online. From there onwards up to now (I came to collect my documents), they gave me very good service. Responding via mails for my queries, updating the process etc. everything is good. When I visited the premises, the personnel service was also the same. I can recommend to anyone who is looking for a service. Superb!!! Keep it up.",
     author: "Sarath Senanayake",
   },
   {
@@ -126,7 +126,7 @@ export const reviews: Review[] = [
   {
     title: "They went above and beyond",
     quote:
-      "Big shout out and thank-you to Simplebooks, our digitally savvy and entrepreneurial minded newly retained book-keepers for our new start-up Remote Workforce. They went above and beyond in their level of service in handling all the drawn out Sri Lankan registration processes required to set up the company. Here's to a long lasting partnership — and as they say what goes around comes around!",
+      "Big shout out and thank-you to Simplebooks, our digitally savvy and entrepreneurial minded newly retained book-keepers for our new start-up Remote Workforce. They went above and beyond in their level of service in handling all the drawn out Sri Lankan registration processes required to set up the company. Here's to a long lasting partnership, and as they say what goes around comes around!",
     author: "Tom Simpson",
   },
 

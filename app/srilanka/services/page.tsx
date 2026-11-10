@@ -38,7 +38,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="What we do"
         title="Everything your business needs, under one roof"
-        lead="One team of accountants, company secretaries and lawyers — so you're never handed off to a stranger halfway through."
+        lead="One team of accountants, company secretaries and lawyers, so you're never handed off to a stranger halfway through."
         primary={{ label: "Talk to a consultant", href: "/srilanka/contact" }}
         secondary={{ label: "See the dashboard", href: "/srilanka/dashboard/accounting-tool" }}
       />
@@ -49,7 +49,7 @@ export default function ServicesPage() {
             eyebrow="Service"
             title="Business registration"
             paras={[
-              "Our team of business registration consultants have helped set up legal entities for founders, entrepreneurs and conglomerates. Regardless of where you are in the stage of your business, lean on the experience and insight generated from incorporating over 3,000+ organizations across South Asia.",
+              "Our team of business registration consultants have helped set up legal entities for founders, entrepreneurs and conglomerates. Regardless of where you are in the stage of your business, lean on the experience and insight generated from incorporating 10000+ organizations across South Asia.",
               "Leverage the learnings and insight from other business owners to avoid making the same mistakes and setting yourself up for success. Whether you're launching your Small Business, Non-Profit or raising capital for your Tech Startup, speak to an advisor and set yourself up for success.",
             ]}
             cta={{ label: "Register your business", href: "/srilanka/services/register-a-company" }}
@@ -57,8 +57,8 @@ export default function ServicesPage() {
               <Panel
                 label="Registration"
                 rows={[
-                  ["Entities incorporated", "3,000+"],
-                  ["Typical turnaround", "3–5 days"],
+                  ["Entities incorporated", "10000+"],
+                  ["Typical timeline", "5–6 weeks"],
                   ["Markets covered", "South Asia"],
                   ["Name approval", "Included"],
                 ]}

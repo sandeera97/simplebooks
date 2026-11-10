@@ -27,8 +27,8 @@ export default function CorporateTaxPage() {
       <PageHero
         eyebrow="Corporate tax"
         title="Corporate tax made simple for Sri Lankan businesses"
-        lead="Stop fighting the system. Get your business back on track with our complete financial back office solution — year-round compliance so you can focus on growth."
-        primary={{ label: "Talk to our expertise", href: "/srilanka/contact" }}
+        lead="Stop fighting the system. Get your business back on track with our complete financial back office solution: year-round compliance so you can focus on growth."
+        primary={{ label: "Talk to our expertise", href: "#consultation" }}
         secondary={{ label: "See all tax services", href: "/tax/income-tax" }}
         stats={[
           { n: "500+", l: "Corporate clients in Sri Lanka" },
@@ -42,7 +42,7 @@ export default function CorporateTaxPage() {
           <SecHead
             eyebrow="How it works"
             title="A simple 3-step process"
-            lead="Your complete financial back office — not just a tax service, but the whole operation behind seamless business compliance."
+            lead="Your complete financial back office. Not just a tax service, but the whole operation behind seamless business compliance."
           />
           <Steps items={STEPS} />
         </div>
@@ -53,7 +53,7 @@ export default function CorporateTaxPage() {
           <SecHead
             eyebrow="The problem"
             title="Fighting a system that wasn't built for you"
-            lead="Corporate tax compliance in Sri Lanka feels like an uphill battle — blindfolded."
+            lead="Corporate tax compliance in Sri Lanka feels like an uphill battle, blindfolded."
           />
           <FeatureGrid items={PAIN} cols={4} />
         </div>
@@ -62,7 +62,7 @@ export default function CorporateTaxPage() {
       <CtaBand
         title="Get your corporate tax under control"
         lead="Tell us where your books stand and we'll tell you exactly what the year needs."
-        primary={{ label: "Talk to our expertise", href: "/srilanka/contact" }}
+        primary={{ label: "Talk to our expertise", href: "#consultation" }}
         secondary={{ label: "See bookkeeping", href: "/srilanka/services/accounting-services" }}
       />
 

@@ -5,13 +5,13 @@ import PageShell from "@/components/v2/PageShell";
 import { PageHero } from "@/components/v2/blocks";
 
 export const metadata: Metadata = {
-  title: "Page not found — Simplebooks",
+  title: "Page not found | Simplebooks",
   description: "The page you were looking for has moved or no longer exists.",
 };
 
 /* Somewhere useful to go, rather than a dead end with a Home button. */
 const LINKS = [
-  { t: "Register a company", d: "Start a Sri Lankan company online in three working days.", href: "/srilanka/services/register-a-company" },
+  { t: "Register a company", d: "Start a Sri Lankan company online, registered within 5–6 working weeks.", href: "/srilanka/services/register-a-company" },
   { t: "File your taxes", d: "Income tax, VAT, APIT and SSCL, reviewed by a human.", href: "/income-tax-filing" },
   { t: "Free calculators", d: "APIT, VAT, WHT, EPF/ETF, gratuity and salary tools.", href: "/tools" },
   { t: "Talk to us", d: "Tell us what you need and we'll set up a free consultation.", href: "/srilanka/contact" },
