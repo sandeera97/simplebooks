@@ -16,7 +16,10 @@
   --sim-footer-text: #c5c8e0;
   --sim-footer-link: #4a8dff;
   --sim-border: #f1f1f6;
-  --font-poppins: "Poppins", sans-serif;
+  /* --font-poppins is not defined here: next/font sets it on <html> (see
+     app/layout.tsx), pointing at the self-hosted face and its size-matched
+     fallback. A value here would override that and name the family directly,
+     which only resolves while the face happens to be called "Poppins". */
 }
 
 * { box-sizing: border-box; }
