@@ -5,6 +5,7 @@ import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
 import { leadFormFor } from "@/lib/leadForms";
 import RegistrationPricing from "@/components/business-registration/RegistrationPricing";
+import ServiceJourney from "@/components/v2/ServiceJourney";
 import {
   PageHero, SecHead, FeatureGrid, Steps, CheckSplit, Faq, CtaBand, ReviewStrip,
 } from "@/components/v2/blocks";
@@ -137,6 +138,8 @@ export default function BusinessRegistrationPage() {
           </p>
         </div>
       </section>
+
+      <ServiceJourney tone="white" />
 
       <section className="v2_band">
         <div className="v2_wrap">

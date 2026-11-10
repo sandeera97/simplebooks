@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import RegistrationPricing from "@/components/business-registration/RegistrationPricing";
+import ServiceJourney from "@/components/v2/ServiceJourney";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
 import { leadFormFor } from "@/lib/leadForms";
@@ -185,7 +186,9 @@ export default function RegisterACompanyPage() {
         </div>
       </section>
 
-      <section className="v2_sec v2_sec_pad">
+      <ServiceJourney />
+
+      <section className="v2_band">
         <div className="v2_wrap">
           <SecHead eyebrow="Customers" title="What founders say" />
           <ReviewStrip items={REVIEWS} />
