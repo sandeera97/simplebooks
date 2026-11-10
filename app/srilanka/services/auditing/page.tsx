@@ -61,7 +61,7 @@ export default function AuditingPage() {
 
       <section className="v2_sec v2_sec_pad">
         <div className="v2_wrap">
-          <SecHead eyebrow="Customers" title="What our 1,000+ repeat customers say" />
+          <SecHead eyebrow="Customers" title="What our 10000+ business owners say" />
           <ReviewStrip items={REVIEWS} />
         </div>
       </section>

@@ -97,10 +97,10 @@ export default function Customers() {
               <div>
                 <p className="v2_score_n">4.9</p>
                 <p className="v2_stars">★★★★★</p>
-                <p className="v2_score_s">400+ Google reviews</p>
+                <p className="v2_score_s">1400+ Google reviews</p>
               </div>
               <div>
-                <p className="v2_score_n">4,500+</p>
+                <p className="v2_score_n">10000+</p>
                 <p className="v2_score_s" style={{ marginTop: 12 }}>Businesses served</p>
               </div>
             </div>

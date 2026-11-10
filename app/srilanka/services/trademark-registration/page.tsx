@@ -58,9 +58,9 @@ export default function TrademarkPage() {
         primary={{ label: "Get a free consultation", href: "/srilanka/contact" }}
         secondary={{ label: "See all services", href: "/srilanka/services" }}
         stats={[
-          { n: "5,000+", l: "Businesses trust Simplebooks" },
+          { n: "10000+", l: "Businesses trust Simplebooks" },
           { n: "LKR 28,920", l: "Registration, all in" },
-          { n: "4.9★", l: "Across 400+ reviews" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
 

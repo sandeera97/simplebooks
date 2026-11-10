@@ -4,7 +4,7 @@ export const whyPoints = [
   "Real-time progress tracking via our online dashboard",
   "Secure digital document management",
   "Human expert support throughout the process",
-  "Trusted by 8000+ of Sri Lankan entrepreneurs",
+  "Trusted by 10000+ business owners",
 ];
 
 export const nameCheckPoints = [

@@ -72,7 +72,7 @@ export default function IncomeTaxPage() {
         secondary={{ label: "Talk to an expert", href: "/srilanka/contact" }}
         note="No credit card until final review."
         stats={[
-          { n: "1,000+", l: "Individuals in Sri Lanka" },
+          { n: "10000+", l: "Business owners supported" },
           { n: "2,500+", l: "Returns filed by our advisors" },
           { n: "4.9★", l: "Google rating" },
         ]}

@@ -39,7 +39,7 @@ export default function TestimonialsPage() {
           </span>
           <span className="v2_google_score">4.9</span>
           <Stars />
-          <span className="v2_google_count">800+ customer reviews</span>
+          <span className="v2_google_count">1400+ Google reviews</span>
         </div>
       </PageHero>
 

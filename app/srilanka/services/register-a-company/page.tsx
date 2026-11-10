@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
+import RegistrationPricing from "@/components/business-registration/RegistrationPricing";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
 import { leadFormFor } from "@/lib/leadForms";
 import {
-  PageHero, SecHead, Steps, FeatureGrid, Pricing, ReviewStrip, CtaBand,
+  PageHero, SecHead, Steps, FeatureGrid, ReviewStrip, CtaBand,
 } from "@/components/v2/blocks";
 
 export const metadata: Metadata = pageMetadata("/srilanka/services/register-a-company");
@@ -55,43 +56,7 @@ const ADVANTAGE = [
   { t: "We are the most affordable service provider", d: "Don't worry about outright payments. Choose from our instalment plans and pay as you earn.", tags: ["Instalments"] },
 ];
 
-const PLANS = [
-  {
-    name: "Premium",
-    price: "LKR 42,410",
-    blurb: "Everything you need to incorporate, with the tools bundled in.",
-    features: [
-      "Name approval",
-      "Articles of association",
-      "Form 1, Form 18 and Form 19",
-      "Certified Form 1 and articles of association",
-      "Certified Form BO 1 and BO 5",
-      "Corporate bank account",
-      "Company incorporation advice",
-      "Paper notice and gazette",
-      "Free invoicing and purchase tool — 6 months (Rs 14,400 value)",
-      "Free payroll tool — 4 months",
-    ],
-    featured: true,
-  },
-  {
-    name: "Premium Pro",
-    price: "LKR 47,410",
-    blurb: "The full kit, with longer tool access and the company seals.",
-    features: [
-      "Everything in Premium",
-      "Free invoicing and purchase tool — 12 months",
-      "Free payroll tool — 6 months",
-      "Free TIN registration (Rs 7,500 value)",
-      "Share certificate, director seal and pre-ink seal",
-      "Minute book and share register",
-      "Integrated with PAYable — first-year fee waived",
-      "20% off any individual Loku Business Course",
-      "Domain names checked and purchased at a discount",
-      "Discounted telemedicine via Flash Health, and Dialog Enterprise solutions",
-    ],
-  },
-];
+
 
 const SECRETARY = [
   "Change company name & address",
@@ -133,13 +98,13 @@ export default function RegisterACompanyPage() {
       <PageHero
         eyebrow="Business registration"
         title="Register your business with us today"
-        lead="We'll guide you through the entire process. Register with an experienced team of company secretaries who have successfully helped over 5,000 others before you."
+        lead="We'll guide you through the entire process. Register with an experienced team of company secretaries who have successfully helped over 10000+ business owners before you."
         primary={{ label: "Get a free consultation", href: "/srilanka/contact" }}
         secondary={{ label: "Sign up for free", href: "https://dashboard.simplebooks.com" }}
         stats={[
-          { n: "5,000+", l: "Businesses registered" },
+          { n: "10000+", l: "Businesses registered" },
           { n: "3–5 days", l: "Typical turnaround" },
-          { n: "4.9★", l: "Across 400+ reviews" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
 
@@ -184,7 +149,7 @@ export default function RegisterACompanyPage() {
           <SecHead
             eyebrow="The advantage"
             title="The Simplebooks business registration advantage"
-            lead="We have helped over 5,000 others. Register with included services that carry on long after the certificate arrives."
+            lead="We have helped over 10000+ business owners. Register with included services that carry on long after the certificate arrives."
           />
           <FeatureGrid items={ADVANTAGE} cols={4} />
         </div>
@@ -193,10 +158,8 @@ export default function RegisterACompanyPage() {
       <section className="v2_sec v2_sec_pad">
         <div className="v2_wrap">
           <SecHead eyebrow="Pricing" title="Get the most affordable rates" />
-          <Pricing
-            plans={PLANS}
-            note="Add the annual secretary service for Rs 15,000 — covering company name and address changes, annual report, amendments to your articles, share issues and transfers, secretary changes and director changes."
-          />
+          <RegistrationPricing />
+          <p className="v2_price_note">Add the annual secretary service for Rs 15,000, covering company name and address changes, annual report, amendments to your articles, share issues and transfers, secretary changes and director changes.</p>
         </div>
       </section>
 

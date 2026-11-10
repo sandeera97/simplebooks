@@ -63,7 +63,7 @@ export default function PayrollPage() {
         secondary={{ label: "Talk to an expert", href: "/srilanka/contact" }}
         note="Full access for free. No credit card required."
         stats={[
-          { n: "5,000+", l: "Businesses in Sri Lanka" },
+          { n: "10000+", l: "Businesses in Sri Lanka" },
           { n: "5 min", l: "To calculate a run" },
           { n: "100%", l: "Labour-law compliant" },
         ]}
@@ -122,7 +122,7 @@ export default function PayrollPage() {
 
       <section className="v2_sec v2_sec_pad">
         <div className="v2_wrap">
-          <SecHead eyebrow="Customers" title="Trusted by 5,000 Sri Lankan businesses" />
+          <SecHead eyebrow="Customers" title="Trusted by 10000+ business owners" />
           <ReviewStrip items={REVIEWS} />
         </div>
       </section>
