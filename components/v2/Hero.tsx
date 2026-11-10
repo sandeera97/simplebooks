@@ -1,5 +1,7 @@
 import Link from "next/link";
-import HeroVideo from "./HeroVideo";
+import Hero3D from "./Hero3D";
+import { HERO_CHAPTERS } from "./heroChapters";
+import "./hero3d.css";
 
 const TRUST_FACES = [
   "/images/avatars/sarath-senanayake.jpg",
@@ -8,9 +10,18 @@ const TRUST_FACES = [
   "/images/avatars/bhanuka-harischandra.jpg",
 ];
 
+/**
+ * The headline is the four services, one per line, so a visitor knows what the
+ * company does before reading anything else. Hero3D lights each line as the
+ * video reaches that chapter.
+ *
+ * Entrances here are CSS (.h3d_rise) rather than the JS-driven .v2_reveal used
+ * further down the page: this is the largest paint on the site, and it should
+ * not sit invisible until the page hydrates.
+ */
 export default function Hero() {
   return (
-    <section className="v2_sec v2_hero">
+    <section className="v2_sec v2_hero h3d_hero">
       <div className="v2_grid_bg" />
       <div
         className="v2_blob v2_blob_a"
@@ -23,19 +34,27 @@ export default function Hero() {
 
       <div className="v2_wrap v2_hero_in">
         <div>
-          <p className="v2_kicker v2_reveal">EST. 2014 · COLOMBO · DHAKA · BENGALURU</p>
-          <p className="v2_pill_note v2_reveal">Company formation and compliance for South Asia</p>
-
-          <h1 className="v2_h1 v2_reveal">
-            The right place to start your business<span className="v2_dot">.</span>
-          </h1>
-
-          <p className="v2_lead v2_hero_p v2_reveal">
-            We&rsquo;ve helped over 4,500 business owners set up, run and grow — from incorporation
-            and bookkeeping to payroll, tax and legal. One team, one platform, across South Asia.
+          <p className="v2_kicker h3d_rise" style={{ "--d": 0 } as React.CSSProperties}>
+            EST. 2014 · COLOMBO · DHAKA · BENGALURU
+          </p>
+          <p className="v2_pill_note h3d_rise" style={{ "--d": 1 } as React.CSSProperties}>
+            The right place to start your business
           </p>
 
-          <div className="v2_hero_cta v2_reveal">
+          <h1 className="v2_h1 h3d_h1 h3d_rise_solid" data-hero-lines>
+            {HERO_CHAPTERS.map((c, i) => (
+              <span key={c.line} className="h3d_line" data-hero-line={i}>
+                {c.line}
+              </span>
+            ))}
+          </h1>
+
+          <p className="v2_lead v2_hero_p h3d_rise" style={{ "--d": 3 } as React.CSSProperties}>
+            One team and one platform behind 4,500+ businesses since 2014 — with tax and
+            compliance handled alongside, across Sri Lanka, Bangladesh and India.
+          </p>
+
+          <div className="v2_hero_cta h3d_rise" style={{ "--d": 4 } as React.CSSProperties}>
             <Link className="v2_btn v2_btn_primary" href="/srilanka/contact">
               Start now <span className="v2_arrow">→</span>
             </Link>
@@ -44,7 +63,7 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="v2_namecheck v2_reveal">
+          <div className="v2_namecheck h3d_rise" style={{ "--d": 5 } as React.CSSProperties}>
             <p className="v2_namecheck_label">Free company name check</p>
             <form
               className="v2_namecheck_row"
@@ -63,7 +82,7 @@ export default function Hero() {
             </form>
           </div>
 
-          <div className="v2_trust v2_reveal">
+          <div className="v2_trust h3d_rise" style={{ "--d": 6 } as React.CSSProperties}>
             <div className="v2_trust_faces">
               {TRUST_FACES.map((f) => (
                 <img key={f} src={f} alt="" width={36} height={36} loading="lazy" />
@@ -76,24 +95,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="v2_hero_art v2_reveal">
-          <div className="v2_hero_card">
-            <HeroVideo />
-            <div className="v2_hero_foot">
-              <span className="v2_hero_foot_live">14 companies registered this week</span>
-              <span>Avg. 3 working days</span>
-            </div>
-          </div>
-
-          <div className="v2_float v2_float_payroll">
-            <p className="v2_float_k">Payroll run</p>
-            <p className="v2_float_v">42 employees paid</p>
-          </div>
-          <div className="v2_float v2_float_filing">
-            <p className="v2_float_k">Filing</p>
-            <p className="v2_float_v">Annual return · Done</p>
-          </div>
-        </div>
+        <Hero3D />
       </div>
     </section>
   );
