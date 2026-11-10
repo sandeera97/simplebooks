@@ -38,11 +38,12 @@ export default function TinRegistrationPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/tax-tin/01.png", w: 600, h: 600, chip: "Registration handled for you" }}
         eyebrow="TIN registration"
         title="TIN registration made simple"
         lead="Get your Tax Identification Number registered quickly and correctly with expert guidance. No stress, no confusion, just results."
-        primary={{ label: "Start your TIN registration", href: "/srilanka/contact" }}
-        secondary={{ label: "Free consultation", href: "/srilanka/contact" }}
+        primary={{ label: "Start your TIN registration", href: "#consultation" }}
+        secondary={{ label: "Free consultation", href: "#consultation" }}
         note="2025 updates TIN number registration guide."
         stats={[
           { n: "100%", l: "Accuracy guaranteed" },
@@ -56,7 +57,7 @@ export default function TinRegistrationPage() {
           <SecHead
             eyebrow="How it works"
             title="A simple 3-step process"
-            lead="Your trusted TIN registration partner — we eliminate all the hassles and ensure your registration is completed smoothly and efficiently."
+            lead="Your trusted TIN registration partner. We eliminate all the hassles and ensure your registration is completed smoothly and efficiently."
           />
           <Steps items={STEPS} />
         </div>
@@ -81,7 +82,7 @@ export default function TinRegistrationPage() {
       <CtaBand
         title="Get your TIN sorted"
         lead="Tell us about your business and we'll tell you exactly what the registration needs."
-        primary={{ label: "Start your TIN registration", href: "/srilanka/contact" }}
+        primary={{ label: "Start your TIN registration", href: "#consultation" }}
         secondary={{ label: "See all tax services", href: "/tax/income-tax" }}
       />
 

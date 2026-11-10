@@ -25,7 +25,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const article = await getArticle(slug);
-  if (!article) return { title: "Article not found — Simplebooks" };
+  if (!article) return { title: "Article not found | Simplebooks" };
 
   return {
     title: article.seoTitle || `${article.title} | Simplebooks`,

@@ -31,7 +31,7 @@ type Outcome = {
    Rates and bodies are the real ones: VAT 18% since January 2024, employer
    EPF 12% and ETF 3%, the Inland Revenue Department, the Registrar of Companies. */
 const OUTCOMES: Outcome[] = [
-  { source: "FORM 1", title: "Company incorporated", meta: "Certificate in 3 working days", icon: "building" },
+  { source: "FORM 1", title: "Company incorporated", meta: "Within 5–6 working weeks", icon: "building" },
   { source: "TIN", title: "TIN issued", meta: "Registered with Inland Revenue", icon: "id" },
   { source: "VAT", title: "VAT registered", meta: "18% standard rate", icon: "receipt" },
   { source: "EPF", title: "Payroll running", meta: "EPF 12% · ETF 3% handled", icon: "people" },
@@ -251,7 +251,7 @@ function makeSeal(R: number, dpr: number, font: string): SealLayers {
     ring(g, R * 0.425, 0.3, 0.5);
     ring(g, R * 0.285, 0.3, 0.5);
 
-    const text = "SIMPLEBOOKS · SRI LANKA · SINCE 2014 · ";
+    const text = "SIMPLEBOOKS · SRI LANKA · SINCE 2016 · ";
     const fontPx = Math.max(6, R * 0.05);
     g.font = `800 ${fontPx}px ${font}`;
     g.fillStyle = `rgba(${NAVY},0.62)`;

@@ -46,10 +46,11 @@ export default function BookkeepingPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/bookkeeping/01.png", w: 768, h: 512, chip: "Your own finance team" }}
         eyebrow="Bookkeeping"
         title="Don't worry about bookkeeping and accounting services"
         lead="We'll take care of it for you. A professional bookkeeper on call at an affordable price. Get powerful insights about your business and grow the right way."
-        primary={{ label: "Get a free consultation", href: "/srilanka/contact" }}
+        primary={{ label: "Get a free consultation", href: "#consultation" }}
         secondary={{ label: "See the dashboard", href: "/srilanka/dashboard/accounting-tool" }}
         note="24-7 bookkeeping and accounting services."
       />
@@ -70,7 +71,7 @@ export default function BookkeepingPage() {
           <SecHead
             eyebrow="The advantage"
             title="A stress free tax season"
-            lead="Focus on growing your business. Let us worry about tax season — from preparing your documentation to meeting your tax deadlines."
+            lead="Focus on growing your business. Let us worry about tax season, from preparing your documentation to meeting your tax deadlines."
           />
           <FeatureGrid items={WHY} cols={4} />
         </div>
@@ -83,7 +84,7 @@ export default function BookkeepingPage() {
             title="What does Simplebooks need from you"
             lead="Let our team comb through your paperwork and organise your books. We'll pair you up with an experienced bookkeeper based on your unique needs."
             items={NEED}
-            cta={{ label: "Contact our team", href: "/srilanka/contact" }}
+            cta={{ label: "Contact our team", href: "#consultation" }}
             aside={
               <div className="v2_panel">
                 <p className="v2_panel_h">Accounting software we work with</p>
@@ -107,7 +108,7 @@ export default function BookkeepingPage() {
       <CtaBand
         title="Want a quotation for your books"
         lead="Get in touch with our team today and we'll price it around what your business actually needs."
-        primary={{ label: "Talk to the team", href: "/srilanka/contact" }}
+        primary={{ label: "Talk to the team", href: "#consultation" }}
         secondary={{ label: "See all services", href: "/srilanka/services" }}
       />
 

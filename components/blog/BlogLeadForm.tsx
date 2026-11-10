@@ -90,7 +90,7 @@ export default function BlogLeadForm() {
         </label>
         {failed && (
           <p className="v2_leadform_err" role="alert">
-            Sorry — we couldn&apos;t send that just now. Please call{" "}
+            Sorry, we couldn&apos;t send that just now. Please call{" "}
             <a href="tel:+94117555878">0117 555 878</a> or email{" "}
             <a href="mailto:info@simplebooks.com">info@simplebooks.com</a>{" "}
             and we&apos;ll pick it up.

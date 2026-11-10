@@ -6,7 +6,7 @@ import Link from "next/link";
 /* Real reviews, taken from the live site. */
 const QUOTES = [
   {
-    q: "It's a superb experience that I got from Simplebooks. I got the contract through on time, very good service. Responding via mail to my queries, updating the process — everything is good.",
+    q: "It's a superb experience that I got from Simplebooks. I got the contract through on time, very good service. Responding via mail to my queries, updating the process, everything is good.",
     name: "Sarath Senanayake",
     role: "Director",
   },

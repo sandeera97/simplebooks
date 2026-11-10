@@ -27,7 +27,7 @@ const TOPICS = [
   },
   {
     t: "VAT compliance",
-    d: "Registration, schedules, RAMIS filing and the quarterly cycle — what your finance team needs to get right.",
+    d: "Registration, schedules, RAMIS filing and the quarterly cycle: what your finance team needs to get right.",
     tags: ["RAMIS", "Quarterly"],
   },
   {
@@ -41,10 +41,11 @@ export default function WebinarPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/tax-webinar/02.png", w: 600, h: 600, chip: "Sessions for your finance team" }}
         eyebrow="Tax webinars"
         title="Master Sri Lankan tax compliance with expert-led webinars"
-        lead="Choose from specialized tax topics tailored to your business needs. Organizations can select specific tax areas they want to focus on — from individual income tax to USD earnings taxation."
-        primary={{ label: "Browse tax topics", href: "/srilanka/contact" }}
+        lead="Choose from specialized tax topics tailored to your business needs. Organizations can select specific tax areas they want to focus on, from individual income tax to USD earnings taxation."
+        primary={{ label: "Browse tax topics", href: "#consultation" }}
         secondary={{ label: "View past webinars", href: "/srilanka/videos" }}
         stats={[
           { n: "Expert-led", l: "Sessions" },
@@ -78,7 +79,7 @@ export default function WebinarPage() {
       <CtaBand
         title="Book a session for your team"
         lead="Tell us which areas your organisation needs and we'll build the session around them."
-        primary={{ label: "Browse tax topics", href: "/srilanka/contact" }}
+        primary={{ label: "Browse tax topics", href: "#consultation" }}
         secondary={{ label: "Watch past sessions", href: "/srilanka/videos" }}
       />
 

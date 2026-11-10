@@ -43,7 +43,7 @@ export const metadata: Metadata = {
      canonical. */
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Simplebooks — Business Registration, Accounting & Tax Services Sri Lanka",
+    default: "Simplebooks | Business Registration, Accounting & Tax Services Sri Lanka",
     template: "%s",
   },
   description:

@@ -41,7 +41,12 @@ export const navItems: NavItem[] = [
       { label: "TIN Registration", href: "/tax/tin-registration" },
       { label: "Corporate Tax", href: "/tax/corporate-tax" },
       { label: "VAT", href: "/tax/vat" },
-      { label: "VAT Invoice Generator", href: "/vat-invoice" },
+      /* OODOX and the VAT invoice generator are separate apps that another team
+         publishes as static files under simplebooks.com (beside WordPress, on
+         WP Engine). They are not part of this site, so link to where they live.
+         Before the domain moves here they need a home of their own, or these
+         links will point back at this site and 404. */
+      { label: "VAT Invoice Generator", href: "https://simplebooks.com/vat-invoice/", external: true },
       { label: "APIT", href: "/tax/apit" },
       { label: "Foreign Income", href: "/tax/foreign-income" },
       { label: "SSCL", href: "/tax/sscl" },
@@ -62,7 +67,7 @@ export const navItems: NavItem[] = [
       { label: "Payroll Tool", href: "/srilanka/dashboard/payroll-management-system" },
       { label: "Payroll Management", href: "/srilanka/services/payroll-managment" },
       { label: "Auditing", href: "/srilanka/services/auditing" },
-      { label: "OODOX", href: "/oodox" },
+      { label: "OODOX", href: "https://simplebooks.com/oodox/", external: true },
     ],
   },
   {
@@ -86,7 +91,7 @@ export const navItems: NavItem[] = [
       { label: "EPF/ETF Calculator", href: "/tools/payroll/epf-calculator" },
       { label: "Gratuity Calculator", href: "/tools/payroll/gratuity-calculator-sri-lanka" },
       { label: "VAT Tool", href: "/srilanka/services/value-added-tax-filling" },
-      { label: "VAT Invoice Generator", href: "/vat-invoice" },
+      { label: "VAT Invoice Generator", href: "https://simplebooks.com/vat-invoice/", external: true },
     ],
   },
   {

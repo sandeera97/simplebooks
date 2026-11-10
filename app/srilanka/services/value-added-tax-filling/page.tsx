@@ -9,7 +9,7 @@ import {
 export const metadata: Metadata = pageMetadata("/srilanka/services/value-added-tax-filling");
 
 const STEPS = [
-  { t: "Upload", d: "Drop your existing documents — invoices, TIN lists, anything. No reformatting needed." },
+  { t: "Upload", d: "Drop your existing documents: invoices, TIN lists, anything. No reformatting needed." },
   { t: "Review & fix", d: "Auto-validation highlights every error and missing field. Fix them in place in seconds." },
   { t: "File", d: "Submit directly to the IRD with one click. We always ask for your consent before proceeding." },
 ];
@@ -36,9 +36,9 @@ const NEW_WAY = [
 ];
 
 const FAQS = [
-  { q: "What is the Simplebooks VAT tool?", a: "It's a tool that turns manual VAT schedule creation and RAMIS filing into a few clicks — built specifically for Sri Lankan accountants." },
+  { q: "What is the Simplebooks VAT tool?", a: "It's a tool that turns manual VAT schedule creation and RAMIS filing into a few clicks, built specifically for Sri Lankan accountants." },
   { q: "Do I need to reformat my files?", a: "No. Upload the invoices and TIN lists you already have. The tool reads them and builds the schedule for you." },
-  { q: "Does it file directly to the IRD?", a: "Yes, with one click — and it always asks for your explicit consent before anything is submitted." },
+  { q: "Does it file directly to the IRD?", a: "Yes, with one click, and it always asks for your explicit consent before anything is submitted." },
   { q: "How many clients can I manage?", a: "There's no limit. The tool is built for practices filing for many clients each period, not just a single company." },
   { q: "When does it launch?", a: "We're finishing the last round of testing with practising accountants. Join the waitlist and you'll be among the first in." },
 ];
@@ -47,6 +47,7 @@ export default function VatToolPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/tax-vat/07.png", w: 600, h: 600, chip: "VAT filing in a few clicks" }}
         eyebrow="VAT tool"
         title="VAT filing shouldn't take all day"
         lead="Simplebooks turns hours of manual schedule creation, validation headaches and RAMIS portal struggles into a few clicks. Built for Sri Lankan accountants."
@@ -60,7 +61,7 @@ export default function VatToolPage() {
           <SecHead
             eyebrow="The difference"
             title="The old way versus the Simplebooks way"
-            lead="Every pain point Sri Lankan accountants face with VAT filing — solved."
+            lead="Every pain point Sri Lankan accountants face with VAT filing, solved."
           />
           <Compare
             badTitle="The old way"

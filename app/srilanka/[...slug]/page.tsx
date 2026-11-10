@@ -28,7 +28,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const post = getPost(slug.join("/"));
-  if (!post) return { title: "Article not found — Simplebooks" };
+  if (!post) return { title: "Article not found | Simplebooks" };
 
   /* These URLs are the ones Google has indexed, so they stay exactly as the
      live site has them, trailing slash included. */

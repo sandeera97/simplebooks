@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import RegistrationPricing from "@/components/business-registration/RegistrationPricing";
+import ServiceJourney from "@/components/v2/ServiceJourney";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
 import { leadFormFor } from "@/lib/leadForms";
@@ -20,10 +21,10 @@ const DASH = [
 ];
 
 const STEPS = [
-  { t: "Approve your business name", d: "We will check the availability, reserve and approve your business name for you." },
-  { t: "Submit your registration form", d: "Let the team fill out and submit your registration forms. This includes Form 01, 18 and 19." },
-  { t: "Submit articles of association", d: "Get the team to help you create and submit your new company's articles of association." },
-  { t: "Help open your bank accounts", d: "Once your company has been approved, we'll help you with opening your bank accounts." },
+  { t: "Get your business name approved", d: "We will check the availability of your business name and submit it to the Registrar of Companies for approval. The final approval is issued by the Registrar." },
+  { t: "Submit your company details", d: "Fill in and submit your company details, and let the team prepare the registration documents for you to sign. This includes Forms 01, 18 and 19." },
+  { t: "Get your articles of association", d: "Let the team prepare customised Articles of Association for your company, based on your business objectives." },
+  { t: "Prepare your bank documents", d: "Once the company is approved, we will help you prepare the bank documents your selected bank requires." },
   { t: "Make sure you're compliant", d: "We will help you ensure that you're conducting your business according to Sri Lankan law." },
 ];
 
@@ -96,14 +97,15 @@ export default function RegisterACompanyPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/business-registration/04.png", w: 1080, h: 1080, alt: "The Simplebooks business registration dashboard on a laptop", chip: "Real-time status at every step" }}
         eyebrow="Business registration"
         title="Register your business with us today"
         lead="We'll guide you through the entire process. Register with an experienced team of company secretaries who have successfully helped over 10000+ business owners before you."
-        primary={{ label: "Get a free consultation", href: "/srilanka/contact" }}
+        primary={{ label: "Get a free consultation", href: "#consultation" }}
         secondary={{ label: "Sign up for free", href: "https://dashboard.simplebooks.com" }}
         stats={[
           { n: "10000+", l: "Businesses registered" },
-          { n: "3–5 days", l: "Typical turnaround" },
+          { n: "5–6 weeks", l: "Subject to Registrar approval" },
           { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
@@ -181,10 +183,13 @@ export default function RegisterACompanyPage() {
               </ul>
             </article>
           </div>
+          <p className="v2_price_note">Note: Government charges will be applied for each change.</p>
         </div>
       </section>
 
-      <section className="v2_sec v2_sec_pad">
+      <ServiceJourney />
+
+      <section className="v2_band">
         <div className="v2_wrap">
           <SecHead eyebrow="Customers" title="What founders say" />
           <ReviewStrip items={REVIEWS} />
@@ -192,9 +197,9 @@ export default function RegisterACompanyPage() {
       </section>
 
       <CtaBand
-        title="Register your company this week"
+        title="Start your company registration today"
         lead="Thirty minutes with a consultant who has done this several thousand times. No obligation, no sales script."
-        primary={{ label: "Get started", href: "/srilanka/contact" }}
+        primary={{ label: "Get a free consultation", href: "#consultation" }}
         secondary={{ label: "Check a company name", href: "/srilanka/company-name-check" }}
       />
 

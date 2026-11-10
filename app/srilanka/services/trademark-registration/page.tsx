@@ -19,7 +19,7 @@ const WHY = [
 
 const STEPS = [
   { t: "Tell us about your trademark", d: "The name, logo or slogan you want protected, and the classes it should cover." },
-  { t: "Submit the necessary details", d: "We tell you exactly what's needed — no guessing at forms." },
+  { t: "Submit the necessary details", d: "We tell you exactly what's needed, so there's no guessing at forms." },
   { t: "We'll fill in and file the documentation", d: "Our team prepares and files the application on your behalf." },
   { t: "Simplebooks will process your documents", d: "We manage the process from filing through to registration." },
   { t: "Collect your trademark certificate", d: "Your certificate lands with you, and we track the renewal dates." },
@@ -52,10 +52,11 @@ export default function TrademarkPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/services/05.png", w: 768, h: 769, chip: "LKR 28,920, all in" }}
         eyebrow="Trademark registration"
         title="Trademark your name, logo, or slogan"
         lead="Protect your brand from copycat competitors."
-        primary={{ label: "Get a free consultation", href: "/srilanka/contact" }}
+        primary={{ label: "Get a free consultation", href: "#consultation" }}
         secondary={{ label: "See all services", href: "/srilanka/services" }}
         stats={[
           { n: "10000+", l: "Businesses trust Simplebooks" },
@@ -86,8 +87,9 @@ export default function TrademarkPage() {
         <div className="v2_wrap">
           <SecHead eyebrow="Pricing" title="Registration at the most affordable rate" />
           <Pricing
+            href="#consultation"
             plans={PLANS}
-            note="Pay easy with our exclusive instalment plans — up to 48 months with Commercial Bank, 36 months with Nations Trust, Seylan and Sampath, and 24 months with HNB."
+            note="Pay easy with our exclusive instalment plans: up to 48 months with Commercial Bank, 36 months with Nations Trust, Seylan and Sampath, and 24 months with HNB."
           />
         </div>
       </section>
@@ -102,7 +104,7 @@ export default function TrademarkPage() {
       <CtaBand
         title="Protect your brand"
         lead="Tell us the name or logo you want covered and we'll check it before you file."
-        primary={{ label: "Talk to the team", href: "/srilanka/contact" }}
+        primary={{ label: "Talk to the team", href: "#consultation" }}
         secondary={{ label: "Check a company name", href: "/srilanka/company-name-check" }}
       />
 

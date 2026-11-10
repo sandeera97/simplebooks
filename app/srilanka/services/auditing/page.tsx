@@ -13,7 +13,7 @@ const STEPS = [
   { t: "Documentation hand-over", d: "Hand over your records once. We organise them so the auditors aren't chasing you for pieces." },
   { t: "Present your source documents to auditors", d: "Your source documents go to the auditors in the form they expect, not a shoebox of receipts." },
   { t: "Auditing process begins", d: "Experienced auditors vet your books while we stay in the middle, answering their queries." },
-  { t: "Access your audited accounts", d: "Your audited financials land with you, on deadline — ready for the bank, the ROC or an investor." },
+  { t: "Access your audited accounts", d: "Your audited financials land with you, on deadline, ready for the bank, the ROC or an investor." },
 ];
 
 const BENEFITS = [
@@ -34,11 +34,12 @@ export default function AuditingPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/auditing/01.png", w: 708, h: 454, chip: "Audited accounts on deadline" }}
         eyebrow="Auditing"
         title="Auditing made easy"
         lead="Company audits stressing you out? We can fix that. Make the right decisions about your company by having access to the right metrics."
-        primary={{ label: "Get audit help", href: "/srilanka/contact" }}
-        secondary={{ label: "Talk to a consultant", href: "/srilanka/contact" }}
+        primary={{ label: "Get audit help", href: "#consultation" }}
+        secondary={{ label: "Talk to a consultant", href: "#consultation" }}
       />
 
       <section className="v2_sec v2_sec_pad">
@@ -69,7 +70,7 @@ export default function AuditingPage() {
       <CtaBand
         title="Get your audit moving"
         lead="Tell us your financial year end and we'll tell you what the audit needs and what it costs."
-        primary={{ label: "Get audit help", href: "/srilanka/contact" }}
+        primary={{ label: "Get audit help", href: "#consultation" }}
         secondary={{ label: "See all services", href: "/srilanka/services" }}
       />
 

@@ -11,7 +11,7 @@ import {
 export const metadata: Metadata = pageMetadata("/srilanka/dashboard/payroll-management-system");
 
 const STEPS = [
-  { t: "Enter data", d: "Our team enters your employee details into the system — you don't have to learn the software first." },
+  { t: "Enter data", d: "Our team enters your employee details into the system, so you don't have to learn the software first." },
   { t: "Calculation", d: "The system calculates within five minutes, and our team of experts then verifies every figure." },
   { t: "Access reports", d: "Payroll summaries, cash requirements and EPF/ETF schedules, all in the tool." },
   { t: "Upload to the bank", d: "We upload the bank files and the EPF/ETF files to the relevant institutions for you." },
@@ -19,7 +19,7 @@ const STEPS = [
 
 const FEATURES = [
   { t: "EPF and ETF handled", d: "Contributions calculated, scheduled and filed on time, every month, without you chasing the dates.", tags: ["EPF", "ETF"] },
-  { t: "Payslips your team trusts", d: "Clear, itemised payslips delivered to each employee — no more spreadsheet emails.", tags: ["Payslips", "Email"] },
+  { t: "Payslips your team trusts", d: "Clear, itemised payslips delivered to each employee. No more spreadsheet emails.", tags: ["Payslips", "Email"] },
   { t: "Bonuses and adjustments", d: "One-off payments, arrears, no-pay and overtime handled without breaking the monthly run.", tags: ["Bonuses", "Overtime"] },
   { t: "Compliant by default", d: "In full accordance with Sri Lankan labour law and the Shop and Office Act.", tags: ["Labour law", "Shop & Office"] },
 ];
@@ -56,11 +56,12 @@ export default function PayrollPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/payroll-services/02.png", w: 768, h: 768, chip: "5 minutes to calculate a run" }}
         eyebrow="Payroll"
         title="Payroll made simple, with a professional touch"
         lead="A guided payroll tool backed by a real team. You send the changes, we handle the calculations, the filings and the bank files."
         primary={{ label: "Try free for a month", href: "https://dashboard.simplebooks.com" }}
-        secondary={{ label: "Talk to an expert", href: "/srilanka/contact" }}
+        secondary={{ label: "Talk to an expert", href: "#consultation" }}
         note="Full access for free. No credit card required."
         stats={[
           { n: "10000+", l: "Businesses in Sri Lanka" },
@@ -137,7 +138,7 @@ export default function PayrollPage() {
       <CtaBand
         title="Hand payroll over this month"
         lead="Tell us your headcount and we'll tell you exactly what it costs and what we need to start."
-        primary={{ label: "Set up a free consultation", href: "/srilanka/contact" }}
+        primary={{ label: "Set up a free consultation", href: "#consultation" }}
         secondary={{ label: "See the dashboard", href: "/srilanka/dashboard/accounting-tool" }}
       />
 

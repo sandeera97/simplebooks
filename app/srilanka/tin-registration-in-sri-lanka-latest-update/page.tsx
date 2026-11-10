@@ -126,7 +126,7 @@ export default function TinRegistrationPost() {
         threshold.
       </p>
       <div className="blog-highlight">
-        <strong>Rs. 1,800,000 per year</strong> — approximately Rs. 150,000 per
+        <strong>Rs. 1,800,000 per year</strong>, approximately Rs. 150,000 per
         month for the 2025/2026 Year of Assessment.
       </div>
       <p>

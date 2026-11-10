@@ -4,16 +4,18 @@ import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
 import LeadForm from "@/components/v2/LeadForm";
 import { leadFormFor } from "@/lib/leadForms";
+import RegistrationPricing from "@/components/business-registration/RegistrationPricing";
+import ServiceJourney from "@/components/v2/ServiceJourney";
 import {
-  PageHero, SecHead, FeatureGrid, Steps, CheckSplit, Pricing, Faq, CtaBand, ReviewStrip,
+  PageHero, SecHead, FeatureGrid, Steps, CheckSplit, Faq, CtaBand, ReviewStrip,
 } from "@/components/v2/blocks";
 
 export const metadata: Metadata = pageMetadata("/business-registration");
 
 const WHY = [
   { t: "Instant company name check", d: "Check if your company name is available in seconds, before you commit to anything." , tags: ["ROC search", "Instant"] },
-  { t: "Real-time progress tracking", d: "You stay informed at every stage — no chasing updates or guessing what comes next.", tags: ["Dashboard", "Status"] },
-  { t: "Digital signing & upload", d: "Upload and sign your documents online — fast, secure, and hassle-free.", tags: ["E-sign", "Secure"] },
+  { t: "Real-time progress tracking", d: "You stay informed at every stage, with no chasing updates or guessing what comes next.", tags: ["Dashboard", "Status"] },
+  { t: "Digital signing & upload", d: "Upload and sign your documents online. Fast, secure and hassle-free.", tags: ["E-sign", "Secure"] },
   { t: "Simple, guided forms", d: "Fill in your company details step by step with clear guidance at every stage.", tags: ["Guided", "No jargon"] },
 ];
 
@@ -25,7 +27,7 @@ const STEPS = [
 ];
 
 const INCLUDED = [
-  { t: "Invoicing & purchase tool", d: "In the Simplebooks dashboard — Rs 14,400 value, free for 12 months." },
+  { t: "Invoicing & purchase tool", d: "In the Simplebooks dashboard. Rs 14,400 value, free for 12 months." },
   { t: "TIN registration", d: "Rs 7,500 value, included with your registration." },
   { t: "Payroll tool", d: "In the Simplebooks dashboard, free for 6 months." },
   { t: "Integrated with PAYable", d: "First-year subscription fee waived off." },
@@ -41,31 +43,6 @@ const NEED = [
   "A brief description of what the business does",
 ];
 
-const PLANS = [
-  {
-    name: "Basic",
-    price: "Rs 19,000",
-    per: "/ year",
-    blurb: "Registration at cost, with secretarial service billed monthly.",
-    features: ["Company incorporation", "Company secretary for 12 months", "Annual return filing", "Rs 1,583 per month"],
-  },
-  {
-    name: "Premium",
-    price: "Rs 15,000",
-    per: "/ year",
-    blurb: "Our most popular plan — better rate, all the perks.",
-    features: ["Everything in Basic", "Rs 1,250 per month", "Invoicing tool free for 12 months", "TIN registration included", "Payroll tool free for 6 months"],
-    featured: true,
-  },
-  {
-    name: "Premium Pro",
-    price: "Talk to us",
-    blurb: "For groups, multiple entities and foreign shareholding.",
-    features: ["Everything in Premium", "Foreign shareholding support", "Multiple entity discounts", "Dedicated consultant"],
-    cta: "Talk to a consultant",
-  },
-];
-
 const REVIEWS = [
   { q: "Thanks to Simplebooks team for the amazing support on my company registration. Very helpful and quick service!", name: "NAWRAN", role: "Director, Social Media Academy" },
   { q: "They explained every step of the way. I deeply appreciate their professionality. Highly recommend!", name: "Ratta", role: "Founder, Studio Ratta" },
@@ -73,10 +50,10 @@ const REVIEWS = [
 ];
 
 const FAQS = [
-  { q: "How long does registration take?", a: "Most registrations are completed within 3–5 working days once we have your documents and the ROC approves your company name. We keep you updated at every stage through your dashboard." },
+  { q: "How long does registration take?", a: "Most registrations are completed within 5–6 working weeks, subject to the Registrar's approval. We keep you updated at every stage through your dashboard." },
   { q: "What is the minimum number of directors?", a: "A private limited company needs at least one director. A public company needs a minimum of two." },
-  { q: "Do I need an office address to register?", a: "It isn't necessary to have a separate office when starting out — you can register at your residential address and change it later if you need to." },
-  { q: "Can a foreigner own 100% of the company?", a: "Yes, for most business categories. Some sectors are restricted or need BOI approval — we'll flag that on your first call." },
+  { q: "Do I need an office address to register?", a: "It isn't necessary to have a separate office when starting out. You can register at your residential address and change it later if you need to." },
+  { q: "Can a foreigner own 100% of the company?", a: "Yes, for most business categories. Some sectors are restricted or need BOI approval, and we'll flag that on your first call." },
   { q: "Do I need a company secretary?", a: "Yes. Every company registered with the ROC must have a company secretary. As a registered secretary, Simplebooks acts as yours." },
   { q: "What does the government fee cover?", a: "The ROC charges a separate incorporation fee, and an additional Rs 2,900 applies for each extra director beyond the standard filing." },
 ];
@@ -85,15 +62,16 @@ export default function BusinessRegistrationPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/business-registration/01.png", w: 1024, h: 1024, alt: "A Simplebooks consultant showing the registration dashboard on a laptop", chip: "100% online, no office visits" }}
         eyebrow="Business registration"
         title="Register your business in Sri Lanka, entirely online"
-        lead="Launch with zero hassle. We handle the whole registration — name approval to certificate — so you can get on with the business."
-        primary={{ label: "Start registration", href: "/srilanka/contact" }}
-        secondary={{ label: "Talk to an expert", href: "/srilanka/contact" }}
+        lead="Launch with zero hassle. We handle the whole registration, from name approval to certificate, so you can get on with the business."
+        primary={{ label: "Start registration", href: "https://dashboard.simplebooks.com" }}
+        secondary={{ label: "Talk to an expert", href: "#consultation" }}
         note="No paperwork. No queues. No confusion."
         stats={[
           { n: "10000+", l: "Companies registered" },
-          { n: "3–5 days", l: "Typical turnaround" },
+          { n: "5–6 weeks", l: "Subject to Registrar approval" },
           { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
@@ -123,7 +101,7 @@ export default function BusinessRegistrationPage() {
             title="Information we'll ask you for"
             lead="To keep the filing smooth we'll request the following. We guide you on what to submit and review everything before it goes to the ROC."
             items={NEED}
-            cta={{ label: "Start your registration", href: "/srilanka/contact" }}
+            cta={{ label: "Start your registration", href: "https://dashboard.simplebooks.com" }}
             aside={
               <div className="v2_panel">
                 <p className="v2_panel_h">Registration progress</p>
@@ -143,7 +121,7 @@ export default function BusinessRegistrationPage() {
           <SecHead
             eyebrow="What's included"
             title="More than just registration"
-            lead="Register with us and you also get the secretarial service — everything from invoicing to deadline tracking."
+            lead="Register with us and you also get the secretarial service, with everything from invoicing to deadline tracking."
           />
           <FeatureGrid items={INCLUDED} cols={3} />
         </div>
@@ -151,17 +129,18 @@ export default function BusinessRegistrationPage() {
 
       <section className="v2_sec v2_sec_pad">
         <div className="v2_wrap">
-          <SecHead
-            eyebrow="Pricing"
-            title="Choose the plan that fits"
-            lead="Registration is done at cost. What you pay for is the company secretary you're legally required to have."
-          />
-          <Pricing
-            plans={PLANS}
-            note="An additional Rs 2,900 government fee applies for each extra director. Flexible KOKO payment plans are available."
-          />
+          {/* The same three packages as the live page and /srilanka/services/register-a-company. */}
+          <SecHead eyebrow="Pricing" title="Get the most affordable rates" />
+          <RegistrationPricing />
+          <p className="v2_price_note">
+            Add the annual secretary service for Rs 15,000, covering company name and address changes, annual report,
+            amendments to your articles, share issues and transfers, secretary changes and director changes. Government
+            charges will be applied for each change, and an additional Rs 2,900 government fee applies for each extra director.
+          </p>
         </div>
       </section>
+
+      <ServiceJourney tone="white" />
 
       <section className="v2_band">
         <div className="v2_wrap">
@@ -180,7 +159,7 @@ export default function BusinessRegistrationPage() {
       <CtaBand
         title="Ready to register your company"
         lead="Thirty minutes with a consultant who has done this several thousand times. No obligation, no sales script."
-        primary={{ label: "Set up a free consultation", href: "/srilanka/contact" }}
+        primary={{ label: "Set up a free consultation", href: "#consultation" }}
         secondary={{ label: "Check a company name", href: "/srilanka/company-name-check" }}
       />
 

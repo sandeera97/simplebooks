@@ -52,10 +52,11 @@ export default function LegalPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/services/03.jpg", w: 768, h: 769, chip: "Reviewed by our lawyers" }}
         eyebrow="Legal services"
         title="On-demand legal services"
         lead="Ensure legal compliance in your company with Simplebooks as your legal counsel. Commission, review and close contracts without complications."
-        primary={{ label: "Get a free legal consultation", href: "/srilanka/contact" }}
+        primary={{ label: "Get a free legal consultation", href: "#consultation" }}
         secondary={{ label: "See all services", href: "/srilanka/services" }}
       />
 
@@ -82,9 +83,9 @@ export default function LegalPage() {
           <CheckSplit
             eyebrow="What we cover"
             title="What can we help you with today"
-            lead="From a single contract review to the paperwork behind a funding round — drafted or reviewed by lawyers who work with growing businesses."
+            lead="From a single contract review to the paperwork behind a funding round, drafted or reviewed by lawyers who work with growing businesses."
             items={HELP}
-            cta={{ label: "Reach out to us", href: "/srilanka/contact" }}
+            cta={{ label: "Reach out to us", href: "#consultation" }}
             aside={
               <div className="v2_panel">
                 <p className="v2_panel_h">Instalment plans</p>
@@ -109,7 +110,7 @@ export default function LegalPage() {
       <CtaBand
         title="Need a quotation for legal services"
         lead="Get in touch with our team today and we'll scope it properly before quoting."
-        primary={{ label: "Talk to the team", href: "/srilanka/contact" }}
+        primary={{ label: "Talk to the team", href: "#consultation" }}
         secondary={{ label: "Register a trademark", href: "/srilanka/services/trademark-registration" }}
       />
 

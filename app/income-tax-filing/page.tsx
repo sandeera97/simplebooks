@@ -9,14 +9,14 @@ import {
 export const metadata: Metadata = pageMetadata("/income-tax-filing");
 
 const STEPS = [
-  { t: "Quick pick", d: "Select your sources of income — salary, freelance, rent or other. That's the whole questionnaire." },
+  { t: "Quick pick", d: "Select your sources of income: salary, freelance, rent or other. That's the whole questionnaire." },
   { t: "Review your computation", d: "Get a clear breakdown of how the figure was reached, with advice from our human experts." },
   { t: "File your return", d: "Your return is manually reviewed before it goes anywhere, then filed with the IRD." },
 ];
 
 const WHY = [
   { t: "Stop overpaying for tax help", d: "File confidently without spending thousands on a third-party consultant every year.", tags: ["Fixed fee"] },
-  { t: "See everything, understand everything", d: "You always know exactly how your return is calculated — no mystery steps, no confusing math.", tags: ["Transparent"] },
+  { t: "See everything, understand everything", d: "You always know exactly how your return is calculated. No mystery steps, no confusing math.", tags: ["Transparent"] },
   { t: "Real support from real experts", d: "Got a question? Our team is a click away via live chat, phone or email.", tags: ["Live chat", "Phone"] },
   { t: "Smarter deductions", d: "We apply the right deductions automatically, so you don't miss out on money that's yours.", tags: ["Deductions"] },
 ];
@@ -26,7 +26,7 @@ const INCLUDED = [
   "A real human reviews the return before filing",
   "IRD e-filing handled for you",
   "Every eligible deduction applied automatically",
-  "All-inclusive — no hidden fees",
+  "All-inclusive, no hidden fees",
 ];
 
 const PLANS = [
@@ -38,7 +38,7 @@ const PLANS = [
       "Instant tax results",
       "Real human review",
       "IRD e-filing",
-      "All-inclusive — no hidden fees",
+      "All-inclusive, no hidden fees",
     ],
     featured: true,
     cta: "Begin filing your return",
@@ -46,13 +46,13 @@ const PLANS = [
 ];
 
 const REVIEWS = [
-  { q: "SUPERB!!! Starting my business was the easiest thing — Simplebooks handled the whole process with just a few emails 😍", name: "Chanux Bro", role: "Director" },
+  { q: "SUPERB!!! Starting my business was the easiest thing. Simplebooks handled the whole process with just a few emails 😍", name: "Chanux Bro", role: "Director" },
   { q: "Very good service, very happy with your assistance.", name: "Cricketer Jeevan Mendis", role: "Director" },
   { q: "Fast, professional and transparent. I finally understand my own taxes. Will use Simplebooks again next year.", name: "Osanda Gamage", role: "Founder" },
 ];
 
 const FAQS = [
-  { q: "Who needs to file an income tax return?", a: "If you have a tax file, or your assessable income crosses the threshold for the year of assessment, you're required to file — even if tax was already deducted at source." },
+  { q: "Who needs to file an income tax return?", a: "If you have a tax file, or your assessable income crosses the threshold for the year of assessment, you're required to file, even if tax was already deducted at source." },
   { q: "When is the deadline?", a: "Returns for a year of assessment are due by 30 November following the end of that year. Filing late attracts penalties, so we start reminding you well before." },
   { q: "Does a human actually check my return?", a: "Yes. Every return is manually reviewed by one of our tax people before it is filed. The tool does the arithmetic; a person checks the judgement calls." },
   { q: "What if I have foreign income?", a: "That's covered on the Assisted plan. We handle the foreign income rules and any double-tax relief you're entitled to." },
@@ -63,9 +63,10 @@ export default function TaxToolPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/bookkeeping/03.png", w: 750, h: 750, chip: "100% human reviewed" }}
         eyebrow="Tax tool"
         title="File your own taxes with confidence"
-        lead="Answer a few simple questions — we take care of the rest. Your return is accurate, every eligible deduction applied, and a human checks it before it's filed."
+        lead="Answer a few simple questions and we take care of the rest. Your return is accurate, every eligible deduction applied, and a human checks it before it's filed."
         primary={{ label: "Start your return", href: "https://dashboard.simplebooks.com" }}
         secondary={{ label: "Talk to an expert", href: "/srilanka/contact" }}
         note="No credit card until final review."

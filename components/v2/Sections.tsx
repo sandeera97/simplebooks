@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FacebookIcon, InstagramIcon, YouTubeIcon, WhatsAppIcon } from "./icons";
 import NewsletterForm from "./NewsletterForm";
+import ServiceArt, { type ServiceArtKind } from "./ServiceArt";
 
 /* ---------------- Banking partners ---------------- */
 export function BankStrip() {
@@ -21,7 +22,7 @@ export function BankStrip() {
 /* ---------------- Stats ---------------- */
 const STATS = [
   { n: "10000", plus: true, l: "Businesses registered" },
-  { n: "12", plus: true, l: "Years of practice" },
+  { n: "10", plus: true, l: "Years of practice" },
   { n: "3", plus: false, l: "Countries, local offices" },
   { n: "4.9", star: true, l: "Average customer rating" },
 ];
@@ -55,8 +56,10 @@ const SERVICES = [
     n: "01",
     t: "Business setup",
     d: "We guide you through registering your business from A–Z. We've set up 10000 companies covering every industry imaginable.",
-    tags: ["Private Ltd", "Sole proprietor", "Name approval"],
+    tags: ["Private Ltd", "Name approval", "Bank account"],
     href: "/srilanka/services/register-a-company",
+    art: "setup" as ServiceArtKind,
+    tint: "orange",
   },
   {
     n: "02",
@@ -64,13 +67,17 @@ const SERVICES = [
     d: "Your own finance team looking after the books, while you focus on capturing invoices, receipts and bills. It's simple.",
     tags: ["Monthly books", "Reconciliations", "Management reports"],
     href: "/srilanka/services/accounting-services",
+    art: "books" as ServiceArtKind,
+    tint: "blue",
   },
   {
     n: "03",
     t: "Legal services",
-    d: "Protect your trademarks and intellectual property, or get your contracts in order — with someone who specialises in it.",
+    d: "Protect your trademarks and intellectual property, or get your contracts in order with someone who specialises in it.",
     tags: ["Contracts", "Trademarks", "IP"],
     href: "/srilanka/legal",
+    art: "legal" as ServiceArtKind,
+    tint: "green",
   },
   {
     n: "04",
@@ -78,6 +85,8 @@ const SERVICES = [
     d: "As your team grows, so does the paperwork. We make sure the busy work is handled, so you can grow and train your team.",
     tags: ["EPF / ETF", "Payslips", "Bonuses"],
     href: "/srilanka/services/payroll-managment",
+    art: "payroll" as ServiceArtKind,
+    tint: "violet",
   },
   {
     n: "05",
@@ -85,6 +94,8 @@ const SERVICES = [
     d: "Most of our new customers are referred by old ones. You'll always have more than one way to get in touch and stay in touch.",
     tags: ["Sinhala", "English", "Tamil", "WhatsApp"],
     href: "/srilanka/contact",
+    art: "support" as ServiceArtKind,
+    tint: "sand",
   },
   {
     n: "06",
@@ -92,6 +103,7 @@ const SERVICES = [
     d: "We're not just here to do the paperwork. We build the tools, apps and capabilities that make running your business easier.",
     tags: ["Dashboard", "E-signing", "Deadline alerts"],
     href: "/srilanka/dashboard/accounting-tool",
+    art: "platform" as ServiceArtKind,
     dark: true,
   },
 ];
@@ -108,7 +120,7 @@ export function WhatWeDo() {
             </h2>
           </div>
           <p className="v2_lead v2_reveal">
-            One team of accountants, company secretaries and lawyers — so you&rsquo;re never handed
+            One team of accountants, company secretaries and lawyers, so you&rsquo;re never handed
             off to a stranger halfway through.
           </p>
         </div>
@@ -118,7 +130,7 @@ export function WhatWeDo() {
             <Link
               key={s.n}
               href={s.href}
-              className={`v2_card v2_reveal${s.dark ? " v2_card_dark" : ""}`}
+              className={`v2_card v2_card_art v2_reveal${s.dark ? " v2_card_dark" : ` v2_tint_${"tint" in s ? s.tint : "orange"}`}`}
             >
               <div className="v2_card_top">
                 <span className="v2_card_num">{s.n}</span>
@@ -133,6 +145,7 @@ export function WhatWeDo() {
                   </span>
                 ))}
               </div>
+              <ServiceArt kind={s.art} />
             </Link>
           ))}
         </div>
@@ -151,7 +164,7 @@ const STEPS = [
   {
     n: 2,
     t: "We prepare and file",
-    d: "Name approval, Form 1, articles, secretary appointment — drafted, signed digitally and filed by our team.",
+    d: "Name approval, Form 1, articles and secretary appointment, all drafted, signed digitally and filed by our team.",
   },
   {
     n: 3,
@@ -167,8 +180,11 @@ export function HowItWorks() {
         <div className="v2_sec_head_center">
           <p className="v2_eyebrow v2_reveal">How it works</p>
           <h2 className="v2_h2 v2_reveal">
-            Registered in three working days<span className="v2_dot">.</span>
+            Registered within 5–6 working weeks<span className="v2_dot">.</span>
           </h2>
+          <p className="v2_lead v2_reveal" style={{ marginTop: 14 }}>
+            Subject to the Registrar of Companies&rsquo; approval.
+          </p>
         </div>
         <div className="v2_steps">
           {STEPS.map((s) => (
@@ -224,11 +240,11 @@ export function WhySimplebooks() {
               The difference between filing it and forgetting it<span className="v2_dot">.</span>
             </h2>
             <p className="v2_lead v2_reveal" style={{ margin: "24px 0 30px", maxWidth: 520 }}>
-              Registration is the easy part. What breaks most businesses is everything after it —
+              Registration is the easy part. What breaks most businesses is everything after it:
               the returns, the renewals, the resolutions nobody reminded you about. We hold all of
               it in one place, with one team.
             </p>
-            <Link className="v2_btn v2_btn_navy v2_reveal" href="/srilanka/contact">
+            <Link className="v2_btn v2_btn_navy v2_reveal" href="#start">
               Talk to a consultant <span className="v2_arrow">→</span>
             </Link>
           </div>
@@ -268,7 +284,7 @@ export function WhySimplebooks() {
             <ul>
               {ALONE.map((t) => (
                 <li key={t}>
-                  <span className="v2_mark v2_mark_bad">—</span>
+                  <span className="v2_mark v2_mark_bad">✕</span>
                   {t}
                 </li>
               ))}
@@ -304,7 +320,7 @@ const QUESTION_ROWS = [
     "When is my annual return due?",
     "Do I need to register for VAT?",
     "What are the EPF and ETF rates?",
-    "Can I convert my sole proprietorship?",
+    "Can I change my company name later?",
     "How do I issue new shares?",
   ],
   [
@@ -361,7 +377,7 @@ export function FooterV2() {
           <div>
             <h2>Stay informed.</h2>
             <p>
-              Registrar changes, tax deadlines and practical guides — once a month, nothing else.
+              Registrar changes, tax deadlines and practical guides. Once a month, nothing else.
             </p>
           </div>
           <NewsletterForm />
@@ -406,9 +422,9 @@ export function FooterV2() {
             <p className="v2_foot_h">Company</p>
             <ul>
               <li><Link href="/srilanka/dashboard/accounting-tool">Platform</Link></li>
-              <li><a href="#how">How it works</a></li>
+              <li><Link href="/#how">How it works</Link></li>
               <li><Link href="/srilanka/testimonials">Customer stories</Link></li>
-              <li><a href="#why">Why simplebooks</a></li>
+              <li><Link href="/#why">Why simplebooks</Link></li>
               <li><Link href="/srilanka/contact">Contact</Link></li>
             </ul>
           </div>
@@ -422,7 +438,7 @@ export function FooterV2() {
               Sri Lanka · 0117 555 878
             </p>
             <p className="v2_office">
-              REGUS – Crystal Palace, House 22,<br />
+              REGUS, Crystal Palace, House 22,<br />
               Gulshan Ave, Gulshan-1,<br />
               Dhaka 1212, Bangladesh<br />
               +880 1312 329255

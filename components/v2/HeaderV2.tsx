@@ -37,8 +37,8 @@ export default function HeaderV2() {
   return (
     <>
       <div className="v2_announce">
-        <span>Register a Sri Lankan company entirely online — in three working days.</span>
-        <Link href="/srilanka/contact">Start now →</Link>
+        <span>Register a Sri Lankan company entirely online, within 5–6 working weeks.</span>
+        <a href="https://dashboard.simplebooks.com">Start now →</a>
       </div>
 
       <header className={`v2_hdr${open ? " is_open" : ""}`}>

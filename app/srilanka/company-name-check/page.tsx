@@ -17,6 +17,7 @@ export default function CompanyNameCheckPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/business-registration/03.png", w: 1080, h: 780, alt: "The company name check in the Simplebooks dashboard, showing a name as available", chip: "Instant availability check" }}
         eyebrow="Company name check"
         title="Check your company name and domain, instantly"
         lead="Enter the name you have in mind. We check it against the Registrar of Companies and tell you whether the matching domain is free."
@@ -43,7 +44,7 @@ export default function CompanyNameCheckPage() {
 
       <CtaBand
         title="Found a name that's free"
-        lead="We can reserve it and have your company registered in three working days."
+        lead="We can reserve it and have your company registered within 5–6 working weeks, subject to the Registrar's approval."
         primary={{ label: "Start registration", href: "/business-registration" }}
         secondary={{ label: "Talk to a consultant", href: "/srilanka/contact" }}
       />

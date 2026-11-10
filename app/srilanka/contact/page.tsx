@@ -19,7 +19,7 @@ const OFFICES = [
   {
     flag: "🇧🇩",
     city: "Dhaka",
-    lines: ["REGUS – Crystal Palace, House 22,", "Gulshan Ave, Gulshan-1,", "Dhaka 1212, Bangladesh"],
+    lines: ["REGUS, Crystal Palace, House 22,", "Gulshan Ave, Gulshan-1,", "Dhaka 1212, Bangladesh"],
     phone: "+880 1312 329255",
     tel: "tel:+8801312329255",
   },
@@ -62,7 +62,7 @@ export default function ContactPage() {
               <div className="v2_office_card v2_office_hours">
                 <p className="v2_office_city">Office hours</p>
                 <p className="v2_office_lines">
-                  <span>Monday – Friday · 9.00am – 5.30pm</span>
+                  <span>Monday–Friday · 9.00am–5.30pm</span>
                   <span>Saturday, Sunday &amp; public holidays · closed</span>
                 </p>
               </div>

@@ -53,7 +53,7 @@ export default function BeneficialOwnershipPost() {
 
             <h2 id="two-new-forms">The Two New Forms You Must File</h2>
             <p>
-              <strong>Form BO5 — Details of the Authorised Person (AP).</strong> This is
+              <strong>Form BO5: Details of the Authorised Person (AP).</strong> This is
               the first form you should prepare because it identifies the natural person
               who will be responsible for maintaining the company’s beneficial ownership
               registration and ongoing compliance. They should be a resident in Sri
@@ -61,7 +61,7 @@ export default function BeneficialOwnershipPost() {
               form: Form BO1
             </p>
             <p>
-              <strong>Form BO1 — Declaration of Beneficial Ownership.</strong> This form
+              <strong>Form BO1: Declaration of Beneficial Ownership.</strong> This form
               captures the full details of every individual who qualifies as a beneficial
               owner of the newly incorporated company.
             </p>
@@ -120,12 +120,12 @@ export default function BeneficialOwnershipPost() {
             <h2 id="penalties">Penalties for Non-Compliance</h2>
             <p>
               Failure to carry out these new obligations carry serious consequences.
-              Non-compliance is not treated as a minor administrative oversight — it is a
+              Non-compliance is not treated as a minor administrative oversight. It is a
               criminal offence that can result in both fines and imprisonment for directors
               and officers personally.
             </p>
             <p>
-              Critically, these penalties apply personally to directors and officers — not
+              Critically, these penalties apply personally to directors and officers, not
               just to the company as a legal entity. Every individual who held a directorial
               or officer position at the time an offence was committed may be held liable.
               This is a deliberate design: it ensures that personal accountability sits at

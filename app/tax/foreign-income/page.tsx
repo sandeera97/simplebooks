@@ -25,11 +25,12 @@ export default function ForeignIncomePage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/tax-foreign/01.png", w: 600, h: 600, chip: "Zero penalty track record" }}
         eyebrow="Foreign income tax"
         title="Navigate Sri Lanka's new USD tax regulations with confidence"
         lead="From April 2025, freelancers and remote employees earning in USD now face 15% tax regulations. Don't let confusion cost you thousands in penalties."
-        primary={{ label: "Get free tax assessment", href: "/srilanka/contact" }}
-        secondary={{ label: "Free consultation", href: "/srilanka/contact" }}
+        primary={{ label: "Get free tax assessment", href: "#consultation" }}
+        secondary={{ label: "Free consultation", href: "#consultation" }}
         stats={[
           { n: "10000+", l: "Business owners supported" },
           { n: "Zero", l: "Penalty track record" },
@@ -58,7 +59,7 @@ export default function ForeignIncomePage() {
       <CtaBand
         title="Get your USD earnings sorted"
         lead="A 15-minute assessment tells you exactly where you stand under the new rules."
-        primary={{ label: "Get free tax assessment", href: "/srilanka/contact" }}
+        primary={{ label: "Get free tax assessment", href: "#consultation" }}
         secondary={{ label: "File your return", href: "/tax/income-tax" }}
       />
 

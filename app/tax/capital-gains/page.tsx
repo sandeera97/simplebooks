@@ -10,7 +10,7 @@ export const metadata: Metadata = pageMetadata("/tax/capital-gains");
 
 const CHALLENGES = [
   { t: "Complex calculations", d: "CGT calculations involve cost basis, improvements, selling costs, and exemptions that are easy to get wrong.", tags: ["Cost basis"] },
-  { t: "Tight deadlines", d: "CGT must be filed and paid within 30 days of asset realization — miss it and face heavy penalties.", tags: ["30 days"] },
+  { t: "Tight deadlines", d: "CGT must be filed and paid within 30 days of asset realization. Miss it and face heavy penalties.", tags: ["30 days"] },
   { t: "Missed exemptions", d: "Without expert guidance, you might miss valuable exemptions and pay more tax than necessary.", tags: ["Exemptions"] },
 ];
 
@@ -24,11 +24,12 @@ export default function CapitalGainsPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/tax-capital-gains/01.png", w: 600, h: 600, chip: "Filed within the 30 days" }}
         eyebrow="Capital gains tax"
         title="Navigate Sri Lanka's capital gains tax without the stress"
         lead="Get expert CGT compliance and filing support that protects your investments and keeps you penalty-free. From property sales to share transactions, we ensure full compliance with Sri Lankan tax regulations."
-        primary={{ label: "Get CGT assessment", href: "/srilanka/contact" }}
-        secondary={{ label: "Learn about CGT", href: "/srilanka/contact" }}
+        primary={{ label: "Get CGT assessment", href: "#consultation" }}
+        secondary={{ label: "Learn about CGT", href: "#consultation" }}
         stats={[
           { n: "10000+", l: "Satisfied clients" },
           { n: "30 days", l: "Filing window" },
@@ -57,7 +58,7 @@ export default function CapitalGainsPage() {
       <CtaBand
         title="Sold an asset? Start the clock properly"
         lead="CGT is due within 30 days of realization. Tell us about the sale and we'll handle the rest."
-        primary={{ label: "Get CGT assessment", href: "/srilanka/contact" }}
+        primary={{ label: "Get CGT assessment", href: "#consultation" }}
         secondary={{ label: "See all tax services", href: "/tax/income-tax" }}
       />
 

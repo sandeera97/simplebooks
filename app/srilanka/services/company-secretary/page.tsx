@@ -20,7 +20,6 @@ const WHAT = [
 ];
 
 const STEPS = [
-  { t: "We'll register your company for you", d: "If you're looking to register your company hassle free, you've come to the right place. We'll take over from here on." },
   { t: "Take care of all your company changes", d: "Need to make some changes to your company details post registration? Don't worry, we'll take care of that too." },
   { t: "File your annual returns", d: "Keep your focus on running your business and let Simplebooks take care of preparing and filing your Annual Returns." },
   { t: "Help you open bank accounts", d: "Forgo the fuss of having to deal with the banks yourself. We'll step in and help you open all of your bank accounts." },
@@ -38,7 +37,7 @@ const PLANS = [
     name: "Company secretarial services",
     price: "LKR 20,000",
     per: "annually",
-    blurb: "Say hello to transparent pricing. One fee, everything the role covers.",
+    blurb: "To act as the company secretary for your already registered company. One annual fee, everything the role covers.",
     features: [
       "A dedicated company secretary",
       "Annual return preparation and filing",
@@ -62,15 +61,16 @@ export default function CompanySecretaryPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/services/04.jpg", w: 768, h: 769, chip: "Registered secretary RCS2000335" }}
         eyebrow="Company secretary"
-        title="Company secretarial services for hire"
+        title="Your business grows. We handle the compliance"
         lead="Hire your very own company secretary in Sri Lanka and have your paperwork done right, on time."
-        primary={{ label: "Get a free consultation", href: "/srilanka/contact" }}
+        primary={{ label: "Get a free consultation", href: "#consultation" }}
         secondary={{ label: "See all services", href: "/srilanka/services" }}
         note="Secretary registration number: RCS2000335"
         stats={[
           { n: "10000+", l: "Businesses registered" },
-          { n: "LKR 20,000", l: "Annually, all in" },
+          { n: "LKR 20,000", l: "Yearly, as secretary for a registered company" },
           { n: "RCS2000335", l: "Registration number" },
         ]}
       />
@@ -101,7 +101,8 @@ export default function CompanySecretaryPage() {
           />
           <Pricing
             plans={PLANS}
-            note="Pay easy with our exclusive instalment plans — up to 48 months with Commercial Bank, 36 months with Nations Trust Bank and 24 months with HNB."
+            href="#consultation"
+            note="Pay easy with our exclusive instalment plans: up to 48 months with Commercial Bank, 36 months with Nations Trust Bank and 24 months with HNB. Government charges will be applied for each company change."
           />
         </div>
       </section>
@@ -110,8 +111,8 @@ export default function CompanySecretaryPage() {
         <div className="v2_wrap">
           <SecHead
             eyebrow="Switching"
-            title="Looking to hire new talent? We have the right secretary for you"
-            lead="Have the team at Simplebooks help you out with the transition process."
+            title="Looking to change your existing company secretary?"
+            lead="We are ready to act as your company secretary, and the Simplebooks team will help you through the transition."
           />
           <Steps items={SWITCH} />
         </div>
@@ -127,7 +128,7 @@ export default function CompanySecretaryPage() {
       <CtaBand
         title="Get your paperwork done right"
         lead="Thirty minutes with a consultant who has done this several thousand times. No obligation, no sales script."
-        primary={{ label: "Get started now", href: "/srilanka/contact" }}
+        primary={{ label: "Get started now", href: "#consultation" }}
         secondary={{ label: "Register a company", href: "/srilanka/services/register-a-company" }}
       />
 

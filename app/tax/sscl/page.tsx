@@ -46,11 +46,12 @@ export default function SsclPage() {
   return (
     <PageShell>
       <PageHero
+        visual={{ src: "/images/tax-sscl/01.png", w: 600, h: 600, chip: "SSCL filed on time" }}
         eyebrow="SSCL"
         title="SSCL tax compliance made simple"
         lead="Navigate Sri Lanka's Social Security Contribution Levy with confidence. From liable turnover calculations to penalty avoidance, Simplebooks ensures your business stays compliant with SSCL requirements."
-        primary={{ label: "Get SSCL guidance", href: "/srilanka/contact" }}
-        secondary={{ label: "Calculate liable turnover", href: "/srilanka/contact" }}
+        primary={{ label: "Get SSCL guidance", href: "#consultation" }}
+        secondary={{ label: "Calculate liable turnover", href: "#consultation" }}
         stats={[
           { n: "Expert", l: "SSCL guidance" },
           { n: "Penalty", l: "Prevention" },
@@ -76,14 +77,14 @@ export default function SsclPage() {
             title="SSCL liable turnover rates by business type"
             lead="SSCL applies at 2.5%, but the effective rate varies based on your business type's liable turnover percentage."
           />
-          <Pricing plans={RATES} />
+          <Pricing plans={RATES} href="#consultation" />
         </div>
       </section>
 
       <CtaBand
         title="Get your SSCL right"
         lead="We'll work out your liable turnover and keep the monthly and quarterly cycle on track."
-        primary={{ label: "Get SSCL guidance", href: "/srilanka/contact" }}
+        primary={{ label: "Get SSCL guidance", href: "#consultation" }}
         secondary={{ label: "See all tax services", href: "/tax/income-tax" }}
       />
 

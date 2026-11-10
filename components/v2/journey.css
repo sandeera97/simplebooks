@@ -1,0 +1,116 @@
+/* "What happens after business registration?" timeline (ServiceJourney.tsx). */
+
+.sj_head { text-align: center; max-width: 720px; margin: 0 auto 60px; }
+.sj_head .v2_h2 { margin-top: 18px; }
+.sj_head .v2_lead { margin-top: 14px; }
+
+.sj_badge {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 6px 16px 6px 6px; border-radius: 999px;
+  background: rgba(255, 91, 46, 0.1); color: var(--v2-orange);
+  font-size: 13.5px; font-weight: 700;
+}
+.sj_badge_tick {
+  width: 24px; height: 24px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--v2-orange); color: #fff;
+}
+
+/* ---- the timeline ---- */
+.sj_steps {
+  position: relative; list-style: none; margin: 0 auto; padding: 0;
+  max-width: 1000px; display: grid; gap: 40px;
+}
+.sj_steps::before {
+  content: ""; position: absolute; top: 8px; bottom: 8px; left: 50%;
+  width: 2px; transform: translateX(-50%);
+  background: linear-gradient(to bottom, rgba(255, 91, 46, 0.25), var(--v2-orange) 12%, var(--v2-orange) 88%, rgba(255, 91, 46, 0.25));
+}
+.sj_step {
+  display: grid; grid-template-columns: 1fr 64px 1fr; align-items: center;
+}
+
+.sj_side { text-align: right; }
+.sj_label {
+  display: inline-block; padding: 5px 12px; border-radius: 8px;
+  background: rgba(255, 91, 46, 0.12); color: var(--v2-orange);
+  font-size: 12.5px; font-weight: 700;
+}
+.sj_title {
+  margin: 12px 0 8px; color: var(--v2-navy);
+  font-size: clamp(22px, 2.2vw, 28px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.2;
+}
+.sj_summary {
+  max-width: 320px; margin: 0 0 0 auto;
+  color: var(--v2-ink-4); font-size: 15px; line-height: 1.6;
+}
+
+.sj_node {
+  justify-self: center; position: relative; z-index: 1;
+  width: 22px; height: 22px; border-radius: 7px;
+  background: var(--v2-orange);
+  box-shadow: 0 0 0 6px rgba(255, 91, 46, 0.14);
+}
+
+.sj_card {
+  display: flex; gap: 16px; align-items: flex-start;
+  background: #fff; border: 1px solid var(--v2-line); border-radius: 18px;
+  padding: 22px 24px;
+  box-shadow: 0 22px 44px -34px rgba(10, 18, 51, 0.45);
+  transition: transform .35s var(--v2-ease), box-shadow .35s var(--v2-ease);
+}
+.sj_step:hover .sj_card { transform: translateY(-3px); box-shadow: 0 28px 52px -34px rgba(10, 18, 51, 0.55); }
+.sj_icon {
+  flex-shrink: 0; width: 50px; height: 50px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(255, 91, 46, 0.1); color: var(--v2-orange);
+}
+.sj_detail { margin: 2px 0 12px; color: var(--v2-ink-3); font-size: 14px; line-height: 1.55; }
+.sj_items { list-style: none; margin: 0; padding: 0; }
+.sj_items li {
+  display: flex; align-items: center; gap: 10px;
+  padding: 3px 0; color: var(--v2-ink-2); font-size: 14px;
+}
+.sj_check { color: var(--v2-orange); display: inline-flex; }
+.sj_time {
+  display: flex; align-items: center; gap: 8px;
+  margin: 12px 0 0; color: var(--v2-ink-4); font-size: 13.5px;
+}
+
+/* ---- closing call to action ---- */
+.sj_cta {
+  margin-top: 64px; padding: 34px 38px; border-radius: 22px;
+  display: flex; align-items: center; justify-content: space-between; gap: 28px;
+  background: linear-gradient(135deg, rgba(255, 91, 46, 0.09), rgba(255, 91, 46, 0.03));
+  border: 1px solid rgba(255, 91, 46, 0.16);
+}
+.sj_cta_k {
+  color: var(--v2-orange); font-size: 12px; font-weight: 800;
+  letter-spacing: 0.14em; text-transform: uppercase;
+}
+.sj_cta_h {
+  margin: 8px 0 6px; color: var(--v2-navy);
+  font-size: clamp(22px, 2.4vw, 30px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.2;
+}
+.sj_cta_p { max-width: 520px; color: var(--v2-ink-4); font-size: 15px; line-height: 1.6; }
+.sj_cta_btns { display: flex; flex-wrap: wrap; gap: 12px; flex-shrink: 0; }
+
+/* ---- phones and small tablets: the line moves to the left edge ---- */
+@media (max-width: 760px) {
+  .sj_head { margin-bottom: 40px; }
+  .sj_steps { gap: 34px; }
+  .sj_steps::before { left: 11px; transform: none; }
+  .sj_step {
+    grid-template-columns: 22px 1fr; column-gap: 18px; row-gap: 14px; align-items: start;
+    grid-template-areas: "node side" ". card";
+  }
+  .sj_node { grid-area: node; margin-top: 2px; }
+  .sj_side { grid-area: side; text-align: left; }
+  .sj_summary { margin: 0; max-width: none; }
+  .sj_card { grid-area: card; padding: 18px; }
+  .sj_cta { flex-direction: column; align-items: flex-start; padding: 26px 22px; margin-top: 48px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sj_card, .sj_step:hover .sj_card { transition: none; transform: none; }
+}

@@ -131,7 +131,7 @@ function drawFloorSeal(canvas: HTMLCanvasElement, font: string) {
   ring(g, R * 0.42, 0.3, 1);
   g.font = `800 ${Math.max(9, R * 0.034)}px ${font}`;
   g.fillStyle = `rgba(${NAVY},0.34)`;
-  textRing(g, "SIMPLEBOOKS · ONE TEAM, ONE PLATFORM · SINCE 2014 · ", R * 0.37);
+  textRing(g, "SIMPLEBOOKS · ONE TEAM, ONE PLATFORM · SINCE 2016 · ", R * 0.37);
 }
 
 const POSTER = "/images/v2/hero-video-poster.jpg";
@@ -484,7 +484,7 @@ export default function Hero3D() {
           <div className="h3d_chip" aria-hidden="true">
             <span className="h3d_chip_dot" />
             14 companies registered this week
-            <span className="h3d_chip_sub">avg. 3 working days</span>
+            <span className="h3d_chip_sub">5–6 week turnaround</span>
           </div>
         </div>
         </div>

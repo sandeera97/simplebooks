@@ -2,6 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { avatarFor } from "@/components/avatars";
+
+/* Headings end in the brand's orange full stop, unless the copy already
+   ends in its own punctuation ("…secretary?" would otherwise read "?."). */
+const ENDS_PUNCTUATED = /[?!.]$/;
+const brandDot = (title: string) => !ENDS_PUNCTUATED.test(title.trim());
 
 /* ============================ Hero ============================ */
 export function PageHero({
@@ -13,6 +20,7 @@ export function PageHero({
   primary,
   secondary,
   stats,
+  visual,
   children,
 }: {
   eyebrow: string;
@@ -23,53 +31,97 @@ export function PageHero({
   primary?: { label: string; href: string };
   secondary?: { label: string; href: string };
   stats?: { n: string; l: string }[];
+  /** An image beside the text (website audit: "break the grid"). The page's
+   *  own illustration from the live site, framed, with one short fact. */
+  visual?: HeroVisual;
   children?: React.ReactNode;
 }) {
+  const text = (
+    <>
+      <p className="v2_eyebrow v2_reveal">{eyebrow}</p>
+      <h1 className="v2_h1 v2_reveal">
+        {title}
+        {dot && brandDot(title) && <span className="v2_dot">.</span>}
+      </h1>
+      {lead && <p className="v2_lead v2_phero_lead v2_reveal">{lead}</p>}
+
+      {(primary || secondary) && (
+        <div className="v2_phero_cta v2_reveal">
+          {primary && (
+            <Link className="v2_btn v2_btn_primary" href={primary.href}>
+              {primary.label} <span className="v2_arrow">→</span>
+            </Link>
+          )}
+          {secondary && (
+            <Link className="v2_btn v2_btn_ghost" href={secondary.href}>
+              {secondary.label}
+            </Link>
+          )}
+        </div>
+      )}
+
+      {note && <p className="v2_phero_note v2_reveal">{note}</p>}
+
+      {stats && (
+        <div className="v2_phero_stats v2_reveal">
+          {stats.map((s) => (
+            <div key={s.l}>
+              <p className="v2_phero_stat_n">{s.n}</p>
+              <p className="v2_phero_stat_l">{s.l}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {children}
+    </>
+  );
+
   return (
-    <section className="v2_sec v2_phero">
+    <section className={`v2_sec v2_phero${visual ? " v2_phero_split" : ""}`}>
       <div className="v2_grid_bg" />
       <div className="v2_blob v2_blob_a" style={{ width: 760, height: 760, top: -300, left: -220 }} />
       <div className="v2_blob v2_blob_b" style={{ width: 680, height: 680, top: -180, right: -240 }} />
 
       <div className="v2_wrap v2_phero_in">
-        <p className="v2_eyebrow v2_reveal">{eyebrow}</p>
-        <h1 className="v2_h1 v2_reveal">
-          {title}
-          {dot && <span className="v2_dot">.</span>}
-        </h1>
-        {lead && <p className="v2_lead v2_phero_lead v2_reveal">{lead}</p>}
-
-        {(primary || secondary) && (
-          <div className="v2_phero_cta v2_reveal">
-            {primary && (
-              <Link className="v2_btn v2_btn_primary" href={primary.href}>
-                {primary.label} <span className="v2_arrow">→</span>
-              </Link>
-            )}
-            {secondary && (
-              <Link className="v2_btn v2_btn_ghost" href={secondary.href}>
-                {secondary.label}
-              </Link>
-            )}
-          </div>
+        {visual ? (
+          <>
+            <div className="v2_phero_text">{text}</div>
+            <HeroFigure {...visual} />
+          </>
+        ) : (
+          text
         )}
-
-        {note && <p className="v2_phero_note v2_reveal">{note}</p>}
-
-        {stats && (
-          <div className="v2_phero_stats v2_reveal">
-            {stats.map((s) => (
-              <div key={s.l}>
-                <p className="v2_phero_stat_n">{s.n}</p>
-                <p className="v2_phero_stat_l">{s.l}</p>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {children}
       </div>
     </section>
+  );
+}
+
+export type HeroVisual = { src: string; w: number; h: number; alt?: string; chip?: string };
+
+/* Not a .v2_reveal: this is usually the largest paint on the page, so it
+   must not wait for hydration to become visible. It rises in with CSS. */
+function HeroFigure({ src, w, h, alt = "", chip }: HeroVisual) {
+  return (
+    <figure className="v2_phero_visual">
+      <div className="v2_phero_frame">
+        <Image
+          src={src}
+          alt={alt}
+          width={w}
+          height={h}
+          sizes="(max-width: 1000px) 86vw, 520px"
+          fetchPriority="high"
+          loading="eager"
+        />
+      </div>
+      {chip && (
+        <figcaption className="v2_phero_chip">
+          <i aria-hidden="true" />
+          {chip}
+        </figcaption>
+      )}
+    </figure>
   );
 }
 
@@ -90,7 +142,7 @@ export function SecHead({
       {eyebrow && <p className="v2_eyebrow v2_reveal">{eyebrow}</p>}
       <h2 className="v2_h2 v2_reveal">
         {title}
-        <span className="v2_dot">.</span>
+        {brandDot(title) && <span className="v2_dot">.</span>}
       </h2>
       {lead && <p className="v2_lead v2_reveal" style={{ marginTop: 18 }}>{lead}</p>}
     </div>
@@ -108,7 +160,8 @@ export function FeatureGrid({
   return (
     <div className={`v2_cards v2_cards_${cols}`}>
       {items.map((f, i) => (
-        <article key={f.t} className="v2_card v2_reveal">
+        // Cycles four brand tints so a row of cards doesn't read as one block (website audit).
+        <article key={f.t} className={`v2_card v2_card_fg v2_fg_c${i % 4} v2_reveal`}>
           <div className="v2_card_top">
             <span className="v2_card_num">{String(i + 1).padStart(2, "0")}</span>
           </div>
@@ -167,7 +220,7 @@ export function CheckSplit({
         <p className="v2_eyebrow v2_reveal">{eyebrow}</p>
         <h2 className="v2_h2 v2_reveal" style={{ marginTop: 16 }}>
           {title}
-          <span className="v2_dot">.</span>
+          {brandDot(title) && <span className="v2_dot">.</span>}
         </h2>
         {lead && (
           <p className="v2_lead v2_reveal" style={{ margin: "22px 0 26px", maxWidth: 520 }}>
@@ -211,7 +264,7 @@ export function Compare({
         <p className="v2_col_h">{badTitle}</p>
         <ul>
           {bad.map((t) => (
-            <li key={t}><span className="v2_mark v2_mark_bad">—</span>{t}</li>
+            <li key={t}><span className="v2_mark v2_mark_bad">✕</span>{t}</li>
           ))}
         </ul>
       </div>
@@ -231,9 +284,12 @@ export function Compare({
 export function Pricing({
   plans,
   note,
+  href = "/srilanka/contact",
 }: {
   plans: { name: string; price: string; per?: string; blurb?: string; features: string[]; featured?: boolean; cta?: string }[];
   note?: string;
+  /** Where the plan buttons go. A page with a lead form passes "#consultation". */
+  href?: string;
 }) {
   return (
     <>
@@ -253,7 +309,7 @@ export function Pricing({
               ))}
             </ul>
             <Link
-              href="/srilanka/contact"
+              href={href}
               className={`v2_btn ${p.featured ? "v2_btn_primary" : "v2_btn_ghost"}`}
             >
               {p.cta ?? "Get started"} <span className="v2_arrow">→</span>
@@ -315,7 +371,7 @@ export function CtaBand({
       <div className="v2_wrap v2_ctaband_in">
         <h2 className="v2_h2 v2_reveal">
           {title}
-          <span className="v2_dot">.</span>
+          {brandDot(title) && <span className="v2_dot">.</span>}
         </h2>
         {lead && <p className="v2_ctaband_lead v2_reveal">{lead}</p>}
         <div className="v2_phero_cta v2_reveal" style={{ justifyContent: "center" }}>
@@ -334,6 +390,20 @@ export function CtaBand({
 }
 
 /* ========================= Reviews ============================ */
+/* The customer's own photo from the live site when we have one, otherwise
+   their initial. Never a stand-in face. */
+function ReviewAvatar({ name }: { name: string }) {
+  const src = avatarFor(name);
+  if (src) {
+    return <img className="v2_mini_av" src={src} alt="" width={44} height={44} loading="lazy" decoding="async" />;
+  }
+  return (
+    <span className="v2_mini_av v2_mini_av_i" aria-hidden="true">
+      {name.trim().charAt(0).toUpperCase()}
+    </span>
+  );
+}
+
 export function ReviewStrip({
   items,
 }: {
@@ -345,8 +415,13 @@ export function ReviewStrip({
         <article key={m.name + m.q.slice(0, 12)} className="v2_mini_c v2_reveal">
           <p className="v2_stars">★★★★★</p>
           <p>{m.q}</p>
-          <b>{m.name}</b>
-          {m.role && <span>{m.role}</span>}
+          <div className="v2_mini_who">
+            <ReviewAvatar name={m.name} />
+            <div>
+              <b>{m.name}</b>
+              {m.role && <span>{m.role}</span>}
+            </div>
+          </div>
         </article>
       ))}
     </div>
@@ -377,7 +452,7 @@ export function SplitSection({
         {eyebrow && <p className="v2_eyebrow v2_reveal">{eyebrow}</p>}
         <h2 className="v2_h2 v2_split_h v2_reveal">
           {title}
-          <span className="v2_dot">.</span>
+          {brandDot(title) && <span className="v2_dot">.</span>}
         </h2>
         {paras.map((t) => (
           <p key={t.slice(0, 24)} className="v2_lead v2_split_p v2_reveal">

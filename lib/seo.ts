@@ -38,7 +38,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   },
   "/income-tax-filing": {
     title: "Simplebooks | Sri Lanka Income Tax Filing Tool",
-    description: "Answer a few simple questions and file an accurate return with every eligible deduction applied — reviewed by a human before it goes to the IRD.",
+    description: "Answer a few simple questions and file an accurate return with every eligible deduction applied, reviewed by a human before it goes to the IRD.",
     fromLive: true,
   },
   "/srilanka/blog": {
@@ -96,7 +96,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   },
   "/srilanka/payable": {
     title: "PAYABLE - Sri Lanka",
-    description: "Simplebooks is now integrated with Payable — no setup fee, free for the first year, market-leading rates and transparent percentage-based pricing.",
+    description: "Simplebooks is now integrated with Payable: no setup fee, free for the first year, market-leading rates and transparent percentage-based pricing.",
     fromLive: true,
   },
   "/srilanka/payment-complete": {
@@ -126,7 +126,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   },
   "/srilanka/services/payroll-managment": {
     title: "Payroll Managment - Sri Lanka",
-    description: "All-in-one payroll management. We are here to help you effectively manage your payroll — EPF/ETF, reports and returns handled for you.",
+    description: "All-in-one payroll management. We are here to help you effectively manage your payroll, with EPF/ETF, reports and returns handled for you.",
     fromLive: true,
   },
   "/srilanka/services/register-a-company": {
@@ -146,7 +146,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   },
   "/srilanka/terms-conditions": {
     title: "Terms & Conditions - Sri Lanka",
-    description: "Simplebooks terms and conditions — company registration at cost, and our Basic and Premium company secretarial packages.",
+    description: "Simplebooks terms and conditions: company registration at cost, and our Basic and Premium company secretarial packages.",
     fromLive: true,
   },
   "/srilanka/testimonials": {
@@ -161,12 +161,12 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   },
   "/srilanka/tin-registration-in-sri-lanka-latest-update": {
     title: "TIN Registration in Sri Lanka: Complete 2026 Guide",
-    description: "Learn how to register for a TIN in Sri Lanka in 2025 — online, offline, or via your bank. Updated with April 2025 WHT rules, new income threshold & FAQs.",
+    description: "Learn how to register for a TIN in Sri Lanka in 2025: online, offline, or via your bank. Updated with April 2025 WHT rules, new income threshold & FAQs.",
     fromLive: true,
   },
   "/srilanka/videos": {
     title: "Videos - Sri Lanka",
-    description: "The Simplebooks channel — business registration, tax, payroll, company law, bookkeeping and case studies, in English and Sinhala.",
+    description: "The Simplebooks channel: business registration, tax, payroll, company law, bookkeeping and case studies, in English and Sinhala.",
     fromLive: true,
   },
   "/tax/ai-bot": {
@@ -176,12 +176,12 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   },
   "/tax/apit": {
     title: "APIT Landing Page - Sri Lanka",
-    description: "Sri Lanka's most trusted APIT filing service provider. Don't let APIT filing slow your business down — let the #1 service provider take care of it.",
+    description: "Sri Lanka's most trusted APIT filing service provider. Don't let APIT filing slow your business down. Let the #1 service provider take care of it.",
     fromLive: true,
   },
   "/tax/capital-gains": {
     title: "Capital Gains Tax - Simplebooks",
-    description: "Expert CGT compliance and filing support that protects your investments and keeps you penalty-free — from property sales to share transactions.",
+    description: "Expert CGT compliance and filing support that protects your investments and keeps you penalty-free, from property sales to share transactions.",
     fromLive: true,
   },
   "/tax/corporate-tax": {
@@ -196,7 +196,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   },
   "/tax/income-tax": {
     title: "Simplebooks | Sri Lanka Income Tax Filing Tool",
-    description: "Upload your forms, answer a few simple questions, and get your tax return done — 100% accurate with all eligible deductions applied, and expert support every step of the way.",
+    description: "Upload your forms, answer a few simple questions, and get your tax return done: 100% accurate with all eligible deductions applied, and expert support every step of the way.",
     fromLive: true,
   },
   "/tax/sscl": {
@@ -211,7 +211,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   },
   "/tax/vat": {
     title: "VAT Compliance Services - Simplebooks",
-    description: "Transform your VAT compliance journey. We'll guide you to compliance confidence with 100% guaranteed accuracy — registration, returns and ongoing support.",
+    description: "Transform your VAT compliance journey. We'll guide you to compliance confidence with 100% guaranteed accuracy: registration, returns and ongoing support.",
     fromLive: true,
   },
   "/tax/webinar": {
