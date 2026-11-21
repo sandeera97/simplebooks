@@ -60,7 +60,7 @@ export default function PayrollPage() {
         eyebrow="Payroll"
         title="Payroll made simple, with a professional touch"
         lead="A guided payroll tool backed by a real team. You send the changes, we handle the calculations, the filings and the bank files."
-        primary={{ label: "Try free for a month", href: "https://dashboard.simplebooks.com" }}
+        primary={{ label: "Try free for a month", href: "https://dashboard.simplebooks.com", className: "cdpay" }}
         secondary={{ label: "Talk to an expert", href: "#consultation" }}
         note="Full access for free. No credit card required."
         stats={[
@@ -95,7 +95,7 @@ export default function PayrollPage() {
             title="Peace of mind on payday"
             lead="Payroll is the one thing you cannot get wrong. This is the part where a person checks the machine's work."
             items={WHY}
-            cta={{ label: "Start free", href: "https://dashboard.simplebooks.com" }}
+            cta={{ label: "Start free", href: "https://dashboard.simplebooks.com", className: "cdpay" }}
             aside={
               <div className="v2_panel">
                 <p className="v2_panel_h">March payroll run</p>

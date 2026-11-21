@@ -59,7 +59,7 @@ export default function InvoicingPage() {
         eyebrow="Invoicing"
         title="Invoicing streamlined, payments boosted"
         lead="Create professional invoices and get paid faster, from a dashboard your whole team can actually use."
-        primary={{ label: "Try free for 2 months", href: "https://dashboard.simplebooks.com" }}
+        primary={{ label: "Try free for 2 months", href: "https://dashboard.simplebooks.com", className: "cdiat" }}
         secondary={{ label: "Talk to an expert", href: "#consultation" }}
         note="Full access for free. No credit card required."
         stats={[
@@ -94,7 +94,7 @@ export default function InvoicingPage() {
             title="Your shortcut to smooth payments"
             lead="Invoicing is where most small businesses lose time and money. This is the part we made boring on purpose."
             items={WHY}
-            cta={{ label: "Start free", href: "https://dashboard.simplebooks.com" }}
+            cta={{ label: "Start free", href: "https://dashboard.simplebooks.com", className: "cdiat" }}
             aside={
               <div className="v2_panel">
                 <p className="v2_panel_h">Recent invoices</p>
@@ -137,7 +137,7 @@ export default function InvoicingPage() {
       <CtaBand
         title="Get started with Simplebooks invoicing"
         lead="Full access to every feature for two months. See the difference it makes before you pay anything."
-        primary={{ label: "Create your account", href: "https://dashboard.simplebooks.com" }}
+        primary={{ label: "Create your account", href: "https://dashboard.simplebooks.com", className: "cdiat" }}
         secondary={{ label: "Talk to an expert", href: "#consultation" }}
       />
 

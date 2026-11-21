@@ -451,7 +451,9 @@ export function FooterV2() {
           <nav>
             <a href="https://simplebooks.com/privacy-policy/">Privacy policy</a>
             <Link href="/srilanka/terms-conditions">Terms &amp; conditions</Link>
-            <a href="https://simplebooks.com/srilanka/no-claim-certification/">No claim certification</a>
+            {/* "No claim certification" was here; that page is a 404 on the live
+                site too. Both policies live on the WordPress root site for now. */}
+            <a href="https://simplebooks.com/refund-policy/">Refund policy</a>
           </nav>
         </div>
       </div>

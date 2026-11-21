@@ -58,6 +58,29 @@ const nextConfig: NextConfig = {
 
       // The Sri Lanka landing page is this site's home
       "/srilanka": "/",
+
+      // Old addresses that the migrated blog articles still link to. These
+      // first ten are where WordPress itself redirects them.
+      "/srilanka/advance-personal-income-tax": "/srilanka/apit-tax",
+      "/srilanka/contact-us": "/srilanka/contact",
+      "/srilanka/file-form-15-in-sri-lanka": "/srilanka/file-form-15-in-sri-lanka-annual-returns",
+      "/srilanka/form-13": "/srilanka/form-13-how-to-change-your-registered-office-address",
+      "/srilanka/form-20": "/srilanka/form-20-make-changes-to-directors",
+      "/srilanka/services/legal": "/srilanka/legal",
+      "/srilanka/sole-proprietorships-sinhala": "/srilanka/si/sole-proprietorships-sinhala",
+      "/srilanka/terms-and-conditions": "/srilanka/terms-conditions",
+      "/srilanka/trademark-registration": "/srilanka/services/trademark-registration",
+      "/srilanka/working-capital-loan": "/srilanka/working-capital-loan-sri-lanka",
+      // These were already dead on WordPress (404 or a redirect loop), so
+      // they go to the closest page this site has rather than a 404.
+      "/srilanka/company-registration-requirements": "/srilanka/services/register-a-company",
+      "/bookkeeping-pricing": "/srilanka/services/accounting-services",
+      "/srilanka/covid-19-business-strategy": "/srilanka/how-to-protect-your-business-from-covid-19-crisis",
+      "/srilanka/how-to-close-your-company-a-step-by-step-guide": "/srilanka/close-a-business",
+      "/srilanka/how-to-come-up-with-business-ideas-in-sri-lanka-5-great-small-business-ideas": "/srilanka/business-ideas-in-sri-lanka",
+      "/srilanka/labour-law-in-sri-lanka-an-easy-guide-to-the-shop-and-office-act": "/srilanka/labour-law-in-sri-lanka",
+      "/srilanka/nbt-tax": "/tax/vat",
+      "/srilanka/pricing": "/srilanka/services/register-a-company",
     };
 
     return Object.entries(map).map(([source, destination]) => ({
