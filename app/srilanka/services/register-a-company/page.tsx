@@ -102,7 +102,7 @@ export default function RegisterACompanyPage() {
         title="Register your business with us today"
         lead="We'll guide you through the entire process. Register with an experienced team of company secretaries who have successfully helped over 10000+ business owners before you."
         primary={{ label: "Get a free consultation", href: "#consultation" }}
-        secondary={{ label: "Sign up for free", href: "https://dashboard.simplebooks.com" }}
+        secondary={{ label: "Sign up for free", href: "https://dashboard.simplebooks.com", className: "cdrat" }}
         stats={[
           { n: "10000+", l: "Businesses registered" },
           { n: "5–6 weeks", l: "Subject to Registrar approval" },

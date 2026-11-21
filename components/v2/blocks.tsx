@@ -10,6 +10,11 @@ import { avatarFor } from "@/components/avatars";
 const ENDS_PUNCTUATED = /[?!.]$/;
 const brandDot = (title: string) => !ENDS_PUNCTUATED.test(title.trim());
 
+/* A button. `className` carries the marker classes GTM's click triggers
+   look for (cdrat, cdiat, cdpay: the dashboard sign-up buttons). */
+type Cta = { label: string; href: string; className?: string };
+const ctaClass = (base: string, cta: Cta) => (cta.className ? `${base} ${cta.className}` : base);
+
 /* ============================ Hero ============================ */
 export function PageHero({
   eyebrow,
@@ -28,8 +33,8 @@ export function PageHero({
   dot?: boolean;
   lead?: string;
   note?: string;
-  primary?: { label: string; href: string };
-  secondary?: { label: string; href: string };
+  primary?: Cta;
+  secondary?: Cta;
   stats?: { n: string; l: string }[];
   /** An image beside the text (website audit: "break the grid"). The page's
    *  own illustration from the live site, framed, with one short fact. */
@@ -48,12 +53,12 @@ export function PageHero({
       {(primary || secondary) && (
         <div className="v2_phero_cta v2_reveal">
           {primary && (
-            <Link className="v2_btn v2_btn_primary" href={primary.href}>
+            <Link className={ctaClass("v2_btn v2_btn_primary", primary)} href={primary.href}>
               {primary.label} <span className="v2_arrow">→</span>
             </Link>
           )}
           {secondary && (
-            <Link className="v2_btn v2_btn_ghost" href={secondary.href}>
+            <Link className={ctaClass("v2_btn v2_btn_ghost", secondary)} href={secondary.href}>
               {secondary.label}
             </Link>
           )}
@@ -211,7 +216,7 @@ export function CheckSplit({
   title: string;
   lead?: string;
   items: string[];
-  cta?: { label: string; href: string };
+  cta?: Cta;
   aside?: React.ReactNode;
 }) {
   return (
@@ -236,7 +241,7 @@ export function CheckSplit({
           ))}
         </ul>
         {cta && (
-          <Link className="v2_btn v2_btn_navy v2_reveal" href={cta.href}>
+          <Link className={ctaClass("v2_btn v2_btn_navy v2_reveal", cta)} href={cta.href}>
             {cta.label} <span className="v2_arrow">→</span>
           </Link>
         )}
@@ -361,8 +366,8 @@ export function CtaBand({
 }: {
   title: string;
   lead?: string;
-  primary: { label: string; href: string };
-  secondary?: { label: string; href: string };
+  primary: Cta;
+  secondary?: Cta;
 }) {
   return (
     <section className="v2_sec v2_ctaband">
@@ -375,11 +380,11 @@ export function CtaBand({
         </h2>
         {lead && <p className="v2_ctaband_lead v2_reveal">{lead}</p>}
         <div className="v2_phero_cta v2_reveal" style={{ justifyContent: "center" }}>
-          <Link className="v2_btn v2_btn_primary" href={primary.href}>
+          <Link className={ctaClass("v2_btn v2_btn_primary", primary)} href={primary.href}>
             {primary.label} <span className="v2_arrow">→</span>
           </Link>
           {secondary && (
-            <Link className="v2_btn v2_btn_ghost v2_btn_on_dark" href={secondary.href}>
+            <Link className={ctaClass("v2_btn v2_btn_ghost v2_btn_on_dark", secondary)} href={secondary.href}>
               {secondary.label}
             </Link>
           )}
@@ -442,7 +447,7 @@ export function SplitSection({
   title: string;
   paras: string[];
   bullets?: string[];
-  cta?: { label: string; href: string };
+  cta?: Cta;
   flip?: boolean;
   aside?: React.ReactNode;
 }) {
@@ -467,7 +472,7 @@ export function SplitSection({
           </ul>
         )}
         {cta && (
-          <Link className="v2_btn v2_btn_navy v2_reveal" href={cta.href} style={{ marginTop: 26 }}>
+          <Link className={ctaClass("v2_btn v2_btn_navy v2_reveal", cta)} href={cta.href} style={{ marginTop: 26 }}>
             {cta.label} <span className="v2_arrow">→</span>
           </Link>
         )}

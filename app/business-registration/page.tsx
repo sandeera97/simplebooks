@@ -6,6 +6,7 @@ import LeadForm from "@/components/v2/LeadForm";
 import { leadFormFor } from "@/lib/leadForms";
 import RegistrationPricing from "@/components/business-registration/RegistrationPricing";
 import ServiceJourney from "@/components/v2/ServiceJourney";
+import { AmplitudeBR } from "@/components/Tracking";
 import {
   PageHero, SecHead, FeatureGrid, Steps, CheckSplit, Faq, CtaBand, ReviewStrip,
 } from "@/components/v2/blocks";
@@ -66,7 +67,7 @@ export default function BusinessRegistrationPage() {
         eyebrow="Business registration"
         title="Register your business in Sri Lanka, entirely online"
         lead="Launch with zero hassle. We handle the whole registration, from name approval to certificate, so you can get on with the business."
-        primary={{ label: "Start registration", href: "https://dashboard.simplebooks.com" }}
+        primary={{ label: "Start registration", href: "https://dashboard.simplebooks.com", className: "cdrat" }}
         secondary={{ label: "Talk to an expert", href: "#consultation" }}
         note="No paperwork. No queues. No confusion."
         stats={[
@@ -101,7 +102,7 @@ export default function BusinessRegistrationPage() {
             title="Information we'll ask you for"
             lead="To keep the filing smooth we'll request the following. We guide you on what to submit and review everything before it goes to the ROC."
             items={NEED}
-            cta={{ label: "Start your registration", href: "https://dashboard.simplebooks.com" }}
+            cta={{ label: "Start your registration", href: "https://dashboard.simplebooks.com", className: "cdrat" }}
             aside={
               <div className="v2_panel">
                 <p className="v2_panel_h">Registration progress</p>
@@ -164,6 +165,8 @@ export default function BusinessRegistrationPage() {
       />
 
       <LeadForm source="/business-registration" {...leadFormFor("/business-registration")!} />
+
+      <AmplitudeBR />
 
     </PageShell>
   );

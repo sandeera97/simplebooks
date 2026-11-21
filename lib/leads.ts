@@ -16,6 +16,7 @@
  */
 
 import { readAttribution, clearAttribution, type Attribution } from "./attribution";
+import { pushToDataLayer } from "./tracking";
 
 export interface Lead {
   firstName: string;
@@ -69,6 +70,19 @@ export async function submitLead(lead: Lead): Promise<void> {
     /* Only once it is safely in the CRM. Clearing earlier would mean a visitor
        who hits a network error and resubmits loses the ad that brought them. */
     clearAttribution();
+    /* Tell Google Tag Manager. Its conversion tags (Google Ads, GA4
+       "fs_contact", the Facebook pixel) were built around WordPress's
+       Gravity Forms announcing "formSubmission", so the new forms announce
+       the same thing. The honeypot path also answers ok, so skip it or bots
+       would count as leads; a newsletter signup gets its own event so it
+       isn't reported to Google Ads as an enquiry. */
+    if (!lead.company?.trim()) {
+      pushToDataLayer(
+        lead.service === "Newsletter subscription"
+          ? { event: "newsletterSignup", formID: lead.source }
+          : { event: "formSubmission", formID: lead.source, formService: lead.service ?? "" },
+      );
+    }
     return;
   }
 

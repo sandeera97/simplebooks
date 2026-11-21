@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/seo";
 import localFont from "next/font/local";
 import AttributionCapture from "@/components/AttributionCapture";
+import Tracking, { GtmNoScript } from "@/components/Tracking";
+import { GOOGLE_SITE_VERIFICATION } from "@/lib/tracking";
 import "./globals.css";
 
 /* Self-hosted, not next/font/google. On Vercel, next/font/google downloads the
@@ -56,6 +58,8 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
+  /* Keeps the Google Search Console property verified once the domain moves. */
+  verification: { google: GOOGLE_SITE_VERIFICATION },
 };
 
 export default function RootLayout({
@@ -66,10 +70,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${jakarta.variable} h-full`}>
       <body className="min-h-full flex flex-col">
+        <GtmNoScript />
         {children}
         {/* Records utm_* / fbclid on arrival so any form can report the ad
             that produced the enquiry. Renders nothing. */}
         <AttributionCapture />
+        {/* GTM and the other marketing tags (lib/tracking.ts). Production only. */}
+        <Tracking />
       </body>
     </html>
   );
