@@ -20,7 +20,8 @@ export default function PaperworkStory() {
           </div>
           <p className="v2_lead v2_reveal">
             Form 1, TIN, VAT, EPF, Form 15: running a company in Sri Lanka comes with a stack of it.
-            We take all of it in, and hand you back a business that is registered, compliant and trading.
+            Hand it to us. We prepare and file every form, and you get back a business that is
+            registered, compliant and trading.
           </p>
         </div>
         <PaperworkStage />
