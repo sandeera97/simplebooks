@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
+import { getBlogAuthorImage } from "@/lib/blogAuthors";
 import HeaderV2 from "@/components/v2/HeaderV2";
 import Reveal from "@/components/v2/Reveal";
 import { FooterV2 } from "@/components/v2/Sections";
@@ -38,6 +39,8 @@ export default function BlogPostLayout({
   headings,
   children,
 }: BlogPostLayoutProps) {
+  const photo = getBlogAuthorImage(author) ?? authorImage;
+
   return (
     <div className="sim_bk_v2">
       <HeaderV2 />
@@ -68,9 +71,9 @@ export default function BlogPostLayout({
 
             <div className="blog-author">
               <div className="blog-author-avatar">
-                {authorImage ? (
+                {photo ? (
                   <Image
-                    src={authorImage}
+                    src={photo}
                     alt={author}
                     width={50}
                     height={50}

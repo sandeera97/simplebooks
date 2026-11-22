@@ -7,6 +7,7 @@ import Reveal from "@/components/v2/Reveal";
 import { FooterV2 } from "@/components/v2/Sections";
 import BlogLeadForm from "@/components/blog/BlogLeadForm";
 import { getArticle, getArticles } from "@/lib/cms";
+import { getBlogAuthorImage } from "@/lib/blogAuthors";
 import "@/app/home-v2.css";
 import "@/components/blog/blog-post.css";
 
@@ -48,6 +49,7 @@ export default async function CmsArticlePage({
   const { slug } = await params;
   const article = await getArticle(slug);
   if (!article) notFound();
+  const authorImage = getBlogAuthorImage(article.authorName);
 
   const published = article.publishedAt
     ? new Date(article.publishedAt).toLocaleDateString("en-GB", {
@@ -120,7 +122,11 @@ export default async function CmsArticlePage({
 
             <div className="blog-author">
               <div className="blog-author-avatar">
-                {(article.authorName ?? "S").charAt(0)}
+                {authorImage ? (
+                  <Image src={authorImage} alt={article.authorName ?? ""} width={50} height={50} sizes="50px" />
+                ) : (
+                  (article.authorName ?? "S").charAt(0)
+                )}
               </div>
               <div className="blog-author-details">
                 <span>Written by</span>

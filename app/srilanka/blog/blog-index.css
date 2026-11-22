@@ -88,7 +88,16 @@
 .blog-index-card h2 { min-height: 76px; margin: 0 0 14px; font-size: 19px; line-height: 1.35; letter-spacing: -0.3px; font-weight: 800; }
 .blog-index-card h2 a { color: var(--v2-navy, #0a1233); text-decoration: none; transition: color .25s cubic-bezier(.22,1,.36,1); }
 .blog-index-card h2 a:hover { color: var(--v2-orange, #ff5b2e); }
-.blog-index-card p { margin: 0 0 22px; color: var(--v2-ink-3, #59637f); font-size: 14px; line-height: 1.72; }
+.blog-index-card p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  margin: 0 0 22px;
+  color: var(--v2-ink-3, #59637f);
+  font-size: 14px;
+  line-height: 1.72;
+}
 .blog-index-read-more {
   display: inline-flex; align-items: center; margin-top: auto;
   color: var(--v2-orange, #ff5b2e); font-size: 13.5px; font-weight: 700; text-decoration: none;

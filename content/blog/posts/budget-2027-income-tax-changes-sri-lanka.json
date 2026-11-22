@@ -1,0 +1,316 @@
+{
+  "route": "budget-2027-income-tax-changes-sri-lanka",
+  "slug": "budget-2027-income-tax-changes-sri-lanka",
+  "title": "2027 Budget නිසා ඔයාගේ Income Tax එක වෙනස් වෙන්නේ කොහොමද?",
+  "excerpt": "2027 Budget එකෙන් salary ගන්න අයගේ income tax එක අඩු කරන්න යෝජනා කරලා තියෙනවා. ප්‍රධාන වෙනස්කම් දෙකයි: tax-free සීමාව වැඩි වෙනවා, tax slabs ලිහිල් වෙනවා. මේ වෙනස්කම් April 2027 ඉඳන් ක්‍රියාත්මක වෙන්න නියමිතයි. 1. Tax-free සීමාව රු. 162,500 දක්වා වැඩි වෙනවා දැනට මාසෙට රු. 150,000 දක්වා salary එකට tax",
+  "date": "2026-11-13T12:34:16",
+  "modified": "2026-11-13T13:06:33",
+  "author": "Aabith Sabeer",
+  "category": "Tax",
+  "image": "/blog/budget-2027-income-tax-changes-sri-lanka/2007-budget.jpg",
+  "seoTitle": "2027 Budget: ඔයාගේ Income Tax එක වෙනස් වෙන්නේ කොහොමද? | Simplebooks",
+  "seoDescription": "2027 Budget එකෙන් tax-free සීමාව මාසෙට රු. 162,500 දක්වා වැඩි වෙනවා. අලුත් tax slabs සහ ඔයාට ඉතුරු වෙන මුදල සරලව බලන්න.",
+  "categories": [
+    {
+      "id": 1,
+      "name": "Uncategorized",
+      "slug": "uncategorized"
+    }
+  ],
+  "tags": [
+    {
+      "id": 20,
+      "name": "Tax",
+      "slug": "tax"
+    },
+    {
+      "id": 61,
+      "name": "Trending",
+      "slug": "trending"
+    }
+  ],
+  "seo": {
+    "title": "2027 Budget: ඔයාගේ Income Tax එක වෙනස් වෙන්නේ කොහොමද? | Simplebooks",
+    "description": "2027 Budget එකෙන් tax-free සීමාව මාසෙට රු. 162,500 දක්වා වැඩි වෙනවා. අලුත් tax slabs සහ ඔයාට ඉතුරු වෙන මුදල සරලව බලන්න.",
+    "robots": {
+      "index": "index",
+      "follow": "follow",
+      "max-snippet": "max-snippet:-1",
+      "max-image-preview": "max-image-preview:large",
+      "max-video-preview": "max-video-preview:-1"
+    },
+    "canonical": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka",
+    "og_locale": "en_US",
+    "og_type": "article",
+    "og_title": "2027 Budget: ඔයාගේ Income Tax එක වෙනස් වෙන්නේ කොහොමද? | Simplebooks",
+    "og_description": "2027 Budget එකෙන් tax-free සීමාව මාසෙට රු. 162,500 දක්වා වැඩි වෙනවා. අලුත් tax slabs සහ ඔයාට ඉතුරු වෙන මුදල සරලව බලන්න.",
+    "og_url": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka",
+    "og_site_name": "Sri Lanka",
+    "article_publisher": "https://www.facebook.com/teamsimplebooks/",
+    "article_published_time": "2026-11-13T07:04:16+00:00",
+    "article_modified_time": "2026-11-13T07:36:33+00:00",
+    "og_image": [
+      {
+        "width": 1200,
+        "height": 630,
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2026/11/2007-budget.jpg",
+        "type": "image/jpeg"
+      }
+    ],
+    "author": "Aabith Sabeer",
+    "twitter_card": "summary_large_image",
+    "twitter_misc": {
+      "Written by": "Aabith Sabeer",
+      "Est. reading time": "2 minutes"
+    }
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka#article",
+        "isPartOf": {
+          "@id": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka"
+        },
+        "author": {
+          "name": "Aabith Sabeer",
+          "@id": "https://simplebooks.com/srilanka/#/schema/person/3efdc60f68884024650a09f469f1a387"
+        },
+        "headline": "2027 Budget නිසා ඔයාගේ Income Tax එක වෙනස් වෙන්නේ කොහොමද?",
+        "datePublished": "2026-11-13T07:04:16+00:00",
+        "dateModified": "2026-11-13T07:36:33+00:00",
+        "mainEntityOfPage": {
+          "@id": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka"
+        },
+        "wordCount": 66,
+        "publisher": {
+          "@id": "https://simplebooks.com/srilanka/#organization"
+        },
+        "image": {
+          "@id": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka#primaryimage"
+        },
+        "thumbnailUrl": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2026/11/2007-budget.jpg",
+        "keywords": [
+          "Tax",
+          "Trending"
+        ],
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": [
+          "WebPage",
+          "FAQPage"
+        ],
+        "@id": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka",
+        "url": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka",
+        "name": "2027 Budget: ඔයාගේ Income Tax එක වෙනස් වෙන්නේ කොහොමද? | Simplebooks",
+        "isPartOf": {
+          "@id": "https://simplebooks.com/srilanka/#website"
+        },
+        "primaryImageOfPage": {
+          "@id": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka#primaryimage"
+        },
+        "image": {
+          "@id": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka#primaryimage"
+        },
+        "thumbnailUrl": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2026/11/2007-budget.jpg",
+        "datePublished": "2026-11-13T07:04:16+00:00",
+        "dateModified": "2026-11-13T07:36:33+00:00",
+        "description": "2027 Budget එකෙන් tax-free සීමාව මාසෙට රු. 162,500 දක්වා වැඩි වෙනවා. අලුත් tax slabs සහ ඔයාට ඉතුරු වෙන මුදල සරලව බලන්න.",
+        "breadcrumb": {
+          "@id": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka#breadcrumb"
+        },
+        "mainEntity": [
+          {
+            "@id": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka#faq-question-1794552895181"
+          },
+          {
+            "@id": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka#faq-question-1794552954688"
+          },
+          {
+            "@id": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka#faq-question-1794552970473"
+          }
+        ],
+        "inLanguage": "en-US",
+        "potentialAction": [
+          {
+            "@type": "ReadAction",
+            "target": [
+              "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka"
+            ]
+          }
+        ]
+      },
+      {
+        "@type": "ImageObject",
+        "inLanguage": "en-US",
+        "@id": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka#primaryimage",
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2026/11/2007-budget.jpg",
+        "contentUrl": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2026/11/2007-budget.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://simplebooks.com/srilanka/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "2027 Budget නිසා ඔයාගේ Income Tax එක වෙනස් වෙන්නේ කොහොමද?"
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://simplebooks.com/srilanka/#website",
+        "url": "https://simplebooks.com/srilanka/",
+        "name": "simplebooks.com",
+        "description": "Trusted by 4,500+ Sri Lankan businesses",
+        "publisher": {
+          "@id": "https://simplebooks.com/srilanka/#organization"
+        },
+        "potentialAction": [
+          {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://simplebooks.com/srilanka/?s={search_term_string}"
+            },
+            "query-input": {
+              "@type": "PropertyValueSpecification",
+              "valueRequired": true,
+              "valueName": "search_term_string"
+            }
+          }
+        ],
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://simplebooks.com/srilanka/#organization",
+        "name": "Simplebooks",
+        "url": "https://simplebooks.com/srilanka/",
+        "logo": {
+          "@type": "ImageObject",
+          "inLanguage": "en-US",
+          "@id": "https://simplebooks.com/srilanka/#/schema/logo/image/",
+          "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2026/04/cropped-simplebooks-new-favicon-1.jpg",
+          "contentUrl": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2026/04/cropped-simplebooks-new-favicon-1.jpg",
+          "width": 512,
+          "height": 512,
+          "caption": "Simplebooks"
+        },
+        "image": {
+          "@id": "https://simplebooks.com/srilanka/#/schema/logo/image/"
+        },
+        "sameAs": [
+          "https://www.facebook.com/teamsimplebooks/"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://simplebooks.com/srilanka/#/schema/person/3efdc60f68884024650a09f469f1a387",
+        "name": "Aabith Sabeer",
+        "image": {
+          "@type": "ImageObject",
+          "inLanguage": "en-US",
+          "@id": "https://secure.gravatar.com/avatar/f6d02faded842c9ae7db06b3db38b9cb05e62d86694b0971b474ba69d3e14f29?s=96&d=mm&r=g",
+          "url": "https://secure.gravatar.com/avatar/f6d02faded842c9ae7db06b3db38b9cb05e62d86694b0971b474ba69d3e14f29?s=96&d=mm&r=g",
+          "contentUrl": "https://secure.gravatar.com/avatar/f6d02faded842c9ae7db06b3db38b9cb05e62d86694b0971b474ba69d3e14f29?s=96&d=mm&r=g",
+          "caption": "Aabith Sabeer"
+        },
+        "description": "Co-Founder of Simplebooks, combines his passion for helping Sri Lankan businesses with over 10 years of professional experience. As a Chartered Accountant, Certified Tax Advisor, and Registered Company Secretary with a Bachelor's in Business (Finance), he offers expert insights on company registration, tax, accounting, and auditing to empower entrepreneurs and SMEs",
+        "sameAs": [
+          "https://simplebooks.com/"
+        ]
+      },
+      {
+        "@type": "Question",
+        "@id": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka#faq-question-1794552895181",
+        "position": 1,
+        "url": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka#faq-question-1794552895181",
+        "name": "2027 Budget එකේ income tax-free සීමාව කීයද?",
+        "answerCount": 1,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "April 2027 ඉඳන් ක්‍රියාත්මක කරන්න යෝජනා කරලා තියෙනවා.",
+          "inLanguage": "en-US"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Question",
+        "@id": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka#faq-question-1794552954688",
+        "position": 2,
+        "url": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka#faq-question-1794552954688",
+        "name": "අලුත් tax rates පටන් ගන්නේ කවදද?",
+        "answerCount": 1,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "April 2027 ඉඳන් ක්‍රියාත්මක කරන්න යෝජනා කරලා තියෙනවා.",
+          "inLanguage": "en-US"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Question",
+        "@id": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka#faq-question-1794552970473",
+        "position": 3,
+        "url": "https://simplebooks.com/srilanka/budget-2027-income-tax-changes-sri-lanka#faq-question-1794552970473",
+        "name": "උපරිම tax rate එක වෙනස් වෙනවද?",
+        "answerCount": 1,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "නෑ, තාමත් 36% ම තමයි. ඒත් ඒක අදාළ වෙන්නේ මාසෙට රු. 433,000ට වැඩි ආදායමට විතරයි.",
+          "inLanguage": "en-US"
+        },
+        "inLanguage": "en-US"
+      }
+    ]
+  },
+  "headings": [
+    {
+      "id": "1-tax-free-162-500",
+      "label": "1. Tax-free සීමාව රු. 162,500 දක්වා වැඩි වෙනවා"
+    },
+    {
+      "id": "2-tax-slabs-18-12",
+      "label": "2. Tax slabs වෙනස් වෙනවා: 18% වෙනුවට 12%"
+    },
+    {
+      "id": "3",
+      "label": "3. ඔයාට මාසෙට කීයක් ඉතුරු වෙනවද?"
+    },
+    {
+      "id": "4-november-30-return",
+      "label": "4. මේ November 30 return එකට බලපානවද?"
+    },
+    {
+      "id": "section-5",
+      "label": "නිතර අහන ප්‍රශ්න"
+    }
+  ],
+  "html": "<p class=\"wp-block-paragraph\">2027 Budget එකෙන් salary ගන්න අයගේ income tax එක අඩු කරන්න යෝජනා කරලා තියෙනවා. ප්‍රධාන වෙනස්කම් දෙකයි: tax-free සීමාව වැඩි වෙනවා, tax slabs ලිහිල් වෙනවා. මේ වෙනස්කම් April 2027 ඉඳන් ක්‍රියාත්මක වෙන්න නියමිතයි.</p>\n\n<h2 class=\"wp-block-heading\" id=\"1-tax-free-162-500\">1. Tax-free සීමාව රු. 162,500 දක්වා වැඩි වෙනවා</h2>\n\n<p class=\"wp-block-paragraph\">දැනට මාසෙට රු. 150,000 දක්වා salary එකට tax නෑ. Budget 2027 යෝජනාව අනුව මේ සීමාව <strong>මාසෙට රු. 162,500</strong> දක්වා වැඩි වෙනවා. අවුරුද්දකට ගත්තොත් රු. 1.8 million ඉඳන් රු. 1.95 million දක්වා.</p>\n\n<p class=\"wp-block-paragraph\">ඒ කියන්නේ ඔයාගේ මාසික salary එක රු. 162,500ට අඩු නම් (වෙනත් ආදායමක් නැත්නම්), ඔයාට income tax ගෙවන්න වෙන්නේ නෑ.</p>\n\n<h2 class=\"wp-block-heading\" id=\"2-tax-slabs-18-12\">2. Tax slabs වෙනස් වෙනවා: 18% වෙනුවට 12%</h2>\n\n<p class=\"wp-block-paragraph\">Tax-free සීමාවට උඩින් තියෙන ආදායමට tax ගණන් කරන්නේ slabs වලින්. ලොකුම වෙනස මේකයි: 6% band එකෙන් පස්සේ කෙලින්ම 18%ට යන්නේ නෑ. ඒ වෙනුවට <strong>අලුත් 12% band එකක්</strong> එනවා.</p>\n\n<figure class=\"wp-block-table\" role=\"region\" tabindex=\"0\" aria-labelledby=\"2-tax-slabs-18-12\"><table class=\"has-fixed-layout\"><thead><tr><th scope=\"col\">Tax rate</th><th scope=\"col\">දැනට (මාසෙට)</th><th scope=\"col\">Budget 2027 (මාසෙට)</th></tr></thead><tbody><tr><td>6%</td><td>පළමු රු. 83,333</td><td>පළමු රු. 70,833</td></tr><tr><td>12%</td><td>නෑ</td><td>ඊළඟ රු. 50,000</td></tr><tr><td>18%</td><td>ඊළඟ රු. 41,667</td><td>ඊළඟ රු. 50,000</td></tr><tr><td>24%</td><td>ඊළඟ රු. 41,667</td><td>ඊළඟ රු. 50,000</td></tr><tr><td>30%</td><td>ඊළඟ රු. 41,667</td><td>ඊළඟ රු. 50,000</td></tr><tr><td>36%</td><td>ඉතිරි සියල්ල</td><td>ඉතිරි සියල්ල</td></tr></tbody></table></figure>\n\n<p class=\"wp-block-paragraph\">මේ slabs අදාළ වෙන්නේ tax-free සීමාවට උඩින් තියෙන ආදායමට විතරයි. ඒ වගේම 36% rate එක අදාළ වෙන්නේ මාසෙට රු. 433,000ට වැඩි ආදායමට විතරයි (දැනට රු. 358,000).</p>\n\n<h2 class=\"wp-block-heading\" id=\"3\">3. ඔයාට මාසෙට කීයක් ඉතුරු වෙනවද?</h2>\n\n<p class=\"wp-block-paragraph\">Budget එක අනුව හැම taxpayer කෙනෙක්ටම මාසෙට <strong>රු. 750 ඉඳන් රු. 15,750 දක්වා</strong> අමතර සහනයක් ලැබෙනවා. උදාහරණ කිහිපයක් බලමු:</p>\n\n<figure class=\"wp-block-table\" role=\"region\" tabindex=\"0\" aria-labelledby=\"3\"><table class=\"has-fixed-layout\"><thead><tr><th scope=\"col\">මාසික salary (රු.)</th><th scope=\"col\">දැනට tax (රු.)</th><th scope=\"col\">Budget 2027 ට පස්සේ (රු.)</th><th scope=\"col\">මාසෙට ඉතුරුව (රු.)</th></tr></thead><tbody><tr><td>162,500</td><td>750</td><td>0</td><td>750</td></tr><tr><td>200,000</td><td>3,000</td><td>2,250</td><td>750</td></tr><tr><td>250,000</td><td>8,000</td><td>6,250</td><td>1,750</td></tr><tr><td>300,000</td><td>18,500</td><td>13,250</td><td>5,250</td></tr><tr><td>400,000</td><td>50,000</td><td>36,250</td><td>13,750</td></tr><tr><td>500,000</td><td>86,000</td><td>70,250</td><td>15,750</td></tr></tbody></table></figure>\n\n<p class=\"wp-block-paragraph\"><em>මේවා salary එක විතරක් ආදායම විදිහට, වෙනත් සහන නැතුව ගණන් කළ ඇස්තමේන්තු. ඔයාගේ නියම tax එක වෙනස් වෙන්න පුළුවන්.</em></p>\n\n<h2 class=\"wp-block-heading\" id=\"4-november-30-return\">4. මේ November 30 return එකට බලපානවද?</h2>\n\n<p class=\"wp-block-paragraph\">නෑ. මේ වෙනස්කම් යෝජනා කරලා තියෙන්නේ April 2027 ඉඳන්. ඒ නිසා මේ අවුරුද්දේ November 30ට file කරන return එකට දැනට තියෙන rates ම තමයි අදාළ වෙන්නේ.</p>\n\n<p class=\"wp-block-paragraph\">ඔයාගේ return එක තාම file කරලා නැත්නම්, Simplebooks Tax Tool එකෙන් හරි WhatsApp TaxBot එකෙන් හරි දැන්ම පටන් ගන්න.</p>\n\n<div class=\"wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-fe48e5de wp-block-buttons-is-layout-flex\">\n<div class=\"wp-block-button ctat\"><a class=\"wp-block-button__link wp-element-button\" href=\"/income-tax-filing/\" target=\"_blank\" rel=\"noopener\">Simplebooks Tax Tool</a></div>\n</div>\n\n<h2 class=\"wp-block-heading\" id=\"section-5\">නිතර අහන ප්‍රශ්න</h2>",
+  "faq": [
+    {
+      "question": "2027 Budget එකේ income tax-free සීමාව කීයද?",
+      "answer": "April 2027 ඉඳන් ක්‍රියාත්මක කරන්න යෝජනා කරලා තියෙනවා."
+    },
+    {
+      "question": "අලුත් tax rates පටන් ගන්නේ කවදද?",
+      "answer": "April 2027 ඉඳන් ක්‍රියාත්මක කරන්න යෝජනා කරලා තියෙනවා."
+    },
+    {
+      "question": "උපරිම tax rate එක වෙනස් වෙනවද?",
+      "answer": "නෑ, තාමත් 36% ම තමයි. ඒත් ඒක අදාළ වෙන්නේ මාසෙට රු. 433,000ට වැඩි ආදායමට විතරයි."
+    }
+  ]
+}

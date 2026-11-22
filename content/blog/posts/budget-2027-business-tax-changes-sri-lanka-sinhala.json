@@ -1,0 +1,265 @@
+{
+  "route": "budget-2027-business-tax-changes-sri-lanka-sinhala",
+  "slug": "budget-2027-business-tax-changes-sri-lanka-sinhala",
+  "title": "අයවැය 2027: ශ්‍රී ලංකාවේ ව්‍යාපාර බදුවල වෙනස් වන දේ",
+  "excerpt": "අයවැය 2027 ගැන ප්‍රධාන ප්‍රවෘත්ති වැඩිපුරම කතා කළේ පුද්ගල ආදායම් බදු සහන ගැන. නමුත් ව්‍යාපාරවලට වඩාත් වැදගත් වෙනස්කම් තියෙන්නේ අයවැය ලේඛනයේ අගට ඇති තාක්ෂණික සටහන්වල (Technical Notes). ඒවායින් සමහරක් අයවැය කතාවේ සඳහන්වත් වෙලා නැහැ. ව්‍යාපාර බදු සම්බන්ධයෙන් වෙනස් වන දේ, ඒවා බලපාන්නේ කාටද, සහ ඔබට දැන්ම",
+  "date": "2026-11-13T13:19:03",
+  "modified": "2026-11-13T13:37:16",
+  "author": "Aabith Sabeer",
+  "category": "Tax",
+  "image": "/blog/budget-2027-business-tax-changes-sri-lanka-sinhala/2027-business-tax.jpg",
+  "seoTitle": "අයවැය 2027: ශ්‍රී ලංකාවේ ව්‍යාපාර බදු වෙනස්කම් සරලව",
+  "seoDescription": "Crypto මත ප්‍රාග්ධන ලාභ බද්ද, BOI සඳහා 200% දීමනා, online ads ගෙවීම් සඳහා නව නීති සහ තවත් දේ. අයවැය 2027 ශ්‍රී ලාංකික ව්‍යාපාරවලට ගෙනෙන වෙනස්කම්.",
+  "categories": [
+    {
+      "id": 46,
+      "name": "Sinhala",
+      "slug": "lk"
+    }
+  ],
+  "tags": [
+    {
+      "id": 20,
+      "name": "Tax",
+      "slug": "tax"
+    },
+    {
+      "id": 61,
+      "name": "Trending",
+      "slug": "trending"
+    }
+  ],
+  "seo": {
+    "title": "අයවැය 2027: ශ්‍රී ලංකාවේ ව්‍යාපාර බදු වෙනස්කම් සරලව",
+    "description": "Crypto මත ප්‍රාග්ධන ලාභ බද්ද, BOI සඳහා 200% දීමනා, online ads ගෙවීම් සඳහා නව නීති සහ තවත් දේ. අයවැය 2027 ශ්‍රී ලාංකික ව්‍යාපාරවලට ගෙනෙන වෙනස්කම්.",
+    "robots": {
+      "index": "index",
+      "follow": "follow",
+      "max-snippet": "max-snippet:-1",
+      "max-image-preview": "max-image-preview:large",
+      "max-video-preview": "max-video-preview:-1"
+    },
+    "canonical": "https://simplebooks.com/srilanka/budget-2027-business-tax-changes-sri-lanka-sinhala",
+    "og_locale": "en_US",
+    "og_type": "article",
+    "og_title": "අයවැය 2027: ශ්‍රී ලංකාවේ ව්‍යාපාර බදු වෙනස්කම් සරලව",
+    "og_description": "Crypto මත ප්‍රාග්ධන ලාභ බද්ද, BOI සඳහා 200% දීමනා, online ads ගෙවීම් සඳහා නව නීති සහ තවත් දේ. අයවැය 2027 ශ්‍රී ලාංකික ව්‍යාපාරවලට ගෙනෙන වෙනස්කම්.",
+    "og_url": "https://simplebooks.com/srilanka/budget-2027-business-tax-changes-sri-lanka-sinhala",
+    "og_site_name": "Sri Lanka",
+    "article_publisher": "https://www.facebook.com/teamsimplebooks/",
+    "article_published_time": "2026-11-13T07:49:03+00:00",
+    "article_modified_time": "2026-11-13T08:07:16+00:00",
+    "og_image": [
+      {
+        "width": 1200,
+        "height": 630,
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2026/11/2027-business-tax.jpg",
+        "type": "image/jpeg"
+      }
+    ],
+    "author": "Aabith Sabeer",
+    "twitter_card": "summary_large_image",
+    "twitter_misc": {
+      "Written by": "Aabith Sabeer",
+      "Est. reading time": "6 minutes"
+    }
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://simplebooks.com/srilanka/budget-2027-business-tax-changes-sri-lanka-sinhala#article",
+        "isPartOf": {
+          "@id": "https://simplebooks.com/srilanka/budget-2027-business-tax-changes-sri-lanka-sinhala"
+        },
+        "author": {
+          "name": "Aabith Sabeer",
+          "@id": "https://simplebooks.com/srilanka/#/schema/person/3efdc60f68884024650a09f469f1a387"
+        },
+        "headline": "අයවැය 2027: ශ්‍රී ලංකාවේ ව්‍යාපාර බදුවල වෙනස් වන දේ",
+        "datePublished": "2026-11-13T07:49:03+00:00",
+        "dateModified": "2026-11-13T08:07:16+00:00",
+        "mainEntityOfPage": {
+          "@id": "https://simplebooks.com/srilanka/budget-2027-business-tax-changes-sri-lanka-sinhala"
+        },
+        "wordCount": 120,
+        "publisher": {
+          "@id": "https://simplebooks.com/srilanka/#organization"
+        },
+        "image": {
+          "@id": "https://simplebooks.com/srilanka/budget-2027-business-tax-changes-sri-lanka-sinhala#primaryimage"
+        },
+        "thumbnailUrl": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2026/11/2027-business-tax.jpg",
+        "keywords": [
+          "Tax",
+          "Trending"
+        ],
+        "articleSection": [
+          "Sinhala"
+        ],
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://simplebooks.com/srilanka/budget-2027-business-tax-changes-sri-lanka-sinhala",
+        "url": "https://simplebooks.com/srilanka/budget-2027-business-tax-changes-sri-lanka-sinhala",
+        "name": "අයවැය 2027: ශ්‍රී ලංකාවේ ව්‍යාපාර බදු වෙනස්කම් සරලව",
+        "isPartOf": {
+          "@id": "https://simplebooks.com/srilanka/#website"
+        },
+        "primaryImageOfPage": {
+          "@id": "https://simplebooks.com/srilanka/budget-2027-business-tax-changes-sri-lanka-sinhala#primaryimage"
+        },
+        "image": {
+          "@id": "https://simplebooks.com/srilanka/budget-2027-business-tax-changes-sri-lanka-sinhala#primaryimage"
+        },
+        "thumbnailUrl": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2026/11/2027-business-tax.jpg",
+        "datePublished": "2026-11-13T07:49:03+00:00",
+        "dateModified": "2026-11-13T08:07:16+00:00",
+        "description": "Crypto මත ප්‍රාග්ධන ලාභ බද්ද, BOI සඳහා 200% දීමනා, online ads ගෙවීම් සඳහා නව නීති සහ තවත් දේ. අයවැය 2027 ශ්‍රී ලාංකික ව්‍යාපාරවලට ගෙනෙන වෙනස්කම්.",
+        "breadcrumb": {
+          "@id": "https://simplebooks.com/srilanka/budget-2027-business-tax-changes-sri-lanka-sinhala#breadcrumb"
+        },
+        "inLanguage": "en-US",
+        "potentialAction": [
+          {
+            "@type": "ReadAction",
+            "target": [
+              "https://simplebooks.com/srilanka/budget-2027-business-tax-changes-sri-lanka-sinhala"
+            ]
+          }
+        ]
+      },
+      {
+        "@type": "ImageObject",
+        "inLanguage": "en-US",
+        "@id": "https://simplebooks.com/srilanka/budget-2027-business-tax-changes-sri-lanka-sinhala#primaryimage",
+        "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2026/11/2027-business-tax.jpg",
+        "contentUrl": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2026/11/2027-business-tax.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://simplebooks.com/srilanka/budget-2027-business-tax-changes-sri-lanka-sinhala#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://simplebooks.com/srilanka/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "අයවැය 2027: ශ්‍රී ලංකාවේ ව්‍යාපාර බදුවල වෙනස් වන දේ"
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://simplebooks.com/srilanka/#website",
+        "url": "https://simplebooks.com/srilanka/",
+        "name": "simplebooks.com",
+        "description": "Trusted by 4,500+ Sri Lankan businesses",
+        "publisher": {
+          "@id": "https://simplebooks.com/srilanka/#organization"
+        },
+        "potentialAction": [
+          {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://simplebooks.com/srilanka/?s={search_term_string}"
+            },
+            "query-input": {
+              "@type": "PropertyValueSpecification",
+              "valueRequired": true,
+              "valueName": "search_term_string"
+            }
+          }
+        ],
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://simplebooks.com/srilanka/#organization",
+        "name": "Simplebooks",
+        "url": "https://simplebooks.com/srilanka/",
+        "logo": {
+          "@type": "ImageObject",
+          "inLanguage": "en-US",
+          "@id": "https://simplebooks.com/srilanka/#/schema/logo/image/",
+          "url": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2026/04/cropped-simplebooks-new-favicon-1.jpg",
+          "contentUrl": "https://simplebooks.com/srilanka/wp-content/uploads/sites/6/2026/04/cropped-simplebooks-new-favicon-1.jpg",
+          "width": 512,
+          "height": 512,
+          "caption": "Simplebooks"
+        },
+        "image": {
+          "@id": "https://simplebooks.com/srilanka/#/schema/logo/image/"
+        },
+        "sameAs": [
+          "https://www.facebook.com/teamsimplebooks/"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://simplebooks.com/srilanka/#/schema/person/3efdc60f68884024650a09f469f1a387",
+        "name": "Aabith Sabeer",
+        "image": {
+          "@type": "ImageObject",
+          "inLanguage": "en-US",
+          "@id": "https://secure.gravatar.com/avatar/f6d02faded842c9ae7db06b3db38b9cb05e62d86694b0971b474ba69d3e14f29?s=96&d=mm&r=g",
+          "url": "https://secure.gravatar.com/avatar/f6d02faded842c9ae7db06b3db38b9cb05e62d86694b0971b474ba69d3e14f29?s=96&d=mm&r=g",
+          "contentUrl": "https://secure.gravatar.com/avatar/f6d02faded842c9ae7db06b3db38b9cb05e62d86694b0971b474ba69d3e14f29?s=96&d=mm&r=g",
+          "caption": "Aabith Sabeer"
+        },
+        "description": "Co-Founder of Simplebooks, combines his passion for helping Sri Lankan businesses with over 10 years of professional experience. As a Chartered Accountant, Certified Tax Advisor, and Registered Company Secretary with a Bachelor's in Business (Finance), he offers expert insights on company registration, tax, accounting, and auditing to empower entrepreneurs and SMEs",
+        "sameAs": [
+          "https://simplebooks.com/"
+        ]
+      }
+    ]
+  },
+  "headings": [
+    {
+      "id": "1-crypto",
+      "label": "1. ප්‍රාග්ධන ලාභ බද්ද දැන් crypto, බලපත්‍ර සහ වටිනා වත්කම්වලටත්"
+    },
+    {
+      "id": "2-boi-200",
+      "label": "2. විශාල BOI ආයෝජනවලට 200% ප්‍රාග්ධන දීමනාවක්"
+    },
+    {
+      "id": "3-online-advertising-cloud-services",
+      "label": "3. Online advertising සහ cloud services: ආදායමේ මූලාශ්‍රය ගෙවීම් කරන ස්ථානය අනුව"
+    },
+    {
+      "id": "4-14",
+      "label": "4. 14% රඳවා ගැනීමේ බද්ද අනේවාසිකයන්ට පමණයි"
+    },
+    {
+      "id": "5",
+      "label": "5. සමාගම් ඒකාබද්ධ කිරීම් සඳහා බදු මගහැරීම් වැළැක්වීමේ නව නීති"
+    },
+    {
+      "id": "6",
+      "label": "6. වෙනස් නොවූ දේ"
+    },
+    {
+      "id": "section-7",
+      "label": "ව්‍යාපාර දැනගත යුතු වෙනත් වෙනස්කම්"
+    },
+    {
+      "id": "2027-checklist",
+      "label": "ඔබේ අයවැය 2027 checklist එක"
+    },
+    {
+      "id": "section-9",
+      "label": "ඔබේ ව්‍යාපාරයට මෙයින් අදහස් වන්නේ කුමක්ද කියලා දැනගන්න උදව් ඕනද?"
+    }
+  ],
+  "html": "<p class=\"wp-block-paragraph\">අයවැය 2027 ගැන ප්‍රධාන ප්‍රවෘත්ති වැඩිපුරම කතා කළේ පුද්ගල ආදායම් බදු සහන ගැන. නමුත් ව්‍යාපාරවලට වඩාත් වැදගත් වෙනස්කම් තියෙන්නේ අයවැය ලේඛනයේ අගට ඇති තාක්ෂණික සටහන්වල (Technical Notes). ඒවායින් සමහරක් අයවැය කතාවේ සඳහන්වත් වෙලා නැහැ.</p>\n\n<p class=\"wp-block-paragraph\">ව්‍යාපාර බදු සම්බන්ධයෙන් වෙනස් වන දේ, ඒවා බලපාන්නේ කාටද, සහ ඔබට දැන්ම කළ හැකි දේ මෙන්න. රජය වෙනත් දිනයක් සඳහන් කර නැත්නම්, මෙම වෙනස්කම් <strong>2027 අප්‍රේල් 1</strong> සිට ක්‍රියාත්මක වෙනවා. ඒ සඳහා තවමත් සංශෝධිත නීති සම්මත විය යුතු නිසා, සමහර විස්තර වෙනස් වෙන්න පුළුවන්.</p>\n\n<p class=\"wp-block-paragraph\"><strong>කෙටියෙන්</strong></p>\n\n<figure class=\"wp-block-table\" role=\"region\" tabindex=\"0\" aria-label=\"2027 Budget ????????\"><table class=\"has-fixed-layout\"><thead><tr><th scope=\"col\"><strong>වෙනස</strong></th><th scope=\"col\"><strong>බලපාන්නේ කාටද</strong></th><th scope=\"col\"><strong>දැන් කළ යුතු දේ</strong></th></tr></thead><tbody><tr><td>ප්‍රාග්ධන ලාභ බද්ද (Capital Gains Tax) crypto, බලපත්‍ර සහ වටිනා වත්කම්වලටත්</td><td>Digital assets, telecom හෝ broadcasting බලපත්‍ර, මැණික්, ස්වර්ණාභරණ හෝ වටිනා ලෝහ තියාගෙන ඉන්න ව්‍යාපාර</td><td>මිලදී ගැනීමේ වාර්තා (දිනය සහ මිල) තබා ගන්න</td></tr><tr><td>විශාල BOI ආයෝජනවලට 200% ප්‍රාග්ධන දීමනාවක් (Capital Allowance)</td><td>Export manufacturing හෝ tourism සඳහා USD 3M+ ආයෝජනය කරන BOI ව්‍යාපාර</td><td>ආයෝජන කාලසටහන සැලසුම් කරන්න</td></tr><tr><td>Online ads සහ cloud services ආදායමේ මූලාශ්‍රය ගෙවීම් කරන ස්ථානය අනුව</td><td>Meta හෝ Google ads, cloud hosting වැනි සේවාවලට ගෙවන ඕනෑම කෙනෙක්</td><td>Digital සේවා ගෙවීම් track කර, නීතිය එනතුරු රැඳී සිටින්න</td></tr><tr><td>14% රඳවා ගැනීමේ බද්ද (WHT) ස්ථිර ව්‍යාපාරික ස්ථානයක් නැති අනේවාසිකයන්ට පමණයි</td><td>සේවා ගාස්තු හෝ රක්ෂණ වාරික ගෙවන ව්‍යාපාර</td><td>දැනට WHT අඩු කරන ආකාරය පරීක්ෂා කරන්න</td></tr><tr><td>සමාගම් ඒකාබද්ධ කිරීම් (Mergers) සඳහා බදු මගහැරීම් වැළැක්වීමේ නීති</td><td>Merger හෝ amalgamation එකක් සැලසුම් කරන සමාගම්</td><td>ව්‍යාපාරික හේතුව ලියා තබා ගන්න</td></tr><tr><td>සමාගම් බදු අනුපාතය</td><td>සියලුම සමාගම්</td><td>වෙනසක් නැහැ</td></tr></tbody></table></figure>\n\n<h2 class=\"wp-block-heading\" id=\"1-crypto\">1. ප්‍රාග්ධන ලාභ බද්ද දැන් crypto, බලපත්‍ර සහ වටිනා වත්කම්වලටත්</h2>\n\n<p class=\"wp-block-paragraph\">මෙම වෙනස තියෙන්නේ තාක්ෂණික සටහන්වල පමණයි, අයවැය කතාවේ නැහැ. දේශීය ආදායම් පනතේ 195 වන වගන්තිය යටතේ “ප්‍රාග්ධන වත්කම” (capital asset) යන්නෙහි අර්ථ දැක්වීම රජය පුළුල් කරනවා. ප්‍රාග්ධන ලාභ බද්දට යටත් වන්නේ මොනවාද කියලා තීරණය වෙන්නේ ඒ අර්ථ දැක්වීම අනුවයි. අලුතින් එකතු වන වත්කම් කාණ්ඩ තුනක් තියෙනවා:</p>\n\n<ul class=\"wp-block-list\">\n<li><strong>Digital සහ virtual වත්කම්</strong>, cryptocurrency ද ඇතුළුව</li>\n\n<li><strong>විදුලි සංදේශ (telecom), විකාශන (broadcasting) සහ ඒ හා සමාන බලපත්‍ර</strong>, සහ වාණිජ වටිනාකමක් ඇති වෙනත් අයිතිවාසිකම්</li>\n\n<li>නියම කරන මුදල් සීමාවකට වඩා වැඩි වටිනාකමක් ඇති <strong>මැණික්, ස්වර්ණාභරණ, වටිනා ලෝහ</strong> සහ වෙනත් වටිනා චංචල වත්කම්</li>\n</ul>\n\n<p class=\"wp-block-paragraph\">මැණික්, ස්වර්ණාභරණ සහ වටිනා ලෝහ සඳහා වන සීමාව තවම තීරණය කර නැහැ. රජය එය පසුව නිවේදනය කරයි.</p>\n\n<p class=\"wp-block-paragraph\"><strong>ඔබට මෙයින් අදහස් වන්නේ:</strong> ඔබේ ව්‍යාපාරය crypto තියාගෙන ඉන්නවා නම්, විකුණන්න පුළුවන් බලපත්‍රයක් අයිති නම්, හෝ ආයෝජනයක් ලෙස මැණික් හෝ රත්තරන් තියාගෙන ඉන්නවා නම්, 2027 අප්‍රේල් සිට ඒවා විකිණීමෙන් ලැබෙන ලාභයට ප්‍රාග්ධන ලාභ බද්ද අය විය හැකියි.</p>\n\n<p class=\"wp-block-paragraph\"><strong>දැන් කළ යුතු දේ:</strong> එක් එක් වත්කම මිලදී ගත් දිනය සහ ගෙවූ මුදල පැහැදිලිව ලියා තබා ගැනීම දැන්ම පටන් ගන්න. ප්‍රාග්ධන ලාභය ගණනය කරන්නේ ඔබේ පිරිවැය අනුවයි, ඒ වාර්තා පසුව නැවත සකස් කිරීම බොහෝ අමාරුයි.</p>\n\n<h2 class=\"wp-block-heading\" id=\"2-boi-200\">2. විශාල BOI ආයෝජනවලට 200% ප්‍රාග්ධන දීමනාවක්</h2>\n\n<p class=\"wp-block-paragraph\">අවම වශයෙන් <strong>USD මිලියන 3</strong>ක් අපනයන කේන්ද්‍රීය නිෂ්පාදනයට (export-oriented manufacturing) හෝ සංචාරක සංවර්ධනයට ආයෝජනය කරන BOI අනුමත ව්‍යාපාරවලට, සුදුසුකම් ලබන ප්‍රාග්ධන වියදමෙන් <strong>200%</strong>ක වැඩි කළ ප්‍රාග්ධන දීමනාවක් තෝරා ගත හැකියි.</p>\n\n<p class=\"wp-block-paragraph\">සරලව කිව්වොත්, සුදුසුකම් ලබන සෑම රු. 100ක වියදමකටම, බදු අය කළ හැකි ආදායමෙන් රු. 200ක දීමනාවක් ඉල්ලුම් කළ හැකියි.</p>\n\n<p class=\"wp-block-paragraph\">කොන්දේසි කිහිපයක් තියෙනවා:</p>\n\n<ul class=\"wp-block-list\">\n<li><strong>නිෂ්පාදනය, සහ හෝටල් හැර අනෙකුත් සංචාරක ව්‍යාපාර:</strong> ආයෝජනය අවුරුදු 3ක් ඇතුළත කළ යුතුයි</li>\n\n<li><strong>හෝටල්:</strong> ආයෝජනය අවුරුදු 5ක් ඇතුළත කළ යුතුයි</li>\n\n<li>වෙනත් දීමනා සමඟ එකතු කරන්න බැහැ. 200% දීමනාව තෝරා ගත්තොත්, හතරවන උපලේඛනය (Fourth Schedule) යටතේ ඇති ප්‍රාග්ධන දීමනාව හෝ දෙවන උපලේඛනය (Second Schedule) යටතේ ඇති වැඩි කළ දීමනාව අත්හැරිය යුතුයි</li>\n</ul>\n\n<p class=\"wp-block-paragraph\"><strong>ඔබට මෙයින් අදහස් වන්නේ:</strong> මෙය ඉලක්ක කර ඇත්තේ විශාල ආයෝජකයන්ටයි. BOI අපනයනකරුවන්ට හෝ හෝටල් ව්‍යාපෘතිවලට සැපයුම් කරන කුඩා ව්‍යාපාරවලටත්, මෙම ව්‍යාපෘති වර්ධනය වෙද්දී වක්‍රව ප්‍රතිලාභ ලැබිය හැකියි.</p>\n\n<h2 class=\"wp-block-heading\" id=\"3-online-advertising-cloud-services\">3. Online advertising සහ cloud services: ආදායමේ මූලාශ්‍රය ගෙවීම් කරන ස්ථානය අනුව</h2>\n\n<p class=\"wp-block-paragraph\">දුරස්ථ සහ digital සේවාවලින් ලැබෙන ආදායමේ මූලාශ්‍රය (source of income) <strong>ගෙවීම කරන ස්ථානය අනුව</strong> තීරණය වන පරිදි දේශීය ආදායම් පනතේ 73 වන වගන්තිය සංශෝධනය කරනවා. තාක්ෂණික සටහන්වල උදාහරණ ලෙස සඳහන් කර ඇත්තේ online advertising සහ cloud services.</p>\n\n<p class=\"wp-block-paragraph\"><strong>මෙය වැදගත් ඇයි:</strong> Online marketing කරන හැම ව්‍යාපාරයකටම වගේ මෙය බලපානවා. ඔබ ශ්‍රී ලංකාවේ සිට Meta හෝ Google වලට ads සඳහා, හෝ cloud hosting සහ software සඳහා ගෙවනවා නම්, එම ආදායම ශ්‍රී ලංකාවේ උපයන ලද ආදායමක් ලෙස සැලකිය හැකියි.</p>\n\n<p class=\"wp-block-paragraph\"><strong>තවම නොදන්නා දේ:</strong> ගෙවීම කරන ව්‍යාපාරයට මෙයින් කිසියම් ප්‍රායෝගික වගකීමක් පැවරෙනවාද කියලා තාක්ෂණික සටහන්වල සඳහන් නැහැ. නිශ්චිත බලපෑම පැහැදිලි වෙන්නේ සංශෝධිත නීතිය ප්‍රකාශයට පත් කළාට පස්සෙයි. මෙය පහත සඳහන් රඳවා ගැනීමේ බදු වෙනසත් එක්ක කියවන්න. Digital ad budget එකක් තියෙනවා නම්, වැඩිපුරම අවධානය යොමු කළ යුතු වෙනස්කම් දෙක මේ දෙකයි.</p>\n\n<p class=\"wp-block-paragraph\"><strong>දැන් කළ යුතු දේ:</strong> ගෙවන ආකාරය තවම වෙනස් කරන්න එපා. නමුත් නීති ප්‍රකාශයට පත් වෙද්දී සූදානම්ව සිටීමට, digital සේවා සඳහා වන සියලුම invoices සහ ගෙවීම් වාර්තා එකම තැනක තබා ගන්න.</p>\n\n<h2 class=\"wp-block-heading\" id=\"4-14\">4. 14% රඳවා ගැනීමේ බද්ද අනේවාසිකයන්ට පමණයි</h2>\n\n<p class=\"wp-block-paragraph\">සේවා ගාස්තු සහ රක්ෂණ වාරික මත ඇති <strong>14% රඳවා ගැනීමේ බද්ද (Withholding Tax)</strong> අදාළ වන්නේ <strong>ශ්‍රී ලංකාවේ ස්ථිර ව්‍යාපාරික ස්ථානයක් (permanent establishment) නැති අනේවාසික පුද්ගලයන්ට</strong> කරන ගෙවීම්වලට පමණක් බව පැහැදිලි කිරීමට 85(1B) වගන්තිය සංශෝධනය කරනවා.</p>\n\n<p class=\"wp-block-paragraph\"><strong>ඔබට මෙයින් අදහස් වන්නේ:</strong> ශ්‍රී ලාංකික සේවා සපයන්නන්ට කරන ගෙවීම් මෙම 14% නීතියට අහු වෙන්නේ නැහැ. එය අදාළ වන්නේ මෙරට ස්ථිර ව්‍යාපාරික ස්ථානයක් නැති විදේශීය පාර්ශවයකට ගෙවන විටයි.</p>\n\n<p class=\"wp-block-paragraph\"><strong>දැන් කළ යුතු දේ:</strong> සේවා ගාස්තු මත දැනට WHT හසුරුවන්නේ කොහොමද කියලා, විශේෂයෙන් විදේශීය සේවා සපයන්නන්ට කරන ගෙවීම් සම්බන්ධයෙන්, ඔබේ ගණකාධිකාරීවරයා සමඟ පරීක්ෂා කරන්න.</p>\n\n<h2 class=\"wp-block-heading\" id=\"5\">5. සමාගම් ඒකාබද්ධ කිරීම් සඳහා බදු මගහැරීම් වැළැක්වීමේ නව නීති</h2>\n\n<p class=\"wp-block-paragraph\">සමාගම් ඒකාබද්ධ කිරීම් (amalgamations සහ mergers) හරහා සිදු වන බදු මගහැරීම් ඉලක්ක කරගත් නව නීති හඳුන්වා දෙනවා. සත්‍ය ඒකාබද්ධ කිරීම්වලට අසාධාරණ ලෙස බලපෑමක් නොවන පරිදි ඒවා සකස් කර ඇති බව රජය පවසනවා.</p>\n\n<p class=\"wp-block-paragraph\"><strong>ඔබට මෙයින් අදහස් වන්නේ:</strong> ඔබ සමාගම් ඒකාබද්ධ කිරීමට සැලසුම් කරනවා නම්, පැහැදිලි ව්‍යාපාරික හේතුවක් තිබීම පෙරට වඩා වැදගත් වෙනවා. විස්තර සංශෝධිත නීතිය සමඟ ලැබෙයි.</p>\n\n<p class=\"wp-block-paragraph\"><strong>දැන් කළ යුතු දේ:</strong> 2027 සඳහා ප්‍රතිව්‍යුහගත කිරීමක් (restructure) සැලසුම් කර තිබේ නම්, ඒ සඳහා ව්‍යාපාරික හේතුව දැන්ම ලියා තබා, අවසන් කිරීමට පෙර උපදෙස් ලබා ගන්න.</p>\n\n<h2 class=\"wp-block-heading\" id=\"6\">6. වෙනස් නොවූ දේ</h2>\n\n<ul class=\"wp-block-list\">\n<li><strong>සමාගම් ආදායම් බදු අනුපාතය වෙනස් වී නැහැ.</strong></li>\n\n<li><strong>අවම top-up බද්දක් නිවේදනය කර නැහැ.</strong></li>\n</ul>\n\n<p class=\"wp-block-paragraph\">බොහෝ සමාගම්වලට, 2027 සඳහා සැලසුම් කරන බදු අනුපාතය එලෙසම පවතිනවා.</p>\n\n<h2 class=\"wp-block-heading\" id=\"section-7\">ව්‍යාපාර දැනගත යුතු වෙනත් වෙනස්කම්</h2>\n\n<p class=\"wp-block-paragraph\">දෛනික අනුකූලතාවට (compliance) වැදගත් කුඩා වෙනස්කම් කිහිපයක්ද තාක්ෂණික සටහන්වල තියෙනවා:</p>\n\n<ul class=\"wp-block-list\">\n<li><strong>Electronic invoices</strong> කඩදාසි invoices වගේම නීත්‍යානුකූලව වලංගු වෙනවා. අවශ්‍ය ආකෘතිය ගැසට් පත්‍රයේ පළ කරයි.</li>\n\n<li><strong>VAT input tax ඉල්ලීම්</strong> සඳහා ඒකාකාරී කාල සීමාවක්: දේශීය මිලදී ගැනීම්වලට මාස 12ක් සහ ආනයනවලට මාස 24ක්, VAT return එක ඉදිරිපත් කරන දිනය කුමක් වුවත්.</li>\n\n<li><strong>අලුතින් VAT ලියාපදිංචි වූ අපනයනකරුවන්ට</strong>, පසුගිය මාස 6 තුළ ඔවුන්ගේ පිරිවැටුමෙන් 80%කට වඩා අපනයනවලින් ලැබුණා නම් “සුදුසුකම් ලත් අපනයනකරුවන්” (eligible exporters) ලෙස සැලකිය හැකියි.</li>\n\n<li><strong>විදේශ මුදලින් කරන විකුණුම් මත VAT</strong>, දේශීය ආදායම් කොමසාරිස් ජනරාල්වරයා නියම කරන පරිදි, මහ බැංකුවේ දර්ශක විනිමය අනුපාතය (indicative exchange rate) භාවිතයෙන් රුපියල්වලට පරිවර්තනය කරයි.</li>\n\n<li><strong>මුදල් ගනුදෙනු සීමා:</strong> මුදල් ගනුදෙනු සම්බන්ධ සීමා ඔබ අනුගමනය කළ බවට සාක්ෂියක් ලෙස අනුමත ගණකාධිකාරීවරයෙකුගේ සහතිකයක් පිළිගනු ලැබේ.</li>\n\n<li><strong>සංචාරක සංවර්ධන බද්ද (Tourism Development Levy)</strong> 2027 අප්‍රේල් 1 සිට අහෝසි කරනවා.</li>\n</ul>\n\n<h2 class=\"wp-block-heading\" id=\"2027-checklist\">ඔබේ අයවැය 2027 checklist එක</h2>\n\n<ul class=\"wp-block-list\">\n<li>ඔබ ගෙවන සියලුම digital සේවා (ads, cloud, software) සහ ඒවාට ගෙවන ආකාරය ලැයිස්තුගත කරන්න</li>\n\n<li>ඔබේ ව්‍යාපාරයට අයිති crypto, බලපත්‍ර, මැණික්, ස්වර්ණාභරණ හෝ වටිනා ලෝහවල පිරිවැය සහ මිලදී ගත් දිනය සටහන් කර තබා ගන්න</li>\n\n<li>සේවා ගාස්තු සහ රක්ෂණ වාරික මත බදු රඳවා ගන්නා ආකාරය සමාලෝචනය කරන්න</li>\n\n<li>ඔබ BOI ව්‍යාපාරයක් නම්, ඔබේ ආයෝජන සැලසුම්වලට අවුරුදු 3 හෝ 5 කාල සීමාව සපුරාලිය හැකිද කියලා බලන්න</li>\n\n<li>Merger එකක් හෝ restructure එකක් සැලසුම් කර ඇත්නම්, නව නීති එන්න කලින් උපදෙස් ලබා ගන්න</li>\n\n<li>2027 අප්‍රේල් 1ට කලින් ඔබේ ගණකාධිකාරීවරයා සමඟ කතා කරන්න</li>\n</ul>\n\n<h2 class=\"wp-block-heading\" id=\"section-9\">ඔබේ ව්‍යාපාරයට මෙයින් අදහස් වන්නේ කුමක්ද කියලා දැනගන්න උදව් ඕනද?</h2>\n\n<p class=\"wp-block-paragraph\">කලින්ම සැලසුම් කළොත් අයවැය වෙනස්කම්වලට මුහුණ දීම පහසුයි. අයවැය 2027 ඔබේ ව්‍යාපාරයට බලපාන්නේ කොහොමද කියලා තේරුම් ගන්න ඕන නම්, Simplebooks tax team එකට ඔබට ඒ ගැන පැහැදිලි කරලා දෙන්න පුළුවන්.</p>\n\n<p class=\"wp-block-paragraph\"><em>මෙම ලිපිය අයවැය 2027 කතාව සහ එහි තාක්ෂණික සටහන් මත පදනම් වූ සාමාන්‍ය තොරතුරු පමණි. මෙය බදු උපදෙස් නොවේ. අවසාන නීති රඳා පවතින්නේ තවමත් ප්‍රකාශයට පත් කර නැති සංශෝධිත නීති මතයි.</em></p>\n\n<p class=\"wp-block-paragraph\"></p>"
+}

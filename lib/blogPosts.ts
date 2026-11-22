@@ -1,5 +1,6 @@
 import { readFileSync, existsSync } from "node:fs";
 import path from "node:path";
+import type { BlogFaqItem } from "@/components/blog/BlogFaq";
 
 /**
  * The blog posts migrated across from the live WordPress site.
@@ -26,8 +27,27 @@ export interface PostSummary {
 }
 
 export interface MigratedPost extends PostSummary {
+  authorImage?: string;
   seoTitle: string;
   seoDescription: string;
+  categories?: { id: number; name: string; slug: string }[];
+  tags?: { id: number; name: string; slug: string }[];
+  seo?: {
+    canonical: string;
+    robots: Record<string, string>;
+    og_locale: string;
+    og_title: string;
+    og_description?: string;
+    og_url: string;
+    og_site_name: string;
+    og_image?: { url: string; width: number; height: number; type: string }[];
+    article_publisher?: string;
+    article_published_time: string;
+    article_modified_time: string;
+    twitter_misc?: Record<string, string>;
+  };
+  schema?: Record<string, unknown>;
+  faq?: BlogFaqItem[];
   /** The post's h2s, for the contents sidebar. */
   headings: { id: string; label: string }[];
   html: string;
@@ -62,7 +82,28 @@ export function getPostIndex(): PostSummary[] {
 }
 
 export function getPost(route: string): MigratedPost | null {
-  return read<MigratedPost>(path.join("posts", fileFor(route)));
+  const post = read<MigratedPost>(path.join("posts", fileFor(route)));
+  if (!post) return null;
+
+  // The imported markup can contain links and emphasis inside answers.
+  // Keep those and the original anchors when turning each block into an accordion.
+  const faqItem = /<div class="schema-faq-section" id="([^"]+)"><strong class="schema-faq-question">([\s\S]*?)<\/strong>\s*(<p class="schema-faq-answer">[\s\S]*?<\/p>)\s*<\/div>/g;
+  let group = 0;
+  const html = post.html.replace(
+    /<div class="schema-faq wp-block-yoast-faq-block">([\s\S]*?<\/p>\s*<\/div>)\s*<\/div>/g,
+    (block, items: string) => {
+      if (items.replace(faqItem, "").trim()) return block;
+      const name = `imported-blog-faq-${++group}`;
+      let first = true;
+      const sections = items.replace(faqItem, (_, id, question, answer) => {
+        const open = first ? " open" : "";
+        first = false;
+        return `<details id="${id}" name="${name}"${open}><summary><span>${question}</span><span class="blog-faq-icon" aria-hidden="true"></span></summary><div class="blog-faq-answer">${answer}</div></details>`;
+      });
+      return `<div class="blog-faq">${sections}</div>`;
+    }
+  );
+  return { ...post, html };
 }
 
 /** "2025-01-16T23:23:00" -> "Jan 16, 2025", matching the hand-built posts. */
