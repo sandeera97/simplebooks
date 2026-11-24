@@ -3,12 +3,11 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { HERO_CHAPTERS, HERO_FINALE, chapterAt, type HeroIcon } from "./heroChapters";
-import { NAVY, ORANGE, TAU, ring, serratedRim, textRing, weave } from "@/lib/guilloche";
 
 /**
  * The homepage hero's 3D scene.
  *
- * A glass app window floats over an engraved seal lying on the floor, with
+ * A glass app window floats above its soft shadow on the floor, with
  * the explainer video playing on its screen and the four services hanging in
  * the space around it at different depths. As the video moves through each
  * chapter, that service's card comes forward and its line of the headline
@@ -18,8 +17,8 @@ import { NAVY, ORANGE, TAU, ring, serratedRim, textRing, weave } from "@/lib/gui
  * Built in CSS 3D rather than WebGL. A 3D library would cost 150KB+ above the
  * fold, and every label here is real text: it stays crisp at any angle and
  * remains readable to search engines and screen readers. The browser does the
- * perspective on the GPU; the script only eases the scene's rotation, keeps
- * the page in step with the video, and draws the floor seal once.
+ * perspective on the GPU; the script only eases the scene's rotation and keeps
+ * the page in step with the video.
  */
 
 /* The drifting sheets: the paperwork the service takes off your hands. */
@@ -92,55 +91,12 @@ function CardIcon({ name }: { name: HeroIcon }) {
   }
 }
 
-/** The seal that lies on the floor of the scene. Drawn once. */
-function drawFloorSeal(canvas: HTMLCanvasElement, font: string) {
-  const size = canvas.clientWidth || 660;
-  const dpr = Math.min(2, window.devicePixelRatio || 1);
-  canvas.width = Math.round(size * dpr);
-  canvas.height = Math.round(size * dpr);
-  const g = canvas.getContext("2d");
-  if (!g) return;
-  g.scale(dpr, dpr);
-  g.translate(size / 2, size / 2);
-  g.lineCap = "round";
-  g.lineJoin = "round";
-  const R = size / 2 - 6;
-
-  g.strokeStyle = `rgba(${NAVY},0.34)`;
-  g.lineWidth = 1;
-  serratedRim(g, R, 120, R * 0.012);
-  g.strokeStyle = `rgba(${NAVY},0.2)`;
-  g.lineWidth = 0.8;
-  weave(g, R * 0.92, R * 0.05, 30, 6, [1, -1]);
-  ring(g, R * 0.86, 0.3, 0.9);
-  ring(g, R * 0.845, 0.3, 0.9);
-  g.strokeStyle = `rgba(${ORANGE},0.42)`;
-  g.lineWidth = 0.9;
-  weave(g, R * 0.74, R * 0.075, 18, 5, [1, -1]);
-  ring(g, R * 0.655, 0.28, 0.8, ORANGE);
-  g.fillStyle = `rgba(${NAVY},0.28)`;
-  for (let i = 0; i < 72; i++) {
-    const th = (i / 72) * TAU;
-    g.beginPath();
-    g.arc(R * 0.62 * Math.cos(th), R * 0.62 * Math.sin(th), R * 0.008, 0, TAU);
-    g.fill();
-  }
-  g.strokeStyle = `rgba(${NAVY},0.2)`;
-  g.lineWidth = 0.8;
-  weave(g, R * 0.5, R * 0.06, 16, 7, [1, -1]);
-  ring(g, R * 0.42, 0.3, 1);
-  g.font = `800 ${Math.max(9, R * 0.034)}px ${font}`;
-  g.fillStyle = `rgba(${NAVY},0.34)`;
-  textRing(g, "SIMPLEBOOKS · ONE TEAM, ONE PLATFORM · SINCE 2016 · ", R * 0.37);
-}
-
 const POSTER = "/images/v2/hero-video-poster.jpg";
 
 export default function Hero3D() {
   const stageRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const sealRef = useRef<HTMLCanvasElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const barRefs = useRef<(HTMLElement | null)[]>([]);
@@ -306,34 +262,7 @@ export default function Hero3D() {
     video.addEventListener("playing", reveal);
     video.addEventListener("seeked", reveal);
 
-    /* ---------- the floor seal: drawn once, off the load path ---------- */
-
-    let cancelled = false;
-    const drawSeal = async () => {
-      if (document.readyState !== "complete") {
-        await new Promise<void>((resolve) => window.addEventListener("load", () => resolve(), { once: true }));
-      }
-      try {
-        await document.fonts?.ready;
-      } catch {
-        /* Draw with whatever is available. */
-      }
-      await new Promise<void>((resolve) => {
-        if (typeof window.requestIdleCallback === "function") {
-          window.requestIdleCallback(() => resolve(), { timeout: 900 });
-        } else {
-          setTimeout(resolve, 1);
-        }
-      });
-      const canvas = sealRef.current;
-      if (cancelled || !canvas) return;
-      drawFloorSeal(canvas, getComputedStyle(stage).fontFamily || "sans-serif");
-      canvas.classList.add("is_drawn");
-    };
-    void drawSeal();
-
     return () => {
-      cancelled = true;
       stop();
       io.disconnect();
       reduced.removeEventListener("change", applyMotion);
@@ -359,7 +288,6 @@ export default function Hero3D() {
         <div className="h3d_rig">
         <div className="h3d_scene" ref={sceneRef}>
           <div className="h3d_floor" aria-hidden="true">
-            <canvas className="h3d_seal" ref={sealRef} />
             <span className="h3d_floor_glow" />
           </div>
 
