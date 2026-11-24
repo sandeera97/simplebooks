@@ -42,19 +42,12 @@
 .h3d_scene { will-change: transform; }
 .h3d_scene > * { position: absolute; transform-style: preserve-3d; }
 
-/* ---------- Floor: the seal, lying flat ---------- */
+/* ---------- Floor: the window's shadow, lying flat under where it hovers ---------- */
 .h3d_floor {
   left: -290px; top: -290px; width: 580px; height: 580px;
   transform: translateY(214px) rotateX(90deg);
   animation: h3dFloorIn 1.6s var(--v2-ease) both;
 }
-.h3d_seal {
-  position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0;
-  transition: opacity 1.4s var(--v2-ease);
-  animation: h3dSpin 150s linear infinite;
-}
-.h3d_seal.is_drawn { opacity: 1; }
-/* The window's shadow on the floor, under where it hovers. */
 .h3d_floor_glow {
   position: absolute; left: 27%; top: 27%; width: 46%; height: 46%; border-radius: 50%;
   background: radial-gradient(closest-side, rgba(10, 18, 51, 0.26), rgba(10, 18, 51, 0.08) 55%, rgba(10, 18, 51, 0) 100%);
@@ -213,7 +206,6 @@
   from { opacity: 0; transform: translateY(214px) rotateX(90deg) scale(0.55); }
   to   { opacity: 1; transform: translateY(214px) rotateX(90deg) scale(1); }
 }
-@keyframes h3dSpin { to { transform: rotate(360deg); } }
 @keyframes h3dCardIn {
   from { opacity: 0; transform: translate3d(0, 40px, 420px) rotateY(-30deg); }
   to   { opacity: 1; transform: none; }
@@ -256,7 +248,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .h3d_rise, .h3d_rise_solid, .h3d_floor, .h3d_seal, .h3d_floor_glow, .h3d_device, .h3d_device_float,
+  .h3d_rise, .h3d_rise_solid, .h3d_floor, .h3d_floor_glow, .h3d_device, .h3d_device_float,
   .h3d_card_in, .h3d_card_body, .h3d_card.is_active .h3d_card_check, .h3d_chip, .h3d_chip_dot { animation: none; }
   .h3d_card, .h3d_line, .h3d_line::after, .h3d_tab { transition: none; }
   .h3d_paper { display: none; }
