@@ -33,8 +33,8 @@ export default function ForeignIncomePage() {
         secondary={{ label: "Free consultation", href: "#consultation" }}
         stats={[
           { n: "10000+", l: "Business owners supported" },
-          { n: "Zero", l: "Penalty track record" },
           { n: "15%", l: "On USD remittances" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
 

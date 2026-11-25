@@ -32,9 +32,9 @@ export default function VatPage() {
         primary={{ label: "Free VAT assessment", href: "#consultation" }}
         secondary={{ label: "Schedule consultation", href: "#consultation" }}
         stats={[
-          { n: "100%", l: "Compliance guaranteed" },
           { n: "10000+", l: "Business owners supported" },
           { n: "2 days", l: "Registration (Premier)" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
 

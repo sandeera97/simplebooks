@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import {
   PageHero, SecHead, Steps, FeatureGrid, CheckSplit, Pricing, Faq, ReviewStrip, CtaBand,
 } from "@/components/v2/blocks";
@@ -70,12 +72,12 @@ export default function IncomeTaxPage() {
         title="File your own taxes with confidence"
         lead="Upload your forms, answer a few simple questions, and get your tax return done: 100% accurate with all eligible deductions applied, and expert support by your side every step of the way."
         primary={{ label: "Get free computation", href: "https://dashboard.simplebooks.com" }}
-        secondary={{ label: "Talk to an expert", href: "/srilanka/contact" }}
+        secondary={{ label: "Talk to an expert", href: "#consultation" }}
         note="No credit card until final review."
         stats={[
           { n: "10000+", l: "Business owners supported" },
           { n: "2,500+", l: "Returns filed by our advisors" },
-          { n: "4.9★", l: "Google rating" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
 
@@ -123,7 +125,7 @@ export default function IncomeTaxPage() {
             title="Without the stress"
             lead="From answering your questions along the way to a final review before you file, our experts ensure your return is 100% accurate."
             items={FEATURES}
-            cta={{ label: "Book a demo now", href: "/srilanka/contact" }}
+            cta={{ label: "Book a demo now", href: "#consultation" }}
             aside={
               <div className="v2_panel">
                 <p className="v2_panel_h">Your return</p>
@@ -144,7 +146,7 @@ export default function IncomeTaxPage() {
             title="Simple pricing, no surprises"
             lead="Instant tax results, real human review, IRD e-filing. All inclusive, no hidden fees."
           />
-          <Pricing plans={PLANS} />
+          <Pricing plans={PLANS} href="https://dashboard.simplebooks.com" />
         </div>
       </section>
 
@@ -177,8 +179,10 @@ export default function IncomeTaxPage() {
         title="File your taxes today"
         lead="See your computation before you pay anything. If it doesn't look right, a human will walk you through it."
         primary={{ label: "Start your tax filing now", href: "https://dashboard.simplebooks.com" }}
-        secondary={{ label: "Talk to a consultant", href: "/srilanka/contact" }}
+        secondary={{ label: "Talk to a consultant", href: "#consultation" }}
       />
+
+      <LeadForm source="/tax/income-tax" {...leadFormFor("/tax/income-tax")!} />
     </PageShell>
   );
 }

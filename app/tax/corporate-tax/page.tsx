@@ -32,9 +32,9 @@ export default function CorporateTaxPage() {
         primary={{ label: "Talk to our expertise", href: "#consultation" }}
         secondary={{ label: "See all tax services", href: "/tax/income-tax" }}
         stats={[
+          { n: "10000+", l: "Business owners supported" },
           { n: "500+", l: "Corporate clients in Sri Lanka" },
-          { n: "98%", l: "Client retention rate" },
-          { n: "4.9★", l: "Google rating" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
 

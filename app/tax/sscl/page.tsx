@@ -53,9 +53,9 @@ export default function SsclPage() {
         primary={{ label: "Get SSCL guidance", href: "#consultation" }}
         secondary={{ label: "Calculate liable turnover", href: "#consultation" }}
         stats={[
+          { n: "10000+", l: "Business owners supported" },
           { n: "Expert", l: "SSCL guidance" },
-          { n: "Penalty", l: "Prevention" },
-          { n: "Full", l: "Compliance" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
 

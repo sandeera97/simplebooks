@@ -33,7 +33,7 @@ export default function CapitalGainsPage() {
         stats={[
           { n: "10000+", l: "Satisfied clients" },
           { n: "30 days", l: "Filing window" },
-          { n: "Maximum", l: "Exemptions applied" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
 

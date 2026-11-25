@@ -386,6 +386,15 @@ export function FooterV2() {
         <div className="v2_foot_cols">
           <div>
             <span className="v2_logo" style={{ color: "#fff" }}>simplebooks</span>
+            {/* The homepage's trust line, repeated on every page (website audit:
+                "add these numbers on every page"). */}
+            <div className="v2_foot_trust">
+              <p>
+                <span className="v2_foot_stars" aria-hidden="true">★★★★★</span>
+                <b>4.9 / 5</b> across 1400+ Google reviews
+              </p>
+              <p><b>10000+</b> businesses registered since 2016</p>
+            </div>
             <p className="v2_foot_about">
               Simplebooks helps small business owners and entrepreneurs grow through financial
               consulting, registrations and legal services. Backed by local knowledge from our

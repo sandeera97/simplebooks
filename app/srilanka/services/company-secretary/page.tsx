@@ -71,7 +71,7 @@ export default function CompanySecretaryPage() {
         stats={[
           { n: "10000+", l: "Businesses registered" },
           { n: "LKR 20,000", l: "Yearly, as secretary for a registered company" },
-          { n: "RCS2000335", l: "Registration number" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
 

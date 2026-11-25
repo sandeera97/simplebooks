@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import {
   PageHero, SecHead, FeatureGrid, CheckSplit, CtaBand,
 } from "@/components/v2/blocks";
@@ -31,11 +33,11 @@ export default function TaxAiBotPage() {
         title="File your taxes in one WhatsApp chat"
         lead="Ask any tax question instantly, get a free computation, and pay only if you file. Every return is reviewed by tax specialists."
         primary={{ label: "Chat on WhatsApp", href: "https://wa.me/94117555878" }}
-        secondary={{ label: "Talk to an expert", href: "/srilanka/contact" }}
+        secondary={{ label: "Talk to an expert", href: "#consultation" }}
         stats={[
-          { n: "24/7", l: "Available" },
-          { n: "100%", l: "Secure" },
-          { n: "Free", l: "Computation" },
+          { n: "10000+", l: "Business owners supported" },
+          { n: "24/7", l: "Available on WhatsApp" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
 
@@ -77,6 +79,8 @@ export default function TaxAiBotPage() {
         primary={{ label: "Chat on WhatsApp", href: "https://wa.me/94117555878" }}
         secondary={{ label: "File with the tax tool", href: "/tax/income-tax" }}
       />
+
+      <LeadForm source="/tax/ai-bot" {...leadFormFor("/tax/ai-bot")!} />
     </PageShell>
   );
 }

@@ -739,6 +739,9 @@
 .v2_news_done { font-size: 14.5px; color: rgba(255,255,255,0.78); }
 
 .v2_foot_cols { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.4fr; gap: 42px; padding: 48px 0 40px; }
+.v2_foot_trust { margin-top: 16px; display: grid; gap: 4px; font-size: 13.5px; line-height: 1.5; color: rgba(255,255,255,0.72); }
+.v2_foot_trust b { color: #fff; font-weight: 700; }
+.v2_foot_stars { color: var(--v2-orange); letter-spacing: 1.5px; margin-right: 8px; }
 .v2_foot_about { font-size: 13.5px; line-height: 1.75; color: rgba(255,255,255,0.55); margin: 18px 0 22px; max-width: 280px; }
 .v2_socials { display: flex; gap: 9px; }
 .v2_socials a {
