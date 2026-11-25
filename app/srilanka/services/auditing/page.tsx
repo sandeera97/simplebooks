@@ -40,6 +40,11 @@ export default function AuditingPage() {
         lead="Company audits stressing you out? We can fix that. Make the right decisions about your company by having access to the right metrics."
         primary={{ label: "Get audit help", href: "#consultation" }}
         secondary={{ label: "Talk to a consultant", href: "#consultation" }}
+        stats={[
+          { n: "10000+", l: "Businesses supported" },
+          { n: "10+", l: "Years of practice" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
+        ]}
       />
 
       <section className="v2_sec v2_sec_pad">

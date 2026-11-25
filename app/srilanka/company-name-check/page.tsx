@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import { PageHero, SecHead, FeatureGrid, CtaBand } from "@/components/v2/blocks";
 
 export const metadata: Metadata = pageMetadata("/srilanka/company-name-check");
@@ -46,8 +48,10 @@ export default function CompanyNameCheckPage() {
         title="Found a name that's free"
         lead="We can reserve it and have your company registered within 5–6 working weeks, subject to the Registrar's approval."
         primary={{ label: "Start registration", href: "/business-registration" }}
-        secondary={{ label: "Talk to a consultant", href: "/srilanka/contact" }}
+        secondary={{ label: "Talk to a consultant", href: "#consultation" }}
       />
+
+      <LeadForm source="/srilanka/company-name-check" {...leadFormFor("/srilanka/company-name-check")!} />
     </PageShell>
   );
 }

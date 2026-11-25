@@ -58,6 +58,11 @@ export default function LegalPage() {
         lead="Ensure legal compliance in your company with Simplebooks as your legal counsel. Commission, review and close contracts without complications."
         primary={{ label: "Get a free legal consultation", href: "#consultation" }}
         secondary={{ label: "See all services", href: "/srilanka/services" }}
+        stats={[
+          { n: "10000+", l: "Businesses trust Simplebooks" },
+          { n: "10+", l: "Years of practice" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
+        ]}
       />
 
       <section className="v2_sec v2_sec_pad">

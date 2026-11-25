@@ -48,9 +48,9 @@ export default function WebinarPage() {
         primary={{ label: "Browse tax topics", href: "#consultation" }}
         secondary={{ label: "View past webinars", href: "/srilanka/videos" }}
         stats={[
+          { n: "10000+", l: "Business owners supported" },
           { n: "Expert-led", l: "Sessions" },
-          { n: "Interactive", l: "Learning" },
-          { n: "Multi-device", l: "Access" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
 

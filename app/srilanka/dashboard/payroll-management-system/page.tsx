@@ -65,8 +65,8 @@ export default function PayrollPage() {
         note="Full access for free. No credit card required."
         stats={[
           { n: "10000+", l: "Businesses in Sri Lanka" },
-          { n: "5 min", l: "To calculate a run" },
           { n: "100%", l: "Labour-law compliant" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
 

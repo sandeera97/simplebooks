@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import { PageHero, SplitSection, CtaBand } from "@/components/v2/blocks";
 
 export const metadata: Metadata = pageMetadata("/srilanka/services");
@@ -40,8 +42,13 @@ export default function ServicesPage() {
         eyebrow="What we do"
         title="Everything your business needs, under one roof"
         lead="One team of accountants, company secretaries and lawyers, so you're never handed off to a stranger halfway through."
-        primary={{ label: "Talk to a consultant", href: "/srilanka/contact" }}
+        primary={{ label: "Talk to a consultant", href: "#consultation" }}
         secondary={{ label: "See the dashboard", href: "/srilanka/dashboard/accounting-tool" }}
+        stats={[
+          { n: "10000+", l: "Businesses supported" },
+          { n: "10+", l: "Years of practice" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
+        ]}
       />
 
       <section className="v2_sec v2_sec_pad">
@@ -161,7 +168,7 @@ export default function ServicesPage() {
               "Avoid potential disputes and set up your business for success by making sure all the shareholders see eye-to-eye on all the details.",
               "Greater protection to shareholders over and above the standard articles of association both in terms of how the company is run, decision making, minority shareholder and majority shareholder rights.",
             ]}
-            cta={{ label: "Talk to a consultant", href: "/srilanka/contact" }}
+            cta={{ label: "Talk to a consultant", href: "#consultation" }}
             aside={
               <Panel
                 label="What it settles"
@@ -226,9 +233,11 @@ export default function ServicesPage() {
       <CtaBand
         title="Not sure which service you need"
         lead="Thirty minutes with a consultant who has done this several thousand times. No obligation, no sales script."
-        primary={{ label: "Set up a free consultation", href: "/srilanka/contact" }}
+        primary={{ label: "Set up a free consultation", href: "#consultation" }}
         secondary={{ label: "Check a company name", href: "/srilanka/company-name-check" }}
       />
+
+      <LeadForm source="/srilanka/services" {...leadFormFor("/srilanka/services")!} />
     </PageShell>
   );
 }

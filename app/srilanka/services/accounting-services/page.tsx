@@ -53,6 +53,11 @@ export default function BookkeepingPage() {
         primary={{ label: "Get a free consultation", href: "#consultation" }}
         secondary={{ label: "See the dashboard", href: "/srilanka/dashboard/accounting-tool" }}
         note="24-7 bookkeeping and accounting services."
+        stats={[
+          { n: "10000+", l: "Businesses supported" },
+          { n: "10+", l: "Years of practice" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
+        ]}
       />
 
       <section className="v2_sec v2_sec_pad">

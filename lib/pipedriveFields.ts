@@ -93,6 +93,8 @@ export const ACCOUNT_FIELDS: Record<PipedriveAccount, AccountFields> = {
     },
     questionByRoute: {
       "/business-registration": "53a646ed9d599c8c7beb4afde8f90fb5adfca94b",
+      /* Same form and question as /business-registration (lib/leadForms.ts). */
+      "/srilanka/company-name-check": "53a646ed9d599c8c7beb4afde8f90fb5adfca94b",
       "/srilanka/dashboard/payroll-management-system": "8b84c1b47f1a364ff966877464f44b9d61a4c14e",
     },
     serviceAnswerByRoute: {

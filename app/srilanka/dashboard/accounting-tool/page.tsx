@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import {
   PageHero, SecHead, FeatureGrid, Steps, CheckSplit, Faq, CtaBand, ReviewStrip,
 } from "@/components/v2/blocks";
@@ -52,7 +54,7 @@ export default function AccountingToolPage() {
         title="All-in-one accounting that simplifies your business"
         lead="Manage invoices, expenses and financial records securely, and generate the reports that guide smart decisions, all in one tool."
         primary={{ label: "Explore the dashboard", href: "https://dashboard.simplebooks.com" }}
-        secondary={{ label: "Talk to an expert", href: "/srilanka/contact" }}
+        secondary={{ label: "Talk to an expert", href: "#consultation" }}
         stats={[
           { n: "10000+", l: "Businesses in Sri Lanka" },
           { n: "3 clicks", l: "To a full report" },
@@ -122,8 +124,10 @@ export default function AccountingToolPage() {
         title="Put your books on autopilot"
         lead="Join over 10000+ business owners that trust us to keep their numbers straight."
         primary={{ label: "Explore the dashboard", href: "https://dashboard.simplebooks.com" }}
-        secondary={{ label: "Talk to a consultant", href: "/srilanka/contact" }}
+        secondary={{ label: "Talk to a consultant", href: "#consultation" }}
       />
+
+      <LeadForm source="/srilanka/dashboard/accounting-tool" {...leadFormFor("/srilanka/dashboard/accounting-tool")!} />
     </PageShell>
   );
 }

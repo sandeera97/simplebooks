@@ -46,9 +46,9 @@ export default function TinRegistrationPage() {
         secondary={{ label: "Free consultation", href: "#consultation" }}
         note="2025 updates TIN number registration guide."
         stats={[
+          { n: "10000+", l: "Business owners supported" },
           { n: "100%", l: "Accuracy guaranteed" },
-          { n: "Fast", l: "Processing" },
-          { n: "Expert", l: "Support" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
 

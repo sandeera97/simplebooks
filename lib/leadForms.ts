@@ -21,12 +21,14 @@ import type { LeadFormConfig } from "@/components/v2/LeadForm";
 
 const YES_NO = ["Yes", "No"];
 
-/** The React tax pages: single name, one question, message box. */
-function taxForm(question: { label: string; options?: string[] }): LeadFormConfig {
+/** The React tax pages: single name, one question, message box. Pages that
+ *  had no form on the live site have no qualifying question to copy, so they
+ *  leave it out rather than invent one. */
+function taxForm(question?: { label: string; options?: string[] }): LeadFormConfig {
   return {
     heading: "Get Expert Tax Help Today",
     nameMode: "single",
-    question: {
+    question: question && {
       label: question.label,
       placeholder: "Select an option",
       options: question.options ?? YES_NO,
@@ -56,6 +58,25 @@ function serviceForm(heading = "Get Started"): LeadFormConfig {
     buttonLabel: "Set up a Free Consultation",
   };
 }
+
+/** The business registration page's form. Company name check reuses it:
+ *  same audience, same question. */
+const BUSINESS_REGISTRATION: LeadFormConfig = {
+  heading: "Set up a free consultation",
+  nameMode: "split",
+  question: {
+    label: "Have you decided on a company name?",
+    placeholder: "Select an option",
+    options: YES_NO,
+    required: true,
+  },
+  showLanguage: true,
+  languageRequired: true,
+  languagePlaceholder: "Select a language",
+  languageOptions: ["English", "Sinhala", "Tamil"],
+  showConsent: false,
+  buttonLabel: "Set up a Free Consultation",
+};
 
 export const LEAD_FORMS: Record<string, LeadFormConfig> = {
   /* ---- Gravity Forms service pages ---- */
@@ -92,22 +113,7 @@ export const LEAD_FORMS: Record<string, LeadFormConfig> = {
   },
 
   /* ---- Business registration (its own React page) ---- */
-  "/business-registration": {
-    heading: "Set up a free consultation",
-    nameMode: "split",
-    question: {
-      label: "Have you decided on a company name?",
-      placeholder: "Select an option",
-      options: YES_NO,
-      required: true,
-    },
-    showLanguage: true,
-    languageRequired: true,
-    languagePlaceholder: "Select a language",
-    languageOptions: ["English", "Sinhala", "Tamil"],
-    showConsent: false,
-    buttonLabel: "Set up a Free Consultation",
-  },
+  "/business-registration": BUSINESS_REGISTRATION,
 
   /* ---- APIT is Gravity Forms and qualifies on the company name ---- */
   "/tax/apit": {
@@ -156,12 +162,48 @@ export const LEAD_FORMS: Record<string, LeadFormConfig> = {
     buttonLabel: "Sign up for Free Webinar",
     note: "We'll only send you notifications about free webinars. No spam, unsubscribe anytime.",
   },
+
+  /* ---- No form on the live site (see NO_FORM_ON_LIVE). The client's website
+         audit asked for the form on the page itself rather than a trip to
+         /srilanka/contact, so each carries the form of its closest sibling ---- */
+  "/income-tax-filing": taxForm(),
+  "/tax/income-tax": taxForm(),
+  "/tax/ai-bot": taxForm(),
+  "/srilanka/dashboard/accounting-tool": serviceForm(),
+  "/srilanka/company-name-check": BUSINESS_REGISTRATION,
+  /* Covers every service, so it asks which one, with the contact form's list
+     (the same names as the business account's "Services Required" field). */
+  "/srilanka/services": {
+    ...serviceForm(),
+    services: {
+      label: "Service required",
+      placeholder: "Select a service",
+      options: [
+        "Business registration",
+        "Bookkeeping",
+        "Payroll",
+        "Tax",
+        "Company secretary",
+        "Legal",
+        "Trademark",
+        "General",
+      ],
+      required: true,
+    },
+  },
+  /* Not launched yet: the page's buttons are "Join the waitlist". */
+  "/srilanka/services/value-added-tax-filling": {
+    ...serviceForm("Join the waitlist"),
+    lead: "Be the first to know when the Simplebooks VAT tool launches.",
+    buttonLabel: "Join the waitlist",
+  },
 };
 
 /**
  * Checked on the live site and confirmed to have NO lead form. Recorded so a
  * future pass does not have to re-check, and so their absence reads as a
- * finding rather than an oversight.
+ * finding rather than an oversight. Since the website audit, the ones with a
+ * LEAD_FORMS entry carry a form here anyway.
  */
 export const NO_FORM_ON_LIVE = [
   "/", // homepage has one, but it is the existing GetStarted section

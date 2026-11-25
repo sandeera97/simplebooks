@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import {
   PageHero, SecHead, FeatureGrid, Steps, CheckSplit, Pricing, Faq, CtaBand, ReviewStrip,
 } from "@/components/v2/blocks";
@@ -68,7 +70,7 @@ export default function TaxToolPage() {
         title="File your own taxes with confidence"
         lead="Answer a few simple questions and we take care of the rest. Your return is accurate, every eligible deduction applied, and a human checks it before it's filed."
         primary={{ label: "Start your return", href: "https://dashboard.simplebooks.com" }}
-        secondary={{ label: "Talk to an expert", href: "/srilanka/contact" }}
+        secondary={{ label: "Talk to an expert", href: "#consultation" }}
         note="No credit card until final review."
         stats={[
           { n: "10000+", l: "Business owners supported" },
@@ -128,7 +130,11 @@ export default function TaxToolPage() {
             title="Simple pricing, no surprises"
             lead="One fee, everything included. You only pay after you've seen your computation."
           />
-          <Pricing plans={PLANS} note="Price is per year of assessment and includes IRD e-filing." />
+          <Pricing
+            plans={PLANS}
+            note="Price is per year of assessment and includes IRD e-filing."
+            href="https://dashboard.simplebooks.com"
+          />
         </div>
       </section>
 
@@ -150,8 +156,10 @@ export default function TaxToolPage() {
         title="Get your return done properly this year"
         lead="See your computation before you pay anything. If it doesn't look right, a human will walk you through it."
         primary={{ label: "Start your return", href: "https://dashboard.simplebooks.com" }}
-        secondary={{ label: "Talk to a consultant", href: "/srilanka/contact" }}
+        secondary={{ label: "Talk to a consultant", href: "#consultation" }}
       />
+
+      <LeadForm source="/income-tax-filing" {...leadFormFor("/income-tax-filing")!} />
     </PageShell>
   );
 }

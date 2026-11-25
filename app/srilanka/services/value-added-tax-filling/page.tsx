@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import "@/app/home-v2.css";
 import PageShell from "@/components/v2/PageShell";
+import LeadForm from "@/components/v2/LeadForm";
+import { leadFormFor } from "@/lib/leadForms";
 import {
   PageHero, SecHead, FeatureGrid, Steps, Compare, Faq, CtaBand,
 } from "@/components/v2/blocks";
@@ -51,9 +53,14 @@ export default function VatToolPage() {
         eyebrow="VAT tool"
         title="VAT filing shouldn't take all day"
         lead="Simplebooks turns hours of manual schedule creation, validation headaches and RAMIS portal struggles into a few clicks. Built for Sri Lankan accountants."
-        primary={{ label: "Join the waitlist", href: "/srilanka/contact" }}
-        secondary={{ label: "Talk to us", href: "/srilanka/contact" }}
+        primary={{ label: "Join the waitlist", href: "#consultation" }}
+        secondary={{ label: "Talk to us", href: "#consultation" }}
         note="Be the first to know when we launch. No spam, ever."
+        stats={[
+          { n: "10000+", l: "Businesses in Sri Lanka" },
+          { n: "10+", l: "Years of practice" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
+        ]}
       />
 
       <section className="v2_sec v2_sec_pad">
@@ -104,8 +111,13 @@ export default function VatToolPage() {
       <CtaBand
         title="Ready to simplify your VAT filing"
         lead="Join the waitlist and be the first to know when the Simplebooks VAT tool launches."
-        primary={{ label: "Join the waitlist", href: "/srilanka/contact" }}
+        primary={{ label: "Join the waitlist", href: "#consultation" }}
         secondary={{ label: "See the dashboard", href: "/srilanka/dashboard/accounting-tool" }}
+      />
+
+      <LeadForm
+        source="/srilanka/services/value-added-tax-filling"
+        {...leadFormFor("/srilanka/services/value-added-tax-filling")!}
       />
     </PageShell>
   );

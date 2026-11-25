@@ -48,6 +48,11 @@ export default function PayrollServicesPage() {
         lead="We are here to help you effectively manage your payroll."
         primary={{ label: "Get a free consultation", href: "#consultation" }}
         secondary={{ label: "See the payroll tool", href: "/srilanka/dashboard/payroll-management-system" }}
+        stats={[
+          { n: "10000+", l: "Businesses in Sri Lanka" },
+          { n: "10+", l: "Years of practice" },
+          { n: "4.9★", l: "Across 1400+ Google reviews" },
+        ]}
       />
 
       <section className="v2_sec v2_sec_pad">
