@@ -23,8 +23,8 @@ export function BankStrip() {
 const STATS = [
   { n: "10000", plus: true, l: "Businesses registered" },
   { n: "10", plus: true, l: "Years of practice" },
-  { n: "3", plus: false, l: "Countries, local offices" },
-  { n: "4.9", star: true, l: "Average customer rating" },
+  { n: "1400", plus: true, l: "Google reviews" },
+  { n: "4.9", star: true, l: "Average Google rating" },
 ];
 
 export function Stats() {
@@ -68,7 +68,7 @@ const SERVICES = [
     tags: ["Monthly books", "Reconciliations", "Management reports"],
     href: "/srilanka/services/accounting-services",
     art: "books" as ServiceArtKind,
-    tint: "blue",
+    tint: "mist",
   },
   {
     n: "03",
@@ -77,7 +77,7 @@ const SERVICES = [
     tags: ["Contracts", "Trademarks", "IP"],
     href: "/srilanka/legal",
     art: "legal" as ServiceArtKind,
-    tint: "green",
+    tint: "sand",
   },
   {
     n: "04",
@@ -86,7 +86,7 @@ const SERVICES = [
     tags: ["EPF / ETF", "Payslips", "Bonuses"],
     href: "/srilanka/services/payroll-managment",
     art: "payroll" as ServiceArtKind,
-    tint: "violet",
+    tint: "mist",
   },
   {
     n: "05",
@@ -95,7 +95,7 @@ const SERVICES = [
     tags: ["Sinhala", "English", "Tamil", "WhatsApp"],
     href: "/srilanka/contact",
     art: "support" as ServiceArtKind,
-    tint: "sand",
+    tint: "orange",
   },
   {
     n: "06",
@@ -398,7 +398,7 @@ export function FooterV2() {
             <p className="v2_foot_about">
               Simplebooks helps small business owners and entrepreneurs grow through financial
               consulting, registrations and legal services. Backed by local knowledge from our
-              offices in Sri Lanka, Bangladesh and India.
+              office in Colombo.
             </p>
             <div className="v2_socials">
               <a href="https://facebook.com/simplebooks" aria-label="Simplebooks on Facebook">
@@ -439,18 +439,12 @@ export function FooterV2() {
           </div>
 
           <div>
-            <p className="v2_foot_h">Offices</p>
+            <p className="v2_foot_h">Office</p>
             <p className="v2_office">
               Simplebooks (Pvt) Ltd<br />
               Millennium Tower, 2nd Floor,<br />
               345 Galle Rd, Colombo 00300,<br />
               Sri Lanka · 0117 555 878
-            </p>
-            <p className="v2_office">
-              REGUS, Crystal Palace, House 22,<br />
-              Gulshan Ave, Gulshan-1,<br />
-              Dhaka 1212, Bangladesh<br />
-              +880 1312 329255
             </p>
           </div>
         </div>

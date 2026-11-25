@@ -34,7 +34,7 @@ export default function Hero() {
       <div className="v2_wrap v2_hero_in">
         <div>
           <p className="v2_kicker h3d_rise" style={{ "--d": 0 } as React.CSSProperties}>
-            EST. 2016 · COLOMBO · DHAKA · BENGALURU
+            EST. 2016 · COLOMBO, SRI LANKA
           </p>
           <p className="v2_pill_note h3d_rise" style={{ "--d": 1 } as React.CSSProperties}>
             The right place to start your business
@@ -50,7 +50,7 @@ export default function Hero() {
 
           <p className="v2_lead v2_hero_p h3d_rise" style={{ "--d": 3 } as React.CSSProperties}>
             One team and one platform behind 10000+ businesses since 2016, with tax and
-            compliance handled alongside, across Sri Lanka, Bangladesh and India.
+            compliance handled alongside, across South Asia.
           </p>
 
           <div className="v2_hero_cta h3d_rise" style={{ "--d": 4 } as React.CSSProperties}>

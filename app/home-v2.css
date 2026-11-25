@@ -285,8 +285,8 @@
   -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 40%, transparent 100%);
 }
 .v2_blob { position: absolute; border-radius: 50%; pointer-events: none; filter: blur(2px); }
-.v2_blob_a { background: radial-gradient(closest-side, rgba(255,91,46,0.18), transparent 72%); animation: v2drift 26s ease-in-out infinite; }
-.v2_blob_b { background: radial-gradient(closest-side, rgba(38,74,196,0.16), transparent 72%); animation: v2drift 34s ease-in-out infinite; }
+.v2_blob_a { background: radial-gradient(closest-side, rgba(255,91,46,0.14), transparent 72%); animation: v2drift 26s ease-in-out infinite; }
+.v2_blob_b { background: radial-gradient(closest-side, rgba(38,74,196,0.09), transparent 72%); animation: v2drift 34s ease-in-out infinite; }
 
 @keyframes v2drift {
   0%   { transform: translate3d(0,0,0) scale(1); }
@@ -416,20 +416,22 @@
 .v2_card_dark .v2_tag { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.88); }
 .v2_card_dark .v2_card_go { border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.75); }
 
-/* Feature cards (FeatureGrid) cycle the brand tints, with the number in a
-   matching badge (website audit: "too many similar cards"). */
-.v2_card_fg.v2_fg_c0 { background: #fff4ee; border-color: rgba(255, 91, 46, 0.14); }
-.v2_card_fg.v2_fg_c1 { background: #eef2ff; border-color: rgba(70, 88, 218, 0.13); }
-.v2_card_fg.v2_fg_c2 { background: #eaf7f0; border-color: rgba(46, 196, 138, 0.18); }
-.v2_card_fg.v2_fg_c3 { background: #f3f0ff; border-color: rgba(120, 90, 230, 0.13); }
+/* Feature cards (FeatureGrid) alternate calm brand washes, with the number in
+   a badge (website audit: "too many similar cards"; then the client asked to
+   "reduce a bit of coloring", so orange, white and a cool navy wash only).
+   No sand wash: these grids often sit on the sand band, where it would vanish. */
+.v2_card_fg.v2_fg_c0 { background: #fff5f0; border-color: rgba(255, 91, 46, 0.12); }
+.v2_card_fg.v2_fg_c1 { background: #fff; }
+.v2_card_fg.v2_fg_c2 { background: #f3f4f8; border-color: rgba(10, 18, 51, 0.07); }
+.v2_card_fg.v2_fg_c3 { background: #fff; }
 .v2_card_fg .v2_card_num {
   display: inline-grid; place-items: center; min-width: 36px; height: 36px; padding: 0 8px;
   border-radius: 12px; background: #fff; box-shadow: 0 8px 18px -12px rgba(10, 18, 51, 0.45);
 }
-.v2_fg_c0 .v2_card_num { color: #e14a1f; }
-.v2_fg_c1 .v2_card_num { color: #4658da; }
-.v2_fg_c2 .v2_card_num { color: #178a5d; }
-.v2_fg_c3 .v2_card_num { color: #6a4fd6; }
+.v2_fg_c0 .v2_card_num,
+.v2_fg_c2 .v2_card_num { color: #e14a1f; }
+.v2_fg_c1 .v2_card_num,
+.v2_fg_c3 .v2_card_num { color: var(--v2-navy); }
 .v2_card_fg .v2_tag { background: rgba(255, 255, 255, 0.78); }
 
 /* ---------- Platform (dark) ---------- */
