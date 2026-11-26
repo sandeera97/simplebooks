@@ -16,13 +16,6 @@ const OFFICES = [
     phone: "0117 555 878",
     tel: "tel:+94117555878",
   },
-  {
-    flag: "🇧🇩",
-    city: "Dhaka",
-    lines: ["REGUS, Crystal Palace, House 22,", "Gulshan Ave, Gulshan-1,", "Dhaka 1212, Bangladesh"],
-    phone: "+880 1312 329255",
-    tel: "tel:+8801312329255",
-  },
 ];
 
 export default function ContactPage() {

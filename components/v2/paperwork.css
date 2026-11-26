@@ -57,10 +57,12 @@
   content: ""; position: absolute; left: -1px; right: -1px; top: -1px; height: 6px;
   border-radius: 8px 8px 0 0; background: var(--acc);
 }
+/* Brand family only (client: "reduce a bit of coloring"). The one-letter
+   suffixes are kept from the old palette so PaperworkStage.tsx is unchanged. */
 .pw_acc_o { --acc: #ff5b2e; }
-.pw_acc_b { --acc: #4658da; }
-.pw_acc_g { --acc: #20a874; }
-.pw_acc_v { --acc: #7a5ae6; }
+.pw_acc_b { --acc: #59637f; }
+.pw_acc_g { --acc: #ff8f63; }
+.pw_acc_v { --acc: #98a0b8; }
 .pw_acc_s { --acc: #c8902b; }
 .pw_acc_n { --acc: #0a1233; }
 .pw_sheet_top { display: flex; align-items: center; justify-content: space-between; margin-top: 3px; }

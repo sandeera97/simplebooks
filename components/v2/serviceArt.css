@@ -4,11 +4,11 @@
    .v2_card .sa so the card's own `p` margins and colours don't leak in. */
 
 .sim_bk_v2 .v2_card_art { overflow: hidden; }
-.sim_bk_v2 .v2_tint_orange { background: #fff4ee; border-color: rgba(255, 91, 46, 0.14); }
-.sim_bk_v2 .v2_tint_blue { background: #eef2ff; border-color: rgba(70, 88, 218, 0.13); }
-.sim_bk_v2 .v2_tint_green { background: #eaf7f0; border-color: rgba(46, 196, 138, 0.18); }
-.sim_bk_v2 .v2_tint_violet { background: #f3f0ff; border-color: rgba(120, 90, 230, 0.13); }
-.sim_bk_v2 .v2_tint_sand { background: #fbf5e6; border-color: rgba(190, 150, 60, 0.18); }
+/* Calm washes from the brand palette only (client, Nov 2026: "reduce a bit of
+   coloring", so the blue, green and violet tints are gone). */
+.sim_bk_v2 .v2_tint_orange { background: #fff5f0; border-color: rgba(255, 91, 46, 0.12); }
+.sim_bk_v2 .v2_tint_mist { background: #f3f4f8; border-color: rgba(10, 18, 51, 0.07); }
+.sim_bk_v2 .v2_tint_sand { background: #f6f3ed; border-color: rgba(10, 18, 51, 0.07); }
 .sim_bk_v2 .v2_card_art .v2_tag { background: rgba(255, 255, 255, 0.75); }
 .sim_bk_v2 .v2_card_art.v2_card_dark .v2_tag { background: rgba(255, 255, 255, 0.12); }
 
@@ -83,9 +83,9 @@
   color: #fff; font-size: 11px; font-weight: 800;
 }
 .v2_card .sa_people span:first-child { margin-left: 0; background: #ff5b2e; }
-.v2_card .sa_people span:nth-child(2) { background: #4658da; }
-.v2_card .sa_people span:nth-child(3) { background: #2ec48a; }
-.v2_card .sa_people span:nth-child(4) { background: #7a5ae6; }
+.v2_card .sa_people span:nth-child(2) { background: #59637f; }
+.v2_card .sa_people span:nth-child(3) { background: #c8902b; }
+.v2_card .sa_people span:nth-child(4) { background: #ff8f63; }
 .v2_card .sa_people span:nth-child(5) { background: #0a1233; }
 .v2_card .sa_people b { margin-left: 10px; color: var(--v2-navy); font-size: 12.5px; font-weight: 800; }
 .v2_card .sa_chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
