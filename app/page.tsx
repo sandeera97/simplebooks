@@ -25,7 +25,7 @@ export default function HomePage() {
   return (
     <div className="sim_bk_v2">
       <HeaderV2 />
-      <main>
+      <main id="main" tabIndex={-1}>
         <Hero />
         <BankStrip />
         <Stats />

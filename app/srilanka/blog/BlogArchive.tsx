@@ -51,7 +51,7 @@ export default function BlogArchive({ posts = LEGACY_POSTS as readonly ArchivePo
         </div>
       </section>
 
-      <main className="blog-index-main">
+      <main className="blog-index-main" id="main" tabIndex={-1}>
         <div className="blog-index-container">
           <div className="blog-index-filters" aria-label="Filter articles by category">
             {categories.map((category) => (

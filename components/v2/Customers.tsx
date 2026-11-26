@@ -56,23 +56,38 @@ export default function Customers() {
   const [i, setI] = useState(0);
   const [dir, setDir] = useState<1 | -1>(1);
   const [paused, setPaused] = useState(false);
+  const [inView, setInView] = useState(false);
+  /* Set once the visitor changes slide themselves. Until then the slides turn
+     on a timer, and a live region announcing each one would talk over
+     whatever a screen-reader user is doing, every six seconds. */
+  const [userDriven, setUserDriven] = useState(false);
   const timer = useRef<number | null>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
 
   const go = useCallback((d: 1 | -1) => {
     setDir(d);
     setI((p) => (p + d + QUOTES.length) % QUOTES.length);
   }, []);
 
+  // Only rotate while the card is on screen; it kept cycling 6,000px away.
   useEffect(() => {
-    if (paused) return;
+    const el = cardRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    const io = new IntersectionObserver(([e]) => setInView(e.isIntersecting), { threshold: 0.2 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (paused || !inView || userDriven) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     timer.current = window.setTimeout(() => go(1), DELAY);
     return () => {
       if (timer.current) window.clearTimeout(timer.current);
     };
-    // re-arms on every slide change, so a manual click restarts the countdown
-  }, [i, paused, go]);
+    // re-arms on every slide change; stops for good once the visitor takes over
+  }, [i, paused, inView, userDriven, go]);
 
   // don't keep cycling in a background tab
   useEffect(() => {
@@ -96,7 +111,7 @@ export default function Customers() {
             <div className="v2_score v2_reveal">
               <div>
                 <p className="v2_score_n">4.9</p>
-                <p className="v2_stars">★★★★★</p>
+                <p className="v2_stars" role="img" aria-label="Rated 4.9 out of 5">★★★★★</p>
                 <p className="v2_score_s">1400+ Google reviews</p>
               </div>
               <div>
@@ -114,6 +129,7 @@ export default function Customers() {
           </div>
 
           <div
+            ref={cardRef}
             className="v2_quote v2_reveal"
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
@@ -122,7 +138,7 @@ export default function Customers() {
           >
             <p className="v2_quote_mark">&ldquo;</p>
 
-            <div className="v2_quote_stage" aria-live="polite">
+            <div className="v2_quote_stage" aria-live={userDriven ? "polite" : "off"}>
               {/* keyed so each slide remounts and replays the enter animation */}
               <div key={i} className={`v2_quote_slide ${dir === 1 ? "from_right" : "from_left"}`}>
                 <p className="v2_quote_t">{cur.q}</p>
@@ -134,8 +150,8 @@ export default function Customers() {
             </div>
 
             <div className="v2_quote_nav">
-              <button type="button" onClick={() => go(-1)} aria-label="Previous review">←</button>
-              <button type="button" onClick={() => go(1)} aria-label="Next review">→</button>
+              <button type="button" onClick={() => { setUserDriven(true); go(-1); }} aria-label="Previous review">←</button>
+              <button type="button" onClick={() => { setUserDriven(true); go(1); }} aria-label="Next review">→</button>
 
               <div className="v2_dots" role="tablist" aria-label="Reviews">
                 {QUOTES.map((_, n) => (
@@ -147,13 +163,19 @@ export default function Customers() {
                     aria-label={`Review ${n + 1}`}
                     className={`v2_dot_btn${n === i ? " is_on" : ""}`}
                     onClick={() => {
+                      setUserDriven(true);
                       setDir(n > i ? 1 : -1);
                       setI(n);
                     }}
                   >
                     <span
                       className="v2_dot_fill"
-                      style={{ animationDuration: `${DELAY}ms`, animationPlayState: paused ? "paused" : "running" }}
+                      style={{
+                        animationDuration: `${DELAY}ms`,
+                        animationPlayState: paused || !inView ? "paused" : "running",
+                        /* a stopped carousel shows a full bar, not a countdown */
+                        ...(userDriven && n === i ? { animation: "none", transform: "scaleX(1)" } : {}),
+                      }}
                     />
                   </button>
                 ))}
@@ -169,7 +191,7 @@ export default function Customers() {
         <div className="v2_mini">
           {MINI.map((m) => (
             <article key={m.name} className="v2_mini_c v2_reveal">
-              <p className="v2_stars">★★★★★</p>
+              <p className="v2_stars" role="img" aria-label="5 out of 5 stars">★★★★★</p>
               <p>{m.q}</p>
               <b>{m.name}</b>
               <span>{m.role}</span>
@@ -179,7 +201,7 @@ export default function Customers() {
 
         <div style={{ textAlign: "center", marginTop: 40 }}>
           <Link className="v2_btn v2_btn_ghost" href="/srilanka/testimonials">
-            View more reviews <span className="v2_arrow">→</span>
+            View more reviews <span className="v2_arrow" aria-hidden="true">→</span>
           </Link>
         </div>
       </div>

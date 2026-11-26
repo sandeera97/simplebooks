@@ -41,7 +41,32 @@ export default function Reveal() {
       else io.observe(n);
     });
 
-    return () => io.disconnect();
+    /* An in-page jump ("Get a free consultation" -> #consultation) used to land
+       on a blank section that faded in for a second. Reveal the target's
+       contents as the jump starts, with no stagger. */
+    const showTarget = (hash: string) => {
+      const id = decodeURIComponent(hash.replace(/^#/, ""));
+      const target = id ? document.getElementById(id) : null;
+      if (!target) return;
+      const inside = [target, ...Array.from(target.querySelectorAll<HTMLElement>(".v2_reveal"))];
+      inside.forEach((n) => {
+        if (!n.classList.contains("v2_reveal")) return;
+        n.style.transitionDelay = "0s";
+        n.classList.add("is_in");
+        io.unobserve(n);
+      });
+    };
+    const onClick = (e: MouseEvent) => {
+      const a = (e.target as Element | null)?.closest?.("a[href^='#']") as HTMLAnchorElement | null;
+      if (a?.hash) showTarget(a.hash);
+    };
+    if (location.hash) showTarget(location.hash);
+    document.addEventListener("click", onClick);
+
+    return () => {
+      io.disconnect();
+      document.removeEventListener("click", onClick);
+    };
   }, []);
 
   return null;

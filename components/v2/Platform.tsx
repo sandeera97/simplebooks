@@ -171,11 +171,12 @@ export default function Platform() {
           </div>
 
           <Link className="v2_btn v2_btn_primary v2_reveal" href="/srilanka/dashboard/accounting-tool">
-            Explore the dashboard <span className="v2_arrow">→</span>
+            Explore the dashboard <span className="v2_arrow" aria-hidden="true">→</span>
           </Link>
         </div>
 
-        <div className="v2_reveal">
+        {/* An illustration of the dashboard; the copy beside it says the same in words. */}
+        <div className="v2_reveal" aria-hidden="true">
           <DashboardMock />
         </div>
       </div>

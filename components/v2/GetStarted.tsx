@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useEffect, useRef, useState, FormEvent } from "react";
 import { submitLead, LeadNotConfiguredError } from "@/lib/leads";
 import { SuccessIcon } from "./icons";
+import { EMAIL_PATTERN, NAME_PATTERN, PHONE_PATTERN } from "./LeadForm";
 
 const PERKS = [
   "Fixed quote before any work starts",
@@ -25,6 +26,12 @@ export default function GetStarted() {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [failed, setFailed] = useState(false);
+  const doneRef = useRef<HTMLDivElement>(null);
+
+  // Announce the thank-you and keep focus with it: the button just vanished.
+  useEffect(() => {
+    if (sent) doneRef.current?.focus();
+  }, [sent]);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -73,16 +80,16 @@ export default function GetStarted() {
           <ul className="v2_start_list v2_reveal">
             {PERKS.map((p) => (
               <li key={p}>
-                <span className="v2_mark v2_mark_good">✓</span>
+                <span className="v2_mark v2_mark_good" aria-hidden="true">✓</span>
                 {p}
               </li>
             ))}
           </ul>
 
-          <div className="v2_contact v2_reveal">
+          <div className="v2_start_contact v2_reveal">
             <div>
               <i>CALL</i>
-              <b>0117 555 878</b>
+              <a href="tel:+94117555878">0117 555 878</a>
             </div>
             <div>
               <i>VISIT</i>
@@ -93,7 +100,7 @@ export default function GetStarted() {
 
         <div className="v2_form v2_reveal">
           {sent ? (
-            <div style={{ textAlign: "center", padding: "40px 0" }}>
+            <div style={{ textAlign: "center", padding: "40px 0", outline: "none" }} ref={doneRef} tabIndex={-1} role="status">
               <p style={{ marginBottom: 14 }}><SuccessIcon /></p>
               <h3 className="v2_h3" style={{ marginBottom: 8 }}>Thank you!</h3>
               <p className="v2_body">
@@ -101,7 +108,7 @@ export default function GetStarted() {
               </p>
             </div>
           ) : (
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit} method="post" aria-label="Free consultation request">
               <p className="v2_form_req">
                 <span>*</span> indicates a required field
               </p>
@@ -109,17 +116,20 @@ export default function GetStarted() {
               <div className="v2_grid2">
                 <div className="v2_field">
                   <label htmlFor="v2fn">First name <span>*</span></label>
-                  <input id="v2fn" name="firstName" className="v2_input" required placeholder="Nimal" />
+                  <input id="v2fn" name="firstName" className="v2_input" required pattern={NAME_PATTERN} autoComplete="given-name" placeholder="Nimal" />
                 </div>
                 <div className="v2_field">
                   <label htmlFor="v2ln">Last name <span>*</span></label>
-                  <input id="v2ln" name="lastName" className="v2_input" required placeholder="Perera" />
+                  <input id="v2ln" name="lastName" className="v2_input" required pattern={NAME_PATTERN} autoComplete="family-name" placeholder="Perera" />
                 </div>
               </div>
 
               <div className="v2_field">
                 <label htmlFor="v2em">Email <span>*</span></label>
-                <input id="v2em" type="email" name="email" className="v2_input" required placeholder="you@company.lk" />
+                <input
+                  id="v2em" type="email" name="email" className="v2_input" required autoComplete="email"
+                  pattern={EMAIL_PATTERN} title="An email address like you@company.lk" placeholder="you@company.lk"
+                />
               </div>
 
               <div className="v2_field">
@@ -130,7 +140,10 @@ export default function GetStarted() {
                     <option>🇧🇩 +880</option>
                     <option>🇮🇳 +91</option>
                   </select>
-                  <input id="v2ph" type="tel" name="phone" className="v2_input" required placeholder="77 123 4567" />
+                  <input
+                    id="v2ph" type="tel" name="phone" className="v2_input" required autoComplete="tel-national"
+                    pattern={PHONE_PATTERN} title="Your phone number, e.g. 77 123 4567" placeholder="77 123 4567"
+                  />
                 </div>
               </div>
 
@@ -172,7 +185,7 @@ export default function GetStarted() {
                 </p>
               )}
 
-              <button type="submit" className="v2_btn v2_btn_primary" disabled={loading}>
+              <button type="submit" className="v2_btn v2_btn_primary" disabled={loading} aria-busy={loading}>
                 {loading ? "Sending…" : "Set up a free consultation"}
               </button>
               <p className="v2_form_note">We reply within one working day. No spam, ever.</p>

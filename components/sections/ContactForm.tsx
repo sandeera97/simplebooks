@@ -1,13 +1,37 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useEffect, useRef, useState, FormEvent } from "react";
 import { submitLead, LeadNotConfiguredError } from "@/lib/leads";
 import { SuccessIcon } from "@/components/v2/icons";
+import { EMAIL_PATTERN, NAME_PATTERN, PHONE_PATTERN } from "@/components/v2/LeadForm";
+
+/* The contact page's form. It now uses the same labelled v2 fields as every
+   other form on the site: it was the last one whose only labels were
+   placeholders (which vanish as you type, and gave the two selects no
+   accessible name at all). Field names and the submitted payload are
+   unchanged. */
+
+const SERVICES = [
+  "Business registration",
+  "Bookkeeping",
+  "Payroll",
+  "Tax",
+  "Company secretary",
+  "Legal",
+  "Trademark",
+  "General",
+];
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [failed, setFailed] = useState(false);
+  const doneRef = useRef<HTMLDivElement>(null);
+
+  // The button just disappeared with the form: announce the thank-you and keep focus with it.
+  useEffect(() => {
+    if (submitted) doneRef.current?.focus();
+  }, [submitted]);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -41,66 +65,78 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="sim_bk_form" style={{ textAlign: "center" }}>
-        <div style={{ marginBottom: 12, color: "var(--v2-green, #2ec48a)", lineHeight: 0 }}>
-          <SuccessIcon />
-        </div>
-        <h3 style={{ fontSize: 24, fontWeight: 800, color: "var(--sim-navy)", margin: "0 0 8px" }}>
-          Thank you!
-        </h3>
-        <p style={{ color: "var(--sim-muted)" }}>
-          We&apos;ve received your enquiry and will be in touch within 24 hours.
-        </p>
+      <div className="v2_contact_done" ref={doneRef} tabIndex={-1} role="status">
+        <p className="v2_leadform_done_icon"><SuccessIcon /></p>
+        <h3>Thank you!</h3>
+        <p>We&apos;ve received your enquiry and will be in touch within 24 hours.</p>
       </div>
     );
   }
 
   return (
-    <form className="sim_bk_form" onSubmit={handleSubmit}>
-      <p className="sim_bk_form_required"><span>&quot;*&quot;</span> indicates required fields</p>
+    /* method="post": if this is ever submitted before the page's script runs,
+       the details must not end up in the URL. */
+    <form onSubmit={handleSubmit} method="post" aria-labelledby="contact-form-h">
+      <p className="v2_form_req"><span>*</span> indicates required fields</p>
 
-      <div className="sim_bk_name_grid">
-        <input type="text" name="firstName" required placeholder="First name *" className="sim_bk_input" style={{ marginBottom: 0 }} />
-        <input type="text" name="lastName" required placeholder="Last name *" className="sim_bk_input" style={{ marginBottom: 0 }} />
+      <div className="v2_grid2">
+        <div className="v2_field">
+          <label htmlFor="cf-fn">First name&nbsp;<span>*</span></label>
+          <input id="cf-fn" name="firstName" className="v2_input" required pattern={NAME_PATTERN} autoComplete="given-name" />
+        </div>
+        <div className="v2_field">
+          <label htmlFor="cf-ln">Last name&nbsp;<span>*</span></label>
+          <input id="cf-ln" name="lastName" className="v2_input" required pattern={NAME_PATTERN} autoComplete="family-name" />
+        </div>
       </div>
 
-      <input type="email" name="email" required placeholder="Email *" className="sim_bk_input" />
+      <div className="v2_field">
+        <label htmlFor="cf-em">Email&nbsp;<span>*</span></label>
+        <input
+          id="cf-em" type="email" name="email" className="v2_input" required autoComplete="email"
+          pattern={EMAIL_PATTERN} title="An email address like you@company.lk"
+        />
+      </div>
 
-      <div className="sim_bk_phone_row">
-        <select name="phoneCountry" className="sim_bk_phone_code" aria-label="Country code">
-          <option>🇱🇰 +94</option>
-          <option>🇧🇩 +880</option>
-          <option>🇮🇳 +91</option>
+      <div className="v2_field">
+        <label htmlFor="cf-ph">Phone number&nbsp;<span>*</span></label>
+        <div className="v2_phone">
+          <select name="phoneCountry" className="v2_select" aria-label="Country dialling code">
+            <option>🇱🇰 +94</option>
+            <option>🇧🇩 +880</option>
+            <option>🇮🇳 +91</option>
+          </select>
+          <input
+            id="cf-ph" type="tel" name="phone" className="v2_input" required autoComplete="tel-national"
+            pattern={PHONE_PATTERN} title="Your phone number, e.g. 77 123 4567" placeholder="77 123 4567"
+          />
+        </div>
+      </div>
+
+      <div className="v2_field">
+        <label htmlFor="cf-sv">Service required&nbsp;<span>*</span></label>
+        <select id="cf-sv" name="service" className="v2_select" required defaultValue="">
+          <option value="" disabled>Select a service</option>
+          {SERVICES.map((s) => (
+            <option key={s}>{s}</option>
+          ))}
         </select>
-        <input type="tel" name="phone" required placeholder="Phone number *" className="sim_bk_phone_input" />
       </div>
 
-      <div className="sim_bk_field" style={{ marginBottom: 16 }}>
-        <select name="service" required defaultValue="" className="sim_bk_select">
-          <option value="" disabled>Services required *</option>
-          <option>Business registration</option>
-          <option>Bookkeeping</option>
-          <option>Payroll</option>
-          <option>Tax</option>
-          <option>Company secretary</option>
-          <option>Legal</option>
-          <option>Trademark</option>
-          <option>General</option>
-        </select>
-        <span className="sim_bk_select_arrow">▼</span>
-      </div>
-
-      <div className="sim_bk_field" style={{ marginBottom: 16 }}>
-        <select name="language" defaultValue="" className="sim_bk_select">
-          <option value="" disabled>Preferred Language</option>
+      <div className="v2_field">
+        <label htmlFor="cf-lg">Preferred language</label>
+        <select id="cf-lg" name="language" className="v2_select" defaultValue="">
+          <option value="" disabled>Select a language</option>
           <option>Sinhala</option>
           <option>English</option>
           <option>Tamil</option>
         </select>
-        <span className="sim_bk_select_arrow">▼</span>
       </div>
 
-      <textarea name="message" placeholder="Your message (Optional)" rows={4} className="sim_bk_textarea" />
+      <div className="v2_field">
+        <label htmlFor="cf-ms">Your message (optional)</label>
+        <textarea id="cf-ms" name="message" rows={4} className="v2_textarea" />
+      </div>
 
       {failed && (
         <p className="v2_leadform_err" role="alert">
@@ -111,11 +147,9 @@ export default function ContactForm() {
         </p>
       )}
 
-      <div className="sim_bk_form_submit">
-        <button type="submit" className="sim_bk_btn_orange" disabled={loading}>
-          {loading ? "Sending..." : "Set up a Free Consultation"}
-        </button>
-      </div>
+      <button type="submit" className="v2_btn v2_btn_primary" disabled={loading} aria-busy={loading}>
+        {loading ? "Sending…" : "Set up a Free Consultation"}
+      </button>
     </form>
   );
 }

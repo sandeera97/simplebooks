@@ -73,8 +73,9 @@ export default function TableOfContents({ headings: given }: { headings?: Headin
               className={active === heading.id ? "active" : ""}
               onClick={(event) => {
                 event.preventDefault();
+                const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
                 document.getElementById(heading.id)?.scrollIntoView({
-                  behavior: "smooth",
+                  behavior: still ? "auto" : "smooth",
                   block: "start",
                 });
                 history.replaceState(null, "", `#${heading.id}`);

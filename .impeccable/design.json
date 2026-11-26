@@ -1,0 +1,382 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-26T12:00:00Z",
+  "title": "Design System: Simplebooks",
+  "extensions": {
+    "colorMeta": {
+      "navy": {
+        "role": "primary",
+        "displayName": "Registrar Navy",
+        "canonical": "#0a1233",
+        "purpose": "Headings, body ink, dark sections.",
+        "tonalRamp": [
+          "#02040d",
+          "#040817",
+          "#060c21",
+          "#080f2b",
+          "#474d66",
+          "#848899",
+          "#c2c4cc",
+          "#e6e7eb"
+        ]
+      },
+      "orange": {
+        "role": "primary",
+        "displayName": "Full-Stop Orange",
+        "canonical": "#ff5b2e",
+        "purpose": "Primary actions, the full stop, icons, anything on navy.",
+        "tonalRamp": [
+          "#40170c",
+          "#732915",
+          "#a63b1e",
+          "#d94d27",
+          "#ff8462",
+          "#ffad96",
+          "#ffd6cb",
+          "#ffefea"
+        ]
+      },
+      "orange-ink": {
+        "role": "primary",
+        "displayName": "Orange Ink",
+        "canonical": "#c3421a",
+        "purpose": "Small orange text on light surfaces (4.6:1+).",
+        "tonalRamp": [
+          "#311006",
+          "#581e0c",
+          "#7f2b11",
+          "#a63816",
+          "#d27153",
+          "#e1a08c",
+          "#f0d0c6",
+          "#f9ece8"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Cream Paper",
+        "canonical": "#fbfaf7",
+        "purpose": "Page background.",
+        "tonalRamp": [
+          "#3f3e3e",
+          "#71706f",
+          "#a3a2a1",
+          "#d5d4d2",
+          "#fcfbf9",
+          "#fdfcfb",
+          "#fefefd",
+          "#fffefe"
+        ]
+      },
+      "sand": {
+        "role": "neutral",
+        "displayName": "Sand",
+        "canonical": "#f5f2ec",
+        "purpose": "Alternating bands.",
+        "tonalRamp": [
+          "#3d3c3b",
+          "#6e6d6a",
+          "#9f9d99",
+          "#d0cec9",
+          "#f8f5f1",
+          "#faf8f6",
+          "#fcfcfa",
+          "#fefefd"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#e6e3dd",
+        "purpose": "Card and divider borders.",
+        "tonalRamp": [
+          "#3a3937",
+          "#676663",
+          "#969490",
+          "#c4c1bc",
+          "#eceae6",
+          "#f2f1ee",
+          "#f9f8f6",
+          "#fcfcfc"
+        ]
+      },
+      "field-line": {
+        "role": "neutral",
+        "displayName": "Field Line",
+        "canonical": "#cbd1dc",
+        "purpose": "Form field edges.",
+        "tonalRamp": [
+          "#333437",
+          "#5b5e63",
+          "#84888f",
+          "#adb2bb",
+          "#d8dce5",
+          "#e5e8ee",
+          "#f2f4f6",
+          "#fafafc"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Ink 3",
+        "canonical": "#59637f",
+        "purpose": "Body copy.",
+        "tonalRamp": [
+          "#161920",
+          "#282d39",
+          "#3a4053",
+          "#4c546c",
+          "#828a9f",
+          "#acb1bf",
+          "#d6d8df",
+          "#eeeff2"
+        ]
+      },
+      "ink-4": {
+        "role": "neutral",
+        "displayName": "Ink 4",
+        "canonical": "#646d88",
+        "purpose": "Captions, notes, labels; lightest text grey.",
+        "tonalRamp": [
+          "#191b22",
+          "#2d313d",
+          "#414758",
+          "#555d74",
+          "#8b92a6",
+          "#b2b6c4",
+          "#d8dae1",
+          "#f0f0f3"
+        ]
+      },
+      "green": {
+        "role": "tertiary",
+        "displayName": "Filed Green",
+        "canonical": "#2ec48a",
+        "purpose": "Status dots only.",
+        "tonalRamp": [
+          "#0c3122",
+          "#15583e",
+          "#1e7f5a",
+          "#27a775",
+          "#62d3a7",
+          "#96e2c4",
+          "#cbf0e2",
+          "#eaf9f3"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Homepage hero h1 only; inner heroes step down."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section h2, closed by the orange full stop."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card and step titles."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "The paragraph under a heading."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Card copy and lists."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase eyebrows (Orange Ink) and menu, plan and footer headings (Ink 4)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-lift",
+        "value": "0 30px 60px -36px rgba(10,18,51,0.55)",
+        "purpose": "Hover state for cards and plans, with translateY(-6px)."
+      },
+      {
+        "name": "floating-panel",
+        "value": "0 40px 90px -56px rgba(10,18,51,0.9)",
+        "purpose": "Form cards, inline panels, embedded tools."
+      },
+      {
+        "name": "menu",
+        "value": "0 30px 70px -32px rgba(10,18,51,0.45)",
+        "purpose": "Desktop mega menu."
+      },
+      {
+        "name": "orange-press",
+        "value": "0 10px 26px -10px rgba(255,91,46,0.85)",
+        "purpose": "Primary button at rest."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Every transition: reveals, lifts, accordions, menus."
+      },
+      {
+        "name": "reveal",
+        "value": "opacity/translateY 0.85s, staggered 60ms",
+        "purpose": "Scroll reveal below the hero; skipped without JS or with reduced motion."
+      },
+      {
+        "name": "hero-rise",
+        "value": "translateY 0.8s, staggered 70ms",
+        "purpose": "Page hero copy, CSS only, painted at once."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "desktop-nav",
+        "value": "1201px"
+      },
+      {
+        "name": "laptop",
+        "value": "1200px"
+      },
+      {
+        "name": "tablet",
+        "value": "1000px"
+      },
+      {
+        "name": "tablet-portrait",
+        "value": "860px"
+      },
+      {
+        "name": "phone",
+        "value": "720px"
+      },
+      {
+        "name": "small-phone",
+        "value": "430px"
+      },
+      {
+        "name": "smallest",
+        "value": "360px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The next action: Start now (dashboard) and consultation buttons.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Get a free consultation <span aria-hidden=\"true\">→</span></a>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:9px;border-radius:999px;background:#ff5b2e;color:#fff;font:700 15.5px/1 'Plus Jakarta Sans',system-ui,sans-serif;padding:16px 28px;text-decoration:none;box-shadow:0 10px 26px -10px rgba(255,91,46,.85);transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s cubic-bezier(.22,1,.36,1)}.ds-btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 38px -12px rgba(255,91,46,.9)}.ds-btn-primary:focus-visible{outline:2px solid #c3421a;outline-offset:3px}"
+    },
+    {
+      "name": "Navy Button",
+      "kind": "button",
+      "refersTo": "button-navy",
+      "description": "Secondary action on light surfaces (Sign up, Talk to a consultant).",
+      "html": "<a class=\"ds-btn-navy\" href=\"#\">Sign up</a>",
+      "css": ".ds-btn-navy{display:inline-flex;align-items:center;border-radius:999px;background:#0a1233;color:#fff;font:700 14px/1 'Plus Jakarta Sans',system-ui,sans-serif;padding:11px 20px;text-decoration:none;white-space:nowrap;transition:transform .3s,box-shadow .3s}.ds-btn-navy:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(10,18,51,.22)}.ds-btn-navy:focus-visible{outline:2px solid #c3421a;outline-offset:3px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Tertiary action beside a primary.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">See the dashboard</a>",
+      "css": ".ds-btn-ghost{display:inline-flex;align-items:center;border-radius:999px;border:1px solid #e6e3dd;color:#0a1233;font:700 15.5px/1 'Plus Jakarta Sans',system-ui,sans-serif;padding:16px 28px;text-decoration:none;transition:background-color .3s,border-color .3s}.ds-btn-ghost:hover{background:#fff;border-color:rgba(10,18,51,.4)}.ds-btn-ghost:focus-visible{outline:2px solid #c3421a;outline-offset:3px}"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Labelled form field with the orange focus halo.",
+      "html": "<label class=\"ds-field\"><span>Email <b>*</b></span><input type=\"email\" placeholder=\"you@company.lk\"></label>",
+      "css": ".ds-field{display:block;font:700 13px 'Plus Jakarta Sans',system-ui,sans-serif;color:#0a1233}.ds-field b{color:#c3421a}.ds-field input{display:block;width:100%;margin-top:6px;border:1px solid #cbd1dc;border-radius:12px;padding:11px 14px;background:#f7f8fa;font:400 15px 'Plus Jakarta Sans',system-ui,sans-serif;color:#0a1233;outline:0;transition:border-color .2s,box-shadow .2s,background-color .2s}.ds-field input::placeholder{color:#646d88}.ds-field input:focus{border-color:#ff5b2e;background:#fff;box-shadow:0 0 0 4px rgba(255,91,46,.18)}"
+    },
+    {
+      "name": "Feature Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Numbered feature card on a palette wash.",
+      "html": "<article class=\"ds-card\"><span class=\"ds-card-num\">01</span><h3>Real-time status updates</h3><p>See exactly which stage your registration is at.</p></article>",
+      "css": ".ds-card{background:#fff5f0;border:1px solid rgba(255,91,46,.12);border-radius:22px;padding:30px 28px 26px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s}.ds-card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -36px rgba(10,18,51,.55)}.ds-card-num{display:inline-grid;place-items:center;min-width:36px;height:36px;border-radius:12px;background:#fff;color:#c3421a;font-weight:800;font-size:12.5px;box-shadow:0 8px 18px -12px rgba(10,18,51,.45)}.ds-card h3{margin:22px 0 10px;font-size:20px;font-weight:800;letter-spacing:-.5px;color:#0a1233}.ds-card p{margin:0;font-size:14.5px;line-height:1.6;color:#59637f}"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Small label pill on cards.",
+      "html": "<span class=\"ds-tag\">Live status</span>",
+      "css": ".ds-tag{display:inline-block;font:700 11.5px 'Plus Jakarta Sans',system-ui,sans-serif;padding:5px 11px;border-radius:999px;background:rgba(10,18,51,.05);color:#3a4460}"
+    },
+    {
+      "name": "Eyebrow + Headline",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "The signature: section label in Orange Ink and a headline closed by the orange full stop.",
+      "html": "<div class=\"ds-head\"><p>How it works</p><h2>Register your business today<span>.</span></h2></div>",
+      "css": ".ds-head{font-family:'Plus Jakarta Sans',system-ui,sans-serif}.ds-head p{margin:0;font-size:12px;font-weight:700;letter-spacing:1.92px;text-transform:uppercase;color:#c3421a}.ds-head h2{margin:14px 0 0;font-size:44px;line-height:1.06;font-weight:800;letter-spacing:-.04em;color:#0a1233;text-wrap:balance}.ds-head h2 span{color:#ff5b2e}"
+    },
+    {
+      "name": "Nav Item",
+      "kind": "nav",
+      "refersTo": "nav-item",
+      "description": "Desktop menu trigger.",
+      "html": "<button class=\"ds-nav\" type=\"button\" aria-expanded=\"false\">Tax <span aria-hidden=\"true\">▾</span></button>",
+      "css": ".ds-nav{display:inline-flex;align-items:center;gap:5px;border:0;background:none;border-radius:10px;padding:9px 12px;font:600 14.5px 'Plus Jakarta Sans',system-ui,sans-serif;color:#0a1233;cursor:pointer;transition:background-color .25s}.ds-nav:hover,.ds-nav[aria-expanded=true]{background:rgba(10,18,51,.05)}.ds-nav[aria-expanded=true]{color:#c3421a}.ds-nav:focus-visible{outline:2px solid #c3421a;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Full Stop",
+    "overview": "Every headline on the site ends in an orange full stop. It is the system in one mark: the work is finished, filed, done. The rest of the language follows that promise of order. Navy ink is set on warm cream paper, in one confident sans (Plus Jakarta Sans at weight 800 for display, tracked tight). There is one hot accent, used sparingly for the thing to do next and the dot that closes a thought. The surfaces are quiet: cream, sand and white bands, faint navy hairlines, a soft grid that fades out behind heroes.\n\nDensity is generous on marketing surfaces (120px section rhythm on desktop) and tightens predictably at each breakpoint. Cards are soft rectangles with large radii and long, low, navy-tinted shadows that appear on hover; they lift a few pixels rather than glow. Motion is a single easing curve (an expo-out) applied to reveals, lifts and accordions, and it all collapses under reduced motion.\n\nThe client asked for less colour, so the system is deliberately narrow: navy, orange, cream and two neutral washes. Blue, green and violet card tints, guilloche, seals and rosettes were removed and stay out.",
+    "keyCharacteristics": [
+      "Navy ink (#0a1233) on cream (#fbfaf7); white cards; sand bands between sections.",
+      "One orange (#ff5b2e) for primary actions, eyebrows and the full stop.",
+      "Plus Jakarta Sans everywhere; 800 weight, negative tracking for display.",
+      "Pill buttons, 22px cards, 12px fields; lift on hover, never glow.",
+      "Sentence-case copy, no em dashes, every page ending in a consultation form."
+    ],
+    "rules": [
+      {
+        "name": "The One Accent Rule",
+        "body": "Orange marks the next action or the end of a thought. If two orange things compete on one screen, one of them is wrong.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paper Palette Rule",
+        "body": "Card tints are Peach, Mist, Paper or white. No blue, green or violet tints, no gradients on cards.",
+        "section": "colors"
+      },
+      {
+        "name": "The Readable Grey Rule",
+        "body": "Text on a light surface is Ink 4 or darker, and small orange text is Orange Ink. Ink 5 is for marks, not words.",
+        "section": "colors"
+      },
+      {
+        "name": "The Full Stop Rule",
+        "body": "Every h1 and h2 ends in the orange full stop (`.v2_dot`), added by the component, never typed into the copy. Copy that ends in ? or ! keeps its own mark and gets no dot.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lift, Not Glow Rule",
+        "body": "Interaction moves a surface up a few pixels and lengthens its shadow. No coloured glows, no outer neon.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** end h1 and h2 headings with the orange full stop component, not a typed dot.",
+      "**Do** use only white, Peach (#fff5f0), Mist (#f3f4f8) or Paper (#f6f3ed) for card fills.",
+      "**Do** keep text on light surfaces at Ink 4 (#646d88) or darker, and small orange text at Orange Ink (#c3421a).",
+      "**Do** send \"Start now\" to dashboard.simplebooks.com and consultation buttons to the page's own form.",
+      "**Do** close every page with a consultation form or a clear next step."
+    ],
+    "donts": [
+      "**Don't** use blue, green or violet tints, gradients on cards, or seal, rosette and guilloche motifs.",
+      "**Don't** use em dashes in copy.",
+      "**Don't** introduce a second accent colour; green is a status colour (a dot beside navy text), never text or a fill.",
+      "**Don't** use Unicode glyphs or emoji as icons in new work; draw them as stroked SVG.",
+      "**Don't** invent figures, offices or testimonials; the approved figures are 10000+ businesses and 1400+ Google reviews."
+    ]
+  }
+}

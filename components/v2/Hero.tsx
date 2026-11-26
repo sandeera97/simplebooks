@@ -57,7 +57,7 @@ export default function Hero() {
             {/* Start now opens the dashboard, where registration begins.
                 Talk to an expert stays on this page: #start is the form below. */}
             <a className="v2_btn v2_btn_primary" href="https://dashboard.simplebooks.com">
-              Start now <span className="v2_arrow">→</span>
+              Start now <span className="v2_arrow" aria-hidden="true">→</span>
             </a>
             <a className="v2_btn v2_btn_ghost" href="#start">
               Talk to an expert

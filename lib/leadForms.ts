@@ -96,13 +96,14 @@ export const LEAD_FORMS: Record<string, LeadFormConfig> = {
     languageRequired: true,
     question: {
       label: "How many employees does your business currently have?",
-      placeholder: "How many employees does your business currently have?",
+      /* The prompt repeated the label and was cut off on a phone. */
+      placeholder: "Select an option",
       options: ["1-10", "11-50", "51-100", "100+"],
       required: true,
     },
     services: {
       label: "How are you currently managing your payroll?",
-      placeholder: "How are you currently managing your payroll?",
+      placeholder: "Select an option",
       options: [
         "Manual processing (Eg: spreadsheets)",
         "Outsourced to an external provider",
@@ -161,6 +162,8 @@ export const LEAD_FORMS: Record<string, LeadFormConfig> = {
     showConsent: false,
     buttonLabel: "Sign up for Free Webinar",
     note: "We'll only send you notifications about free webinars. No spam, unsubscribe anytime.",
+    /* Display only. The default thank-you talks about an enquiry and a reply. */
+    successText: "You’re on the list. We’ll only send you notifications about free webinars.",
   },
 
   /* ---- No form on the live site (see NO_FORM_ON_LIVE). The client's website

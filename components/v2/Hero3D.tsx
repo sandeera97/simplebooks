@@ -412,7 +412,7 @@ export default function Hero3D() {
           <div className="h3d_chip" aria-hidden="true">
             <span className="h3d_chip_dot" />
             14 companies registered this week
-            <span className="h3d_chip_sub">5–6 week turnaround</span>
+            <span className="h3d_chip_sub">5–6 working week turnaround</span>
           </div>
         </div>
         </div>

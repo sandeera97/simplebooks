@@ -86,7 +86,7 @@ export default function BookkeepingPage() {
         <div className="v2_wrap">
           <CheckSplit
             eyebrow="What we need"
-            title="What does Simplebooks need from you"
+            title="What does Simplebooks need from you?"
             lead="Let our team comb through your paperwork and organise your books. We'll pair you up with an experienced bookkeeper based on your unique needs."
             items={NEED}
             cta={{ label: "Contact our team", href: "#consultation" }}
@@ -111,7 +111,7 @@ export default function BookkeepingPage() {
       </section>
 
       <CtaBand
-        title="Want a quotation for your books"
+        title="Want a quotation for your books?"
         lead="Get in touch with our team today and we'll price it around what your business actually needs."
         primary={{ label: "Talk to the team", href: "#consultation" }}
         secondary={{ label: "See all services", href: "/srilanka/services" }}

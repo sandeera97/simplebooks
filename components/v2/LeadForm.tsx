@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useEffect, useRef, useState, FormEvent } from "react";
 import { submitLead, LeadNotConfiguredError } from "@/lib/leads";
 import { SuccessIcon } from "./icons";
 
@@ -51,6 +51,8 @@ export interface LeadFormConfig {
   requiredNote?: boolean;
   note?: string;
   buttonLabel?: string;
+  /** What the thank-you panel says. Defaults to the consultation reply line. */
+  successText?: string;
   /** Tints the section, for pages whose preceding section is already cream. */
   band?: boolean;
 }
@@ -65,6 +67,39 @@ const DIAL_CODES = [
   { flag: "🇧🇩", code: "+880" },
   { flag: "🇮🇳", code: "+91" },
 ];
+
+/* The API's own checks (app/api/leads/route.ts), mirrored so a typo is flagged
+   at the field instead of surfacing as "we couldn't send that". */
+export const EMAIL_PATTERN = "[^\\s@]+@[^\\s@]+\\.[^\\s@]+";
+export const NAME_PATTERN = ".*\\S.*";
+/* Digits and the usual separators; letters are a number nobody can call. */
+export const PHONE_PATTERN = "[0-9 \\(\\)\\+\\-\\.]{7,}";
+
+/* The reply promise the thank-you panel already makes, shown before the
+   visitor commits rather than only after. */
+const CONSULT_NOTE = "We reply within one working day. No spam, ever.";
+const ENDS_PUNCTUATED = /[?!.]$/;
+
+/* Defined outside LeadForm on purpose. As a component declared inside it, it
+   was a new component type on every render, so React remounted each select
+   whenever the form re-rendered: the answers were wiped the moment "Sending…"
+   appeared, and stayed blank after an error. */
+function LeadSelect({
+  id, name, q, required,
+}: { id: string; name: string; q: LeadQuestion; required: boolean }) {
+  return (
+    <div className="v2_field">
+      <label htmlFor={id}>
+        {q.label}
+        {required && <>{"\u00a0"}<span>*</span></>}
+      </label>
+      <select id={id} name={name} className="v2_select" required={required} defaultValue="">
+        <option value="" disabled>{q.placeholder}</option>
+        {q.options.map((o) => <option key={o}>{o}</option>)}
+      </select>
+    </div>
+  );
+}
 
 export default function LeadForm({
   source,
@@ -84,11 +119,25 @@ export default function LeadForm({
   requiredNote = true,
   note,
   buttonLabel = "Set up a Free Consultation",
+  successText = "We’ve received your enquiry and will reply within one working day.",
   band = false,
 }: LeadFormProps) {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [failed, setFailed] = useState(false);
+  const doneRef = useRef<HTMLDivElement>(null);
+
+  /* The button the visitor pressed disappears with the form, so move focus to
+     the thank-you panel (role=status announces it) and bring it into view: on
+     the long phone variants it can otherwise render above the viewport. */
+  useEffect(() => {
+    if (!sent) return;
+    doneRef.current?.focus({ preventScroll: true });
+    const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    doneRef.current?.scrollIntoView({ block: "center", behavior: still ? "auto" : "smooth" });
+  }, [sent]);
+
+  const shownNote = note ?? (/consultation/i.test(buttonLabel) ? CONSULT_NOTE : undefined);
 
   /* Ids derive from the route so two forms on one page can never collide. */
   const uid = source.replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "") || "lead";
@@ -128,35 +177,34 @@ export default function LeadForm({
     }
   }
 
-  const Select = ({
-    id, name, q, required,
-  }: { id: string; name: string; q: LeadQuestion; required: boolean }) => (
-    <div className="v2_field">
-      <label htmlFor={id}>{q.label} {required && <span>*</span>}</label>
-      <select id={id} name={name} className="v2_select" required={required} defaultValue="">
-        <option value="" disabled>{q.placeholder}</option>
-        {q.options.map((o) => <option key={o}>{o}</option>)}
-      </select>
-    </div>
-  );
-
   return (
     <section className={band ? "v2_band" : "v2_sec v2_sec_pad"} id="consultation">
       <div className="v2_wrap">
         <div className="v2_leadform v2_reveal">
           {heading && (
-            <h2 className="v2_leadform_h">{heading}<span className="v2_dot">.</span></h2>
+            <h2 className="v2_leadform_h" id={`${uid}-h`}>
+              {heading}
+              {!ENDS_PUNCTUATED.test(heading.trim()) && <span className="v2_dot">.</span>}
+            </h2>
           )}
           {lead && <p className="v2_leadform_lead">{lead}</p>}
 
           {sent ? (
-            <div className="v2_leadform_done">
+            <div className="v2_leadform_done" ref={doneRef} tabIndex={-1} role="status">
               <p className="v2_leadform_done_icon"><SuccessIcon /></p>
               <h3>Thank you</h3>
-              <p>We&rsquo;ve received your enquiry and will reply within one working day.</p>
+              <p>{successText}</p>
             </div>
           ) : (
-            <form className="v2_leadform_form" onSubmit={onSubmit}>
+            /* method="post": a submit before the script runs must not put the
+               visitor's details in the URL. */
+            <form
+              className="v2_leadform_form"
+              onSubmit={onSubmit}
+              method="post"
+              aria-labelledby={heading ? `${uid}-h` : undefined}
+              aria-label={heading ? undefined : "Consultation request"}
+            >
               {requiredNote && (
                 <p className="v2_form_req"><span>*</span> indicates required fields</p>
               )}
@@ -171,42 +219,51 @@ export default function LeadForm({
               {nameMode === "split" ? (
                 <div className="v2_grid2">
                   <div className="v2_field">
-                    <label htmlFor={`${uid}-fn`}>First name <span>*</span></label>
-                    <input id={`${uid}-fn`} name="firstName" className="v2_input" required autoComplete="given-name" />
+                    <label htmlFor={`${uid}-fn`}>First name&nbsp;<span>*</span></label>
+                    <input id={`${uid}-fn`} name="firstName" className="v2_input" required pattern={NAME_PATTERN} autoComplete="given-name" />
                   </div>
                   <div className="v2_field">
-                    <label htmlFor={`${uid}-ln`}>Last name <span>*</span></label>
-                    <input id={`${uid}-ln`} name="lastName" className="v2_input" required autoComplete="family-name" />
+                    <label htmlFor={`${uid}-ln`}>Last name&nbsp;<span>*</span></label>
+                    <input id={`${uid}-ln`} name="lastName" className="v2_input" required pattern={NAME_PATTERN} autoComplete="family-name" />
                   </div>
                 </div>
               ) : (
                 <div className="v2_field">
-                  <label htmlFor={`${uid}-nm`}>Name <span>*</span></label>
-                  <input id={`${uid}-nm`} name="name" className="v2_input" required autoComplete="name" />
+                  <label htmlFor={`${uid}-nm`}>Name&nbsp;<span>*</span></label>
+                  <input id={`${uid}-nm`} name="name" className="v2_input" required pattern={NAME_PATTERN} autoComplete="name" />
                 </div>
               )}
 
               <div className="v2_field">
-                <label htmlFor={`${uid}-em`}>Email <span>*</span></label>
-                <input id={`${uid}-em`} name="email" type="email" className="v2_input" required autoComplete="email" />
+                <label htmlFor={`${uid}-em`}>Email&nbsp;<span>*</span></label>
+                <input
+                  id={`${uid}-em`} name="email" type="email" className="v2_input" required autoComplete="email"
+                  pattern={EMAIL_PATTERN} title="An email address like you@company.lk"
+                />
               </div>
 
               <div className="v2_field">
-                <label htmlFor={`${uid}-ph`}>Phone number <span>*</span></label>
+                <label htmlFor={`${uid}-ph`}>Phone number&nbsp;<span>*</span></label>
                 <div className="v2_phone">
                   <select name="phoneCountry" className="v2_select" aria-label="Country dialling code">
                     {DIAL_CODES.map((c) => <option key={c.code}>{`${c.flag} ${c.code}`}</option>)}
                   </select>
-                  <input id={`${uid}-ph`} name="phone" type="tel" className="v2_input" required autoComplete="tel" />
+                  {/* tel-national: the dial code is the select beside it, so a
+                      full autofilled "+94 77…" would be stored as "+94 +94 77…". */}
+                  <input
+                    id={`${uid}-ph`} name="phone" type="tel" className="v2_input" required
+                    autoComplete="tel-national" placeholder="77 123 4567"
+                    pattern={PHONE_PATTERN} title="Your phone number, e.g. 77 123 4567"
+                  />
                 </div>
               </div>
 
-              {services && <Select id={`${uid}-sv`} name="service" q={services} required={!!services.required} />}
-              {question && <Select id={`${uid}-qq`} name="question" q={question} required={question.required !== false} />}
+              {services && <LeadSelect id={`${uid}-sv`} name="service" q={services} required={!!services.required} />}
+              {question && <LeadSelect id={`${uid}-qq`} name="question" q={question} required={question.required !== false} />}
 
               {checkboxGroup && (
                 <fieldset className="v2_field v2_checkgroup">
-                  <legend>{checkboxGroup.label} {checkboxGroup.required && <span>*</span>}</legend>
+                  <legend>{checkboxGroup.label}{checkboxGroup.required && <>&nbsp;<span>*</span></>}</legend>
                   <div className="v2_checkgroup_opts">
                     {checkboxGroup.options.map((o) => (
                       <label key={o}>
@@ -219,7 +276,7 @@ export default function LeadForm({
               )}
 
               {showLanguage && (
-                <Select
+                <LeadSelect
                   id={`${uid}-lg`}
                   name="language"
                   q={{ label: "Preferred Language", placeholder: languagePlaceholder, options: languageOptions }}
@@ -250,10 +307,10 @@ export default function LeadForm({
                 </p>
               )}
 
-              <button type="submit" className="v2_btn v2_btn_primary" disabled={loading}>
+              <button type="submit" className="v2_btn v2_btn_primary" disabled={loading} aria-busy={loading}>
                 {loading ? "Sending…" : buttonLabel}
               </button>
-              {note && <p className="v2_form_note">{note}</p>}
+              {shownNote && <p className="v2_form_note">{shownNote}</p>}
             </form>
           )}
         </div>

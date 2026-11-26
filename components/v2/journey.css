@@ -4,10 +4,14 @@
 .sj_head .v2_h2 { margin-top: 18px; }
 .sj_head .v2_lead { margin-top: 14px; }
 
+/* Quieter pass (client: less colour). Orange is kept for the timeline itself
+   (rail and nodes), the badge tick and the primary button; the step chips,
+   icon discs and ticks are navy-neutral, and the closing card is the flat
+   peach wash instead of an orange gradient. */
 .sj_badge {
   display: inline-flex; align-items: center; gap: 9px;
   padding: 6px 16px 6px 6px; border-radius: 999px;
-  background: rgba(255, 91, 46, 0.1); color: var(--v2-orange);
+  background: rgba(10, 18, 51, 0.05); color: var(--v2-ink-2);
   font-size: 13.5px; font-weight: 700;
 }
 .sj_badge_tick {
@@ -33,7 +37,7 @@
 .sj_side { text-align: right; }
 .sj_label {
   display: inline-block; padding: 5px 12px; border-radius: 8px;
-  background: rgba(255, 91, 46, 0.12); color: var(--v2-orange);
+  background: rgba(10, 18, 51, 0.06); color: var(--v2-ink-2);
   font-size: 12.5px; font-weight: 700;
 }
 .sj_title {
@@ -63,7 +67,7 @@
 .sj_icon {
   flex-shrink: 0; width: 50px; height: 50px; border-radius: 50%;
   display: grid; place-items: center;
-  background: rgba(255, 91, 46, 0.1); color: var(--v2-orange);
+  background: rgba(10, 18, 51, 0.05); color: var(--v2-navy);
 }
 .sj_detail { margin: 2px 0 12px; color: var(--v2-ink-3); font-size: 14px; line-height: 1.55; }
 .sj_items { list-style: none; margin: 0; padding: 0; }
@@ -71,7 +75,8 @@
   display: flex; align-items: center; gap: 10px;
   padding: 3px 0; color: var(--v2-ink-2); font-size: 14px;
 }
-.sj_check { color: var(--v2-orange); display: inline-flex; }
+.sj_check { color: var(--v2-ink-3); display: inline-flex; }
+.sj_sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .sj_time {
   display: flex; align-items: center; gap: 8px;
   margin: 12px 0 0; color: var(--v2-ink-4); font-size: 13.5px;
@@ -81,11 +86,11 @@
 .sj_cta {
   margin-top: 64px; padding: 34px 38px; border-radius: 22px;
   display: flex; align-items: center; justify-content: space-between; gap: 28px;
-  background: linear-gradient(135deg, rgba(255, 91, 46, 0.09), rgba(255, 91, 46, 0.03));
-  border: 1px solid rgba(255, 91, 46, 0.16);
+  background: #fff5f0;
+  border: 1px solid rgba(255, 91, 46, 0.12);
 }
 .sj_cta_k {
-  color: var(--v2-orange); font-size: 12px; font-weight: 800;
+  color: var(--v2-orange-ink); font-size: 12px; font-weight: 800;
   letter-spacing: 0.14em; text-transform: uppercase;
 }
 .sj_cta_h {

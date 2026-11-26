@@ -17,12 +17,26 @@ export function Logo({ size = 21 }: { size?: number }) {
 export default function HeaderV2() {
   const [open, setOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
+  const burgerRef = useRef<HTMLButtonElement>(null);
 
-  // Close on Escape, and whenever the viewport grows back to the desktop nav.
+  // The panel scrolls inside the space left below its own top edge. That edge
+  // moves (the announcement bar wraps to three lines on a phone and scrolls
+  // away), so measure it each time the menu opens.
+  useEffect(() => {
+    const panel = panelRef.current;
+    if (!open || !panel) return;
+    panel.style.setProperty("--v2-mnav-top", `${Math.max(0, panel.getBoundingClientRect().top)}px`);
+  }, [open]);
+
+  // Close on Escape (handing focus back to the burger rather than leaving it on
+  // a row that is about to disappear), and whenever the viewport grows back to
+  // the desktop nav.
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key !== "Escape") return;
+      if (panelRef.current?.contains(document.activeElement)) burgerRef.current?.focus();
+      setOpen(false);
     };
     const mq = window.matchMedia("(min-width: 1201px)");
     const onWide = () => mq.matches && setOpen(false);
@@ -36,6 +50,7 @@ export default function HeaderV2() {
 
   return (
     <>
+      <a className="v2_skip" href="#main">Skip to content</a>
       <div className="v2_announce">
         <span>Register a Sri Lankan company entirely online, within 5–6 working weeks.</span>
         <a href="https://dashboard.simplebooks.com">Start now →</a>
@@ -50,8 +65,9 @@ export default function HeaderV2() {
           <DesktopNav items={navItems} />
 
           <div className="v2_hdr_right">
+            {/* A label, not a menu: Sri Lanka is the only region, so no caret. */}
             <span className="v2_region">
-              🇱🇰 Sri Lanka <span className="v2_nav_caret">▼</span>
+              <span aria-hidden="true">🇱🇰</span> Sri Lanka
             </span>
             <a className="v2_signin" href="https://dashboard.simplebooks.com/sign-in">
               Sign in
@@ -61,6 +77,7 @@ export default function HeaderV2() {
             </a>
 
             <button
+              ref={burgerRef}
               type="button"
               className={`v2_burger${open ? " is_open" : ""}`}
               aria-label={open ? "Close menu" : "Open menu"}
@@ -78,16 +95,18 @@ export default function HeaderV2() {
           </div>
         </div>
 
-        {/* Expanding panel — pushes the page down rather than covering it,
-            which is what the redesign does. */}
-        <div className="v2_mnav" id="v2-mobile-menu" ref={panelRef} aria-hidden={!open}>
+        {/* Expanding panel that pushes the page down rather than covering it,
+            which is what the redesign does. inert while closed: it collapses
+            to zero height but stays in the DOM, and its 48 links were still
+            in the tab order (and read out) behind an aria-hidden. */}
+        <div className="v2_mnav" id="v2-mobile-menu" ref={panelRef} inert={!open}>
           <div className="v2_mnav_inner">
             <div className="v2_wrap v2_mnav_pad">
               <MobileNav items={navItems} onNavigate={() => setOpen(false)} />
 
               <div className="v2_mnav_foot">
                 <div className="v2_mnav_region">
-                  🇱🇰 Sri Lanka <span className="v2_nav_caret">▼</span>
+                  <span aria-hidden="true">🇱🇰</span> Sri Lanka
                 </div>
 
                 <div className="v2_mnav_cta">

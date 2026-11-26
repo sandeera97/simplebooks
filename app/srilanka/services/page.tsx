@@ -66,7 +66,7 @@ export default function ServicesPage() {
                 label="Registration"
                 rows={[
                   ["Entities incorporated", "10000+"],
-                  ["Typical timeline", "5–6 weeks"],
+                  ["Typical timeline", "5–6 working weeks"],
                   ["Markets covered", "South Asia"],
                   ["Name approval", "Included"],
                 ]}

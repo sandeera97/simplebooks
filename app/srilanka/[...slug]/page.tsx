@@ -17,6 +17,17 @@ import { SITE_URL } from "@/lib/seo";
  */
 export const dynamicParams = false;
 
+/* The WordPress "Get Free Consultation" buttons inside posts (59 across the
+   blog) pointed at the contact page. The site's rule is that consultation
+   buttons open the form on the page itself, which here is the lead card
+   (#consultation); the button's label and its "ctat" wrapper are untouched. */
+const CONTACT_HREF = /href="(?:https?:\/\/(?:www\.)?simplebooks\.com)?\/srilanka\/contact(?:-us)?\/?"/;
+function pointConsultationButtonsHere(html: string) {
+  return html.replace(/<a\b[^>]*>/g, (tag) =>
+    tag.includes("wp-block-button__link") ? tag.replace(CONTACT_HREF, 'href="#consultation"') : tag
+  );
+}
+
 export function generateStaticParams() {
   return getPostIndex().map((post) => ({ slug: post.route.split("/") }));
 }
@@ -89,9 +100,9 @@ export default async function MigratedBlogPost({
           decoding="async"
         />
       )}
-      {/* Our own editorial content, exported from our own CMS — not anything a
+      {/* Our own editorial content, exported from our own CMS, not anything a
           visitor can supply. */}
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div dangerouslySetInnerHTML={{ __html: pointConsultationButtonsHere(post.html) }} />
     </BlogPostLayout>
   );
 }

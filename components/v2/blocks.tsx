@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { avatarFor } from "@/components/avatars";
@@ -14,6 +14,9 @@ const brandDot = (title: string) => !ENDS_PUNCTUATED.test(title.trim());
    look for (cdrat, cdiat, cdpay: the dashboard sign-up buttons). */
 type Cta = { label: string; href: string; className?: string };
 const ctaClass = (base: string, cta: Cta) => (cta.className ? `${base} ${cta.className}` : base);
+
+/* Stagger index for the hero's CSS entrance (.v2_rise in home-v2.css). */
+const d = (n: number) => ({ "--d": n }) as React.CSSProperties;
 
 /* ============================ Hero ============================ */
 export function PageHero({
@@ -41,20 +44,23 @@ export function PageHero({
   visual?: HeroVisual;
   children?: React.ReactNode;
 }) {
+  /* The hero copy enters with CSS (.v2_rise), not the scroll-reveal: it is on
+     screen at load, often the largest paint, and must not sit invisible until
+     the page hydrates (or forever, without JavaScript). */
   const text = (
     <>
-      <p className="v2_eyebrow v2_reveal">{eyebrow}</p>
-      <h1 className="v2_h1 v2_reveal">
+      <p className="v2_eyebrow v2_rise" style={d(0)}>{eyebrow}</p>
+      <h1 className="v2_h1 v2_rise_solid" style={d(1)}>
         {title}
         {dot && brandDot(title) && <span className="v2_dot">.</span>}
       </h1>
-      {lead && <p className="v2_lead v2_phero_lead v2_reveal">{lead}</p>}
+      {lead && <p className="v2_lead v2_phero_lead v2_rise_solid" style={d(2)}>{lead}</p>}
 
       {(primary || secondary) && (
-        <div className="v2_phero_cta v2_reveal">
+        <div className="v2_phero_cta v2_rise" style={d(3)}>
           {primary && (
             <Link className={ctaClass("v2_btn v2_btn_primary", primary)} href={primary.href}>
-              {primary.label} <span className="v2_arrow">→</span>
+              {primary.label} <span className="v2_arrow" aria-hidden="true">→</span>
             </Link>
           )}
           {secondary && (
@@ -65,10 +71,10 @@ export function PageHero({
         </div>
       )}
 
-      {note && <p className="v2_phero_note v2_reveal">{note}</p>}
+      {note && <p className="v2_phero_note v2_rise" style={d(4)}>{note}</p>}
 
       {stats && (
-        <div className="v2_phero_stats v2_reveal">
+        <div className="v2_phero_stats v2_rise" style={d(5)}>
           {stats.map((s) => (
             <div key={s.l}>
               <p className="v2_phero_stat_n">{s.n}</p>
@@ -235,14 +241,14 @@ export function CheckSplit({
         <ul className="v2_start_list v2_reveal" style={{ margin: "0 0 30px" }}>
           {items.map((t) => (
             <li key={t}>
-              <span className="v2_mark v2_mark_good">✓</span>
+              <span className="v2_mark v2_mark_good" aria-hidden="true">✓</span>
               {t}
             </li>
           ))}
         </ul>
         {cta && (
           <Link className={ctaClass("v2_btn v2_btn_navy v2_reveal", cta)} href={cta.href}>
-            {cta.label} <span className="v2_arrow">→</span>
+            {cta.label} <span className="v2_arrow" aria-hidden="true">→</span>
           </Link>
         )}
       </div>
@@ -269,7 +275,7 @@ export function Compare({
         <p className="v2_col_h">{badTitle}</p>
         <ul>
           {bad.map((t) => (
-            <li key={t}><span className="v2_mark v2_mark_bad">✕</span>{t}</li>
+            <li key={t}><span className="v2_mark v2_mark_bad" aria-hidden="true">✕</span>{t}</li>
           ))}
         </ul>
       </div>
@@ -277,7 +283,7 @@ export function Compare({
         <p className="v2_col_h">{goodTitle}</p>
         <ul>
           {good.map((t) => (
-            <li key={t}><span className="v2_mark v2_mark_good">✓</span>{t}</li>
+            <li key={t}><span className="v2_mark v2_mark_good" aria-hidden="true">✓</span>{t}</li>
           ))}
         </ul>
       </div>
@@ -301,7 +307,7 @@ export function Pricing({
       <div className={`v2_price v2_price_${plans.length}`}>
         {plans.map((p) => (
           <article key={p.name} className={`v2_plan v2_reveal${p.featured ? " is_featured" : ""}`}>
-            {p.featured && <span className="v2_plan_flag">Most popular</span>}
+            {p.featured && plans.length > 1 && <span className="v2_plan_flag">Most popular</span>}
             <p className="v2_plan_name">{p.name}</p>
             <p className="v2_plan_price">
               {p.price}
@@ -310,14 +316,14 @@ export function Pricing({
             {p.blurb && <p className="v2_plan_blurb">{p.blurb}</p>}
             <ul className="v2_plan_list">
               {p.features.map((f) => (
-                <li key={f}><span className="v2_mark v2_mark_good">✓</span>{f}</li>
+                <li key={f}><span className="v2_mark v2_mark_good" aria-hidden="true">✓</span>{f}</li>
               ))}
             </ul>
             <Link
               href={href}
               className={`v2_btn ${p.featured ? "v2_btn_primary" : "v2_btn_ghost"}`}
             >
-              {p.cta ?? "Get started"} <span className="v2_arrow">→</span>
+              {p.cta ?? "Get started"} <span className="v2_arrow" aria-hidden="true">→</span>
             </Link>
           </article>
         ))}
@@ -330,22 +336,27 @@ export function Pricing({
 /* =========================== FAQ ============================== */
 export function Faq({ items }: { items: { q: string; a: string }[] }) {
   const [open, setOpen] = useState<number | null>(0);
+  const base = useId();
   return (
     <div className="v2_faq2">
       {items.map((it, i) => {
         const isOpen = open === i;
+        const panel = `${base}-a${i}`;
         return (
           <div key={it.q} className={`v2_faq2_item v2_reveal${isOpen ? " is_open" : ""}`}>
             <button
               type="button"
               className="v2_faq2_q"
               aria-expanded={isOpen}
+              aria-controls={panel}
               onClick={() => setOpen(isOpen ? null : i)}
             >
               <span>{it.q}</span>
               <span className="v2_faq2_s" aria-hidden="true">{isOpen ? "−" : "+"}</span>
             </button>
-            <div className="v2_faq2_wrap">
+            {/* inert while closed: a collapsed answer stays in the DOM (so it can
+                animate open) but must not be read out or tabbed into. */}
+            <div className="v2_faq2_wrap" id={panel} inert={!isOpen}>
               <div className="v2_faq2_inner">
                 <p className="v2_faq2_a">{it.a}</p>
               </div>
@@ -381,7 +392,7 @@ export function CtaBand({
         {lead && <p className="v2_ctaband_lead v2_reveal">{lead}</p>}
         <div className="v2_phero_cta v2_reveal" style={{ justifyContent: "center" }}>
           <Link className={ctaClass("v2_btn v2_btn_primary", primary)} href={primary.href}>
-            {primary.label} <span className="v2_arrow">→</span>
+            {primary.label} <span className="v2_arrow" aria-hidden="true">→</span>
           </Link>
           {secondary && (
             <Link className={ctaClass("v2_btn v2_btn_ghost v2_btn_on_dark", secondary)} href={secondary.href}>
@@ -418,7 +429,7 @@ export function ReviewStrip({
     <div className="v2_mini">
       {items.map((m) => (
         <article key={m.name + m.q.slice(0, 12)} className="v2_mini_c v2_reveal">
-          <p className="v2_stars">★★★★★</p>
+          <p className="v2_stars" role="img" aria-label="5 out of 5 stars">★★★★★</p>
           <p>{m.q}</p>
           <div className="v2_mini_who">
             <ReviewAvatar name={m.name} />
@@ -473,7 +484,7 @@ export function SplitSection({
         )}
         {cta && (
           <Link className={ctaClass("v2_btn v2_btn_navy v2_reveal", cta)} href={cta.href} style={{ marginTop: 26 }}>
-            {cta.label} <span className="v2_arrow">→</span>
+            {cta.label} <span className="v2_arrow" aria-hidden="true">→</span>
           </Link>
         )}
       </div>
