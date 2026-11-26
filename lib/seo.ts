@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CALCULATORS } from "@/lib/calculators";
 
 /**
  * Per-page SEO, in one place.
@@ -219,6 +220,24 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     description: "Master Sri Lankan tax compliance with expert-led webinars. Choose from specialised tax topics tailored to your business needs.",
     fromLive: true,
   },
+
+  /* Titles and descriptions from the tools team's hub at
+     calculators.simplebooks.com, which these pages mirror. */
+  "/calculators": {
+    title: "Free Sri Lanka Tax Calculators | simplebooks",
+    description: "Quick, free calculators for salary tax, rent, dividends, freelancing and more in Sri Lanka.",
+    fromLive: true,
+  },
+  ...Object.fromEntries(
+    CALCULATORS.map((c): [string, PageSeo] => [
+      `/calculators/${c.slug}`,
+      {
+        title: `${c.title} | simplebooks`,
+        description: `${c.title} Use this Sri Lanka tax calculator from simplebooks.`,
+        fromLive: true,
+      },
+    ])
+  ),
 };
 
 /** Builds the full Metadata object for a route, canonical and OG included. */

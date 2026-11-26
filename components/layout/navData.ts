@@ -81,6 +81,9 @@ export const navItems: NavItem[] = [
   {
     label: "Free Tools",
     children: [
+      /* The tools team's new calculators (calculators.simplebooks.com), all
+         eighteen, plus the nine below: see lib/calculators.ts. */
+      { label: "Tax Calculators", href: "/calculators" },
       { label: "Local APIT Calculator", href: "/tools/tax-calculators/local-income" },
       { label: "Foreign APIT Calculator", href: "/tools/tax-calculators/foreign-income" },
       { label: "Cumulative Income Calculator", href: "/tools/tax-calculators/cumulative-income" },
@@ -99,6 +102,8 @@ export const navItems: NavItem[] = [
     children: [
       { label: "Blog", href: "/srilanka/blog" },
       { label: "Videos", href: "/srilanka/videos" },
+      /* Live links this to calculators.simplebooks.com; ours are on this site. */
+      { label: "Calculators", href: "/calculators" },
     ],
   },
 ];
