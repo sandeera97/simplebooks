@@ -39,7 +39,8 @@ export default async function CalculatorPage({ params }: { params: Promise<{ slu
     <div className="sim_bk_v2">
       <div className="v2_calc_screen">
         <HeaderV2 />
-        <main className="v2_calc_main">
+        {/* Same target as PageShell's <main>, for the header's "Skip to content" link. */}
+        <main className="v2_calc_main" id="main" tabIndex={-1}>
           <h1 className="v2_sr_only">{calculator.title}</h1>
           <CalculatorFrame src={calculator.app} title={calculator.title} />
         </main>
