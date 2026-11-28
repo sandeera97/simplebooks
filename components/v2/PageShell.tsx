@@ -11,7 +11,7 @@ export default function PageShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="sim_bk_v2">
       <HeaderV2 />
-      <main>{children}</main>
+      <main id="main" tabIndex={-1}>{children}</main>
       <FooterV2 />
       <Reveal />
     </div>

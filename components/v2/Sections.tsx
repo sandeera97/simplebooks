@@ -55,7 +55,7 @@ const SERVICES = [
   {
     n: "01",
     t: "Business setup",
-    d: "We guide you through registering your business from A–Z. We've set up 10000 companies covering every industry imaginable.",
+    d: "We guide you through registering your business from A–Z. We've set up 10000+ companies covering every industry imaginable.",
     tags: ["Private Ltd", "Name approval", "Bank account"],
     href: "/srilanka/services/register-a-company",
     art: "setup" as ServiceArtKind,
@@ -245,7 +245,7 @@ export function WhySimplebooks() {
               it in one place, with one team.
             </p>
             <Link className="v2_btn v2_btn_navy v2_reveal" href="#start">
-              Talk to a consultant <span className="v2_arrow">→</span>
+              Talk to a consultant <span className="v2_arrow" aria-hidden="true">→</span>
             </Link>
           </div>
 
@@ -284,7 +284,7 @@ export function WhySimplebooks() {
             <ul>
               {ALONE.map((t) => (
                 <li key={t}>
-                  <span className="v2_mark v2_mark_bad">✕</span>
+                  <span className="v2_mark v2_mark_bad" aria-hidden="true">✕</span>
                   {t}
                 </li>
               ))}
@@ -295,7 +295,7 @@ export function WhySimplebooks() {
             <ul>
               {WITH_US.map((t) => (
                 <li key={t}>
-                  <span className="v2_mark v2_mark_good">✓</span>
+                  <span className="v2_mark v2_mark_good" aria-hidden="true">✓</span>
                   {t}
                 </li>
               ))}
@@ -346,9 +346,10 @@ export function FaqMarquee() {
 
       {QUESTION_ROWS.map((row, i) => (
         <div key={i} className="v2_marquee v2_marquee_row" aria-hidden={i > 0}>
-          {/* duplicated once so the -50% translate loops seamlessly */}
+          {/* duplicated once so the -50% translate loops seamlessly; the copy
+              is hidden from screen readers so the first row is read once */}
           {[0, 1].map((copy) => (
-            <div key={copy} className="v2_marquee_track">
+            <div key={copy} className="v2_marquee_track" aria-hidden={copy > 0 || undefined}>
               {row.map((q) => (
                 <span key={q} className="v2_q">
                   {q}
@@ -361,7 +362,7 @@ export function FaqMarquee() {
 
       <div className="v2_wrap v2_faq_cta">
         <Link className="v2_btn v2_btn_navy" href="/srilanka/faq">
-          Ask us yours <span className="v2_arrow">→</span>
+          Ask us yours <span className="v2_arrow" aria-hidden="true">→</span>
         </Link>
       </div>
     </section>
@@ -375,7 +376,7 @@ export function FooterV2() {
       <div className="v2_wrap">
         <div className="v2_news">
           <div>
-            <h2>Stay informed.</h2>
+            <h2>Stay informed<span className="v2_dot">.</span></h2>
             <p>
               Registrar changes, tax deadlines and practical guides. Once a month, nothing else.
             </p>
@@ -385,7 +386,7 @@ export function FooterV2() {
 
         <div className="v2_foot_cols">
           <div>
-            <span className="v2_logo" style={{ color: "#fff" }}>simplebooks</span>
+            <Link href="/" className="v2_logo" style={{ color: "#fff" }} aria-label="Simplebooks home">simplebooks</Link>
             {/* The homepage's trust line, repeated on every page (website audit:
                 "add these numbers on every page"). */}
             <div className="v2_foot_trust">
@@ -401,10 +402,13 @@ export function FooterV2() {
               office in Colombo.
             </p>
             <div className="v2_socials">
-              <a href="https://facebook.com/simplebooks" aria-label="Simplebooks on Facebook">
+              {/* The published handles (live site, earlier builds) are
+                  teamsimplebooks; facebook.com/simplebooks redirects to a
+                  different "SimpleBooks" page. */}
+              <a href="https://www.facebook.com/teamsimplebooks/" aria-label="Simplebooks on Facebook">
                 <FacebookIcon />
               </a>
-              <a href="https://instagram.com/simplebooks" aria-label="Simplebooks on Instagram">
+              <a href="https://www.instagram.com/teamsimplebooks/" aria-label="Simplebooks on Instagram">
                 <InstagramIcon />
               </a>
               <a href="https://youtube.com/@simplebooks" aria-label="Simplebooks on YouTube">
@@ -444,7 +448,11 @@ export function FooterV2() {
               Simplebooks (Pvt) Ltd<br />
               Millennium Tower, 2nd Floor,<br />
               345 Galle Rd, Colombo 00300,<br />
-              Sri Lanka · 0117 555 878
+              Sri Lanka
+            </p>
+            <p className="v2_office_links">
+              <a href="tel:+94117555878">0117 555 878</a>
+              <a href="mailto:info@simplebooks.com">info@simplebooks.com</a>
             </p>
           </div>
         </div>

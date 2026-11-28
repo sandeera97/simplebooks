@@ -26,8 +26,11 @@
   background: var(--v2-orange); transform: scaleX(0); transform-origin: left center;
   transition: transform 0.9s var(--v2-ease);
 }
-/* Only once the video is driving it: before that, every line is at full strength. */
-.h3d_h1.is_synced .h3d_line { color: rgba(10, 18, 51, 0.2); }
+/* Only once the video is driving it: before that, every line is at full strength.
+   The resting lines were navy at 20% (1.5:1), so for most of the loop the
+   offer itself, "Register your company.", was unreadable. 48% keeps the
+   chapter effect and passes 3:1 for large text. */
+.h3d_h1.is_synced .h3d_line { color: rgba(10, 18, 51, 0.48); }
 .h3d_h1.is_synced .h3d_line.is_on { color: var(--v2-navy); }
 .h3d_h1.is_synced .h3d_line.is_on::after { transform: scaleX(1); }
 .h3d_h1.is_synced.is_all .h3d_line::after { transform: scaleX(0); }
@@ -185,12 +188,12 @@
 }
 .h3d_tab:hover { color: var(--v2-navy); transform: translateY(-2px); }
 .h3d_tab:focus-visible { outline: 2px solid var(--v2-orange); outline-offset: 2px; }
-.h3d_tab_n { margin-right: 6px; color: var(--v2-ink-5); font-size: 11px; }
+.h3d_tab_n { margin-right: 6px; color: var(--v2-ink-4); font-size: 11px; }
 .h3d_tab_label { white-space: nowrap; }
 .h3d_tab_bar { display: block; height: 3px; margin-top: 9px; overflow: hidden; border-radius: 999px; background: var(--v2-sand-deep); }
 .h3d_tab_bar b { display: block; height: 100%; border-radius: inherit; background: var(--v2-orange); transform: scaleX(0); transform-origin: left center; }
 .h3d_tab.is_active { background: #fff; color: var(--v2-navy); box-shadow: 0 14px 30px -20px rgba(10, 18, 51, 0.45); }
-.h3d_tab.is_active .h3d_tab_n { color: var(--v2-orange); }
+.h3d_tab.is_active .h3d_tab_n { color: var(--v2-orange-ink); }
 .h3d_tab.is_done .h3d_tab_bar b { background: rgba(255, 91, 46, 0.45); }
 
 /* ---------- Motion ---------- */

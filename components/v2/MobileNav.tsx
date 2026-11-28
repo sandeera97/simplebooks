@@ -2,15 +2,18 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { NavItem } from "@/components/layout/navData";
 
 function Row({
   item,
   depth,
+  pathname,
   onNavigate,
 }: {
   item: NavItem;
   depth: number;
+  pathname: string;
   onNavigate: () => void;
 }) {
   const [open, setOpen] = useState(false);
@@ -26,7 +29,12 @@ function Row({
             <span className="v2_mnav_go" aria-hidden="true">↗</span>
           </a>
         ) : (
-          <Link className={cls} href={item.href ?? "#"} onClick={onNavigate}>
+          <Link
+            className={cls}
+            href={item.href ?? "#"}
+            onClick={onNavigate}
+            aria-current={item.href === pathname ? "page" : undefined}
+          >
             <span>{item.label}</span>
             <span className="v2_mnav_go" aria-hidden="true">→</span>
           </Link>
@@ -51,11 +59,13 @@ function Row({
         </span>
       </button>
 
-      <div className="v2_mnav_sub">
+      {/* inert while collapsed: the rows are still in the DOM (for the height
+          animation) and were being tabbed into while invisible. */}
+      <div className="v2_mnav_sub" inert={!open}>
         <div className="v2_mnav_sub_in">
           <ul>
             {item.children!.map((c) => (
-              <Row key={c.label} item={c} depth={depth + 1} onNavigate={onNavigate} />
+              <Row key={c.label} item={c} depth={depth + 1} pathname={pathname} onNavigate={onNavigate} />
             ))}
           </ul>
         </div>
@@ -71,10 +81,11 @@ export default function MobileNav({
   items: NavItem[];
   onNavigate: () => void;
 }) {
+  const pathname = usePathname() ?? "";
   return (
     <ul className="v2_mnav_list">
       {items.map((item) => (
-        <Row key={item.label} item={item} depth={0} onNavigate={onNavigate} />
+        <Row key={item.label} item={item} depth={0} pathname={pathname} onNavigate={onNavigate} />
       ))}
     </ul>
   );

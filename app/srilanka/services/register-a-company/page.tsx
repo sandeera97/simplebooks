@@ -84,7 +84,7 @@ function NeedPanel({ label, items }: { label: string; items: string[] }) {
       <ul className="v2_plan_list" style={{ margin: 0 }}>
         {items.map((i) => (
           <li key={i}>
-            <span className="v2_mark v2_mark_good">✓</span>
+            <span className="v2_mark v2_mark_good" aria-hidden="true">✓</span>
             {i}
           </li>
         ))}
@@ -105,7 +105,7 @@ export default function RegisterACompanyPage() {
         secondary={{ label: "Sign up for free", href: "https://dashboard.simplebooks.com", className: "cdrat" }}
         stats={[
           { n: "10000+", l: "Businesses registered" },
-          { n: "5–6 weeks", l: "Subject to Registrar approval" },
+          { n: "5–6", l: "Working weeks, subject to Registrar approval" },
           { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
@@ -160,8 +160,8 @@ export default function RegisterACompanyPage() {
       <section className="v2_sec v2_sec_pad">
         <div className="v2_wrap">
           <SecHead eyebrow="Pricing" title="Get the most affordable rates" />
-          <RegistrationPricing />
-          <p className="v2_price_note">Add the annual secretary service for Rs 15,000, covering company name and address changes, annual report, amendments to your articles, share issues and transfers, secretary changes and director changes.</p>
+          {/* The add-on sits straight under the prices it qualifies. */}
+          <RegistrationPricing note="Add the annual secretary service for Rs 15,000, covering company name and address changes, annual report, amendments to your articles, share issues and transfers, secretary changes and director changes." />
         </div>
       </section>
 
@@ -176,7 +176,7 @@ export default function RegisterACompanyPage() {
               <ul className="v2_plan_list" style={{ margin: 0, columnCount: 2, columnGap: 40 }}>
                 {SECRETARY.map((i) => (
                   <li key={i} style={{ breakInside: "avoid" }}>
-                    <span className="v2_mark v2_mark_good">✓</span>
+                    <span className="v2_mark v2_mark_good" aria-hidden="true">✓</span>
                     {i}
                   </li>
                 ))}

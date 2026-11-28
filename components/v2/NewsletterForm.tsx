@@ -61,7 +61,7 @@ export default function NewsletterForm() {
   }
 
   return (
-    <form className="v2_news_form" onSubmit={onSubmit}>
+    <form className="v2_news_form" onSubmit={onSubmit} method="post" aria-label="Newsletter signup">
       {/* Hidden from people. Anything in it is a bot, and the API drops it. */}
       <div className="v2_hp" aria-hidden="true">
         <label htmlFor="v2-news-co">Company</label>
@@ -72,6 +72,7 @@ export default function NewsletterForm() {
         name="email"
         placeholder="you@company.lk"
         aria-label="Your email"
+        autoComplete="email"
         required
       />
       <button type="submit" className="v2_btn v2_btn_primary" disabled={loading}>

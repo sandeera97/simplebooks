@@ -72,7 +72,7 @@ export default function BusinessRegistrationPage() {
         note="No paperwork. No queues. No confusion."
         stats={[
           { n: "10000+", l: "Companies registered" },
-          { n: "5–6 weeks", l: "Subject to Registrar approval" },
+          { n: "5–6", l: "Working weeks, subject to Registrar approval" },
           { n: "4.9★", l: "Across 1400+ Google reviews" },
         ]}
       />
@@ -132,12 +132,11 @@ export default function BusinessRegistrationPage() {
         <div className="v2_wrap">
           {/* The same three packages as the live page and /srilanka/services/register-a-company. */}
           <SecHead eyebrow="Pricing" title="Get the most affordable rates" />
-          <RegistrationPricing />
-          <p className="v2_price_note">
-            Add the annual secretary service for Rs 15,000, covering company name and address changes, annual report,
-            amendments to your articles, share issues and transfers, secretary changes and director changes. Government
-            charges will be applied for each change, and an additional Rs 2,900 government fee applies for each extra director.
-          </p>
+          {/* The add-on and fees sit straight under the prices they qualify,
+              rather than after the two perk panels. */}
+          <RegistrationPricing
+            note="Add the annual secretary service for Rs 15,000, covering company name and address changes, annual report, amendments to your articles, share issues and transfers, secretary changes and director changes. Government charges will be applied for each change, and an additional Rs 2,900 government fee applies for each extra director."
+          />
         </div>
       </section>
 

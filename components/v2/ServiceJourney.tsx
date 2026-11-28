@@ -25,7 +25,7 @@ const STEPS: {
     summary: "Start your company with expert guidance from name reservation to incorporation.",
     detail: "We guide you through the entire business registration process, from name reservation to incorporation.",
     items: ["Name reservation", "Company incorporation", "Registration guidance"],
-    time: "5–6 working weeks",
+    time: "5–6 working weeks, subject to Registrar approval",
     icon: "doc",
   },
   {
@@ -150,7 +150,7 @@ export default function ServiceJourney({ tone = "plain" }: { tone?: keyof typeof
                   <ul className="sj_items">
                     {s.items.map((it) => (
                       <li key={it}>
-                        <span className="sj_check">
+                        <span className="sj_check" aria-hidden="true">
                           <Check />
                         </span>
                         {it}
@@ -159,6 +159,7 @@ export default function ServiceJourney({ tone = "plain" }: { tone?: keyof typeof
                   </ul>
                   <p className="sj_time">
                     <Clock />
+                    <span className="sj_sr">Time: </span>
                     {s.time}
                   </p>
                 </div>
@@ -178,10 +179,10 @@ export default function ServiceJourney({ tone = "plain" }: { tone?: keyof typeof
           <div className="sj_cta_btns">
             {/* Two different places: the form on this page, or a WhatsApp chat. */}
             <Link className="v2_btn v2_btn_primary" href="#consultation">
-              Book a free consultation <span className="v2_arrow">→</span>
+              Book a free consultation <span className="v2_arrow" aria-hidden="true">→</span>
             </Link>
             <a className="v2_btn v2_btn_ghost" href="https://wa.me/94117555878">
-              Talk to our team
+              Talk to our team <span className="sj_sr">on WhatsApp</span>
             </a>
           </div>
         </div>

@@ -60,7 +60,7 @@ export default async function CmsArticlePage({
   return (
     <div className="sim_bk_v2">
       <HeaderV2 />
-      <main className="blog-page">
+      <main className="blog-page" id="main" tabIndex={-1}>
         <header className="blog-hero">
           <div className="blog-hero-inner">
             <p className="blog-post-tag">{article.category}</p>

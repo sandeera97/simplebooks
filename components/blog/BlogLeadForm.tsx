@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { submitLead, LeadNotConfiguredError } from "@/lib/leads";
+import { EMAIL_PATTERN, NAME_PATTERN } from "@/components/v2/LeadForm";
 
 export default function BlogLeadForm() {
   const [sent, setSent] = useState(false);
@@ -36,8 +37,8 @@ export default function BlogLeadForm() {
 
   if (sent) {
     return (
-      <aside className="blog-lead-card blog-lead-success" aria-live="polite">
-        <span>✓</span>
+      <aside className="blog-lead-card blog-lead-success" id="consultation" aria-live="polite">
+        <span aria-hidden="true">✓</span>
         <h2>Thank you!</h2>
         <p>We have received your details and will be in touch shortly.</p>
       </aside>
@@ -45,9 +46,10 @@ export default function BlogLeadForm() {
   }
 
   return (
-    <aside className="blog-lead-card">
+    /* #consultation: the in-article consultation buttons land here. */
+    <aside className="blog-lead-card" id="consultation">
       <h2>Have more questions?</h2>
-      <form onSubmit={submit}>
+      <form onSubmit={submit} method="post" aria-label="Free consultation request">
         <div className="blog-name-fields">
           <label>
             <span className="blog-field-label">First name</span>
@@ -56,6 +58,7 @@ export default function BlogLeadForm() {
               autoComplete="given-name"
               placeholder="First name"
               required
+              pattern={NAME_PATTERN}
             />
           </label>
           <label>
@@ -65,6 +68,7 @@ export default function BlogLeadForm() {
               autoComplete="family-name"
               placeholder="Last name"
               required
+              pattern={NAME_PATTERN}
             />
           </label>
         </div>
@@ -76,6 +80,8 @@ export default function BlogLeadForm() {
             autoComplete="email"
             placeholder="Email"
             required
+            pattern={EMAIL_PATTERN}
+            title="An email address like you@company.lk"
           />
         </label>
         <label>
@@ -97,7 +103,7 @@ export default function BlogLeadForm() {
           </p>
         )}
 
-        <button type="submit" disabled={loading}>
+        <button type="submit" disabled={loading} aria-busy={loading}>
           {loading ? "Sending…" : "Get a free consultation"}
         </button>
       </form>

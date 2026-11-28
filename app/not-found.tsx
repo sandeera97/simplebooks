@@ -35,7 +35,7 @@ export default function NotFound() {
             {LINKS.map((l) => (
               <Link className="v2_404_card v2_reveal" href={l.href} key={l.t}>
                 <p className="v2_404_card_t">
-                  {l.t} <span className="v2_arrow">→</span>
+                  {l.t} <span className="v2_arrow" aria-hidden="true">→</span>
                 </p>
                 <p className="v2_404_card_d">{l.d}</p>
               </Link>

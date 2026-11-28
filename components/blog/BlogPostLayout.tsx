@@ -24,6 +24,16 @@ type BlogPostLayoutProps = {
   children: ReactNode;
 };
 
+/* "Team simplebooks" -> "TS", not "Te" (the first two letters, as before). */
+function initials(name: string) {
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((w) => w[0]!.toUpperCase())
+    .join("");
+}
+
 export default function BlogPostLayout({
   title,
   author,
@@ -41,7 +51,7 @@ export default function BlogPostLayout({
   return (
     <div className="sim_bk_v2">
       <HeaderV2 />
-      <main className="blog-page">
+      <main className="blog-page" id="main" tabIndex={-1}>
         <header className="blog-hero">
           <div className="blog-hero-inner">
             <div className="blog-post-tag">{tag}</div>
@@ -77,7 +87,7 @@ export default function BlogPostLayout({
                     sizes="50px"
                   />
                 ) : (
-                  authorInitials ?? author.slice(0, 2)
+                  authorInitials ?? initials(author)
                 )}
               </div>
               <div className="blog-author-details">
